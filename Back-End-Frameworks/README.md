@@ -1,35 +1,35 @@
-# Back-End Frameworks
+# Πλαίσια Back-End 
 
-Η ενότητα "Back-end Frameworks" προσφέρει μια σε βάθος εξερεύνηση των μεθοδολογιών, εργαλείων και βέλτιστων πρακτικών που είναι ζωτικής σημασίας για τη σημερινή ανάπτυξη εφαρμογών στην πλευρά του διακομιστή. Οι σπουδαστές θα εντρυφήσουν στις βασικές έννοιες, όπως δρομολόγηση (routing),  ενδιάμεσο λογισμικό (middleware),  ταυτόποιήση (authentication) και λειτουργίες βάσεων δεδομένων. Καθ' όλη τη διάρκεια του μαθήματος, οι φοιτητές θα συμμετάσχουν πρακτικά , δημιουργώντας αποδοτικές και ασφαλείς εφαρμογές που είναι έτοιμες για ανάπτυξη σε σενάρια του πραγματικού κόσμου. Αυτό το ταξίδι θα τους εξοικειώσει επίσης με το εκτεταμένο σύνολο εργαλείων και το οικοσύστημα που ενυπάρχει στη σύγχρονο back-end προγραμματισμό.
+Η ενότητα "Πλαίσια Back-end " προσφέρει μια σε βάθος εξερεύνηση των μεθοδολογιών, εργαλείων και βέλτιστων πρακτικών που είναι ζωτικής σημασίας για τη σημερινή ανάπτυξη εφαρμογών στην πλευρά του διακομιστή. Οι σπουδαστές θα εντρυφήσουν στις βασικές έννοιες, όπως δρομολόγηση (routing),  ενδιάμεσο λογισμικό (middleware),  ταυτόποιήση (authentication) και λειτουργίες βάσεων δεδομένων. Καθ' όλη τη διάρκεια του μαθήματος, οι φοιτητές θα συμμετάσχουν πρακτικά , δημιουργώντας αποδοτικές και ασφαλείς εφαρμογές που είναι έτοιμες για ανάπτυξη σε σενάρια του πραγματικού κόσμου. Αυτό το ταξίδι θα τους εξοικειώσει επίσης με το εκτεταμένο σύνολο εργαλείων και το οικοσύστημα που ενυπάρχει στο σύγχρονο back-end προγραμματισμό.
 
-## Description
+## Περιγραφή
 
-- **Volume**: 4 ECTS (4 x 26 hours)
-- **Subject Aims**: The aim of the "Back-end Frameworks" subject is to cultivate students' abilities to use modern back-end frameworks for the development of robust, scalable, and secure server-side applications.
+- **Μονάδες**: 4 ECTS (4 x 26 hours)
+- **Στόχοι μαθήματος**: Στόχος του μαθήματος "Πλαίσια Back-end" είναι να καλλιεργήσει τις ικανότητες των φοιτητών να χρησιμοποιούν σύγχρονα back-end frameworks για την ανάπτυξη εύρωστων, κλιμακούμενων και ασφαλών εφαρμογών στην πλευρά του διακομιστή.
 
-By the end of the course, students should be adept at the principles of server architecture, API development, database integration, and the broader ecosystem associated with contemporary back-end development.
+Στο τέλος του μαθήματος, οι σπουδαστές θα πρέπει να γνωρίζουν τις αρχές της αρχιτεκτονικής του διακομιστή, της ανάπτυξης API, της ενσωμάτωσης βάσεων δεδομένων και του ευρύτερου οικοσυστήματος που σχετίζεται με στο σύγχρονο back-end προγραμματισμό.
 
-## Learning Outcomes
-- **Server Architecture**: Understand and implement server architectures, utilizing framework capabilities to structure scalable applications.
-- **Routing and Middleware**: Employ routing mechanisms to handle various request types and utilize middleware for request/response processing.
-- **Database Integration**: Connect server-side applications to relational and non-relational databases, executing CRUD operations and understanding ORM/ODM paradigms.
-- **Authentication & Authorization**: Implement authentication and authorization strategies to secure applications, understanding sessions, tokens, and OAuth mechanisms.
-- **API Development**: Design and develop RESTful APIs, emphasizing best practices for endpoint structure, data validation, and error handling.
-- **Error Handling**: Implement comprehensive error handling strategies to manage and respond to various error types and scenarios.
-- **Deployment and Production**: Familiarize with deployment processes, environment configurations, and the nuances of moving a back-end application to production.
-- **Security Measures**: Implement various security measures, understanding potential vulnerabilities such as SQL injection, CSRF, and protecting against them.
-- **Continuous Integration/Continuous Deployment (CI/CD)**: Understand the CI/CD pipeline and integrate it into the back-end development workflow.
+## Μαθησιακά αποτελέσματα
+- **Αρχιτεκτονική διακομιστή**: Κατανόηση και υλοποίηση αρχιτεκτονικών διακομιστών, αξιοποιώντας τις δυνατότητες πλαισίων για τη δόμηση κλιμακούμενων εφαρμογών.
+- **Δρομολόγηση και Ενδιάμεσο λογισμικό**: Χρήση μηχανισμών δρομολόγησης για τη διαχείριση διαφόρων τύπων αιτημάτων και χρησιμοποιήστε ενδιάμεσο λογισμικό για την επεξεργασία αιτημάτων/απαντήσεων.
+- **Ενσωμάτωση βάσης δεδομένων**: Σύνδεση εφαρμογών στην πλευρά του διακομιστή με σχεσιακές και μη σχεσιακές βάσεις δεδομένων, εκτέλεση λειτουργιών CRUD και κατανόηση παραδειγμάτων ORM/ODM.
+- **Αυθεντικοποίηση & Εξουσιοδότηση**:Εφαρμογή στρατηγικών ελέγχου ταυτότητας και εξουσιοδότησης για την ασφάλεια εφαρμογών, κατανόηση των συνόδων, των δειγμάτων (tokens) και των μηχανισμών OAuth.
+- **Ανάπτυξη API**: Σχεδιασμός και ανάπτυξη RESTful APIs, με έμφαση στις βέλτιστες πρακτικές για τη δομή των τελικών(endpoint) σημείων, την επικύρωση δεδομένων και τον χειρισμό σφαλμάτων.
+- **Αντιμετώπιση σφαλμάτων**: Εφαρμογή ολοκληρωμένων στρατηγικών χειρισμού σφαλμάτων για τη διαχείριση και την αντιμετώπιση διαφόρων τύπων και σεναρίων σφαλμάτων.
+- **Εγκατάσταση και παραγωγή**: Εξοικείωση με τις διαδικασίες ανάπτυξης, τις διαμορφώσεις περιβάλλοντος και τις ιδιαιτερότητες της μετακίνησης μιας back-end εφαρμογής στην παραγωγή.
+- **Μέτρα ασφαλείας**: Εφαρμογή διαφόρων μέτρων ασφαλείας, κατανόηση των πιθανών ευπαθειών, όπως SQL injection, CSRF, και προστασία από αυτές.
+- **Συνεχής ολοκλήρωση/συνεχής ανάπτυξη (CI/CD)**: Κατανόηση του αγωγού CI/CD και ενσωμάτωσή του στη ροή εργασιών ανάπτυξης back-end.
 
-## Topics
+## Θεματικές ενότητες
 - API
 - REST
 - Express.JS
-- Request/Response cycle
-- API structure
-- API documentation
-- Middleware
-- Authentication/Authorization
-- Security
+- Κύκλος αίτησης/απόκρισης
+- Δομή API 
+- Τεκμηρίωση API
+- Ενδιάμεσο Λογισμικό (Middleware)
+- Αυθεντικοποίηση/Εξουσιοδότηση
+- Ασφάλεια
 - JWT
-- Testing
-- Deployment
+- Έλεγχος
+- Ανάπτυξη
