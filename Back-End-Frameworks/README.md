@@ -1,6 +1,6 @@
 # Back-End Frameworks
 
-"Back-end Frameworks" offers an in-depth exploration into the methodologies, tools, and best practices pivotal to today's server-side application development. Students will immerse themselves in the core concepts such as routing, middleware, authentication, and database operations. Throughout the course, students will engage in hands-on projects, building performant and secure applications that are ready for deployment in real-world scenarios. This journey will also acquaint them with the extensive toolset and ecosystem intrinsic to modern back-end development.
+Η ενότητα "Back-end Frameworks" προσφέρει μια σε βάθος εξερεύνηση των μεθοδολογιών, εργαλείων και βέλτιστων πρακτικών που είναι ζωτικής σημασίας για τη σημερινή ανάπτυξη εφαρμογών στην πλευρά του διακομιστή. Οι σπουδαστές θα εντρυφήσουν στις βασικές έννοιες, όπως δρομολόγηση (routing),  ενδιάμεσο λογισμικό (middleware),  ταυτόποιήση (authentication) και λειτουργίες βάσεων δεδομένων. Καθ' όλη τη διάρκεια του μαθήματος, οι φοιτητές θα συμμετάσχουν πρακτικά , δημιουργώντας αποδοτικές και ασφαλείς εφαρμογές που είναι έτοιμες για ανάπτυξη σε σενάρια του πραγματικού κόσμου. Αυτό το ταξίδι θα τους εξοικειώσει επίσης με το εκτεταμένο σύνολο εργαλείων και το οικοσύστημα που ενυπάρχει στη σύγχρονο back-end προγραμματισμό.
 
 ## Description
 
