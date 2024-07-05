@@ -1,4 +1,4 @@
-# Front-End Technologies
+# Τεχνολογίες Front-End
 
 **"Front-end Technologies"** provides an immersive exploration into the tools, techniques, and best practices that drive today's web interfaces. This subject introduces students to the trinity of web development: HTML for content structure, CSS for styling and layout, and JavaScript for interactivity and dynamic behavior. With a blend of theory and hands-on practice, students will undertake projects that challenge them to design and code web pages and applications that are both visually appealing and functionally robust. This course serves as a gateway to the fast-evolving domain of web development and user experience design.
 ## Description
