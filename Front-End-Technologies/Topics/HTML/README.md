@@ -4,7 +4,7 @@
 
   - [Γλώσσα σήμανσης υπερκειμένου (Hyper Text Markup Language - HTML)](#Γλώσσα-σήμανσης-υπερκειμένου-(Hyper-Text-Markup-Language-HTML)
   - [Μαθησιακά αποτελέσματα](#Μαθησιακά-αποτελέσματα)
-  - [HTML Basics](#html-basics)
+  - [Βασικά στοιχεία HTML](#Βασικά-στοιχεία-HTML)
   - [HTML Tags](#html-tags)
   - [HTML Elements](#html-elements)
   - [Nested HTML Elements](#nested-html-elements)
@@ -21,23 +21,23 @@
 
 ## Μαθησιακά αποτελέσματα
 
-After completing this topic, you'll be able to:
+Αφού ολοκληρώσετε αυτό το μάθημα, θα είστε σε θέση να:
 
-- Explain what HTML is;
-- Explain what HTML tags are;
-- Explain what HTML elements are;
-- Explain what HTML attributes are;
-- Explain what HTML document structure is;
-- Explain what HTML document metadata is;
-- Write simple HTML document;
-- Run HTML document in a web browser.
+- Εξηγήσετε τι είναι η HTML,
+- Εξηγήσετε τι είναι οι ετικέτες HTML,
+- Εξηγήσετε τι είναι τα στοιχεία HTML,
+- Εξηγήσετε τι είναι τα χαρακτηριστικά της HTML,
+- Εξηγήσετε ποια είναι η δομή του εγγράφου HTML,
+- Εξηγήστε τι είναι τα μεταδεδομένα εγγράφων HTML,
+- Γράψτε ένα απλό έγγραφο HTML,
+- Εκτελέσετε το έγγραφο HTML σε ένα πρόγραμμα περιήγησης ιστού.
 
 
-## HTML Basics
+## Βασικά στοιχεία HTML
 
-HTML stands for Hyper Text Markup Language. Markup language means that, rather than using a programming language to write instructions for the computer to follow, you are using tags to identify different types of content. It is the standard markup language for creating Web pages. HTML describes the structure of a Web page. HTML consists of a series of elements, which you use to enclose, or wrap, different parts of the content to make it appear a certain way, or act a certain way. The enclosing tags can make a word or image hyperlink to somewhere else, can italicize words, can make the font bigger or smaller, and so on.
+HTML σημαίνει Hyper Text Markup Language. Η γλώσσα σήμανσης σημαίνει ότι, αντί να χρησιμοποιείτε μια γλώσσα προγραμματισμού για να γράφετε οδηγίες για να τις ακολουθεί ο υπολογιστής, χρησιμοποιείτε ετικέτες για να προσδιορίζετε διαφορετικούς τύπους περιεχομένου. Είναι η τυπική γλώσσα σήμανσης για τη δημιουργία ιστοσελίδων. Η HTML περιγράφει τη δομή μιας ιστοσελίδας. Η HTML αποτελείται από μια σειρά στοιχείων, τα οποία χρησιμοποιείτε για να περικλείετε ή να τυλίγετε διάφορα μέρη του περιεχομένου, ώστε να το κάνετε να εμφανίζεται με έναν συγκεκριμένο τρόπο ή να ενεργεί με έναν συγκεκριμένο τρόπο. Οι ετικέτες που περικλείουν μπορούν να κάνουν μια λέξη ή μια εικόνα υπερσύνδεσμο προς κάπου αλλού, να κάνουν λέξεις πλάγιες, να κάνουν τη γραμματοσειρά μεγαλύτερη ή μικρότερη κ.ο.κ.
 
-In HTML You don't tell the computer what to do, you tell it what something is. For example, you might say "this is a paragraph", "this is a heading", "this is a link", etc. The browser then knows how to display the content you wrote. Different browsers might display it differently, but they all know what it is. For example, a browser might display a paragraph in a different font than another browser, but they both know it's a paragraph.
+Στην HTML δεν λέτε στον υπολογιστή τι να κάνει, αλλά τι είναι κάτι. Για παράδειγμα, μπορείτε να πείτε "αυτή είναι μια παράγραφος", "αυτή είναι μια επικεφαλίδα", "αυτός είναι ένας σύνδεσμος", κ.λπ. Το πρόγραμμα περιήγησης γνωρίζει τότε πώς να εμφανίσει το περιεχόμενο που γράψατε. Διαφορετικοί φυλλομετρητές μπορεί να το εμφανίζουν με διαφορετικό τρόπο, αλλά όλοι γνωρίζουν τι είναι. Για παράδειγμα, ένα πρόγραμμα περιήγησης μπορεί να εμφανίζει μια παράγραφο με διαφορετική γραμματοσειρά από ένα άλλο πρόγραμμα περιήγησης, αλλά και οι δύο γνωρίζουν ότι πρόκειται για παράγραφο.
 
 ## HTML Tags
 
