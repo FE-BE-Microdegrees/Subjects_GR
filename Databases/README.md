@@ -1,11 +1,11 @@
-# Databases
+# Βάσεις Δεδομένων
 
-## Description
+## Περιγραφή
 
-"Database" delves deep into the realm of data storage, manipulation, and retrieval systems central to today's technological infrastructures. Students will learn foundational concepts like data models, normalization, and SQL. Through a blend of theoretical instruction and practical exercises, students will design and manage database systems, ensuring efficiency, scalability, and security in real-world scenarios.
+Το κεφάλαιο "βάση δεδομένων" εμβαθύνει στη σφαίρα των συστημάτων αποθήκευσης, χειρισμού και ανάκτησης δεδομένων που είναι κεντρικά στις σημερινές τεχνολογικές υποδομές. Οι μαθητές θα μάθουν θεμελιώδεις έννοιες όπως μοντέλα δεδομένων, κανονικοποίηση και SQL. Μέσω ενός μείγματος θεωρητικής διδασκαλίας και πρακτικών ασκήσεων, οι μαθητές θα σχεδιάσουν και θα διαχειριστούν συστήματα βάσεων δεδομένων, διασφαλίζοντας αποτελεσματικότητα, επεκτασιμότητα και ασφάλεια σε σε πραγματικές συνθήκες.
 
-- **Volume**: 4 ECTS (4 x 26 hours)
-- **Subject Aims**: The aim of the "Database" subject is to provide students with foundational knowledge and hands-on experience in designing, implementing, and managing databases.
+- **Μονάδες**: 4 ECTS (4 x 26 ώρες)
+- **Μαθησιακοί στόχοι**: Στόχος του γνωστικού αντικειμένου "Βάσεις δεδομένων" είναι να παρέχει στους σπουδαστές θεμελιώδεις γνώσεις και πρακτική εμπειρία στο σχεδιασμό, την υλοποίηση και τη διαχείριση βάσεων δεδομένων.
 
 Upon completion, students should be adept at data modeling, understanding database architectures, optimizing queries, and ensuring data integrity and security in both relational and non-relational database systems.
 
