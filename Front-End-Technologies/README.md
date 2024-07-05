@@ -19,7 +19,7 @@
 - **Προσβασιμότητα στον Παγκόσμιο Ιστό**: Ανάπτυξη διεπαφών ιστού που είναι προσβάσιμες σε χρήστες με αναπηρίες, εφαρμόζοντας τις κατευθυντήριες γραμμές των Οδηγιών για την Προσβασιμότητα του Περιεχομένου του Ιστού (WCAG).
 - 
 ## Θεματικές ενότητες
-- [Document Object Model (DOM)](./Topics/DOM/README.md)
+- [Μοντέλο Αντικειμένων Εγγράφου (Document Object Model - DOM)](./Topics/DOM/README.md)
 - [HTML](./Topics/HTML/README.md)
 - [CSS](./Topics/CSS/README.md)
 - [JavaScript (browser)](./Topics/JS-in-Browser/README.md)
