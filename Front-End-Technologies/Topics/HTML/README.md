@@ -3,7 +3,7 @@
 Σε αυτό το μάθημα, θα μάθουμε για τη γλώσσα σήμανσης υπερκειμένου (HTML).
 
 - [ Γλώσσα σήμανσης υπερκειμένου (Hyper Text Markup Language - HTML)](#hyper-text-markup-language-html)
-  - [Μαθησιακά αποτελέσματα](#learning-outcomes)
+  - [Μαθησιακά αποτελέσματα](#Μαθησιακά-αποτελέσματα)
   - [HTML Basics](#html-basics)
   - [HTML Tags](#html-tags)
   - [HTML Elements](#html-elements)
