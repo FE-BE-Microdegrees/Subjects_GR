@@ -1,9 +1,9 @@
-# Hyper Text Markup Language (HTML)
+# Γλώσσα σήμανσης υπερκειμένου (Hyper Text Markup Language - HTML)
 
-In this topic, we'll learn about Hyper Text Markup Language (HTML).
+Σε αυτό το μάθημα, θα μάθουμε για τη γλώσσα σήμανσης υπερκειμένου (HTML).
 
-- [Hyper Text Markup Language (HTML)](#hyper-text-markup-language-html)
-  - [Learning Outcomes](#learning-outcomes)
+- [ Γλώσσα σήμανσης υπερκειμένου (Hyper Text Markup Language - HTML)](#hyper-text-markup-language-html)
+  - [Μαθησιακά αποτελέσματα](#learning-outcomes)
   - [HTML Basics](#html-basics)
   - [HTML Tags](#html-tags)
   - [HTML Elements](#html-elements)
@@ -19,7 +19,7 @@ In this topic, we'll learn about Hyper Text Markup Language (HTML).
     - [Exercise 3 - HTML Table and Links](#exercise-3---html-table-and-links)
 
 
-## Learning Outcomes
+## Μαθησιακά αποτελέσματα
 
 After completing this topic, you'll be able to:
 
