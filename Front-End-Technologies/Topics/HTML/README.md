@@ -41,15 +41,14 @@ HTML σημαίνει Hyper Text Markup Language. Η γλώσσα σήμανση
 
 ## HTML Tags
 
-HTML tags are element names surrounded by angle brackets - in HTML, tag is used to create HTML elements, which are the building blocks of HTML pages. HTML tags are keywords (tag names) surrounded by angle brackets:
+Οι ετικέτες (tags) της HTML είναι ονόματα στοιχείων που περιβάλλονται από γωνιακές αγκύλες - στην HTML, η ετικέτα χρησιμοποιείται για τη δημιουργία στοιχείων HTML, τα οποία αποτελούν τα δομικά στοιχεία των σελίδων HTML. Οι ετικέτες HTML είναι λέξεις-κλειδιά (ονόματα ετικετών) που περιβάλλονται από αγκύλες:
 
 ```html
 <tagname></tagname>
 ```
 
-HTML tags normally come in pairs like `<p>` and `</p>`. The first tag in a pair is the start tag, the second tag is the end tag. The end tag is written like the start tag, but with a forward slash inserted before the tag name. There are some HTML tags that don't have an end tag, like the `<br>` tag (which indicates a line break).
-
-There are lots of different HTML tags. Some HTML tags are used to display or format text, some HTML tags are used to display images, some HTML tags are used to display tables, some HTML tags are used to display forms, etc. Full list of HTML tags can be found [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
+Οι ετικέτες HTML συνήθως έρχονται σε ζεύγη όπως `<p>` και `</p>`. Η πρώτη ετικέτα σε ένα ζευγάρι είναι η ετικέτα έναρξης, η δεύτερη ετικέτα είναι η ετικέτα τέλους. Η ετικέτα τέλους είναι γραμμένη όπως η ετικέτα έναρξης, αλλά με μια πρόσθια κάθετο πριν από το όνομα της ετικέτας. Υπάρχουν ορισμένες ετικέτες HTML που δεν έχουν ετικέτα τέλους, όπως η ετικέτα `<br>` (που υποδηλώνει αλλαγή γραμμής).
+Υπάρχουν πολλές διαφορετικές ετικέτες HTML. Ορισμένες ετικέτες HTML χρησιμοποιούνται για την εμφάνιση ή τη μορφοποίηση κειμένου, ορισμένες ετικέτες HTML χρησιμοποιούνται για την εμφάνιση εικόνων, ορισμένες ετικέτες HTML χρησιμοποιούνται για την εμφάνιση πινάκων, ορισμένες ετικέτες HTML χρησιμοποιούνται για την εμφάνιση φορμών κ.λπ. Ο πλήρης κατάλογος των ετικετών HTML μπορεί να βρεθεί [εδώ](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
 
 It is difficult to bring out most common HTML tags, because it depends on what you are trying to do. But, there are some HTML tags, which are used very often. For example:
 
