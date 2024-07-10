@@ -8,8 +8,8 @@
   - [HTML Tags](#html-tags)
   - [Στοιχεία HTML](#Στοιχεία-HTML)
   - [Ενσωματωμένα στοιχεία HTML](#Ενσωματωμένα-στοιχεία-HTML)
-  - [HTML Attributes](#html-attributes)
-  - [HTML Document Structure](#html-document-structure)
+  - [Χαρακτηριστικά HTML](#Χαρακτηριστικά-HTML)
+  - [Δομή εγγράφου HTML](#Δομή-εγγράφου-HTML)
   - [HTML Document Metadata](#html-document-metadata)
   - [How to write HTML?](#how-to-write-html)
   - [How to run HTML?](#how-to-run-html)
@@ -146,25 +146,25 @@ HTML σημαίνει Hyper Text Markup Language. Η γλώσσα σήμανση
 <h1 id="επικεφαλίδα">Αυτή είναι μια επικεφαλίδα</h1>
 ```
 
-The `id` attribute specifies a unique id for an HTML element. The value of the `id` attribute must be unique within the HTML document. The `id` attribute is used to identify the element when linking (using a fragment identifier), scripting, or styling (with CSS).
+Το χαρακτηριστικό `id` καθορίζει ένα μοναδικό αναγνωριστικό για ένα στοιχείο HTML. Η τιμή του χαρακτηριστικού `id` πρέπει να είναι μοναδική εντός του εγγράφου HTML. Το χαρακτηριστικό `id` χρησιμοποιείται για την αναγνώριση του στοιχείου κατά τη σύνδεση (με χρήση αναγνωριστικού τμήματος), τη δημιουργία σεναρίων ή τη διαμόρφωση (με CSS).
 
-There are some tags, which usually have some attributes. For example, the `<a>` tag is used to create a hyperlink, and it usually has an `href` attribute, which specifies the URL of the page the link goes to. The `<img>` tag is used to display an image, and it usually has an `src` attribute, which specifies the URL of the image to be displayed. For `img` tag the `alt` attribute is also usually used, which specifies an alternate text for an image, if the image cannot be displayed.
+Υπάρχουν κάποιες ετικέτες, οι οποίες συνήθως έχουν κάποια χαρακτηριστικά. Για παράδειγμα, η ετικέτα «<a>» χρησιμοποιείται για τη δημιουργία μιας υπερσύνδεσης και συνήθως έχει ένα χαρακτηριστικό `href`, το οποίο καθορίζει τη διεύθυνση URL της σελίδας στην οποία πηγαίνει ο σύνδεσμος. Η ετικέτα `<img>` χρησιμοποιείται για την εμφάνιση μιας εικόνας και συνήθως έχει ένα χαρακτηριστικό `src`, το οποίο καθορίζει τη διεύθυνση URL της εικόνας που θα εμφανίζεται. Για την ετικέτα `img` συνήθως χρησιμοποιείται επίσης το χαρακτηριστικό `alt`, το οποίο καθορίζει ένα εναλλακτικό κείμενο για μια εικόνα, εάν η εικόνα δεν μπορεί να εμφανιστεί.
 
 ```html
 <a href="https://www.google.com/">Google</a>
 <img src="https://www.example.com/image.png" alt="Alternate text">
 ```
 
-Most common HTML attributes can be found [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes).
+Τα πιο συνηθισμένα χαρακτηριστικά HTML μπορείτε να τα βρείτε [εδώ](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes).
 
-## HTML Document Structure
+## Δομή εγγράφου HTML
 
-An HTML document is a file containing HTML code. An HTML document is made up of the following parts:
+Ένα έγγραφο HTML είναι ένα αρχείο που περιέχει κώδικα HTML. Ένα έγγραφο HTML αποτελείται από τα ακόλουθα μέρη:
 
-- HTML document declaration;
-- HTML document root element;
-- HTML document head;
-- HTML document body.
+- Δήλωση εγγράφου HTML,
+- Στοιχείο ρίζας εγγράφου HTML,
+- Κεφαλή εγγράφου HTML,
+- Σώμα εγγράφου HTML.
 
 The HTML document declaration is the first line of the HTML document. It tells the browser that the document is an HTML document. The HTML document declaration is not an HTML tag. It is an instruction to the browser. The HTML document declaration is written like this:
 
