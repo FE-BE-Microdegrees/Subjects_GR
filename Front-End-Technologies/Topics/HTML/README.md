@@ -138,12 +138,12 @@ HTML σημαίνει Hyper Text Markup Language. Η γλώσσα σήμανση
 
 ## Χαρακτηριστικά HTML
 
-Τα χαρακτηριστικά HTML είναι ειδικές λέξεις που χρησιμοποιούνται μέσα στην ετικέτα start για τον έλεγχο της συμπεριφοράς του στοιχείου. Τα χαρακτηριστικά HTML χρησιμοποιούνται για την παροχή πρόσθετων πληροφοριών σχετικά με τα στοιχεία HTML. Τα χαρακτηριστικά HTML καθορίζονται πάντα στην ετικέτα start. Τα χαρακτηριστικά HTML εμφανίζονται σε ζεύγη ονόματος/τιμής όπως: `name="value"`.
+Τα χαρακτηριστικά HTML είναι ειδικές λέξεις που χρησιμοποιούνται μέσα στην ετικέτα start για τον έλεγχο της συμπεριφοράς του στοιχείου. Τα χαρακτηριστικά HTML χρησιμοποιούνται για την παροχή πρόσθετων πληροφοριών σχετικά με τα στοιχεία HTML. Τα χαρακτηριστικά HTML καθορίζονται πάντα στην ετικέτα start. Τα χαρακτηριστικά HTML εμφανίζονται σε ζεύγη ονόματος/τιμής όπως: `name="τιμή"`.
 
-For example, the following HTML code defines a first level heading with an id attribute:
+Για παράδειγμα, ο ακόλουθος κώδικας HTML ορίζει μια επικεφαλίδα πρώτου επιπέδου με ένα χαρακτηριστικό id:
 
 ```html
-<h1 id="heading">This is a heading</h1>
+<h1 id="επικεφαλίδα">Αυτή είναι μια επικεφαλίδα</h1>
 ```
 
 The `id` attribute specifies a unique id for an HTML element. The value of the `id` attribute must be unique within the HTML document. The `id` attribute is used to identify the element when linking (using a fragment identifier), scripting, or styling (with CSS).
