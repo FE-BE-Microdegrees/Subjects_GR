@@ -95,44 +95,44 @@ HTML σημαίνει Hyper Text Markup Language. Η γλώσσα σήμανση
 
 ```html
 <h1>Αυτή είναι μια επικεφαλίδα.</h1>
-<p>TΑυτή είναι μια παράγραφος.
+<p>Αυτή είναι μια παράγραφος.
   <a href="https://www.google.com/">Google</a>
 </p>
 ```
-Nesting HTML elements is very common. For example, the `<body>` element contains all the contents of an HTML document, and the `<head>` element contains all the metadata of an HTML document. Nesting is also used to group elements together. For example, the `<ul>` element contains all the list items (`<li>` elements) of an unordered list (`<ul>` element). For example:
+Η ένθεση στοιχείων HTML είναι πολύ συνηθισμένη. Για παράδειγμα, το στοιχείο `<body>` περιέχει όλα τα περιεχόμενα ενός εγγράφου HTML και το στοιχείο `<head>` περιέχει όλα τα μεταδεδομένα ενός εγγράφου HTML. Η ένθεση χρησιμοποιείται επίσης για την ομαδοποίηση στοιχείων μαζί. Για παράδειγμα, το στοιχείο `<ul>` περιέχει όλα τα στοιχεία λίστας (στοιχεία `<li>`) μιας μη ταξινομημένης λίστας (στοιχείο `<ul>`). Για παράδειγμα:
 
 ```html
 <ul>
-  <li>Item 1</li>
-  <li>Item 2</li>
+  <li>Στοιχείο 1</li>
+  <li>Στοιχείο 2</li>
 </ul>
 
 <ol>
-  <li>Item 1</li>
-  <li>Item 2</li>
+  <li>Στοιχείο 1</li>
+  <li>Στοιχείο 2</li>
 </ol>
 ```
 
-Other example of nested HTML elements would be a table. A table contains rows (`<tr>` elements). First row of the table contains table headings (`<th>` elements), and other rows contain table cells (`<td>` elements). For example:
+Ένα άλλο παράδειγμα ένθετων στοιχείων HTML θα ήταν ένας πίνακας. Ένας πίνακας περιέχει γραμμές (στοιχεία `<tr>`). Η πρώτη γραμμή του πίνακα περιέχει επικεφαλίδες πίνακα (στοιχεία `<th>`) και οι υπόλοιπες γραμμές περιέχουν κελιά πίνακα (στοιχεία `<td>`). Για παράδειγμα:
 
 ```html
 <table>
   <tr>
-    <th>Header 1</th>
-    <th>Header 2</th>
+    <th>Επικεφαλίδα 1</th>
+    <th>Επικεφαλίδα 2</th>
   </tr>
   <tr>
-    <td>Cell 1</td>
-    <td>Cell 2</td>
+    <td>Κελί 1</td>
+    <td>Κελί 2</td>
   </tr>
   <tr>
-    <td>Cell 3</td>
-    <td>Cell 4</td>
+    <td>Κελί 3</td>
+    <td>Κελί 4</td>
   </tr>
 </table>
 ```
 
-Table example would be displayed in Google Chrome as:
+Το παράδειγμα πίνακα θα εμφανιζόταν στο Google Chrome ως εξής:
 
 ![Table](Table.png)
 
