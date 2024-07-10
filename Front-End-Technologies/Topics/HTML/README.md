@@ -7,7 +7,7 @@
   - [Βασικά στοιχεία HTML](#Βασικά-στοιχεία-HTML)
   - [HTML Tags](#html-tags)
   - [Στοιχεία HTML](#Στοιχεία-HTML)
-  - [Nested HTML Elements](#nested-html-elements)
+  - [Ενσωματωμένα στοιχεία HTML](#Ενσωματωμένα-στοιχεία-HTML)
   - [HTML Attributes](#html-attributes)
   - [HTML Document Structure](#html-document-structure)
   - [HTML Document Metadata](#html-document-metadata)
@@ -87,15 +87,15 @@ HTML σημαίνει Hyper Text Markup Language. Η γλώσσα σήμανση
 Τα προγράμματα περιήγησης δεν εμφανίζουν τις ετικέτες HTML, αλλά τις χρησιμοποιούν για να αποδώσουν το περιεχόμενο της σελίδας. Στο Google Chrome αυτός ο κώδικας θα εμφανιστεί ως εξής:
 ![HeadingAndParagraph](HeadingAndParagraph.png)
 
-As you can see, the `<h1>` tag makes the text bigger and bold, and the `<p>` tag adds some space above and below the paragraph.
+Όπως μπορείτε να δείτε, η ετικέτα `<h1>` κάνει το κείμενο μεγαλύτερο και έντονο, και η ετικέτα `<p>` προσθέτει λίγο χώρο πάνω και κάτω από την παράγραφο.
 
-## Nested HTML Elements
+## Ενσωματωμένα στοιχεία HTML
 
-HTML elements can be nested (elements can contain elements). Most HTML elements can be nested (except for some HTML elements, like `<br>` tag). For example, the following HTML code defines a first level heading and paragraph element, and the paragraph element contains a link element:
+Τα στοιχεία HTML μπορούν να είναι ένθετα (τα στοιχεία μπορεί να περιέχουν στοιχεία). Τα περισσότερα στοιχεία HTML μπορούν να είναι ένθετα (εκτός από ορισμένα στοιχεία HTML, όπως η ετικέτα `<br>`. Για παράδειγμα, ο ακόλουθος κώδικας HTML ορίζει μια επικεφαλίδα και ένα στοιχείο παραγράφου πρώτου επιπέδου και το στοιχείο παραγράφου περιέχει ένα στοιχείο σύνδεσης:
 
 ```html
-<h1>This is a heading</h1>
-<p>This is a paragraph.
+<h1>Αυτή είναι μια επικεφαλίδα.</h1>
+<p>TΑυτή είναι μια παράγραφος.
   <a href="https://www.google.com/">Google</a>
 </p>
 ```
