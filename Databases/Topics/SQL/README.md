@@ -1,6 +1,6 @@
-# SQL - (Structured Query Language)
+# SQL - (Δομημένη γλώσσα ερωτήσεων)
 
-In this topic, we'll learn about Structured Query Language (SQL).
+Σε αυτό το θέμα, θα μάθουμε για τη Δομημένη Γλώσσα Ερωτήσεων (SQL).
 
 - [SQL - (Structured Query Language)](#sql---structured-query-language)
   - [Learning Outcomes](#learning-outcomes)
