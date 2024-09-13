@@ -3,47 +3,47 @@
 Σε αυτήν τη θεματική ενότητα, θα μάθουμε για τη Δομημένη Γλώσσα Ερωτήσεων (Structured Query Language) (SQL).
 
 - [SQL - (Δομημένη γλώσσα ερωτήσεων)](#sql---structured-query-language)
-  - [Learning Outcomes](#learning-outcomes)
-  - [What is SQL?](#what-is-sql)
-  - [History of SQL](#history-of-sql)
-  - [Advantages of SQL](#advantages-of-sql)
-  - [Disadvantages of SQL](#disadvantages-of-sql)
-  - [How to run SQL?](#how-to-run-sql)
+  - [Μαθησιακά αποτελέσματα](#Μαθησιακά-αποτελέσματα)
+  - [Τι είναι η SQL;](#Τι-είναι-η-SQL)
+  - [Ιστορία της SQL](#Ιστορία-της-SQL)
+  - [Πλεονεκτήματα της SQL](#Πλεονεκτήματα-της-SQL)
+  - [Μειονεκτήματα της SQL](#Μειονεκτήματα-τη-SQL)
+  - [Πώς να εκτελέσετε την SQL;](#Πώς-να-εκτελέσετε-την-SQL;)
 
 
-## Learning Outcomes
+## Μαθησιακά αποτελέσματα
 
-After completing this topic, you'll be able to:
+Αφού ολοκληρώσετε αυτό τη θεματική ενότητα, θα είστε σε θέση να:
 
 
-## What is SQL?
+## Τι είναι η SQL;
 
-SQL is a declarative language that is used to manage data in relational databases. It is used to create, read, update, and delete data in relational databases. It is also used to create and modify the structure of relational databases. SQL is a declarative language, that means that we don't need to specify how to do something, we only need to specify what to do. SQL is a standard language for accessing and manipulating data in relational databases.
+Η SQL είναι μια δηλωτική γλώσσα που χρησιμοποιείται για τη διαχείριση δεδομένων σε σχεσιακές βάσεις δεδομένων. Χρησιμοποιείται για τη δημιουργία, ανάγνωση, ενημέρωση και διαγραφή δεδομένων σε σχεσιακές βάσεις δεδομένων. Χρησιμοποιείται επίσης για τη δημιουργία και την τροποποίηση της δομής των σχεσιακών βάσεων δεδομένων. Η SQL είναι μια δηλωτική γλώσσα, αυτό σημαίνει ότι δεν χρειάζεται να καθορίσουμε πώς να κάνουμε κάτι, αλλά μόνο τι να κάνουμε. Η SQL είναι μια τυπική γλώσσα για την πρόσβαση και τον χειρισμό δεδομένων σε σχεσιακές βάσεις δεδομένων.
 
-Relational databases are databases that store data in tables. Each table has a name and consists of rows and columns. Each row in a table represents a record and each column in a table represents a field. Each record in a table has (usually, but not always) a unique identifier called a primary key. The primary key is used to identify a record in a table. Each field in a table has a data type. The data type of a field determines what kind of data can be stored in that field. For example, if a field has a data type of `int`, it can only store integers. If a field has a data type of `varchar`, it can store any kind of data.
+Οι σχεσιακές βάσεις δεδομένων είναι βάσεις δεδομένων που αποθηκεύουν δεδομένα σε πίνακες. Κάθε πίνακας έχει ένα όνομα και αποτελείται από γραμμές και στήλες. Κάθε γραμμή σε έναν πίνακα αντιπροσωπεύει μια εγγραφή και κάθε στήλη σε έναν πίνακα αντιπροσωπεύει ένα πεδίο. Κάθε εγγραφή σε έναν πίνακα έχει (συνήθως, αλλά όχι πάντα) ένα μοναδικό αναγνωριστικό που ονομάζεται πρωτεύον κλειδί. Το πρωτεύον κλειδί χρησιμοποιείται για την ταυτοποίηση μιας εγγραφής σε έναν πίνακα. Κάθε πεδίο σε έναν πίνακα έχει έναν τύπο δεδομένων. Ο τύπος δεδομένων ενός πεδίου καθορίζει τι είδους δεδομένα μπορούν να αποθηκευτούν σε αυτό το πεδίο. Για παράδειγμα, εάν ένα πεδίο έχει τύπο δεδομένων `int`, μπορεί να αποθηκεύσει μόνο ακέραιους αριθμούς. Εάν ένα πεδίο έχει τύπο δεδομένων `varchar`, μπορεί να αποθηκεύσει οποιοδήποτε είδος δεδομένων.
 
-## History of SQL
+## Ιστορία της SQL
 
-SQL was developed by IBM in the 1970s. It was originally called SEQUEL (Structured English Query Language). It was later renamed to SQL (Structured Query Language). SQL was first standardized in 1986 by ANSI (American National Standards Institute). It was later standardized by ISO (International Organization for Standardization) in 1987. SQL has been revised several times since then. The latest version of SQL is SQL:2016.
+Η SQL αναπτύχθηκε από την IBM τη δεκαετία του 1970. Αρχικά ονομαζόταν SEQUEL (Structured English Query Language-Δομημένη Αγγλική γλώσσα ερωτήσεων). Αργότερα μετονομάστηκε σε SQL (Δομημένη γλώσσα ερωτήσεων). Η SQL τυποποιήθηκε για πρώτη φορά το 1986 από το ANSI (American National Standards Institute-Αμερικανικό Ινστιτούτο Εθνικών Προτύπων). Αργότερα τυποποιήθηκε από τον ISO (Διεθνής Οργανισμός Τυποποίησης) το 1987. Η SQL έχει αναθεωρηθεί αρκετές φορές από τότε. Η τελευταία έκδοση της SQL είναι η SQL:2016.
 
-## Advantages of SQL
-
-TODO
-
-## Disadvantages of SQL
+## Πλεονεκτήματα της SQL
 
 TODO
 
-## How to run SQL?
+## Μειονεκτήματα της SQL
 
-We can run SQL in a database management system (DBMS). A DBMS is a software application that is used to manage data in a database. There are many different DBMSs available, including `MySQL`, `PostgreSQL`, `Oracle`, `Microsoft SQL Server`, and `SQLite`. We can use any of these DBMSs to run SQL.
+TODO
 
-In this course we'll use `MySQL` as our DBMS. MySQL is an open-source relational database management system (RDBMS) that is developed by Oracle Corporation. It is one of the most popular RDBMSs in the world. It is used by many companies, including `Facebook`, `Twitter`, and `Google`.
+## Πώς να εκτελέσετε την SQL;
 
-There are many different ways to run SQL in MySQL. For example, we can use:
-- MySQL command-line client;
-- MySQL Workbench;
-- MySQL Connector/ODBC;
-- etc.
+Μπορούμε να εκτελέσουμε την SQL σε ένα σύστημα διαχείρισης βάσεων δεδομένων (DBMS-ΣΔΒΔ). Ένα ΣΔΒΔ είναι μια εφαρμογή λογισμικού που χρησιμοποιείται για τη διαχείριση δεδομένων σε μια βάση δεδομένων. Υπάρχουν πολλά διαφορετικά διαθέσιμα ΣΔΒΔ, όπως η `MySQL`, η `PostgreSQL`, η `Oracle`, ο `Microsoft SQL Server` και η `SQLite`. Μπορούμε να χρησιμοποιήσουμε οποιοδήποτε από αυτά τα DBMS για να εκτελέσουμε SQL.
 
-During this course, we'll use MySQL Workbench to run SQL. MySQL Workbench is a graphical user interface (GUI) tool that is used to manage MySQL databases. It is available for Windows, Mac, and Linux.
+Σε αυτό το μάθημα θα χρησιμοποιήσουμε τη `MySQL` ως το DBMS μας. Η MySQL είναι ένα σύστημα διαχείρισης σχεσιακών βάσεων δεδομένων (ΣΔΣΒΔ-RDBMS) ανοικτού κώδικα που αναπτύσσεται από την Oracle Corporation. Είναι ένα από τα πιο δημοφιλή RDBMS στον κόσμο. Χρησιμοποιείται από πολλές εταιρείες, συμπεριλαμβανομένων των `Facebook`, `Twitter` και `Google`.
+
+Υπάρχουν πολλοί διαφορετικοί τρόποι εκτέλεσης της SQL στη MySQL. Για παράδειγμα, μπορούμε να χρησιμοποιήσουμε:
+- Τον πελάτη γραμμής εντολών της MySQL,
+- MySQL Workbench,
+- MySQL Connector/ODBC,
+- κ.λπ.
+
+Κατά τη διάρκεια αυτού του μαθήματος, θα χρησιμοποιήσουμε το MySQL Workbench για την εκτέλεση της SQL. Το MySQL Workbench είναι ένα εργαλείο γραφικής διεπαφής χρήστη (GUI) που χρησιμοποιείται για τη διαχείριση των βάσεων δεδομένων MySQL. Είναι διαθέσιμο για Windows, Mac και Linux.
