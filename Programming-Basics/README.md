@@ -28,117 +28,118 @@
 
 ## Θεματικές ενότητες
 - [Εισαγωγή](./Topics/Introduction/README.md)
-- [Tools](./Topics/Tools/README.md)
+- [Εργαλεία](./Topics/Tools/README.md)
 - [Javascript](./Topics/Javascript/README.md)
 - [Node.JS](./Topics/NodeJS/README.md)
 - [Hello World](./Topics/HelloWorld/README.md)
-- [Algorithms](./Topics/Algorithms/README.md)
-- [Variables](./Topics/Variables/README.md)
-- [Data Types](./Topics/Data-Types/README.md)
-- [Operators and Expressions](./Topics/Operators/README.md)
-- [Debugging](./Topics/Debugging/README.md)
-- [Conditionals](./Topics/Conditionals/README.md)
-- [Loops](./Topics/Loops/README.md)
-- [Functions](./Topics/Functions/README.md)
-- [Data Structures](./Topics/Data-Structures/README.md)
-- [Modules](./Topics/Modules/README.md)
+- [Αλγόριθμοι](./Topics/Algorithms/README.md)
+- [Μεταβλητές](./Topics/Variables/README.md)
+- [Τύποι δεδομένων](./Topics/Data-Types/README.md)
+- [Τελεστές και εκφράσεις](./Topics/Operators/README.md)
+- [Αποσφαλμάτωση](./Topics/Debugging/README.md)
+- [Συνθήκες](./Topics/Conditionals/README.md)
+- [Βρόχοι](./Topics/Loops/README.md)
+- [Συναρτήσεις](./Topics/Functions/README.md)
+- [Δομές δεδομένων](./Topics/Data-Structures/README.md)
+- [Ενότητες](./Topics/Modules/README.md)
 - [NPM](./Topics/NPM/README.md)
 
-## Lectures
+## Διαλέξεις
 
-### Lecture 1: Introduction to Programming Basics
+### Διάλεξη 1: Εισαγωγή στα βασικά του προγραμματισμού
 
-Volume: 4h
+Διάρκεια: 4h
 
-- Introduction to subject
-- Tools
+- Εισαγωγή στο θέμα
+- Εργαλεία
 - Javascript
-- Node
+- Κόμβος
 - Hello World
-- Algorithms
-- Variables
-- Data Types
-- Uploading Code to Github
-- Exercises
+- Αλγόριθμοι
+- Μεταβλητές
+- Τύποι δεδομένων
+- Ανέβασμα κώδικα στο Github
+- Ασκήσεις
 
-### Lecture 2 (Zoom):
+### Διάλεξη 2 (Zoom):
 
-Volume: 2h
+Διάρκεια: 2h
 
-- Recall of previous lecture
-- Solving problems that arose during the homework
-- Uploading Code to Github
-- Exercises
+- Ανάκληση προηγούμενης διάλεξης
+- Επίλυση προβλημάτων που προέκυψαν κατά την κατ' οίκον εργασία
+- Ανέβασμα κώδικα στο Github
+- Ασκήσεις
 
-### Lecture 3:
+### Διάλεξη 3:
 
-Volume: 4h
+Διάρκεια: 4h
 
-- Recall of previous lecture
-- Solving problems that arose during the homework
-- Operators and Expressions
-- Exercises
+- Ανάκληση προηγούμενης διάλεξης
+- Επίλυση προβλημάτων που προέκυψαν κατά την κατ' οίκον εργασία
+- Τελεστές και εκφράσεις
+- Ασκήσεις
 
-### Lecture 4 (Zoom): 
+### Διάλεξη 4 (Zoom): 
 
-Volume: 2h
+Διάρκεια: 2h
 
-- Recall of previous lecture
-- Solving problems that arose during the homework
-- Exercises
+- Ανάκληση προηγούμενης διάλεξης
+- Επίλυση προβλημάτων που προέκυψαν κατά την κατ' οίκον εργασία
+- Ασκήσεις
 
 
-### Lecture 5: 
+### Διάλεξη 5: 
 
-Volume: 4h
+Διάρκεια: 4h
 
-- Recall of previous lecture
-- Solving problems that arose during the homework
-- Debugging
-- Conditionals
-- Exercises
+- Ανάκληση προηγούμενης διάλεξης
+- Επίλυση προβλημάτων που προέκυψαν κατά την κατ' οίκον εργασία
+- Αποσφαλμάτωση
+- Συνθήκες
+- Ασκήσεις
+- 
+### Διάλεξη 6 (Zoom):
 
-### Lecture 6 (Zoom):
+Διάρκεια: 2h
 
-Volume: 2h
+- Ανάκληση προηγούμενης διάλεξης
+- Επίλυση προβλημάτων που προέκυψαν κατά την κατ' οίκον εργασία
+- Ασκήσεις
 
-- Recall of previous lecture
-- Solving problems that arose during the homework
-- Exercises
+### Διάλεξη 7: 
 
-### Lecture 7: 
+Διάρκεια: 4h
 
-Volume: 4h
+- Ανάκληση προηγούμενης διάλεξης
+- Επίλυση προβλημάτων που προέκυψαν κατά την κατ' οίκον εργασία
+- Βρόχοι
+- Συναρτήσεις
+- Ασκήσεις
+  
+### Διάλεξη 8 (Zoom):
 
-- Recall of previous lecture
-- Solving problems that arose during the homework
-- Loops
-- Functions
-- Exercises
+Διάρκεια: 2h
 
-### Lecture 8 (Zoom):
+- Ανάκληση προηγούμενης διάλεξης
+- Επίλυση προβλημάτων που προέκυψαν κατά την κατ' οίκον εργασία
+- Ασκήσεις
 
-Volume: 2h
 
-- Recall of previous lecture
-- Solving problems that arose during the homework
-- Exercises
+### Διάλεξη 9: 
 
-### Lecture 9: 
+Διάρκεια: 4h
 
-Volume: 4h
+- Ανάκληση προηγούμενης διάλεξης
+- Επίλυση προβλημάτων που προέκυψαν κατά την κατ' οίκον εργασία
+- Δομές δεδομένων
+- Ενότητες
+- Ασκήσεις
 
-- Recall of previous lecture
-- Solving problems that arose during the homework
-- Data Structures
-- Modules
-- Exercises
+### Διάλεξη 10 (Zoom):
 
-### Lecture 10 (Zoom):
+Διάρκεια: 2h
 
-Volume: 2h
-
-- Recall of previous lecture
-- Solving problems that arose during the homework
+- Ανάκληση προηγούμενης διάλεξης
+- Επίλυση προβλημάτων που προέκυψαν κατά την κατ' οίκον εργασία
 - NPM
-- Final Q&A
+- Τελικές ερωτήσεις και απαντήσεις
