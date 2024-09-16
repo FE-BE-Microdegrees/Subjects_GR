@@ -1,55 +1,55 @@
-# Javascript in Browser
+# Javascript στο πρόγραμμα περιήγησης
 
-In this topic we'll learn about Javascript in browser and how to include Javascript in HTML files.
+Σε αυτό το θέμα θα μάθουμε για τη Javascript στο πρόγραμμα περιήγησης και πώς να συμπεριλάβετε τη Javascript σε αρχεία HTML.
 
-- [Javascript in Browser](#javascript-in-browser)
-  - [Learning Outcomes](#learning-outcomes)
-  - [Difference between Node.js and Browser Javascript](#difference-between-nodejs-and-browser-javascript)
-  - [Including Javascript in HTML](#including-javascript-in-html)
-    - [Using `<script>` tag](#using-script-tag)
-    - [Using `src` attribute](#using-src-attribute)
-  - [Input and Output in Browser Javascript](#input-and-output-in-browser-javascript)
-    - [`prompt()` function](#prompt-function)
-    - [`alert()` function](#alert-function)
-  - [Exercises](#exercises)
-    - [Exercise 1: Basic User Greeting](#exercise-1-basic-user-greeting)
-    - [### Exercise 2: Simple Math Quiz](#-exercise-2-simple-math-quiz)
-    - [Exercise 3: Age Category Checker](#exercise-3-age-category-checker)
+- [Javascript στο πρόγραμμα περιήγησης](#Javascript-στο-πρόγραμμα-περιήγησης)
+  - [Μαθησιακά αποτελέσματα](#Μαθησιακά-αποτελέσματα)
+  - [Διαφορά μεταξύ Node.js και Javascript του προγράμματος περιήγησης](#Διαφορά-μεταξύ-Node.js-και-Javascript-του-προγράμματος-περιήγησης)
+  - [Συμπεριλαμβανομένης της Javascript στην HTML](#Συμπεριλαμβανομένης-της-Javascript-στην-HTML)
+    - [Χρήση της ετικέτας `<script>`](#Χρήση-της-ετικέτας-`<script>`)
+    - [Χρήση του χαρακτηριστικού `src`](#Χρήση-του-χαρακτηριστικού-`src`)
+  - [Είσοδος και έξοδος στο πρόγραμμα περιήγησης Javascript](#Είσοδος-και-έξοδος-στο-πρόγραμμα-περιήγησης-Javascript)
+    - [Συνάρτηση `prompt()`](#Συνάρτηση-`prompt()`)
+    - [Συνάρτηση `alert()`](#Συνάρτηση-`alert()`)
+  - [Ασκήσεις](#Ασκήσεις)
+    - [Άσκηση 1: Βασικός χαιρετισμός χρήστη](#Άσκηση-1-:-Βασικός-χαιρετισμός-χρήστη)
+    - [### Άσκηση 2: Απλό μαθηματικό κουίζ](#Άσκηση-2-:-Απλό-μαθηματικό-κουίζ)
+    - [Άσκηση 3: Έλεγχος ηλικιακής κατηγορίας](#Άσκηση-3-:-Έλεγχος-ηλικιακής-κατηγορίας)
 
 
-## Learning Outcomes
+## Μαθησιακά αποτελέσματα
 
-After completing this topic, you'll be able to:
+Αφού ολοκληρώσετε αυτό το θέμα, θα είστε σε θέση να:
 
-- Describe the difference between Node.js and browser Javascript.
-- Include Javascript in HTML.
-- Get user input and display output in browser Javascript.
-- Use `prompt()` and `alert()` functions.
+- Να περιγράψετε τη διαφορά μεταξύ του Node.js και της Javascript του προγράμματος περιήγησης.
+- Να συμπεριλαμβάνετε Javascript στην HTML.
+- Να λαμβάνετε την είσοδο του χρήστη και να εμφανίζετε την έξοδο σε Javascript του προγράμματος περιήγησης.
+- Να χρησιμοποιείτε τις συναρτήσεις `prompt()` και `alert()`.
 
-## Difference between Node.js and Browser Javascript
+## Διαφορά μεταξύ Node.js και Browser Javascript
 
-Main difference is that Node.js is a Javascript runtime environment, while browser Javascript is a Javascript engine. Javascript engine is a program that executes Javascript code. Javascript runtime environment is a program that executes Javascript code and provides additional features, such as access to the file system, network, etc.
+Η κύρια διαφορά είναι ότι το Node.js είναι ένα περιβάλλον εκτέλεσης της Javascript, ενώ η Javascript του προγράμματος περιήγησης είναι μια μηχανή Javascript. Η μηχανή Javascript είναι ένα πρόγραμμα που εκτελεί κώδικα Javascript. Το περιβάλλον εκτέλεσης Javascript είναι ένα πρόγραμμα που εκτελεί κώδικα Javascript και παρέχει πρόσθετες δυνατότητες, όπως πρόσβαση στο σύστημα αρχείων, στο δίκτυο κ.λπ.
 
-For example, Javascript in browser cannot access the file system, while Node.js can. Javascript in browser can access the DOM, while Node.js cannot.
+Για παράδειγμα, η Javascript στο πρόγραμμα περιήγησης δεν μπορεί να έχει πρόσβαση στο σύστημα αρχείων, ενώ το Node.js μπορεί. Η Javascript στο πρόγραμμα περιήγησης μπορεί να έχει πρόσβαση στο DOM, ενώ το Node.js όχι.
 
-There are different global objects in Node.js and browser Javascript. For example, `window` an `document` objects are available in browser Javascript, but not in Node.js. `process` object is available in Node.js, but not in browser Javascript.
+Υπάρχουν διαφορετικά παγκόσμια αντικείμενα στο Node.js και στη Javascript του προγράμματος περιήγησης. Για παράδειγμα, τα αντικείμενα `window` και `document` είναι διαθέσιμα στην Javascript του προγράμματος περιήγησης, αλλά όχι στο Node.js. Το αντικείμενο `process` είναι διαθέσιμο στο Node.js, αλλά όχι στο πρόγραμμα περιήγησης Javascript.
 
-- `window` object is the global object in browser Javascript. It represents the browser window. It has properties and methods that allow to access the browser window and its content.
-- `document` object is the global object in browser Javascript. It represents the DOM. It has properties and methods that allow to access the DOM and its content.
-- `process` object is the global object in Node.js. It has properties and methods that allow to access the Node.js process and its content.
+- Το αντικείμενο `window` είναι το παγκόσμιο αντικείμενο στο πρόγραμμα περιήγησης Javascript. Αντιπροσωπεύει το παράθυρο του προγράμματος περιήγησης. Διαθέτει ιδιότητες και μεθόδους που επιτρέπουν την πρόσβαση στο παράθυρο του προγράμματος περιήγησης και στο περιεχόμενό του.
+- Το αντικείμενο `document` είναι το παγκόσμιο αντικείμενο στη Javascript του προγράμματος περιήγησης. Αντιπροσωπεύει το DOM. Διαθέτει ιδιότητες και μεθόδους που επιτρέπουν την πρόσβαση στο DOM και το περιεχόμενό του.
+- Το αντικείμενο `process` είναι το παγκόσμιο αντικείμενο στο Node.js. Διαθέτει ιδιότητες και μεθόδους που επιτρέπουν την πρόσβαση στη διεργασία Node.js και στο περιεχόμενό της.
 
-Javascript syntax is the same in both environments.
+Η σύνταξη της Javascript είναι η ίδια και στα δύο περιβάλλοντα.
 
-## Including Javascript in HTML
+## Συμπεριλαμβάνοντας Javascript στην HTML
 
-Browsers can execute Javascript code that is included in HTML files. There are two ways to include Javascript code in HTML files:
+Οι φυλλομετρητές μπορούν να εκτελέσουν κώδικα Javascript που περιλαμβάνεται σε αρχεία HTML. Υπάρχουν δύο τρόποι για να συμπεριλάβετε κώδικα Javascript σε αρχεία HTML:
 
-- using `<script>` tag;
-- using `src` attribute.
+- χρησιμοποιώντας την ετικέτα `<script>`,
+- χρησιμοποιώντας το χαρακτηριστικό `src`.
 
-### Using `<script>` tag
+### Χρήση της ετικέτας `<script>`
 
-Javascript code can be included in HTML files using `<script>` tag. `<script>` tag can be placed in the `<head>` or `<body>` section of the HTML file. Javascript code that is included in the `<head>` section is executed before the HTML file is loaded. Javascript code that is included in the `<body>` section is executed after the HTML file is loaded.
+Ο κώδικας Javascript μπορεί να συμπεριληφθεί σε αρχεία HTML χρησιμοποιώντας την ετικέτα `<script>`. Η ετικέτα `<script>` μπορεί να τοποθετηθεί στην ενότητα `<head>` ή `<body>` του αρχείου HTML. Ο κώδικας Javascript που περιλαμβάνεται στο τμήμα `<head>` εκτελείται πριν από τη φόρτωση του αρχείου HTML. Ο κώδικας Javascript που περιλαμβάνεται στην ενότητα `<body>` εκτελείται μετά τη φόρτωση του αρχείου HTML.
 
 ```html
 <!DOCTYPE html>
@@ -66,12 +66,12 @@ Javascript code can be included in HTML files using `<script>` tag. `<script>` t
 </body>
 </html>
 ```
-> Note: in browser Javascript, we can see the output of `console.log()` in the browser console. To open the browser console, press `F12` or `Ctrl+Shift+I` in Chrome, Firefox, or Edge.
+> Σημείωση: στο πρόγραμμα περιήγησης Javascript, μπορούμε να δούμε την έξοδο της `console.log()` στην κονσόλα του προγράμματος περιήγησης. Για να ανοίξετε την κονσόλα του προγράμματος περιήγησης, πατήστε `F12` ή `Ctrl+Shift+I` στους Chrome, Firefox ή Edge.
 > ![Console](Console.png)
 
-### Using `src` attribute
+### Χρήση του χαρακτηριστικού `src`
 
-Javascript code can be included from external Javascript files using `src` attribute. `src` attribute can be used with `<script>` tag. Javascript code that is included using `src` attribute is executed after the HTML file is loaded.
+Ο κώδικας Javascript μπορεί να συμπεριληφθεί από εξωτερικά αρχεία Javascript χρησιμοποιώντας το χαρακτηριστικό `src`. Το χαρακτηριστικό `src` μπορεί να χρησιμοποιηθεί με την ετικέτα `<script>`. Ο κώδικας Javascript που περιλαμβάνεται με τη χρήση του χαρακτηριστικού `src` εκτελείται μετά τη φόρτωση του αρχείου HTML.
 
 ```html
 <!DOCTYPE html>
@@ -87,48 +87,48 @@ Javascript code can be included from external Javascript files using `src` attri
 </html>
 ```
 
-## Input and Output in Browser Javascript
+## Είσοδος και έξοδος στο πρόγραμμα περιήγησης Javascript
 
-There are several ways to get user input and display output in browser Javascript. Main interactions with the user are done using the DOM. Using DOM we can read and modify the content of HTML elements like different input elements, paragraphs, headings, etc. But for the first steps, we can use `prompt()` and `alert()` functions.
+Υπάρχουν διάφοροι τρόποι για να λαμβάνετε την είσοδο του χρήστη και να εμφανίζετε την έξοδο στο πρόγραμμα περιήγησης Javascript. Οι κύριες αλληλεπιδράσεις με τον χρήστη γίνονται με τη χρήση του DOM. Χρησιμοποιώντας το DOM μπορούμε να διαβάσουμε και να τροποποιήσουμε το περιεχόμενο των στοιχείων HTML, όπως διάφορα στοιχεία εισόδου, παραγράφους, επικεφαλίδες κ.λπ. Αλλά για τα πρώτα βήματα, μπορούμε να χρησιμοποιήσουμε τις συναρτήσεις `prompt()` και `alert()`.
 
-### `prompt()` function
+### Συνάρτηση `prompt()`
 
-`prompt()` function displays a dialog box that prompts the user for input. It takes one argument, which is the text to display in the dialog box. It returns the text that the user entered in the dialog box.
+Η συνάρτηση `prompt()` εμφανίζει ένα παράθυρο διαλόγου που ζητάει από τον χρήστη να εισάγει δεδομένα. Λαμβάνει ένα όρισμα, το οποίο είναι το κείμενο που θα εμφανιστεί στο πλαίσιο διαλόγου. Επιστρέφει το κείμενο που εισήγαγε ο χρήστης στο πλαίσιο διαλόγου.
 
 ```js
 let name = prompt('Enter your name:');
 console.log('Hello, ' + name + '!');
 ```
 
-### `alert()` function
+### Συνάρτηση `alert()`
 
-`alert()` function displays a dialog box that shows a message to the user. It takes one argument, which is the text to display in the dialog box.
+Η συνάρτηση `alert()` εμφανίζει ένα παράθυρο διαλόγου που εμφανίζει ένα μήνυμα στο χρήστη. Λαμβάνει ένα όρισμα, το οποίο είναι το κείμενο που θα εμφανιστεί στο πλαίσιο διαλόγου.
 
 ```js
 alert('Hello, world!');
 ```
 
-Usually we don't use `prompt()` and `alert()` functions in browser Javascript and we use the DOM instead. But they are useful for the first steps.
+Συνήθως δεν χρησιμοποιούμε τις συναρτήσεις `prompt()` και `alert()` στην Javascript του προγράμματος περιήγησης και χρησιμοποιούμε το DOM. Είναι όμως χρήσιμες για τα πρώτα βήματα.
 
-## Exercises
+## Ασκήσεις
 
-Write a Javascript code into a separate file and include it in an HTML file using `src` attribute.
+Γράψτε έναν κώδικα Javascript σε ένα ξεχωριστό αρχείο και συμπεριλάβετε τον σε ένα αρχείο HTML χρησιμοποιώντας το χαρακτηριστικό `src`.
 
-Try to solve exercises without looking at the solution. If you get stuck, you can look at the solution.
+Προσπαθήστε να λύσετε τις ασκήσεις χωρίς να κοιτάξετε τη λύση. Αν κολλήσετε, μπορείτε να δείτε τη λύση.
 
-Always test your code to see if it works as expected.
+Να δοκιμάζετε πάντα τον κώδικά σας για να δείτε αν λειτουργεί όπως αναμένεται.
 
-### Exercise 1: Basic User Greeting
+### Άσκηση 1: Βασικός χαιρετισμός χρήστη
 
-**Objective**: Prompt the user for their name and greet them with a personalized message.
+**Στόχος**: Ζητήστε από τον χρήστη το όνομά του και υποδεχτείτε τον με ένα εξατομικευμένο μήνυμα.
 
-**Description**: Write a JavaScript script that uses `prompt` to ask the user for their name. Then, use `alert` to display a greeting message that includes their name.
+**Περιγραφή**: Γράψτε ένα σενάριο JavaScript που χρησιμοποιεί το `prompt` για να ρωτήσει τον χρήστη για το όνομά του. Στη συνέχεια, χρησιμοποιήστε το `alert` για να εμφανίσετε ένα μήνυμα χαιρετισμού που περιλαμβάνει το όνομά του.
 
-**Expected Behavior**: The browser first displays a prompt for the user's name and then shows an alert with a greeting message using the provided name.
+**Αναμενόμενη συμπεριφορά**: Το πρόγραμμα περιήγησης εμφανίζει πρώτα μια προτροπή για το όνομα του χρήστη και στη συνέχεια εμφανίζει μια ειδοποίηση με ένα μήνυμα χαιρετισμού χρησιμοποιώντας το όνομα που δόθηκε.
 
 <details>
 
-<summary>Solution</summary>
+<summary>Λύση</summary>
 `app.js`:
 
 ```js
@@ -156,16 +156,17 @@ alert(`Hello, ${userName}!`);
 ![Prompt and Alert](PromptAndAlert.gif)
 </details>
 
-### ### Exercise 2: Simple Math Quiz
+### ### Άσκηση 2: Απλό μαθηματικό κουίζ
 
-**Objective**: Ask the user a basic math question and provide feedback based on their answer.
+**Στόχος**: Θέστε στο χρήστη μια βασική μαθηματική ερώτηση και δώστε ανατροφοδότηση με βάση την απάντησή του.
 
-**Description**: Use `prompt` to ask the user a simple math question (e.g., "What is 2 + 3?"). Check if the answer is correct. Use `alert` to give them appropriate feedback. If they are correct, display a congratulatory message; if incorrect, display the correct answer.
+**Περιγραφή**: Χρησιμοποιήστε το `prompt` για να θέσετε στο χρήστη μια απλή μαθηματική ερώτηση (π.χ., «Πόσο είναι 2 + 3;»). Ελέγξτε αν η απάντηση είναι σωστή. Χρησιμοποιήστε το `alert` για να του δώσετε την κατάλληλη ανατροφοδότηση. Αν είναι σωστός, εμφανίστε ένα συγχαρητήριο μήνυμα- αν είναι λανθασμένος, εμφανίστε τη σωστή απάντηση.
 
-**Expected Behavior**: The user is prompted to answer a math question and then receives feedback based on their response.
+**Αναμενόμενη συμπεριφορά**: Ο χρήστης καλείται να απαντήσει σε μια μαθηματική ερώτηση και στη συνέχεια λαμβάνει ανατροφοδότηση με βάση την απάντησή του.
+
 
 <details>
-<summary>Solution</summary>
+<summary>Λύση </summary>
 
 `app.js`:
 
@@ -181,7 +182,7 @@ if (parseInt(userAnswer) === 5) {
 }
 ```
 
-> Note: `parseInt()` function converts a string to an integer. For example, `parseInt('5')` returns `5`. We should use `parseInt()` function because `prompt()` function returns a string.
+> Σημείωση: Η συνάρτηση `parseInt()` μετατρέπει μια συμβολοσειρά σε ακέραιο αριθμό. Για παράδειγμα, η συνάρτηση `parseInt('5')` επιστρέφει `5`. Θα πρέπει να χρησιμοποιήσουμε τη συνάρτηση `parseInt()` επειδή η συνάρτηση `prompt()` επιστρέφει μια συμβολοσειρά.
 
 `index.html`:
 
@@ -199,10 +200,10 @@ if (parseInt(userAnswer) === 5) {
 ```
 </details>
 
-### Exercise 3: Age Category Checker
+### Άσκηση 3: Έλεγχος ηλικιακής κατηγορίας
 
-**Objective**: Determine the user's age category based on the age they enter.
+**Στόχος**: Καθορίστε την ηλικιακή κατηγορία του χρήστη με βάση την ηλικία που εισάγει.
 
-**Description**: Use `prompt` to ask the user for their age. Depending on the age they enter, use `alert` to inform them of their age category (e.g., child, teenager, adult).
+**Περιγραφή**:Χρησιμοποιήστε το `prompt` για να ρωτήσετε τον χρήστη για την ηλικία του. Ανάλογα με την ηλικία που εισάγει, χρησιμοποιήστε το `alert` για να τον ενημερώσετε για την ηλικιακή του κατηγορία (π.χ. παιδί, έφηβος, ενήλικας).
 
-**Expected Behavior**: The user is asked for their age and receives an alert indicating their age category.
+**Αναμενόμενη συμπεριφορά**: Ο χρήστης ερωτάται για την ηλικία του και λαμβάνει μια ειδοποίηση που υποδεικνύει την ηλικιακή του κατηγορία.
