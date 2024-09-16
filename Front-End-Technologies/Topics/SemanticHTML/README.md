@@ -1,51 +1,51 @@
-# Semantic HTML
+# Σημασιολογική HTML
 
-In this topic, you'll learn about semantic HTML and why it's important to use it when building webpages.
+Σε αυτό το θέμα, θα μάθετε για τη σημασιολογική HTML και γιατί είναι σημαντικό να τη χρησιμοποιείτε κατά την κατασκευή ιστοσελίδων.
 
-## Learning Outcomes
+## Μαθησιακά αποτελέσματα
 
-After completing this topic, you'll be able to:
+Αφού ολοκληρώσετε αυτό το θέμα, θα είστε σε θέση να:
 
-## What is Semantic HTML?
+## Τι είναι η Σημασιολογική HTML;
 
-Semantic HTML refers to the use of HTML markup to reinforce the semantics, or meaning, of the content. In other words, it's about using HTML tags that describe their purpose and the type of content they enclose, not just how they should appear on the page. For example, `<article>`, `<footer>`, `<header>`, `<nav>`, and `<section>` are semantic elements that clearly describe the role or meaning of the content they contain.
+Η σημασιολογική HTML αναφέρεται στη χρήση της σήμανσης HTML για την ενίσχυση της σημασιολογίας ή του νοήματος του περιεχομένου. Με άλλα λόγια, πρόκειται για τη χρήση ετικετών HTML που περιγράφουν το σκοπό τους και τον τύπο του περιεχομένου που περικλείουν, όχι μόνο το πώς πρέπει να εμφανίζονται στη σελίδα. Για παράδειγμα, τα `<article>`, `<footer>`, `<header>`, `<nav>` και `<section>` είναι σημασιολογικά στοιχεία που περιγράφουν σαφώς το ρόλο ή το νόημα του περιεχομένου που περιέχουν.
 
-## Why Use Semantic HTML?
+## Γιατί να χρησιμοποιήσετε Σημασιολογική HTML;
 
-- **Accessibility**: Screen readers and other assistive technologies rely on semantic HTML to provide a better experience for users with disabilities. For instance, screen readers can navigate a webpage more effectively when the content is properly marked up with semantic tags.
-- **SEO Benefits**: Search engines prefer websites that have clear, descriptive, semantic markup. It makes it easier for them to understand the content of the page, which can lead to better search rankings.
-- **Maintainability and Readability**: Semantic HTML makes the structure of a webpage clearer, thus making it easier for developers to understand, maintain, and update the code.
-- **Cross-Device Compatibility**: Properly structured content using semantic HTML is more likely to be consistently rendered across different devices and browsers.
+- **Προσβασιμότητα**: Τα προγράμματα ανάγνωσης οθόνης και άλλες βοηθητικές τεχνολογίες βασίζονται σε σημασιολογικό HTML για να παρέχουν καλύτερη εμπειρία στους χρήστες με αναπηρίες. Για παράδειγμα, οι αναγνώστες οθόνης μπορούν να πλοηγηθούν σε μια ιστοσελίδα πιο αποτελεσματικά όταν το περιεχόμενο είναι σωστά επισημασμένο με σημασιολογικές ετικέτες.
+- **Οφέλη SEO**: Οι μηχανές αναζήτησης προτιμούν ιστότοπους που έχουν σαφή, περιγραφική, σημασιολογική σήμανση. Τους διευκολύνει να κατανοήσουν το περιεχόμενο της σελίδας, κάτι που μπορεί να οδηγήσει σε καλύτερη κατάταξη αναζήτησης.
+- **Διατηρησιμότητα και Αναγνωσιμότητα**: Η σημασιολογική HTML καθιστά τη δομή μιας ιστοσελίδας πιο ξεκάθαρη, διευκολύνοντας έτσι τους προγραμματιστές να κατανοήσουν, να διατηρήσουν και να ενημερώσουν τον κώδικα.
+- **Συμβατότητα μεταξύ συσκευών**: Το σωστά δομημένο περιεχόμενο που χρησιμοποιεί σημασιολογικό HTML είναι πιο πιθανό να αποδίδεται με συνέπεια σε διαφορετικές συσκευές και προγράμματα περιήγησης.
 
-## How to Use Semantic HTML
+## Τρόπος χρήσης Σημασιολογικού HTML
 
-Using semantic HTML involves choosing the most appropriate HTML elements to mark up the content on your webpage. Here are some examples:
+Η χρήση σημασιολογικού HTML περιλαμβάνει την επιλογή των καταλληλότερων στοιχείων HTML για τη σήμανση του περιεχομένου στην ιστοσελίδα σας. Ακολουθούν μερικά παραδείγματα:
 
-- **`<header>`**: Used for introductory content or a set of navigational links. It typically contains the site's logo, the main navigation menu, or the title of the current section.
+- **`<header>`**: Χρησιμοποιείται για εισαγωγικό περιεχόμενο ή για ένα σύνολο συνδέσμων πλοήγησης. Συνήθως περιέχει το λογότυπο του ιστότοπου, το κύριο μενού πλοήγησης ή τον τίτλο της τρέχουσας ενότητας.
 
-- **`<nav>`**: Designates a section of a page that links to other pages or to parts within the page. It's for primary navigation blocks.
+- **`<nav>`**: Προσδιορίζει ένα τμήμα μιας σελίδας που συνδέεται με άλλες σελίδες ή με τμήματα εντός της σελίδας. Είναι για κύρια μπλοκ πλοήγησης.
 
-- **`<article>`**: Specifies independent, self-contained content which could be independently distributed or reused (e.g., in syndication).
+- **`<article>`**: Καθορίζει ανεξάρτητο, αυτοτελές περιεχόμενο που θα μπορούσε να διανεμηθεί ή να επαναχρησιμοποιηθεί ανεξάρτητα (π.χ. σε διανομή).
 
-- **`<section>`**: Represents a standalone section of functionality or a thematic grouping of content.
+- **`<section>`**:Αντιπροσωπεύει μια αυτόνομη ενότητα λειτουργικότητας ή μια θεματική ομαδοποίηση περιεχομένου.
 
-- **`<footer>`**: Represents the footer of a document or section, typically containing authorship information, related documents, copyright, and contact information.
+- **`<footer>`**:Αντιπροσωπεύει το υποσέλιδο ενός εγγράφου ή ενότητας, που συνήθως περιέχει πληροφορίες συγγραφής, σχετικά έγγραφα, πνευματικά δικαιώματα και στοιχεία επικοινωνίας.
 
-- **`<aside>`**: Used for content tangentially related to the content around it, like a sidebar.
+- **`<aside>`**: Χρησιμοποιείται για περιεχόμενο που σχετίζεται εφαπτομενικά με το περιεχόμενο γύρω από αυτό, όπως μια πλαϊνή γραμμή.
 
-- **`<h1>` to `<h6>`**: Header tags used to define headings. `<h1>` represents the most important heading, while `<h6>` represents the least important.
+- **`<h1>` to `<h6>`**: Ετικέτες κεφαλίδων που χρησιμοποιούνται για τον ορισμό επικεφαλίδων. Το "<h1>" αντιπροσωπεύει την πιο σημαντική επικεφαλίδα, ενώ το "<h6>" αντιπροσωπεύει τη λιγότερο σημαντική.
 
-- **`<figure>` and `<figcaption>`**: Used for marking up diagrams, illustrations, photos, and code listings, along with their caption.
+- **`<figure>` and `<figcaption>`**: Χρησιμοποιείται για τη σήμανση διαγραμμάτων, εικονογραφήσεων, φωτογραφιών και καταχωρίσεων κωδικών, μαζί με τη λεζάντα τους.
 
-- **`<main>`**: Represents the dominant content of the body of a document, excluding footers, headers, navigation, and sidebars.
+- **`<main>`**: Αντιπροσωπεύει το κυρίαρχο περιεχόμενο του σώματος ενός εγγράφου, εξαιρουμένων των υποσέλιδων, των κεφαλίδων, της πλοήγησης και των πλευρικών γραμμών.
 
-- **`<mark>`**: Indicates text that is marked or highlighted for reference or notation purposes.
+- **`<mark>`**: Υποδεικνύει κείμενο που επισημαίνεται ή επισημαίνεται για λόγους αναφοράς ή σημειογραφίας.
 
-- **`<time>`**: Used to represent either a time on a 24-hour clock or a precise date in the Gregorian calendar (with optional time and timezone information).
+- **`<time>`**: Χρησιμοποιείται για να αναπαραστήσει είτε μια ώρα σε ένα 24ωρο ρολόι είτε μια ακριβή ημερομηνία στο Γρηγοριανό ημερολόγιο (με προαιρετικές πληροφορίες ώρας και ζώνης ώρας).
 
-- **`<details>` and `<summary>`**: Used to create a disclosure widget from which the user can obtain additional information or controls.
+- **`<details>` and `<summary>`**: Χρησιμοποιείται για τη δημιουργία ενός γραφικού στοιχείου αποκάλυψης από το οποίο ο χρήστης μπορεί να λάβει πρόσθετες πληροφορίες ή στοιχεία ελέγχου.
 
-By using semantic HTML, not only do you structure your content in a meaningful, logical way, but you also contribute to the accessibility and SEO-friendliness of your website. It’s a best practice that enhances the overall quality and effectiveness of your web content.
+Χρησιμοποιώντας σημασιολογικό HTML, όχι μόνο δομείτε το περιεχόμενό σας με ουσιαστικό, λογικό τρόπο, αλλά συμβάλλετε επίσης στην προσβασιμότητα και τη φιλικότητα προς το SEO του ιστότοπού σας. Είναι μια βέλτιστη πρακτική που ενισχύει τη συνολική ποιότητα και αποτελεσματικότητα του περιεχομένου σας στον ιστό.
 
-You can read more about semantic HTML in the [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Glossary/Semantics).
+Μπορείτε να διαβάσετε περισσότερα σχετικά με το σημασιολογικό HTML στα [Έγγραφα Ιστού MDN](https://developer.mozilla.org/en-US/docs/Glossary/Semantics).
 
