@@ -68,9 +68,9 @@
 
 ![Grid Container](GridContainer.png)
 
-### Grid Columns
+### Στήλες πλέγματος
 
-By default, the grid container will display the grid items in a single column. To create a grid with multiple columns, we need to define the number of columns in the grid container using the `grid-template-columns` property.
+Από προεπιλογή, ο περιέκτης πλέγματος θα εμφανίζει τα στοιχεία πλέγματος σε μία μόνο στήλη. Για να δημιουργήσουμε ένα πλέγμα με πολλαπλές στήλες, πρέπει να ορίσουμε τον αριθμό των στηλών στο δοχείο πλέγματος χρησιμοποιώντας την ιδιότητα `grid-template-columns`.
 
 ```css
 .container {
@@ -79,15 +79,15 @@ By default, the grid container will display the grid items in a single column. T
 }
 ```
 
-The `grid-template-columns` property defines the number of columns in the grid container, and the width of each column. In the example above, we have defined three columns, each with a width of 200 pixels.
+Η ιδιότητα `grid-template-columns` ορίζει τον αριθμό των στηλών στο δοχείο πλέγματος και το πλάτος κάθε στήλης. Στο παραπάνω παράδειγμα, έχουμε ορίσει τρεις στήλες, η καθεμία με πλάτος 200 pixels.
 
-Now our grid container looks like this:
+Τώρα το δοχείο πλέγματος μας έχει την εξής μορφή:
 
 ![Grid With Three Column](GridWithThreeColumn.png)
 
-As we can see, now we have three columns with fixed column widths. The columns are 200 pixels wide. If we add more grid items, they will be automatically placed in the next row.
+Όπως βλέπουμε, τώρα έχουμε τρεις στήλες με σταθερό πλάτος στήλης. Οι στήλες έχουν πλάτος 200 pixels. Αν προσθέσουμε περισσότερα στοιχεία πλέγματος, θα τοποθετηθούν αυτόματα στην επόμενη γραμμή.
 
-If we want dynamic column widths, we can use percentages or fractions of the available space instead of fixed widths. Fractions are specified using the `fr` unit. For example, if we want the columns to take up equal space, we can use `1fr` for each column.
+Αν θέλουμε δυναμικά πλάτη στηλών, μπορούμε να χρησιμοποιήσουμε ποσοστά ή κλάσματα του διαθέσιμου χώρου αντί για σταθερά πλάτη. Τα κλάσματα καθορίζονται χρησιμοποιώντας τη μονάδα `fr`. Για παράδειγμα, αν θέλουμε οι στήλες να καταλαμβάνουν ίσο χώρο, μπορούμε να χρησιμοποιήσουμε `1fr` για κάθε στήλη.
 
 ```css
 .container {
@@ -95,17 +95,17 @@ If we want dynamic column widths, we can use percentages or fractions of the ava
   grid-template-columns: 1fr 1fr 1fr;
 }
 ```
-Now our grid container looks like this:
+Τώρα το δοχείο πλέγματος μας μοιάζει με αυτό:
 
 ![Grid With Dynamic Columns](GridWithDynamicColumns.png)
 
-As we can see, now our columns take up all space in the grid container.
+Όπως βλέπουμε, τώρα οι στήλες μας καταλαμβάνουν όλο το χώρο στο δοχείο πλέγματος.
 
-Just to make things to look a bit more nice, we'll add some gap between the grid items. A gap is the space between the grid items. We can add gap between the grid items using the `gap` property.
+Για να κάνουμε τα πράγματα να φαίνονται λίγο πιο όμορφα, θα προσθέσουμε κάποιο κενό μεταξύ των στοιχείων του πλέγματος. Το κενό είναι ο χώρος μεταξύ των στοιχείων του πλέγματος. Μπορούμε να προσθέσουμε κενό μεταξύ των στοιχείων του πλέγματος χρησιμοποιώντας την ιδιότητα `gap`.
 
-Also lets make thing a bit more interesting by changing the columns to have different widths - lets make the first column 1fr, the second column 2fr, and the third column 1fr.
+Επίσης, ας κάνουμε τα πράγματα λίγο πιο ενδιαφέροντα αλλάζοντας τις στήλες ώστε να έχουν διαφορετικό πλάτος - ας κάνουμε την πρώτη στήλη 1fr, τη δεύτερη στήλη 2fr και την τρίτη στήλη 1fr.
 
-It means, the first column will take up 1/4 of the available space, the second column will take up 2/4 of the available space, and the third column will take up 1/4 of the available space.
+Αυτό σημαίνει ότι η πρώτη στήλη θα καταλαμβάνει το 1/4 του διαθέσιμου χώρου, η δεύτερη στήλη θα καταλαμβάνει τα 2/4 του διαθέσιμου χώρου και η τρίτη στήλη θα καταλαμβάνει το 1/4 του διαθέσιμου χώρου.
 
 ```css
 .container {
@@ -115,11 +115,11 @@ It means, the first column will take up 1/4 of the available space, the second c
 }
 ```
 
-Now our grid container looks like this:
+Τώρα το δοχείο πλέγματος μας μοιάζει με αυτό:
 
 ![Grid With Gaps](GridWithGaps.png)
 
-We can also mix fixed widths and dynamic widths. For example, if we want the first column to be 200 pixels wide, the second column to take up 1/4 of the available space, and the third column to take up 3/4 of the available space, we can do it like this:
+Μπορούμε επίσης να συνδυάσουμε σταθερά πλάτη και δυναμικά πλάτη. Για παράδειγμα, αν θέλουμε η πρώτη στήλη να έχει πλάτος 200 pixels, η δεύτερη στήλη να καταλαμβάνει το 1/4 του διαθέσιμου χώρου και η τρίτη στήλη να καταλαμβάνει τα 3/4 του διαθέσιμου χώρου, μπορούμε να το κάνουμε ως εξής:
 
 ```css
 .container {
@@ -128,15 +128,16 @@ We can also mix fixed widths and dynamic widths. For example, if we want the fir
   gap: 20px;
 }
 ```
-Now our grid has one fixed width column and two dynamic width columns. What makes things interesting is that the dynamic width columns will take up the available space after the fixed width column has been taken into account and if we resize the browser window, the dynamic width columns will resize accordingly.
+Τώρα το πλέγμα μας έχει μία στήλη σταθερού πλάτους και δύο στήλες δυναμικού πλάτους. Αυτό που κάνει τα πράγματα ενδιαφέροντα είναι ότι οι στήλες δυναμικού πλάτους θα καταλάβουν τον διαθέσιμο χώρο αφού ληφθεί υπόψη η στήλη σταθερού πλάτους και αν αλλάξουμε το μέγεθος του παραθύρου του προγράμματος περιήγησης, οι στήλες δυναμικού πλάτους θα αλλάξουν το μέγεθος ανάλογα.
 
 ![Grid With Fixed And Dynamic Columns](GridWithFixedAndDynamicColumns.gif)
 
-## Implicit and Explicit Grids
+## 'Αρρητα και ρητά πλέγματα
 
-In our examples above, we have defined the number of columns in the grid container using the `grid-template-columns` property. These columns are called explicit columns. An explicit column is a column that is created by the developer. But in our examples, we also have rows but we haven't defined the number of rows in the grid container. These rows are part of the implicit grid.
+Στα παραπάνω παραδείγματά μας, ορίσαμε τον αριθμό των στηλών στο δοχείο πλέγματος χρησιμοποιώντας την ιδιότητα `grid-template-columns`. Αυτές οι στήλες ονομάζονται σαφείς στήλες. Μια σαφή στήλη είναι μια στήλη που δημιουργείται από τον προγραμματιστή. Αλλά στα παραδείγματά μας, έχουμε επίσης γραμμές, αλλά δεν έχουμε ορίσει τον αριθμό των γραμμών στο δοχείο grid. Αυτές οι γραμμές αποτελούν μέρος του άρρητου πλέγματος.
 
-We can create an explicit grid by defining the number of rows and columns in the grid container using the `grid-template-columns` and `grid-template-rows` property.
+
+Μπορούμε να δημιουργήσουμε ένα ρητό πλέγμα καθορίζοντας τον αριθμό των γραμμών και των στηλών στο δοχείο πλέγματος χρησιμοποιώντας τις ιδιότητες `grid-template-columns` και `grid-template-rows`.
 
 ```css
 .container {
@@ -146,13 +147,13 @@ We can create an explicit grid by defining the number of rows and columns in the
   gap: 20px;
 }
 ```
-Now our grid container looks like this:
+Τώρα το δοχείο πλέγματος μας μοιάζει με αυτό:
 
 ![Explicit Grid](ExplicitGrid.png)
 
-As we can see, now we have an explicit grid with two rows and three columns. The first row is 100 pixels high, the second row is 100 pixels high, the first column is 1/4 of the available space, the second column is 2/4 of the available space, and the third column is 1/4 of the available space.
+Όπως βλέπουμε, τώρα έχουμε ένα ρητό πλέγμα με δύο γραμμές και τρεις στήλες. Η πρώτη γραμμή έχει ύψος 100 pixels, η δεύτερη γραμμή έχει ύψος 100 pixels, η πρώτη στήλη είναι το 1/4 του διαθέσιμου χώρου, η δεύτερη στήλη είναι τα 2/4 του διαθέσιμου χώρου και η τρίτη στήλη είναι το 1/4 του διαθέσιμου χώρου.
 
-But what if we add more grid items? Lets add three more grid items to the grid container.
+Τι γίνεται όμως αν προσθέσουμε περισσότερα στοιχεία πλέγματος; Ας προσθέσουμε τρία ακόμη στοιχεία πλέγματος στο δοχείο πλέγματος.
 
 ```html
 <body>
@@ -170,12 +171,12 @@ But what if we add more grid items? Lets add three more grid items to the grid c
 </body>
 ```
 
-As we can see, we now have three rows, but we have only defined two rows in the grid container. The third row is part of the implicit grid. The implicit grid is created automatically when we add more grid items than we have defined rows and columns in the grid container. We can also see, that that grid items in implicit grid don't have same height as the grid items in the explicit grid.
+Όπως βλέπουμε, τώρα έχουμε τρεις γραμμές, αλλά έχουμε ορίσει μόνο δύο γραμμές στο δοχείο πλέγματος. Η τρίτη σειρά είναι μέρος του άρρητου πλέγματος. Τοάρρητο πλέγμα δημιουργείται αυτόματα όταν προσθέτουμε περισσότερα στοιχεία πλέγματος από όσα έχουμε ορίσει γραμμές και στήλες στο δοχείο πλέγματος. Μπορούμε επίσης να δούμε, ότι τα στοιχεία πλέγματος στο άρρητο πλέγμα δεν έχουν το ίδιο ύψος με τα στοιχεία πλέγματος στο ρητό πλέγμα.
+
 
 ![Explicit and Implicit Grid](ExplicitAndImplicitGrid.png)
 
-We can also set the height of the rows in the implicit grid using the `grid-auto-rows` property.
-
+Μπορούμε επίσης να ορίσουμε το ύψος των γραμμών στο έμμεσο πλέγμα χρησιμοποιώντας την ιδιότητα `grid-auto-rows`.
 ```css
 .container {
   display: grid;
@@ -187,18 +188,18 @@ We can also set the height of the rows in the implicit grid using the `grid-auto
 
 ![Grid Auto Rows](GridAutoRows.png)
 
-## Positioning Grid Items
+## Τοποθέτηση στοιχείων πλέγματος
 
-If we want more control over the placement of grid items, we can use the `grid-column-start`, `grid-column-end`, `grid-row-start`, and `grid-row-end` properties. These properties allow us to specify where a grid item should start and end.
+Αν θέλουμε περισσότερο έλεγχο στην τοποθέτηση των στοιχείων του πλέγματος, μπορούμε να χρησιμοποιήσουμε τις ιδιότητες `grid-column-start`, `grid-column-end`, `grid-row-start` και `grid-row-end`. Αυτές οι ιδιότητες μας επιτρέπουν να καθορίσουμε πού θα πρέπει να αρχίζει και να τελειώνει ένα στοιχείο πλέγματος.
 
-But before we can use these properties, we need to understand how the grid is structured. The grid is structured into columns and rows. Each column and row has a start line and an end line. The start line is the line where the column or row starts, and the end line is the line where the column or row ends. The lines are numbered starting from 1 and going up. The lines are numbered from left to right for columns, and from top to bottom for rows.
+Αλλά πριν μπορέσουμε να χρησιμοποιήσουμε αυτές τις ιδιότητες, πρέπει να καταλάβουμε πώς είναι δομημένο το πλέγμα. Το πλέγμα είναι δομημένο σε στήλες και γραμμές. Κάθε στήλη και γραμμή έχει μια γραμμή αρχής και μια γραμμή τέλους. Η γραμμή έναρξης είναι η γραμμή όπου ξεκινάει η στήλη ή η γραμμή και η γραμμή τέλους είναι η γραμμή όπου τελειώνει η στήλη ή η γραμμή. Οι γραμμές είναι αριθμημένες ξεκινώντας από το 1 και ανεβαίνοντας προς τα πάνω. Οι γραμμές αριθμούνται από αριστερά προς τα δεξιά για τις στήλες και από πάνω προς τα κάτω για τις γραμμές.
 
 ![Grid Lines](GridLines.png)
 [Image Source](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
 
-We can use the `grid-column-start` and `grid-column-end` properties to specify where a grid item should start and end horizontally. We can use the `grid-row-start` and `grid-row-end` properties to specify where a grid item should start and end vertically.
+Μπορούμε να χρησιμοποιήσουμε τις ιδιότητες `grid-column-start` και `grid-column-end` για να καθορίσουμε πού θα πρέπει να αρχίζει και να τελειώνει οριζόντια ένα στοιχείο πλέγματος. Μπορούμε να χρησιμοποιήσουμε τις ιδιότητες `grid-row-start` και `grid-row-end` για να καθορίσουμε πού θα πρέπει να ξεκινά και να τελειώνει ένα στοιχείο πλέγματος κάθετα.
 
-For example, if we want to create a 3x3 grid and place three items in the grid so that first item is in the first row and first column, second item is in the second row and second column, and third item is in the third row and third column, we can do it like this:
+Για παράδειγμα, αν θέλουμε να δημιουργήσουμε ένα πλέγμα 3x3 και να τοποθετήσουμε τρία στοιχεία στο πλέγμα έτσι ώστε το πρώτο στοιχείο να βρίσκεται στην πρώτη γραμμή και την πρώτη στήλη, το δεύτερο στοιχείο στη δεύτερη γραμμή και τη δεύτερη στήλη και το τρίτο στοιχείο στην τρίτη γραμμή και την τρίτη στήλη, μπορούμε να το κάνουμε ως εξής:
 
 ```html
 <body>
@@ -239,11 +240,11 @@ For example, if we want to create a 3x3 grid and place three items in the grid s
   grid-row: 3 / 4;
 }
 ```
-As we can see from the exapmle, we had to create elements with classes `box-1`, `box-2`, and `box-3` to be able to style them individually. First item is placed from the first line of the first column to the second line of the first column and from the first line of the first row to the second line of the first row. Other items are placed in the same way, but in different columns and rows.
+Όπως μπορούμε να δούμε από το παράδειγμα, έπρεπε να δημιουργήσουμε στοιχεία με κλάσεις `box-1`, `box-2` και `box-3` για να μπορούμε να τα διαμορφώσουμε ξεχωριστά. Το πρώτο στοιχείο τοποθετείται από την πρώτη γραμμή της πρώτης στήλης στη δεύτερη γραμμή της πρώτης στήλης και από την πρώτη γραμμή της πρώτης γραμμής στη δεύτερη γραμμή της πρώτης γραμμής. Τα υπόλοιπα στοιχεία τοποθετούνται με τον ίδιο τρόπο, αλλά σε διαφορετικές στήλες και γραμμές.
 
 ![Grid Items Positioned](GridItemsPositioned.png)
 
-One more example:
+Ένα ακόμη παράδειγμα:
 
 ```css
 .box-1 {
@@ -264,27 +265,27 @@ One more example:
 
 ![Grid Items Positioned](GridItemsPositioned2.png)
 
-There is lot more to CSS Grid than what we have covered here. We have only scratched the surface of CSS Grid. If you want to learn more about CSS Grid, check out the [CSS Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) documentation on MDN.
+Υπάρχουν πολλά περισσότερα στο CSS Grid από αυτά που καλύψαμε εδώ. Έχουμε μόνο ξύσει την επιφάνεια του CSS Grid. Αν θέλετε να μάθετε περισσότερα για το CSS Grid, δείτε το [CSS Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) τεκμηρίωση στο MDN.
 
-## Exercises
+## Ασκήσεις
 
-Create `index.html` and `style.css` files. Link `style.css` file to `index.html` file. Use `style.css` file to write CSS code. Use `index.html` file to write HTML code.
+Δημιουργήστε τα αρχεία `index.html` και `style.css`. Συνδέστε το αρχείο `style.css` με το αρχείο `index.html`. Χρησιμοποιήστε το αρχείο `style.css` για να γράψετε κώδικα CSS. Χρησιμοποιήστε το αρχείο `index.html` για να γράψετε κώδικα HTML.
 
-Test your code by opening `index.html` file in your browser.
+Δοκιμάστε τον κώδικά σας ανοίγοντας το αρχείο `index.html` στο πρόγραμμα περιήγησής σας.
 
-Try to solve exercises without looking at the solutions. If you get stuck, you can look at the solutions.
+Προσπαθήστε να λύσετε ασκήσεις χωρίς να κοιτάξετε τις λύσεις. Αν κολλήσετε, μπορείτε να δείτε τις λύσεις.
 
-### Exercise 1: Creating a Grid
+### Άσκηση 1: Δημιουργία πλέγματος
 
-**Objective**: Create a simple grid layout with four columns of equal width.
+**Στόχος**: Δημιουργήστε μια απλή διάταξη πλέγματος με τέσσερις στήλες ίσου πλάτους.
 
-**Description**: Design a webpage layout that contains a grid with four columns. Each column should have the same width. There should be gap `10px` between columns. You can use div elements for the grid container and grid items. Style the grid items with different background colors for visual distinction.
+**Περιγραφή**: Σχεδιάστε μια διάταξη ιστοσελίδας που περιέχει ένα πλέγμα με τέσσερις στήλες. Κάθε στήλη πρέπει να έχει το ίδιο πλάτος. Θα πρέπει να υπάρχει κενό `10px` μεταξύ των στηλών. Μπορείτε να χρησιμοποιήσετε στοιχεία div για το δοχείο του πλέγματος και τα στοιχεία του πλέγματος. Διαμορφώστε τα στοιχεία του πλέγματος με διαφορετικά χρώματα φόντου για οπτική διάκριση.
 
-> Hint: Use `grid-template-columns` property to define the number of columns and their width.
+> Συμβουλή: Χρησιμοποιήστε την ιδιότητα `grid-template-columns` για να ορίσετε τον αριθμό των στηλών και το πλάτος τους.
 >
-> Hint: Use `gap` property to add gap between columns.
+> Συμβουλή: Χρησιμοποιήστε την ιδιότητα `gap` για να προσθέσετε κενό μεταξύ των στηλών.
 >
-> Hint: Use `background-color` property to add background color to grid items.
+> Συμβουλή: Χρησιμοποιήστε την ιδιότητα `background-color` για να προσθέσετε χρώμα φόντου στα στοιχεία του πλέγματος.
 
 <details>
 <summary>Exercise 1 Solution</summary>
