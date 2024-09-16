@@ -288,7 +288,7 @@
 > Συμβουλή: Χρησιμοποιήστε την ιδιότητα `background-color` για να προσθέσετε χρώμα φόντου στα στοιχεία του πλέγματος.
 
 <details>
-<summary>Exercise 1 Solution</summary>
+<summary>Άσκηση 1 Επίλυση</summary>
 
 ```html
 <!DOCTYPE html>
@@ -342,18 +342,18 @@
 
 </details>
 
-### Exercise 2: Creating a Checkered Grid
+### Άσκηση 2: Δημιουργία ενός καρό πλέγματος
 
-**Objective**: Create a checkered grid layout with four columns and four rows with equal width and height. Make it look like a chessboard. It means, the first row should have a black cell in the first column, a white cell in the second column, a black cell in the third column, and a white cell in the fourth column. The second row should have a white cell in the first column, a black cell in the second column, a white cell in the third column, and a black cell in the fourth column. And so on.
+**Στόχος**: Δημιουργήστε μια καρό διάταξη πλέγματος με τέσσερις στήλες και τέσσερις γραμμές με ίσο πλάτος και ύψος. Κάντε το να μοιάζει με σκακιέρα. Αυτό σημαίνει ότι η πρώτη σειρά θα πρέπει να έχει ένα μαύρο κελί στην πρώτη στήλη, ένα λευκό κελί στη δεύτερη στήλη, ένα μαύρο κελί στην τρίτη στήλη και ένα λευκό κελί στην τέταρτη στήλη. Η δεύτερη σειρά θα πρέπει να έχει ένα λευκό κελί στην πρώτη στήλη, ένα μαύρο κελί στη δεύτερη στήλη, ένα λευκό κελί στην τρίτη στήλη και ένα μαύρο κελί στην τέταρτη στήλη. Και ούτω καθεξής.
 
-**Description**: Design a webpage layout that contains a grid with four columns and four rows. Each column and row should have the same width and height. You can use div elements for the grid container and grid items. Style the grid items so that they look like a chessboard.
+**Περιγραφή**: Σχεδιάστε μια διάταξη ιστοσελίδας που περιέχει ένα πλέγμα με τέσσερις στήλες και τέσσερις γραμμές. Κάθε στήλη και γραμμή θα πρέπει να έχει το ίδιο πλάτος και ύψος. Μπορείτε να χρησιμοποιήσετε στοιχεία div για τον περιέκτη του πλέγματος και τα στοιχεία του πλέγματος. Διαμορφώστε τα στοιχεία του πλέγματος έτσι ώστε να μοιάζουν με σκακιέρα.
 
-> Hint: Use `grid-template-columns` property to define the number of columns and their width.
+> Συμβουλή: Χρησιμοποιήστε την ιδιότητα `grid-template-columns` για να ορίσετε τον αριθμό των στηλών και το πλάτος τους.
 >
-> Hint: Use `grid-template-rows` property to define the number of rows and their height.
+> Συμβουλή: Χρησιμοποιήστε την ιδιότητα `grid-template-rows` για να ορίσετε τον αριθμό των γραμμών και το ύψος τους.
 
 <details>
-<summary>Exercise 2 Solution</summary>
+<summary>Άσκηση 2 Επίλυση</summary>
 
 ```html
 <!DOCTYPE html>
@@ -417,8 +417,8 @@
 }
 ```
 
-> Note: There are many different ways to solve this exercise. This is just one of them.
+> Σημείωση: Υπάρχουν πολλοί διαφορετικοί τρόποι επίλυσης αυτής της άσκησης. Αυτός είναι μόνο ένας από αυτούς.
 >
-> Note: You can also use `repeat()` function to simplify the solution. For example, `grid-template-columns: repeat(4, 60px);` will create four columns with a width of 60 pixels.
+> Σημείωση: Μπορείτε επίσης να χρησιμοποιήσετε τη συνάρτηση `repeat()` για να απλοποιήσετε τη λύση. Για παράδειγμα, `grid-template-columns: repeat(4, 60px);` θα δημιουργήσει τέσσερις στήλες με πλάτος 60 pixels.
 
 </details>
