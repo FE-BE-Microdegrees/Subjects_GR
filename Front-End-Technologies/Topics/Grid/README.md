@@ -1,37 +1,37 @@
 # Grid
 
-In this topic, we'll learn about basics of CSS Grid.
+Σε αυτό τη θεματική ενότητα, θα μάθουμε για τα βασικά στοιχεία του CSS Grid.
 
-## Learning Outcomes
+## Μαθησιακά αποτελέσματα
 
-After completing this topic, you'll be able to:
+Αφού ολοκληρώσετε αυτό το κεφάλαιο, θα είστε σε θέση να:
 
 
-## What is CSS Grid?
+## Τι είναι το CSS Grid;
 
-CSS Grid is a layout system that allows you to create complex layouts with ease. It's a two-dimensional system, meaning it can handle both columns and rows, unlike flexbox which is largely a one-dimensional system. CSS Grid is supported in all modern browsers.
+Το CSS Grid είναι ένα σύστημα διάταξης που σας επιτρέπει να δημιουργείτε πολύπλοκες διατάξεις με ευκολία. Είναι ένα δισδιάστατο σύστημα, που σημαίνει ότι μπορεί να χειριστεί τόσο στήλες όσο και γραμμές, σε αντίθεση με το flexbox που είναι σε μεγάλο βαθμό ένα μονοδιάστατο σύστημα. Το CSS Grid υποστηρίζεται από όλα τα σύγχρονα προγράμματα περιήγησης.
 
-Grid provides a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning. It offers a new level of flexibility and control in CSS page layouts.
+Το Grid παρέχει ένα σύστημα διάταξης βασισμένο σε πλέγμα, με γραμμές και στήλες, διευκολύνοντας τον σχεδιασμό ιστοσελίδων χωρίς να χρειάζεται να χρησιμοποιείτε floats και τοποθέτηση. Προσφέρει ένα νέο επίπεδο ευελιξίας και ελέγχου στις διατάξεις σελίδων CSS.
 
-Basically we can think of CSS Grid as a table, where we can define the number of rows and columns, and then place items within the table. The items can span multiple rows and columns, and can be placed anywhere within the table.
+Βασικά μπορούμε να σκεφτούμε το CSS Grid ως έναν πίνακα, όπου μπορούμε να ορίσουμε τον αριθμό των γραμμών και των στηλών και στη συνέχεια να τοποθετήσουμε στοιχεία μέσα στον πίνακα. Τα στοιχεία μπορούν να καλύπτουν πολλαπλές γραμμές και στήλες και μπορούν να τοποθετηθούν οπουδήποτε μέσα στον πίνακα.
 
-## Why Use CSS Grid?
+## Γιατί να χρησιμοποιήσετε το CSS Grid;
 
-- **Two-Dimensional Layout**: Grid allows you to work with both rows and columns simultaneously, which is not possible with Flexbox (a one-dimensional system).
-- **Fixed and flexible track sizes**: You can define grid with fixed track sizes - where the size of the tracks are defined in pixels, or flexible track sizes - where the size of the tracks are defined in percentages or fractions of the available space.
-- **Control and Precision**: You can precisely place and size grid items within the grid container using line numbers, names, or by targeting grid areas.
-- **Responsive Design**: It simplifies the creation of responsive designs. Grid items can be rearranged and resized easily as the viewport changes, without changing the HTML.
-- **Creattion of Additional Tracks**: You can create additional tracks (rows and columns) automatically in the grid container, without changing the HTML.
-- **Simplifies Complex Layouts**: It's ideal for complex layouts that were difficult to achieve with older CSS properties, reducing the need for additional markup or complex scripting.
-- **Browser Support**: Modern browsers, including the latest versions of Chrome, Firefox, Safari, and Edge, support Grid, making it widely usable in current web development.
+- **Δισδιάστατη Διάταξη**: Το πλέγμα σας επιτρέπει να εργάζεστε ταυτόχρονα με γραμμές και στήλες, κάτι που δεν είναι δυνατό με το Flexbox (ένα μονοδιάστατο σύστημα).
+- **Σταθερά και Ευέλικτα Μεγέθη Τροχιάς**:Μπορείτε να ορίσετε πλέγμα με σταθερά μεγέθη τροχιάς - όπου το μέγεθος των τροχιών ορίζεται σε εικονοστοιχεία, ή ευέλικτα μεγέθη τροχιάς - όπου το μέγεθος των τροχιών ορίζεται σε ποσοστά ή κλάσματα του διαθέσιμου χώρου.
+- **Έλεγχος και Ακρίβεια**: You can precisely place and size grid items within the grid container using line numbers, names, or by targeting grid areas.
+- **Ανταποκρινόμενος Σχεδιασμός**: Απλοποιεί τη δημιουργία σχεδίων που ανταποκρίνονται στις ανάγκες του χρήστη. Τα στοιχεία του πλέγματος μπορούν να αναδιατάσσονται και να αλλάζουν μέγεθος εύκολα καθώς αλλάζει το παράθυρο προβολής, χωρίς να αλλάζει η HTML.
+- **Δημιουργία Πρόσθετων Διαδρομών**: Μπορείτε να δημιουργήσετε πρόσθετες διαδρομές (γραμμές και στήλες) αυτόματα στο δοχείο πλέγματος, χωρίς να αλλάξετε την HTML.
+- **Απλοποιεί πολύπλοκες διατάξεις**: Είναι ιδανικό για σύνθετες διατάξεις που ήταν δύσκολο να επιτευχθούν με παλαιότερες ιδιότητες CSS, μειώνοντας την ανάγκη για πρόσθετη σήμανση ή πολύπλοκο scripting.
+- **Υποστήριξη Προγράμματος Περιήγησης**: Τα σύγχρονα προγράμματα περιήγησης, συμπεριλαμβανομένων των τελευταίων εκδόσεων των Chrome, Firefox, Safari και Edge, υποστηρίζουν το Grid, καθιστώντας το ευρέως χρησιμοποιήσιμο στην τρέχουσα ανάπτυξη ιστοσελίδων.
 
-> Grid tracks are the columns and rows of the grid. A grid track can be a column or a row.
+> Οι διαδρομές πλέγματος είναι οι στήλες και οι γραμμές του πλέγματος. Μια διαδρομή πλέγματος μπορεί να είναι μια στήλη ή μια γραμμή.
 
-## How to use CSS Grid
+## Πώς να χρησιμοποιήσετε το CSS Grid
 
-### Grid Container
+### Δοχείο πλέγματος
 
-To create a grid, we first need to define a grid container. A grid container is an element that contains a grid. To create a grid container, we need to set the `display` property of the element to `grid` or `inline-grid`.
+Για να δημιουργήσουμε ένα πλέγμα, πρέπει πρώτα να ορίσουμε ένα δοχείο πλέγματος. Ένα δοχείο πλέγματος είναι ένα στοιχείο που περιέχει ένα πλέγμα. Για να δημιουργήσουμε ένα δοχείο πλέγματος, πρέπει να ορίσουμε την ιδιότητα `display` του στοιχείου σε `grid` ή `inline-grid`.
 
 ```css
 .container {
@@ -39,7 +39,7 @@ To create a grid, we first need to define a grid container. A grid container is 
 }
 ```
 
-Now we create HTML elements inside the container and they will become grid items. We add `class="container"` to the `div` element to make it a grid container. All elements inside the container will become grid items. We also add `class="item"` to each `div` element, so we can style them.
+Τώρα δημιουργούμε στοιχεία HTML μέσα στο δοχείο και αυτά θα γίνουν στοιχεία πλέγματος. Προσθέτουμε το `class=«container»` στο στοιχείο `div` για να το κάνουμε ένα δοχείο πλέγματος. Όλα τα στοιχεία μέσα στο δοχείο θα γίνουν στοιχεία πλέγματος. Προσθέτουμε επίσης `class=«item»` σε κάθε στοιχείο `div`, ώστε να μπορούμε να τα διαμορφώσουμε.
 
 ```html
 <body>
@@ -54,7 +54,7 @@ Now we create HTML elements inside the container and they will become grid items
 </body>
 ```
 
-Just for demonstration purposes, we'll add some styles to the grid items.
+Για λόγους επίδειξης, θα προσθέσουμε μερικά στυλ στα στοιχεία του πλέγματος.
 
 ```css
 .item {
@@ -64,7 +64,7 @@ Just for demonstration purposes, we'll add some styles to the grid items.
 }
 ```
 
-Our grid container now looks like this:
+Το δοχείο πλέγματος μας μοιάζει τώρα με αυτό:
 
 ![Grid Container](GridContainer.png)
 
