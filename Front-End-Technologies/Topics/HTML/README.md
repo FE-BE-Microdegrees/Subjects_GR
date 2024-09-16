@@ -118,16 +118,16 @@ HTML σημαίνει Hyper Text Markup Language. Η γλώσσα σήμανση
 ```html
 <table>
   <tr>
-    <th>Επικεφαλίδα 1</th>
-    <th>Επικεφαλίδα 2</th>
+    <th>Heading 1</th>
+    <th>Heading 2</th>
   </tr>
   <tr>
-    <td>Κελί 1</td>
-    <td>Κελί 2</td>
+    <td>Cell 1</td>
+    <td>Cell 2</td>
   </tr>
   <tr>
-    <td>Κελί 3</td>
-    <td>Κελί 4</td>
+    <td>Cell 3</td>
+    <td>Cell 4</td>
   </tr>
 </table>
 ```
@@ -166,13 +166,13 @@ HTML σημαίνει Hyper Text Markup Language. Η γλώσσα σήμανση
 - Κεφαλή εγγράφου HTML,
 - Σώμα εγγράφου HTML.
 
-The HTML document declaration is the first line of the HTML document. It tells the browser that the document is an HTML document. The HTML document declaration is not an HTML tag. It is an instruction to the browser. The HTML document declaration is written like this:
+Η δήλωση εγγράφου HTML είναι η πρώτη γραμμή του εγγράφου HTML. Λέει στο πρόγραμμα περιήγησης ότι το έγγραφο είναι έγγραφο HTML. Η δήλωση εγγράφου HTML δεν είναι ετικέτα HTML. Είναι μια οδηγία προς το πρόγραμμα περιήγησης. Η δήλωση εγγράφου HTML γράφεται ως εξής:
 
 ```html
 <!DOCTYPE html>
 ```
 
-The HTML document root element `html` is the outermost element in an HTML document. It is the parent of all other elements in the HTML document. It means that all other elements in the HTML document are descendants of the HTML document root element. The HTML document root element is written like this:
+Το  στοιχείο ρίζα του εγγράφου HTML `html` είναι το εξωτερικό στοιχείο ενός εγγράφου HTML. Είναι ο γονέας όλων των άλλων στοιχείων του εγγράφου HTML. Αυτό σημαίνει ότι όλα τα άλλα στοιχεία στο έγγραφο HTML είναι απόγονοι του στοιχείου ρίζας του εγγράφου HTML. Το στοιχείο ρίζα εγγράφου HTML γράφεται ως εξής:
 
 ```html
 <html>
@@ -180,7 +180,7 @@ The HTML document root element `html` is the outermost element in an HTML docume
 </html>
 ```
 
-The HTML document `head` is the first part of the HTML document. It is the part of the HTML document that is not displayed in the browser window. It is used to specify information about the HTML document, such as the title of the HTML document, the character encoding of the HTML document, etc. The HTML document `head` is written like this:
+Η «κεφαλή» του εγγράφου HTML είναι το πρώτο μέρος του εγγράφου HTML. Είναι το μέρος του εγγράφου HTML που δεν εμφανίζεται στο παράθυρο του προγράμματος περιήγησης. Χρησιμοποιείται για τον καθορισμό πληροφοριών σχετικά με το έγγραφο HTML, όπως ο τίτλος του εγγράφου HTML, η κωδικοποίηση χαρακτήρων του εγγράφου HTML κ.λπ. Η «κεφαλή» του εγγράφου HTML γράφεται ως εξής:
 
 ```html
 <head>
@@ -188,7 +188,7 @@ The HTML document `head` is the first part of the HTML document. It is the part 
 </head>
 ```
 
-The HTML document `body` is the second part of the HTML document. It is the part of the HTML document that is displayed in the browser window. All visible content of the HTML document is written in the HTML document `body`. The HTML document `body` is written like this:
+Το «σώμα» του εγγράφου HTML είναι το δεύτερο μέρος του εγγράφου HTML. Είναι το μέρος του εγγράφου HTML που εμφανίζεται στο παράθυρο του προγράμματος περιήγησης. Όλο το ορατό περιεχόμενο του εγγράφου HTML γράφεται στο έγγραφο HTML `body`. Το έγγραφο HTML `body` γράφεται ως εξής:
 
 ```html
 <body>
@@ -197,7 +197,7 @@ The HTML document `body` is the second part of the HTML document. It is the part
 </body>
 ```
 
-If we put all these parts together, we get the following HTML document:
+Αν βάλουμε όλα αυτά τα μέρη μαζί, θα έχουμε το ακόλουθο έγγραφο HTML:
 
 ```html
 <!DOCTYPE html>
@@ -211,11 +211,11 @@ If we put all these parts together, we get the following HTML document:
   </body>
 </html>
 ```
-It is important to note that all HTML elements are descendants of the HTML document root element. 
+Είναι σημαντικό να σημειωθεί ότι όλα τα στοιχεία HTML είναι απόγονοι του στοιχείου ρίζα του εγγράφου HTML. 
 
-## HTML Document Metadata
+## Μεταδεδομένα εγγράφου HTML
 
-HTML document metadata is data about the HTML document. HTML document metadata is used by browsers (how to display content or reload page), search engines (keywords), etc. HTML document metadata is specified in the HTML document `head`, it is using `meta` tags and attributes. For example:
+Τα μεταδεδομένα εγγράφου HTML είναι δεδομένα σχετικά με το έγγραφο HTML. Τα μεταδεδομένα του εγγράφου HTML χρησιμοποιούνται από τα προγράμματα περιήγησης (τρόπος εμφάνισης του περιεχομένου ή επαναφόρτωσης της σελίδας), τις μηχανές αναζήτησης (λέξεις-κλειδιά) κ.λπ. Τα μεταδεδομένα του εγγράφου HTML καθορίζονται στην «κεφαλή» του εγγράφου HTML, χρησιμοποιώντας τις ετικέτες και τα χαρακτηριστικά «meta». Για παράδειγμα:
 
 ```html
 <head>
@@ -227,56 +227,56 @@ HTML document metadata is data about the HTML document. HTML document metadata i
 </head>
 ```
 
-- `<title>` tag specifies the title of the HTML document.
-- `<meta charset="UTF-8">` tag specifies the character encoding of the HTML document.
-- `<meta name="description" content="Free Web tutorials">` tag specifies the description of the HTML document.
-- `<meta name="keywords" content="HTML, CSS, JavaScript">` tag specifies the keywords of the HTML document.
-- `<meta name="author" content="John Doe">` tag specifies the author of the HTML document.
+- `<title>` προσδιορίζει τον τίτλο του εγγράφου HTML.
+- `<meta charset="UTF-8">` προσδιορίζει την κωδικοποίηση χαρακτήρων του εγγράφου HTML.
+- `<meta name="description" content="Free Web tutorials">` προσδιορίζει την περιγραφή του εγγράφου HTML.
+- `<meta name="keywords" content="HTML, CSS, JavaScript">` προσδιορίζει τις λέξεις-κλειδιά του εγγράφου HTML.
+- `<meta name="author" content="John Doe">` προσδιορίζει τον συγγραφέα του εγγράφου HTML.
 
-> HTML metadata is not mandatory, but it is recommended to use it in every HTML document.
+> Τα μεταδεδομένα HTML δεν είναι υποχρεωτικά, αλλά συνιστάται η χρήση τους σε κάθε έγγραφο HTML.
 
-You can read more about HTML metadata [here](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML).
+Μπορείτε να διαβάσετε περισσότερα για τα μεταδεδομένα HTML [εδώ](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML).
 
-## How to write HTML?
+## Πώς να γράψετε HTML;
 
-HTML is a text-based markup language. It means, that HTML document is a text file, which contains HTML code. So, to write HTML, we need a text editor. There are many different text editors available, including `Notepad++`, `Sublime Text`, `Atom`, `Visual Studio Code`, etc. You can use any of these text editors to write HTML. In this course we'll use `Visual Studio Code` to write HTML.
+Η HTML είναι μια γλώσσα σήμανσης βασισμένη σε κείμενο. Αυτό σημαίνει ότι το έγγραφο HTML είναι ένα αρχείο κειμένου, το οποίο περιέχει κώδικα HTML. Έτσι, για να γράψουμε HTML, χρειαζόμαστε έναν επεξεργαστή κειμένου. Υπάρχουν πολλοί διαφορετικοί διαθέσιμοι επεξεργαστές κειμένου, συμπεριλαμβανομένων των `Notepad++`, `Sublime Text`, `Atom`, `Visual Studio Code`, κ.λπ. Μπορείτε να χρησιμοποιήσετε οποιοδήποτε από αυτά τα προγράμματα επεξεργασίας κειμένου για να γράψετε HTML. Σε αυτό το μάθημα θα χρησιμοποιήσουμε το `Visual Studio Code` για να γράψουμε HTML.
 
-To start writing HTML, we need to create an HTML document. An HTML document is a text file with `.html` extension. We can create an HTML document using any text editor. For example, we can create an HTML document called `index.html` using `Visual Studio Code`:
+Για να ξεκινήσουμε να γράφουμε HTML, πρέπει να δημιουργήσουμε ένα έγγραφο HTML. Ένα έγγραφο HTML είναι ένα αρχείο κειμένου με επέκταση `.html`. Μπορούμε να δημιουργήσουμε ένα έγγραφο HTML χρησιμοποιώντας οποιονδήποτε επεξεργαστή κειμένου. Για παράδειγμα, μπορούμε να δημιουργήσουμε ένα έγγραφο HTML με όνομα `index.html` χρησιμοποιώντας το `Visual Studio Code`:
 
 ![Writing HTML](writingHTML.gif)
 
-As we can see, if we are using `Visual Studio Code` or other code editor, editors are usually can help us to write HTML. For example, if we type `<h1>` tag, editor will automatically add `</h1>` tag. Also, if we type `<img>` tag, editor will automatically add `>` at the end of the tag. Editor will also provide us with suggestions, if we don't remember the name of the tag or attribute.
+Όπως μπορούμε να δούμε, εάν χρησιμοποιούμε "Visual Studio Code" ή άλλο πρόγραμμα επεξεργασίας κώδικα, οι επεξεργαστές συνήθως μπορούν να μας βοηθήσουν να γράψουμε HTML. Για παράδειγμα, αν πληκτρολογήσουμε ετικέτα "<h1>", ο επεξεργαστής θα προσθέσει αυτόματα την ετικέτα "</h1>". Επίσης, αν πληκτρολογήσουμε ετικέτα `<img>`, το πρόγραμμα επεξεργασίας θα προσθέσει αυτόματα `>` στο τέλος της ετικέτας. Το πρόγραμμα επεξεργασίας θα μας παρέχει επίσης προτάσεις, εάν δεν θυμόμαστε το όνομα της ετικέτας ή του χαρακτηριστικού.
 
-Actually, we can write HTML using any text editor, even `Notepad`. But, if we are using `Notepad`, we need to remember all the tags and attributes, and we need to type all the tags and attributes manually. So, it is better to use a code editor, which can help us to write HTML.
+Στην πραγματικότητα, μπορούμε να γράψουμε HTML χρησιμοποιώντας οποιοδήποτε πρόγραμμα επεξεργασίας κειμένου, ακόμα και το "Notepad". Ωστόσο, εάν χρησιμοποιούμε το "Notepad", πρέπει να θυμόμαστε όλες τις ετικέτες και τα χαρακτηριστικά και πρέπει να πληκτρολογούμε όλες τις ετικέτες και τα χαρακτηριστικά με μη αυτόματο τρόπο. Επομένως, είναι καλύτερο να χρησιμοποιήσουμε έναν επεξεργαστή κώδικα, ο οποίος μπορεί να μας βοηθήσει να γράψουμε HTML.
 
-## How to run HTML?
+## Πώς να εκτελέσετε την HTML;
 
-To run HTML, we need a web browser. There are many different web browsers available, including `Google Chrome`, `Mozilla Firefox`, `Microsoft Edge`, `Opera`, `Safari`, etc. You can use any of these web browsers to run HTML. In this course we'll use `Google Chrome` to run HTML.
+Για την εκτέλεση της HTML, χρειαζόμαστε ένα πρόγραμμα περιήγησης στο διαδίκτυο. Υπάρχουν πολλά διαφορετικά προγράμματα περιήγησης ιστού, όπως το `Google Chrome`, `Mozilla Firefox`, `Microsoft Edge`, `Opera`, `Safari` κ.λπ. Μπορείτε να χρησιμοποιήσετε οποιοδήποτε από αυτά τα προγράμματα περιήγησης ιστού για να εκτελέσετε HTML. Σε αυτό το μάθημα θα χρησιμοποιήσουμε το `Google Chrome` για την εκτέλεση της HTML.
 
-To run HTML, we need to open HTML document in a web browser. We can open HTML document in a web browser by double-clicking on the HTML document. Then the computer will open the HTML document in the default web browser:
+Για να εκτελέσουμε την HTML, πρέπει να ανοίξουμε το έγγραφο HTML σε ένα πρόγραμμα περιήγησης ιστού. Μπορούμε να ανοίξουμε το έγγραφο HTML σε ένα πρόγραμμα περιήγησης ιστού κάνοντας διπλό κλικ στο έγγραφο HTML. Στη συνέχεια, ο υπολογιστής θα ανοίξει το έγγραφο HTML στο προεπιλεγμένο πρόγραμμα περιήγησης ιστού:
 
 ![Running HTML](runningHTML.gif)
 
-## Exercises
+## Ασκήσεις
 
-Try to solve exercises by yourself before checking the solution.
+Προσπαθήστε να λύσετε τις ασκήσεις μόνοι σας πριν ελέγξετε τη λύση.
 
-Always test your code to see if it works the way you want.
+Να δοκιμάζετε πάντα τον κώδικά σας για να δείτε αν λειτουργεί όπως θέλετε.
 
-### Exercise 1 - Basic HTML Page Structure
+### Άσκηση 1 - Βασική δομή σελίδας HTML
 
-**Objective**: Create a basic HTML page with standard elements.
+**Στόχος**: Δημιουργήστε μια βασική σελίδα HTML με τυποποιημένα στοιχεία.
 
-**Description**: Create an HTML page (`index.html`) that includes the basic structure: `doctype`, `html`, `head`, and `body` tags. Inside the `body`, add a `h1` tag with the text "Welcome to My Webpage!", followed by a `p` (paragraph) tag with a brief introduction about yourself or a topic of your choice.
+**Περιγραφή**: Δημιουργήστε μια σελίδα HTML (`index.html`) που περιλαμβάνει τη βασική δομή: ετικέτες `doctype`, `html`, `head` και `body`. Μέσα στο `body`, προσθέστε μια ετικέτα `h1` με το κείμενο «Welcome to My Webpage!», ακολουθούμενη από μια ετικέτα `p` (paragraph) με μια σύντομη εισαγωγή για τον εαυτό σας ή για ένα θέμα της επιλογής σας.
 
-Open the HTML page in a web browser to see the result.
+Ανοίξτε τη σελίδα HTML σε ένα πρόγραμμα περιήγησης ιστού για να δείτε το αποτέλεσμα.
 
-Result should look something like this:
+Το αποτέλεσμα θα πρέπει να μοιάζει κάπως έτσι:
 
 ![Basic HTML](basicHTML.png)
 
 <details>
-  <summary>Solution</summary>
+  <summary>Λύση</summary>
 
   ```html
   <!DOCTYPE html>
@@ -293,22 +293,22 @@ Result should look something like this:
 
 </details>
 
-### Exercise 2 - HTML Lists
+### Άσκηση 2 - Λίστες HTML
 
-**Objective**: Use HTML to create `ordered` and `unordered` lists.
+**Στόχος**: Χρησιμοποιήστε την HTML για να δημιουργήσετε «ταξινομημένες» και «μη ταξινομημένες» λίστες.
 
-**Description**: Expand the `index.html` page. Add an `unordered` list (bulleted list) of your favorite hobbies. Then, add an `ordered` list (numbered list) of steps to perform one of those hobbies.
+**Περιγραφή**: Αναπτύξτε τη σελίδα «index.html». Προσθέστε μια λίστα «μη ταξινομημένη» (bulleted list) με τα αγαπημένα σας χόμπι. Στη συνέχεια, προσθέστε μια «ταξινομημένη» λίστα (αριθμημένη λίστα) με τα βήματα για την εκτέλεση ενός από αυτά τα χόμπι.
 
-> Hint: Use the `ul` and `ol` tags to create unordered and ordered lists, respectively. Use the `li` tag to create list items inside the `ul` and `ol` tags.
+> Συμβουλή: Χρησιμοποιήστε τις ετικέτες `ul` και `ol` για να δημιουργήσετε μη ταξινομημένες και ταξινομημένες λίστες, αντίστοιχα. Χρησιμοποιήστε την ετικέτα `li` για να δημιουργήσετε στοιχεία λίστας μέσα στις ετικέτες `ul` και `ol`.
 >
-> Hint: You can use different levels of headings to separate the two lists.
+> Συμβουλή: Μπορείτε να χρησιμοποιήσετε διαφορετικά επίπεδα επικεφαλίδων για να διαχωρίσετε τις δύο λίστες.
 
-Result should look something like this:
+Το αποτέλεσμα θα πρέπει να μοιάζει κάπως έτσι:
 
 ![Lists](Lists.png)
 
 <details>
-  <summary>Solution</summary>
+  <summary>Λύση</summary>
 
   ```html
   <!DOCTYPE html>
@@ -336,24 +336,24 @@ Result should look something like this:
   ```
 </details>
 
-### Exercise 3 - HTML Table and Links
+### Άσκηση 3 - Πίνακας HTML και σύνδεσμοι
 
-**Objective**: Create a table and add hyperlinks.
+**Στόχος**: Δημιουργήστε έναν πίνακα και προσθέστε υπερσυνδέσμους.
 
-**Description**: Further expand the `index.html` page. Create a table that lists at least three items (e.g., books, movies, recipes), including columns for the item's `name`, a brief `description`, and a `year` or a relevant date. Then, add `hyperlinks` to external websites with more information about each item.
+**Περιγραφή**: Επεκτείνετε περαιτέρω τη σελίδα «index.html». Δημιουργήστε έναν πίνακα που απαριθμεί τουλάχιστον τρία στοιχεία (π.χ. βιβλία, ταινίες, συνταγές), περιλαμβάνοντας στήλες για το «όνομα» του στοιχείου, μια σύντομη «περιγραφή» και ένα «έτος» ή μια σχετική ημερομηνία. Στη συνέχεια, προσθέστε «υπερσυνδέσμους» προς εξωτερικούς δικτυακούς τόπους με περισσότερες πληροφορίες για κάθε στοιχείο.
 
-> Hint: Use the `table`, `tr`, `th`, and `td` tags to create a table with rows and columns.
+> Συμβουλή: Χρησιμοποιήστε τις ετικέτες `table`, `tr`, `th` και `td` για να δημιουργήσετε έναν πίνακα με γραμμές και στήλες.
 >
-> Hint: Use the `a` tag with `src` attribute to create hyperlinks.
+> Συμβουλή: Χρησιμοποιήστε την ετικέτα `a` με το χαρακτηριστικό `src` για να δημιουργήσετε υπερσυνδέσμους.
 
-Test the hyperlinks by clicking on them.
+Δοκιμάστε τους υπερσυνδέσμους κάνοντας κλικ πάνω τους.
 
-Result should look something like this:
+Το αποτέλεσμα θα πρέπει να μοιάζει κάπως έτσι:
 
 ![ListsAndTable](ListsAndTable.png)
 
 <details>
-  <summary>Solution</summary>
+  <summary>Λύση</summary>
 
   ```html
   <!DOCTYPE html>
