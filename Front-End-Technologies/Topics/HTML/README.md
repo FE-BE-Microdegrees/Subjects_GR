@@ -10,13 +10,13 @@
   - [Ενσωματωμένα στοιχεία HTML](#Ενσωματωμένα-στοιχεία-HTML)
   - [Χαρακτηριστικά HTML](#Χαρακτηριστικά-HTML)
   - [Δομή εγγράφου HTML](#Δομή-εγγράφου-HTML)
-  - [HTML Document Metadata](#html-document-metadata)
-  - [How to write HTML?](#how-to-write-html)
-  - [How to run HTML?](#how-to-run-html)
-  - [Exercises](#exercises)
-    - [Exercise 1 - Basic HTML Page Structure](#exercise-1---basic-html-page-structure)
-    - [Exercise 2 - HTML Lists](#exercise-2---html-lists)
-    - [Exercise 3 - HTML Table and Links](#exercise-3---html-table-and-links)
+  - [Μεταδεδομένα εγγράφου HTML](#Μεταδεδομένα-εγγράφου-HTML)
+  - [Πώς να γράψετε HTML;](#Πώς-να-γράψετε-HTML-;)
+  - [Πώς να εκτελέσετε την HTML;](#Πώς-να-εκτελέσετε-την-HTML-;)
+  - [Ασκήσεις](#Ασκήσεις)
+    - [Άσκηση 1 - Βασική δομή σελίδας HTML](#Άσκηση-1---Βασική-δομή-σελίδας-HTML)
+    - [Άσκηση 2 - Λίστες HTML](#Άσκηση-2---Λίστες-HTML)
+    - [Άσκηση 3 - Πίνακας HTML και σύνδεσμοι](#Άσκηση-3---Πίνακας-HTML-και-σύνδεσμοι)
 
 
 ## Μαθησιακά αποτελέσματα
