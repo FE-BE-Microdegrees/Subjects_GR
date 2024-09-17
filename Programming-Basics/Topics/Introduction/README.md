@@ -26,7 +26,7 @@
 Σε αυτό το μάθημα, θα μάθουμε τα βασικά του προγραμματισμού. Θα μάθουμε για:
 - [Μεταβλητές](https://github.com/FE-BE-Microdegrees/Subjects/blob/Translate/Programming-Basics/Topics/Variables/README.md);
 - [Τύποι δεδομένων](https://github.com/FE-BE-Microdegrees/Subjects/blob/Translate/Programming-Basics/Topics/Data-Types/README.md);
-- [Δομές ελέγχου]()
+- [Δομές ελέγχου](https://github.com/FE-BE-Microdegrees/Subjects_GR/tree/main/Programming-Basics/Topics/Data-Structures)
 - [Operators and expressions](https://github.com/FE-BE-Microdegrees/Subjects/blob/Translate/Programming-Basics/Topics/Operators/README.md)
 - [Loops](https://github.com/FE-BE-Microdegrees/Subjects/blob/Translate/Programming-Basics/Topics/Loops/README.md)
 - [Functions](https://github.com/FE-BE-Microdegrees/Subjects/blob/Translate/Programming-Basics/Topics/Functions/README.md)
