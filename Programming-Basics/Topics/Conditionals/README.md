@@ -1,44 +1,44 @@
-# Conditionals
+# Συνθήκες
 
-In this topic, we'll learn about conditionals in Javascript.
+Σε αυτό το θέμα, θα μάθουμε για τις συνθήκες στη Javascript.
 
-- [Conditionals](#conditionals)
-  - [Learning Outcomes](#learning-outcomes)
-  - [What is a Conditional?](#what-is-a-conditional)
-  - [Understanding Conditionals](#understanding-conditionals)
-    - [Boolean Expressions](#boolean-expressions)
-    - [Comparison Operators](#comparison-operators)
-  - [Types of Conditionals](#types-of-conditionals)
+- [Συνθήκες](#Συνθήκες)
+  - [Μαθησιακά αποτελέσματα](#Μαθησιακά αποτελέσματα)
+  - [Τι είναι μία συνθήκη;](#Τι-είναι-μία-συνθήκη-;)
+  - [Κατανοώντας τις συνθήκες](#Κατανοώντας-τις-συνθήκες)
+    - [Εκφράσεις Boolean](#Εκφράσεις-Boolean)
+    - [Τελεστές σύγκρισης](#Τελεστές-σύγκρισης)
+  - [Τύποι συνθηκών](#Τύποι-συνθηκών)
     - [if](#if)
     - [if-else](#if-else)
     - [if-else-if](#if-else-if)
     - [switch](#switch)
-    - [Ternary operator](#ternary-operator)
-  - [Nested Conditional](#nested-conditional)
-  - [Truthiness and Falsiness](#truthiness-and-falsiness)
-  - [Best Practices](#best-practices)
-  - [Exercises](#exercises)
-    - [Exercise 1 - Basic If Statement](#exercise-1---basic-if-statement)
-    - [Exercise 2 - If-Else Statement](#exercise-2---if-else-statement)
-    - [Exercise 3 - Nested If-Else Statement](#exercise-3---nested-if-else-statement)
+    - [Τριμερής τελεστής](#Τριμερής-τελεστής)
+  - [Εμφωλευμένη συνθήκη](#Εμφωλευμένη-συνθήκη)
+  - [Αληθοφάνεια και Ψευδοφάνεια](#Αληθοφάνεια-και-Ψευδοφάνεια)
+  - [Βέλτιστες πρακτικές](#Βέλτιστες-πρακτικές)
+  - [Ασκήσεις](#Ασκήσεις)
+    - [ Άσκηση 1 - Βασική εντολή If](#Άσκηση-1---Βασική-εντολή-If)
+    - [Άσκηση 2 - Εντολή If-Else](#Άσκηση-2---Εντολή-If---Else)
+    - [Άσκηση 3 - Εμφωλευμένη εντολή If-Else](#Άσκηση-3---Εμφωλευμένη-εντολή-If---Else])
 
-## Learning Outcomes
+## Μαθησιακά αποτελέσματα
 
-After completing this topic, you'll be able to:
+Αφού ολοκληρώσετε αυτό το θέμα, θα είστε σε θέση να:
 
-- Define what a conditional is
-- Explain the difference between `==` and `===`
-- Explain the difference between `!=` and `!==`
-- Explain the difference between `if`, `if-else`, `if-else-if`, `switch`, and ternary operator
-- Explain what a nested conditional is
-- Explain what truthiness and falsiness are
-- Use best practices when writing conditionals
+- Να ορίζετε τι είναι μια συνθήκη.
+- Να εξηγείτε τη διαφορά μεταξύ `==` και `===`.
+- Να εξηγείτε τη διαφορά μεταξύ `!=` και `!==`.
+- Να εξηγείτε τη διαφορά μεταξύ των τελεστών `if`, `if-else`, `if-else-if`, `switch` και του τεταρτοβάθμιου τελεστή.
+- Εξηγήστε τι είναι η εμφωλευμένη συνθήκη.
+- Εξηγήστε τι είναι το αληθές και το ψεύδος.
+- Χρήση βέλτιστων πρακτικών κατά τη συγγραφή όρων.
+- 
+## Τι είναι μία συνθήκη;
 
-## What is a Conditional?
+Μια συνθήκη είναι μια δήλωση που χρησιμοποιείται για την εκτέλεση διαφορετικών ενεργειών με βάση διαφορετικές συνθήκες. Για παράδειγμα, μπορούμε να χρησιμοποιήσουμε μια συνθήκη για να ελέγξουμε αν ένας αριθμός είναι θετικός ή αρνητικός και να εκτελέσουμε διαφορετικές ενέργειες με βάση το αποτέλεσμα του ελέγχου.
 
-A conditional is a statement that is used to perform different actions based on different conditions. For example, we can use a conditional to check if a number is positive or negative and perform different actions based on the result of the check.
-
-In our mind, we use conditionals all the time, when we make decisions. For example, when we decide whether to go to do some sport or not, we check the weather, our mood, our schedule, etc. and based on the result of the check, we decide whether to go to do some sport or not.
+Στο μυαλό μας, χρησιμοποιούμε συνεχώς όρους, όταν παίρνουμε αποφάσεις. Για παράδειγμα, όταν αποφασίζουμε αν θα πάμε να κάνουμε κάποιο άθλημα ή όχι, ελέγχουμε τον καιρό, τη διάθεσή μας, το πρόγραμμά μας κ.λπ. και με βάση το αποτέλεσμα του ελέγχου, αποφασίζουμε αν θα πάμε να κάνουμε κάποιο άθλημα ή όχι.
 
 ```mermaid
 flowchart TD
@@ -52,24 +52,25 @@ flowchart TD
 
 ```
 
-## Understanding Conditionals
+## Κατανοώντας τις συνθήκες
 
-In order to understand conditionals, we need to understand boolean expressions and comparison operators.
+Για να κατανοήσουμε τις συνθήκες, πρέπει να κατανοήσουμε τις εκφράσεις boolean και τους τελεστές σύγκρισης.
 
-### Boolean Expressions
 
-A boolean expression is an expression that evaluates to a boolean value. A boolean value is a value that is either `true` or `false`. For example, `5 > 3` is a boolean expression that evaluates to `true` because `5` is greater than `3`. `5 < 3` is a boolean expression that evaluates to `false` because `5` is not less than `3`.
+### Εκφράσεις Boolean
 
-### Comparison Operators
+Μια boolean έκφραση είναι μια έκφραση που αξιολογείται σε μια boolean τιμή. Μια boolean τιμή είναι μια τιμή που είναι είτε «αληθής» είτε «ψευδής». Για παράδειγμα, το `5 > 3` είναι μια boolean έκφραση που αποτιμάται σε `αλήθεια` επειδή το `5` είναι μεγαλύτερο από το `3`. `5 < 3` είναι μια boolean έκφραση που αξιολογείται ως `false` επειδή το `5` δεν είναι μικρότερο από το `3`.
 
-Comparison operators are used to compare two values and return a boolean value. There are 6 comparison operators in Javascript:
+### Τελεστές σύγκρισης
 
-- `>`: greater than
-- `<`: less than
-- `>=`: greater than or equal to
-- `<=`: less than or equal to
-- `==`: equal to
-- `!=`: not equal to
+Οι τελεστές σύγκρισης χρησιμοποιούνται για τη σύγκριση δύο τιμών και την επιστροφή μιας boolean τιμής. Υπάρχουν 6 τελεστές σύγκρισης στη Javascript:
+
+- `>`: μεγαλύτερο από
+- `<`: λιγότερο από
+- `>=`: μεγαλύτερη ή ίση με
+- `<=`: μικρότερη ή ίση με
+- `==`: ίσο  με
+- `!=`: δεν είναι ίσο με
 
 ```javascript
 console.log(5 > 3); // true
@@ -80,9 +81,9 @@ console.log(5 == 3); // false
 console.log(5 != 3); // true
 ```
 
-## Types of Conditionals
+## Τύποι συνθηκών
 
-There are 5 types of conditionals in Javascript:
+Υπάρχουν 5 τύποι όρων στη Javascript:
 
 - `if`
 - `if-else`
@@ -92,7 +93,7 @@ There are 5 types of conditionals in Javascript:
 
 ### if
 
-The `if` statement is used to execute a block of code if a condition is true. The `if` statement has the following syntax:
+Η δήλωση «if» χρησιμοποιείται για την εκτέλεση ενός μπλοκ κώδικα εάν μια συνθήκη είναι αληθής. Η δήλωση `if` έχει την ακόλουθη σύνταξη:
 
 ```javascript
 if (condition) {
@@ -100,7 +101,7 @@ if (condition) {
 }
 ```
 
-For example:
+Για παράδειγμα:
   
 ```javascript
 let weather = 'sunny';
@@ -110,11 +111,11 @@ if (weather === 'sunny') {
 }
 ```
 
-In this example, we check if the weather is sunny and if it is, we print a message to the console.
+Σε αυτό το παράδειγμα, ελέγχουμε αν ο καιρός είναι ηλιόλουστος και αν είναι, εκτυπώνουμε ένα μήνυμα στην κονσόλα.
 
 ### if-else
 
-The `if-else` statement is used to execute a block of code if a condition is true and another block of code if the condition is false. The `if-else` statement has the following syntax:
+Η δήλωση «αν-αν» χρησιμοποιείται για την εκτέλεση ενός μπλοκ κώδικα αν μια συνθήκη είναι αληθής και ενός άλλου μπλοκ κώδικα αν η συνθήκη είναι ψευδής. Η δήλωση `if-else` έχει την ακόλουθη σύνταξη:
 
 ```javascript
 if (condition) {
@@ -124,7 +125,7 @@ if (condition) {
 }
 ```
 
-For example:
+Για παράδειγμα:
 
 ```javascript
 let weather = 'rainy';
@@ -136,11 +137,12 @@ if (weather === 'sunny') {
 }
 ```
 
-In this example, we check if the weather is sunny and if it is, we print a message to the console. If the weather is not sunny, we print a different message to the console.
+Σε αυτό το παράδειγμα, ελέγχουμε αν ο καιρός είναι ηλιόλουστος και αν είναι, εκτυπώνουμε ένα μήνυμα στην κονσόλα. Αν ο καιρός δεν είναι ηλιόλουστος, εκτυπώνουμε ένα διαφορετικό μήνυμα στην κονσόλα.
+
 
 ### if-else-if
 
-The `if-else-if` statement is used to execute a block of code if a condition is true and another block of code if the condition is false. The `if-else-if` statement has the following syntax:
+Η δήλωση `if-else-if`  χρησιμοποιείται για την εκτέλεση ενός μπλοκ κώδικα αν μια συνθήκη είναι αληθής και ενός άλλου μπλοκ κώδικα αν η συνθήκη είναι ψευδής. Η δήλωση `if-else-if` έχει την ακόλουθη σύνταξη:
 
 ```javascript
 if (condition1) {
@@ -152,7 +154,7 @@ if (condition1) {
 }
 ```
 
-For example:
+Για παράδειγμα:
 
 ```javascript
 let weather = 'rainy';
@@ -165,12 +167,12 @@ if (weather === 'sunny') {
   console.log('Im going to stay home!');
 }
 ```
-
-In this example, we check if the weather is sunny and if it is, we will go to the beach. If the weather is not sunny, we check if the weather is rainy and if it is, are going to the movies. If the weather is not sunny and not rainy, we will stay home.
+Σε αυτό το παράδειγμα, ελέγχουμε αν ο καιρός είναι ηλιόλουστος και αν είναι, θα πάμε στην παραλία. Αν ο καιρός δεν είναι ηλιόλουστος, ελέγχουμε αν ο καιρός είναι βροχερός και αν είναι, πάμε στον κινηματογράφο. Αν ο καιρός δεν είναι ηλιόλουστος και δεν βρέχει, θα μείνουμε στο σπίτι.
 
 ### switch
 
-The `switch` statement is used to execute a block of code based on different cases. The `switch` statement has the following syntax:
+Η εντολή `switch` χρησιμοποιείται για την εκτέλεση ενός μπλοκ κώδικα με βάση διαφορετικές περιπτώσεις. Η δήλωση `switch` έχει την ακόλουθη σύνταξη:
+
 
 ```javascript
 switch (expression) {
@@ -185,7 +187,7 @@ switch (expression) {
 }
 ```
 
-For example:
+Για παράδειγμα:
 
 ```javascript
 let weather = 'rainy';
@@ -202,17 +204,19 @@ switch (weather) {
 }
 ```
 
-This example is equivalent to the previous example with `if-else-if` statement.
+Το παράδειγμά του είναι ισοδύναμο με το προηγούμενο παράδειγμα με τη δήλωση `if-else-if`.
 
-### Ternary operator
 
-The ternary operator is used to execute a block of code based on a condition. The ternary operator has the following syntax:
+### Τριμερής τελεστής
+
+Ο τριμερής τελεστής χρησιμοποιείται για την εκτέλεση ενός μπλοκ κώδικα με βάση μια συνθήκη. Ο τριμερής τελεστής έχει την ακόλουθη σύνταξη:
+
 
 ```javascript
 condition ? expression1 : expression2
 ```
 
-For example:
+Για παράδειγμα:
 
 ```javascript
 let weather = 'rainy';
@@ -220,11 +224,12 @@ let weather = 'rainy';
 weather === 'sunny' ? console.log('Im going to the beach!') : console.log('Im going to the movies!');
 ```
 
-This example is equivalent to the previous example with `if-else` statement.
+Αυτό το παράδειγμα είναι ισοδύναμο με το προηγούμενο παράδειγμα με τη δήλωση `if-else`.
 
-## Nested Conditional
+## Εμφωλευμένη συνθήκη
 
-A nested conditional is a conditional that is inside another conditional. For example:
+Μια εμφωλευμένη συνθήκη είναι μια συνθήκη που βρίσκεται μέσα σε μια άλλη συνθήκη. Για παράδειγμα:
+
 
 ```javascript
 let weather = 'rainy';
@@ -240,13 +245,13 @@ if (weather === 'sunny') {
 }
 ```
 
-This example is equivalent to the previous example with `if-else-if` statement, but it has more code and it is harder to read, so it is better to use `if-else-if` statement instead of nested conditionals.
+Αυτό το παράδειγμα είναι ισοδύναμο με το προηγούμενο παράδειγμα με τη δήλωση `if-else-if`, αλλά έχει περισσότερο κώδικα και είναι πιο δύσκολο να διαβαστεί, οπότε είναι προτιμότερο να χρησιμοποιείτε τη δήλωση `if-else-if` αντί για εμφωλευμένους όρους.
 
-## Truthiness and Falsiness
+## Αληθοφάνεια και Ψευδοφάνεια.
 
-In Javascript, there are values that are considered to be `true` and values that are considered to be `false`. These values are called truthy and falsy values. It means that if we use a truthy value in a boolean expression, it will evaluate to `true` and if we use a falsy value in a boolean expression, it will evaluate to `false`.
+Στη Javascript, υπάρχουν τιμές που θεωρούνται «αληθείς» και τιμές που θεωρούνται «ψευδείς». Αυτές οι τιμές ονομάζονται αληθείς και ψευδείς τιμές. Αυτό σημαίνει ότι αν χρησιμοποιήσουμε μια αληθινή τιμή σε μια boolean έκφραση, θα αξιολογηθεί ως `true` και αν χρησιμοποιήσουμε μια falsy τιμή σε μια boolean έκφραση, θα αξιολογηθεί ως `false`.
 
-The following values are considered to be falsy:
+Οι ακόλουθες τιμές θεωρούνται ψευδείς:
 
 - `false`
 - `0`
@@ -255,9 +260,9 @@ The following values are considered to be falsy:
 - `undefined`
 - `NaN`
 
-All other values are considered to be truthy.
+Όλες οι άλλες τιμές θεωρούνται αληθείς.
 
-For example:
+Για παράδειγμα:
 
 ```javascript
 let x = 5;
@@ -277,30 +282,30 @@ if (x) {
 }
 ```
 
-In this example, we check if `x` is truthy or falsy and print a message to the console based on the result of the check.
+Σε αυτό το παράδειγμα, ελέγχουμε αν το `x` είναι αληθινό ή ψευδές και εκτυπώνουμε ένα μήνυμα στην κονσόλα με βάση το αποτέλεσμα του ελέγχου.
 
-## Best Practices
+## Βέλτιστες πρακτικές
 
-- Use `===` instead of `==` when comparing values
-- Use `!==` instead of `!=` when comparing values
-- Use `if-else-if` statement instead of nested conditionals
+- Χρησιμοποιήστε `===` αντί για `==` όταν συγκρίνετε τιμές
+- Χρησιμοποιήστε `!==` αντί για `!=` όταν συγκρίνετε τιμές
+- Χρήση της δήλωσης `if-else-if` αντί για εμφωλευμένους όρους
 
-## Exercises
+## Ασκήσεις
 
-Create a file named `index.js` (or another name of your choice) and start adding solutions to the exercises below.
+Δημιουργήστε ένα αρχείο με όνομα `index.js` (ή άλλο όνομα της επιλογής σας) και αρχίστε να προσθέτετε λύσεις στις παρακάτω ασκήσεις.
 
-Test your code by running the `index.js` file using the `node index.js` command.
+Δοκιμάστε τον κώδικά σας εκτελώντας το αρχείο `index.js` χρησιμοποιώντας την εντολή `node index.js`.
 
-Test your code with different values.
+Δοκιμάστε τον κώδικά σας με διαφορετικές τιμές.
 
-### Exercise 1 - Basic If Statement
+### Άσκηση 1 - Βασική εντολή If
 
-**Objective**: Check if a number is positive.
+**Στόχος**: Ελέγξτε αν ένας αριθμός είναι θετικός.
 
-**Description**: Write a JavaScript program that defines a variable to store a number. Use an if statement to print "The number is positive" if the number is greater than zero.
+**Περιγραφή**: Γράψτε ένα πρόγραμμα JavaScript που ορίζει μια μεταβλητή για την αποθήκευση ενός αριθμού. Χρησιμοποιήστε μια εντολή if για να εκτυπώσετε «Ο αριθμός είναι θετικός» αν ο αριθμός είναι μεγαλύτερος από το μηδέν.
 
 <details>
-  <summary>Solution</summary>
+  <summary>Λύση</summary>
 
 ```javascript
 let number = 5;
@@ -309,7 +314,7 @@ if (number > 0) {
   console.log('The number is positive');
 }
 ```
-**Expected output**:
+**Αναμενόμενο αποτέλεσμα**:
 
 ```javascript
 The number is positive
@@ -318,11 +323,11 @@ The number is positive
 
 </details>
 
-### Exercise 2 - If-Else Statement
+### Άσκηση 2 - Εντολή If-Else
 
-**Objective**: Check if a number is even or odd.
+**Στόχος**: Ελέγξτε αν ένας αριθμός είναι ζυγός ή περιττός.
 
-**Description**: Write a JavaScript program that takes a number and checks whether the number is even or odd. Print "The number is even" if the number is even and "The number is odd" if the number is odd.
+**Περιγραφή**: Γράψτε ένα πρόγραμμα JavaScript που παίρνει έναν αριθμό και ελέγχει αν ο αριθμός είναι ζυγός ή περιττός. Εκτυπώστε «Ο αριθμός είναι ζυγός» αν ο αριθμός είναι ζυγός και «Ο αριθμός είναι περιττός» αν ο αριθμός είναι περιττός.
 
 <details>
   <summary>Solution</summary>
@@ -337,18 +342,18 @@ if (number % 2 === 0) {
 }
 ```
 
-**Expected output**:
+**Αναμενόμενο αποτέλεσμα**:
 
 ```javascript
 The number is odd
 ```
 </details>
 
-### Exercise 3 - Nested If-Else Statement
+### Άσκηση 3 - Εμφωλευμένη εντολή If-Else
 
-**Objective**: Grade classification.
+**Στόχος**: Ταξινόμηση βαθμού.
 
-**Description**: Write a JavaScript program that classifies students' grades. The program should take a number (0-100) and classify it as follows:
+**Περιγραφή**: Γράψτε ένα πρόγραμμα JavaScript που ταξινομεί τους βαθμούς των μαθητών. Το πρόγραμμα θα πρέπει να λαμβάνει έναν αριθμό (0-100) και να τον ταξινομεί ως εξής:
 
 - `A` for 90 and above
 - `B` for 80 to 89
@@ -356,5 +361,5 @@ The number is odd
 - `D` for 60 to 69
 - `F` for below 60
 
-Print the grade classification.
+Εκτυπώστε την ταξινόμηση βαθμού.
 
