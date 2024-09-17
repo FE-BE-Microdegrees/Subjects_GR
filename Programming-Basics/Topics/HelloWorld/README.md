@@ -23,31 +23,31 @@
 
 Σε ορισμένες γλώσσες προγραμματισμού (όπως η C), πρέπει να γράψουμε πολύ κώδικα για να εκτυπώσουμε τις λέξεις "Hello World" στην οθόνη. Στο Javascript, χρειάζεται μόνο να γράψουμε μία γραμμή κώδικα για να εκτυπώσουμε τις λέξεις "Hello World" στην οθόνη.
 
-## How to Write Hello World in Javascript?
+## Πώς να γράψετε το Hello World σε Javascript;
 
-In order to write Hello World in Javascript, we need to open a text editor and type the following code:
+Για να γράψουμε το Hello World σε Javascript, πρέπει να ανοίξουμε ένα πρόγραμμα επεξεργασίας κειμένου και να πληκτρολογήσουμε τον ακόλουθο κώδικα:
 
 ```javascript
 console.log('Hello World!');
 ```
 
-We can save the file as `helloWorld.js` and run it using Node JS.
+Μπορούμε να αποθηκεύσουμε το αρχείο ως `helloWorld.js` και να το εκτελέσουμε χρησιμοποιώντας το Node JS.
 
-`console.log()` is a function that is used to print a message to the console. It takes one argument, which is the message that we want to print to the console. In this case, the message is "Hello World!".
+Το `console.log()` είναι μια συνάρτηση που χρησιμοποιείται για την εκτύπωση ενός μηνύματος στην κονσόλα. Χρειάζεται ένα όρισμα, το οποίο είναι το μήνυμα που θέλουμε να εκτυπώσουμε στην κονσόλα. Σε αυτή την περίπτωση, το μήνυμα είναι "Hello World!".
 
-## How to Run Hello World in Javascript?
+## Πώς να εκτελέσετε το Hello World σε Javascript;
 
-In order to run Hello World in Javascript, we need to open a terminal and type `node helloWorld.js` in the terminal, where `helloWorld.js` is the name of the file that contains the Hello World program.
+Για να εκτελέσουμε το Hello World σε Javascript, πρέπει να ανοίξουμε ένα τερματικό και να πληκτρολογήσουμε `node helloWorld.js` στο τερματικό, όπου το `helloWorld.js` είναι το όνομα του αρχείου που περιέχει το πρόγραμμα Hello World.
 
 ![Running Hello World](RunningHelloWorld.gif)
 
-## Excercises
+## Ασκήσεις
 
-Write a program that prints the words "Hello World" to the screen.
+Γράψτε ένα πρόγραμμα που θα εκτυπώνει τις λέξεις "Hello World" στην οθόνη.
 
-Run the program using Node JS.
+Εκτελέστε το πρόγραμμα χρησιμοποιώντας το Node JS.
 
-> **Hint:** You can use the `console.log()` function to print a message to the console.
+> **Συμβουλή:** Μπορείτε να χρησιμοποιήσετε τη συνάρτηση `console.log()` για να εκτυπώσετε ένα μήνυμα στην κονσόλα.
 >
-> **Hint:** You can use the `node fileName.js` command to run a Javascript file.
+> **Συμβουλή:** Μπορείτε να χρησιμοποιήσετε την εντολή `node fileName.js` για να εκτελέσετε ένα αρχείο Javascript.
 > 
