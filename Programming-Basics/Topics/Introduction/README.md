@@ -1,32 +1,32 @@
-# Introduction
+# Εισαγωγή
 
-In thistopic, we'll talk about Programming Basics subject and what you can expect to learn from it.
+Σε αυτή τη θεματική , θα μιλήσουμε για το θέμα των Βασικών Στοιχείων Προγραμματισμού και τι μπορείτε να περιμένετε να μάθετε από αυτό.
 
-- [Introduction](#introduction)
-  - [What is the purpose of this course?](#what-is-the-purpose-of-this-course)
-  - [What is programming and why is it important?](#what-is-programming-and-why-is-it-important)
-  - [What we will learn in this course?](#what-we-will-learn-in-this-course)
-  - [Which language will we use?](#which-language-will-we-use)
-  - [What tools will we use?](#what-tools-will-we-use)
+- [Εισαγωγή](#Εισαγωγή)
+  - [Ποιος είναι ο σκοπός αυτού του μαθήματος;](#Ποιος-είναι-ο-σκοπός-αυτού-του-μαθήματος-;)
+  - [Τι είναι ο προγραμματισμός και γιατί είναι σημαντικός;](#Τι-είναι-ο-προγραμματισμός-και-γιατί-είναι-σημαντικός-;)
+  - [Τι θα μάθουμε σε αυτό το μάθημα;](#Τι-θα-μάθουμε-σε-αυτό-το-μάθημα-;)
+  - [Ποια γλώσσα θα χρησιμοποιήσουμε;](#Ποια-γλώσσα-θα-χρησιμοποιήσουμε-;)
+  - [Τι εργαλεία θα χρησιμοποιήσουμε;](#Τι-εργαλεία-θα-χρησιμοποιήσουμε-;)
 
 
-## What is the purpose of this course?
+## Ποιος είναι ο σκοπός αυτού του μαθήματος;
 
-The purpose of this course is to get acquainted with the world of programming. We will learn the basics of programming, how to plan and write code using JavaScript.
+Σκοπός αυτού του μαθήματος είναι η γνωριμία με τον κόσμο του προγραμματισμού. Θα μάθουμε τα βασικά του προγραμματισμού, πώς να σχεδιάζουμε και να γράφουμε κώδικα χρησιμοποιώντας JavaScript.
 
-This course lays the foundation for `Front-End` and `Back-End` development. It helps understand the basics and concepts of programming. This course is intended for those who wish to learn programming and software development but have not previously been exposed to programming.
+Αυτό το μάθημα θέτει τα θεμέλια για την ανάπτυξη `Front-End` και `Back-End`. Βοηθά στην κατανόηση των βασικών και των εννοιών του προγραμματισμού. Αυτό το μάθημα απευθύνεται σε όσους επιθυμούν να μάθουν προγραμματισμό και ανάπτυξη λογισμικού αλλά δεν έχουν προηγουμένως εκτεθεί στον προγραμματισμό.
 
-## What is programming and why is it important?
+## Τι είναι ο προγραμματισμός και γιατί είναι σημαντικός;
 
-Programming is the process of writing instructions for a computer to perform tasks. These instructions are written in a programming language, which is a formal language that can be translated into **machine code** (i.e., binary) and executed by a computer.
-Programming is a creative process that involves designing **algorithms** and developing **code** to solve problems. It is a skill that is highly valued in today's digital world, and it is also a skill that can be learned by anyone.
+Προγραμματισμός είναι η διαδικασία σύνταξης οδηγιών για έναν υπολογιστή για την εκτέλεση εργασιών. Αυτές οι οδηγίες είναι γραμμένες σε μια γλώσσα προγραμματισμού, η οποία είναι μια επίσημη γλώσσα που μπορεί να μεταφραστεί σε **κώδικα μηχανής** (δηλαδή, δυαδικό) και να εκτελεστεί από έναν υπολογιστή.
+Ο προγραμματισμός είναι μια δημιουργική διαδικασία που περιλαμβάνει το σχεδιασμό **αλγορίθμων** και την ανάπτυξη **κώδικα** για την επίλυση προβλημάτων. Είναι μια δεξιότητα που εκτιμάται ιδιαίτερα στον σημερινό ψηφιακό κόσμο και είναι επίσης μια δεξιότητα που μπορεί να μάθει ο καθένας.
 
-## What we will learn in this course?
+## Τι θα μάθουμε σε αυτό το μάθημα;
 
-In this course, we will learn the basics of programming. We will learn about:
-- [Variables](https://github.com/FE-BE-Microdegrees/Subjects/blob/Translate/Programming-Basics/Topics/Variables/README.md);
-- [Data types](https://github.com/FE-BE-Microdegrees/Subjects/blob/Translate/Programming-Basics/Topics/Data-Types/README.md);
-- Control structures
+Σε αυτό το μάθημα, θα μάθουμε τα βασικά του προγραμματισμού. Θα μάθουμε για:
+- [Μεταβλητές](https://github.com/FE-BE-Microdegrees/Subjects/blob/Translate/Programming-Basics/Topics/Variables/README.md);
+- [Τύποι δεδομένων](https://github.com/FE-BE-Microdegrees/Subjects/blob/Translate/Programming-Basics/Topics/Data-Types/README.md);
+- [Δομές ελέγχου]()
 - [Operators and expressions](https://github.com/FE-BE-Microdegrees/Subjects/blob/Translate/Programming-Basics/Topics/Operators/README.md)
 - [Loops](https://github.com/FE-BE-Microdegrees/Subjects/blob/Translate/Programming-Basics/Topics/Loops/README.md)
 - [Functions](https://github.com/FE-BE-Microdegrees/Subjects/blob/Translate/Programming-Basics/Topics/Functions/README.md)
