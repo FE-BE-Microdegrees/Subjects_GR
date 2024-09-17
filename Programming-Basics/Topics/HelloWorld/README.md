@@ -1,27 +1,27 @@
 # Hello World
 
-In this topic, we'll learn about Hello World in Javascript.
+Σε αυτή τη θεματική ενότητα, θα μάθουμε για το Hello World σε Javascript.
 
 - [Hello World](#hello-world)
-  - [Learning Outcomes](#learning-outcomes)
-  - [What is Hello World?](#what-is-hello-world)
-  - [How to Write Hello World in Javascript?](#how-to-write-hello-world-in-javascript)
-  - [How to Run Hello World in Javascript?](#how-to-run-hello-world-in-javascript)
-  - [Excercises](#excercises)
+  - [Μαθησιακά Αποτελέσματα](#Μαθησιακά-Αποτελέσματα)
+  - [Τι είναι το Hello World;](#Τι-είναι-το-Hello-World-;)
+  - [Πώς να γράψετε το Hello World σε Javascript;](#Πώς-να-γράψετε-το-Hello-World-σε-Javascript-;)
+  - [Πώς-να-εκτελέσετε-το-Hello-World-σε-Javascript;](#Πώς-να-εκτελέσετε-το-Hello-World-σε-Javascript;)
+  - [Ασκήσεις](#Ασκήσεις)
 
-## Learning Outcomes
+## Μαθησιακά Αποτελέσματα
 
-After completing this topic, you'll be able to:
+Αφού ολοκληρώσετε αυτή τη θεματική, θα είστε σε θέση:
 
-- Define what Hello World is
-- Write Hello World in Javascript
-- Run Hello World in Javascript
+- Καθορίστε τι είναι το Hello World
+- Γράψτε Hello World σε Javascript
+- Εκτελέστε το Hello World σε Javascript
 
-## What is Hello World?
+## Τι είναι το Hello World;
 
-Usually, when we start learning programming or a new programming language, the first thing that we do is write a program that prints the words "Hello World" to the screen. This is called a "Hello World" program. It is a simple program that is used to demonstrate the basic syntax of a programming language and to make sure that we can run the program on our computer. It is also used to test the development environment and to make sure that everything is working correctly.
+Συνήθως, όταν αρχίζουμε να μαθαίνουμε προγραμματισμό ή μια νέα γλώσσα προγραμματισμού, το πρώτο πράγμα που κάνουμε είναι να γράψουμε ένα πρόγραμμα που εκτυπώνει τις λέξεις "Hello World" στην οθόνη. Αυτό ονομάζεται πρόγραμμα "Hello World". Είναι ένα απλό πρόγραμμα που χρησιμοποιείται για να επιδείξουμε τη βασική σύνταξη μιας γλώσσας προγραμματισμού και να βεβαιωθούμε ότι μπορούμε να εκτελέσουμε το πρόγραμμα στον υπολογιστή μας. Χρησιμοποιείται επίσης για τη δοκιμή του περιβάλλοντος ανάπτυξης και για να βεβαιωθείτε ότι όλα λειτουργούν σωστά.
 
-In some programming languages (like C), we need to write a lot of code to print the words "Hello World" to the screen. In Javascript, we only need to write one line of code to print the words "Hello World" to the screen.
+Σε ορισμένες γλώσσες προγραμματισμού (όπως η C), πρέπει να γράψουμε πολύ κώδικα για να εκτυπώσουμε τις λέξεις "Hello World" στην οθόνη. Στο Javascript, χρειάζεται μόνο να γράψουμε μία γραμμή κώδικα για να εκτυπώσουμε τις λέξεις "Hello World" στην οθόνη.
 
 ## How to Write Hello World in Javascript?
 
