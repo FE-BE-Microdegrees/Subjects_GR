@@ -1,41 +1,41 @@
-# Loops and iteration
+# Βρόχοι και επανάληψη
 
-In this topic, we'll learn about loops and iteration.
+Σε αυτό τη θεματική ενότητα , θα μάθουμε για τους βρόχους και την επανάληψη.
 
-- [Loops and iteration](#loops-and-iteration)
-  - [Learning Outcomes](#learning-outcomes)
-  - [What is a Loop?](#what-is-a-loop)
-  - [`for` Loop](#for-loop)
-  - [`while` Loop](#while-loop)
-  - [`do...while` Loop](#dowhile-loop)
-  - [`for...in` Loop](#forin-loop)
-  - [`for...of` Loop](#forof-loop)
-  - [Loop Control Statements](#loop-control-statements)
+- [Βρόχοι και επανάληψη](#loops-and-iteration)
+  - [Μαθησιακά Αποτελέσματα](#Μαθησιακά-Αποτελέσματα)
+  - [Τι είναι ένας βρόχος;](#Τι-είναι-ένας-βρόχος-;)
+  - [Βρόχος `for` ](#Βρόχος-`for`)
+  - [Βρόχος `while`](#Βρόχος-`while`)
+  - [Βρόχος `do...while`](#Βρόχος-`do...while`)
+  - [Βρόχος `for...in`](#Βρόχος-`for...in`)
+  - [Βρόχος  `for...of`](#Βρόχος-`for...of`)
+  - [Δηλώσεις ελέγχου βρόχου](#Δηλώσεις-ελέγχου-βρόχου)
     - [`continue`](#continue)
     - [`break`](#break)
-  - [Exercises](#exercises)
-    - [Exercise 1](#exercise-1)
-    - [Exercise 2](#exercise-2)
-    - [Exercise 3](#exercise-3)
+  - [Ασκήσεις](#Ασκήσεις)
+    - [Άσκηση 1](#Άσκηση-1)
+    - [Άσκηση 2](#Άσκηση-2)
+    - [Άσκηση 3](#Άσκηση-3)
 
-## Learning Outcomes
+## Μαθησιακά Αποτελέσματα
 
-After completing this topic, you'll be able to:
+Αφού ολοκληρώσετε αυτή τη θεματική ενότητα, θα είστε σε θέση να:
 
-- Define what a loop is
-- Explain the difference between different types of loops
-- Explain what loop control statements are
-- Explain what `continue` statement is
-- Explain what `break` statement is
-- Use different loops and loop control statements
+- Ορίστε τι είναι βρόχος
+- Εξηγήστε τη διαφορά μεταξύ διαφορετικών τύπων βρόχων
+- Εξηγήστε τι είναι οι δηλώσεις ελέγχου βρόχου
+- Εξηγήστε τι είναι η δήλωση `continue`.
+- Εξηγήστε τι είναι η δήλωση `break`.
+- Χρησιμοποιήστε διαφορετικούς βρόχους και δηλώσεις ελέγχου βρόχου
 
-## What is a Loop?
+## Τι είναι ένας βρόχος;
 
-A loop is a programming construct that is used to repeat a block of code until a certain condition is met. Loops are used to iterate over a collection of data or to repeat a block of code a certain number of times. There are different types of loops in Javascript: `for`, `while`, `do...while`, `for...in`, and `for...of`.
+Ένας βρόχος είναι μια κατασκευή προγραμματισμού που χρησιμοποιείται για την επανάληψη ενός μπλοκ κώδικα μέχρι να ικανοποιηθεί μια συγκεκριμένη συνθήκη. Οι βρόχοι χρησιμοποιούνται για την επανάληψη σε μια συλλογή δεδομένων ή για την επανάληψη ενός μπλοκ κώδικα ορισμένες φορές. Υπάρχουν διάφοροι τύποι βρόχων στο Javascript:  `for`, `while`, `do...while`, `for...in`, and `for...of`.
 
-## `for` Loop
+## Βρόχος `for` 
 
-The `for` loop is used to repeat a block of code a certain number of times. The `for` loop consists of three parts: *initialization*, *condition*, and *increment/decrement*. The initialization part is used to initialize the loop counter, the condition part is used to check if the loop counter is less/greater than or equal to a certain value, and the increment/decrement part is used to increment or decrement the loop counter. The `for` loop is used to iterate over a collection of data or to repeat a block of code a certain number of times.
+Ο βρόχος «for» χρησιμοποιείται για την επανάληψη ενός μπλοκ κώδικα ορισμένες φορές. Ο βρόχος `for` αποτελείται από τρία μέρη: *αρχικοποίηση*, *συνθήκη* και *αύξηση/μείωση*. Το τμήμα αρχικοποίησης χρησιμοποιείται για την προετοιμασία του μετρητή βρόχου, το τμήμα συνθήκης χρησιμοποιείται για να ελέγξει εάν ο μετρητής βρόχου είναι μικρότερος/μεγαλύτερος ή ίσος με μια συγκεκριμένη τιμή και το τμήμα αύξησης/μείωσης χρησιμοποιείται για την αύξηση ή τη μείωση του μετρητή βρόχου. Ο βρόχος `for` χρησιμοποιείται για επανάληψη σε μια συλλογή δεδομένων ή για επανάληψη ενός μπλοκ κώδικα ορισμένες φορές.
 
 ```javascript
 for (let i = 0; i < 10; i++) {
@@ -55,14 +55,14 @@ Output:
 8
 9
 ```
-In this example, we created a `for` loop that iterates over the numbers from `0` to `9` and prints them to the console. In the beginning of the loop, we initialize the loop counter (`i`) to `0` (`let i = 0`). Then, we check if the loop counter (`i`) is less than `10` (`i < 10`). If the loop counter is less than `10`, we print the value of the loop counter to the console and increment the loop counter (`i`) by `1` (`i++`). And then we repeat this process until the loop counter is greater than or equal to `10`.
+Σε αυτό το παράδειγμα, δημιουργήσαμε έναν βρόχο `for` που επαναλαμβάνεται πάνω από τους αριθμούς από `0` έως `9` και τους εκτυπώνει στην κονσόλα. Στην αρχή του βρόχου, αρχικοποιούμε τον μετρητή βρόχου (`i`) σε `0` (`let i = 0`). Στη συνέχεια, ελέγχουμε αν ο μετρητής βρόχου (`i`) είναι μικρότερος από `10` (`i < 10`). Εάν ο μετρητής βρόχου είναι μικρότερος από `10`, εκτυπώνουμε την τιμή του μετρητή βρόχου στην κονσόλα και αυξάνουμε τον μετρητή βρόχου (`i`) κατά `1` (`i++`). Και μετά επαναλαμβάνουμε αυτή τη διαδικασία μέχρι ο μετρητής βρόχου να είναι μεγαλύτερος ή ίσος με `10`.
 
-## `while` Loop
+## Βρόχος `while`
 
-The `while` loop is used to repeat a block of code while a certain condition is true. The `while` loop consists of a *condition* and a *block of code*. The condition is used to check if the loop counter is less/greater than or equal to a certain value, and the block of code is used to execute the code inside the loop. The `while` loop is used to iterate over a collection of data or to repeat a block of code a certain number of times.
+Ο βρόχος `while` χρησιμοποιείται για την επανάληψη ενός μπλοκ κώδικα ενώ μια συγκεκριμένη συνθήκη είναι αληθής. Ο βρόχος `while` αποτελείται από μια *συνθήκη* και ένα *μπλοκ κώδικα*. Η συνθήκη χρησιμοποιείται για να ελέγξει εάν ο μετρητής βρόχου είναι μικρότερος/μεγαλύτερος ή ίσος με μια συγκεκριμένη τιμή και το μπλοκ κώδικα χρησιμοποιείται για την εκτέλεση του κώδικα μέσα στον βρόχο. Ο βρόχος `while` χρησιμοποιείται για επανάληψη σε μια συλλογή δεδομένων ή για επανάληψη ενός μπλοκ κώδικα ορισμένες φορές.
 
-> **Note:** The `while` loop is similar to the `for` loop, but the `while` loop doesn't have an built in initialization part or an increment/decrement part. So we have to be careful when using the `while` loop because it can easily lead to an infinite loop if we forget to increment/decrement the loop counter.
-
+> **Σημείωση:** Ο βρόχος  `while` είναι παρόμοιος με τον βρόχο `for`, αλλά ο βρόχος  `while` δεν έχει ενσωματωμένο τμήμα προετοιμασίας ή τμήμα αύξησης/μείωσης. Πρέπει λοιπόν να είμαστε προσεκτικοί όταν χρησιμοποιούμε τον βρόχο `while` γιατί μπορεί εύκολα να οδηγήσει σε έναν άπειρο βρόχο αν ξεχάσουμε να αυξήσουμε/μειώσουμε τον μετρητή βρόχου.
+> 
 ```javascript
 let i = 0;
 
@@ -85,11 +85,11 @@ Output:
 9
 ```
 
-We can see, that even though the `for` loop and `while` loop are defined differently, they both do the same thing. In these exapmles they both iterate over the numbers from `0` to `9` and print them to the console.
+Μπορούμε να δούμε, ότι παρόλο που ο βρόχος `for` και ο βρόχος `while` ορίζονται διαφορετικά, και οι δύο κάνουν το ίδιο πράγμα. Σε αυτά τα παραδείγματα και τα δύο επαναλαμβάνουν τους αριθμούς από `0` έως `9` και τους εκτυπώνουν στην κονσόλα.
 
-## `do...while` Loop
+## Βρόχος `do...while`
 
-The `do...while` loop is another type of loop that is used to repeat a block of code while a certain condition is true.
+Ο βρόχος «do...while» είναι ένας άλλος τύπος βρόχου που χρησιμοποιείται για την επανάληψη ενός μπλοκ κώδικα ενώ μια συγκεκριμένη συνθήκη είναι αληθής.
 
 ```javascript
 let i = 0;
@@ -113,11 +113,11 @@ Output:
 9
 ```
 
-The key difference between the `while` loop and the `do...while` loop is that the `do...while` loop executes the code inside the loop at least once, even if the condition is false.
+Η βασική διαφορά μεταξύ του βρόχου «while» και του βρόχου `do...while` είναι ότι ο βρόχος `do...while` εκτελεί τον κώδικα μέσα στον βρόχο τουλάχιστον μία φορά, ακόμα κι αν η συνθήκη είναι ψευδής.
 
-## `for...in` Loop
+## Βρόχος `for...in`
 
-The `for...in` loop is bit different from the previous loops. The `for...in` loop is used to iterate over the properties of an object. The `for...in` loop consists of a *variable* and an *object*. The variable is used to store the name of the property, and the object is used to iterate over the properties of the object. The `for...in` loop is used to iterate over the properties of an object.
+Ο βρόχος `for...in` είναι λίγο διαφορετικός από τους προηγούμενους βρόχους. Ο βρόχος `for...in` χρησιμοποιείται για την επανάληψη των ιδιοτήτων ενός αντικειμένου. Ο βρόχος `for...in` αποτελείται από μια *μεταβλητή* και ένα *αντικείμενο*. Η μεταβλητή χρησιμοποιείται για την αποθήκευση του ονόματος της ιδιότητας και το αντικείμενο χρησιμοποιείται για την επανάληψη των ιδιοτήτων του αντικειμένου. Ο βρόχος `for...in` χρησιμοποιείται για την επανάληψη των ιδιοτήτων ενός αντικειμένου.
 
 ```javascript
 const person = {
@@ -138,11 +138,11 @@ lastName: Doe
 age: 25
 isMarried: false
 ```
-In this example, we created an object named `person` with four properties: `firstName`, `lastName`, `age`, and `isMarried`. Then, we created a `for...in` loop that iterates over the properties of the `person` object and prints them to the console.
+Σε αυτό το παράδειγμα, δημιουργήσαμε ένα αντικείμενο με το όνομα `person` με τέσσερις ιδιότητες: `firstName`, `lastName`, `age` και `isMarried`. Στη συνέχεια, δημιουργήσαμε έναν βρόχο `for...in`  που επαναλαμβάνει τις ιδιότητες του αντικειμένου `person` και τις εκτυπώνει στην κονσόλα.
 
-## `for...of` Loop
+## Βρόχος `for...of`
 
-The `for...of` loop is another type of loop. The `for...of` loop is used to iterate over the values of an iterable object. The `for...of` loop consists of a *variable* and an *iterable object*. The variable is used to store the value of the current iteration, and the iterable object is used to iterate over the values of the iterable object. 
+Ο βρόχος `for...of` είναι ένας άλλος τύπος βρόχου. Ο βρόχος `for...of` χρησιμοποιείται για επανάληψη πάνω από τις τιμές ενός επαναλήψιμου αντικειμένου. Ο βρόχος `for...of` αποτελείται από μια *μεταβλητή* και ένα *επαναληπτικό αντικείμενο*. Η μεταβλητή χρησιμοποιείται για την αποθήκευση της τιμής της τρέχουσας επανάληψης και το επαναλαμβανόμενο αντικείμενο χρησιμοποιείται για την επανάληψη πάνω από τις τιμές του επαναλαμβανόμενου αντικειμένου.
 
 ```javascript
 const fruits = ['apple', 'banana', 'orange'];
@@ -157,15 +157,15 @@ apple
 banana
 orange
 ```
-In this example, we created an array named `fruits` with three values: `apple`, `banana`, and `orange`. Then, we created a `for...of` loop that iterates over the values of the `fruits` array and prints them to the console.
+Σε αυτό το παράδειγμα, δημιουργήσαμε έναν πίνακα με το όνομα `fruits` με τρεις τιμές: `apple`, `banana`,  και `orange`. Στη συνέχεια, δημιουργήσαμε έναν βρόχο `for...of` που επαναλαμβάνεται πάνω από τις τιμές του πίνακα «φρούτων» και τις εκτυπώνει στην κονσόλα.
 
-## Loop Control Statements
+## Δηλώσεις ελέγχου βρόχου
 
-Loop control statements are used to control the flow of a loop. There are two types of loop control statements: `continue` and `break`.
+Οι δηλώσεις ελέγχου βρόχου χρησιμοποιούνται για τον έλεγχο της ροής ενός βρόχου. Υπάρχουν δύο τύποι δηλώσεων ελέγχου βρόχου: `continue` και `break`.
 
 ### `continue`
 
-The `continue` statement is used to skip the current iteration of a loop. The `continue` statement consists of the keyword `continue`.
+Η εντολή `continue` χρησιμοποιείται για να παραβλεφθεί η τρέχουσα επανάληψη ενός βρόχου. Η εντολή `continue` αποτελείται από τη λέξη-κλειδί `continue`.
 
 ```javascript
 for (let i = 0; i < 10; i++) {
@@ -189,11 +189,11 @@ Output:
 9
 ```
 
-As we can see, the `continue` statement skips the current iteration of the loop. In this example, we created a `for` loop that iterates over the numbers from `0` to `9` and prints them to the console. But if the loop counter is equal to `5`, we skip the current iteration of the loop using the `continue` statement.
+Όπως μπορούμε να δούμε, η δήλωση `continue` παρακάμπτει την τρέχουσα επανάληψη του βρόχου. Σε αυτό το παράδειγμα, δημιουργήσαμε έναν βρόχο `for` που επαναλαμβάνεται πάνω από τους αριθμούς από `0` έως `9` και τους εκτυπώνει στην κονσόλα. Αλλά αν ο μετρητής βρόχου είναι ίσος με `5`, παραλείπουμε την τρέχουσα επανάληψη του βρόχου χρησιμοποιώντας τη δήλωση `continue`.
 
 ### `break`
 
-The `break` statement is used to exit a loop. The `break` statement consists of the keyword `break`.
+Η δήλωση `break` χρησιμοποιείται για έξοδο από έναν βρόχο. Η δήλωση `break` αποτελείται από τη λέξη-κλειδί `break`.
 
 ```javascript
 for (let i = 0; i < 10; i++) {
@@ -211,22 +211,21 @@ Output:
 3
 4
 ```
+Όπως μπορούμε να δούμε, η δήλωση `break` εξέρχεται από τον βρόχο. Σε αυτό το παράδειγμα, δημιουργήσαμε έναν βρόχο `for` που επαναλαμβάνεται πάνω από τους αριθμούς από `0` έως `9` και τους εκτυπώνει στην κονσόλα. Αλλά αν ο μετρητής βρόχου είναι ίσος με `5`, βγαίνουμε από τον βρόχο χρησιμοποιώντας την πρόταση `break`.
 
-As we can see, the `break` statement exits the loop. In this example, we created a `for` loop that iterates over the numbers from `0` to `9` and prints them to the console. But if the loop counter is equal to `5`, we exit the loop using the `break` statement.
+## Ασκήσεις
 
-## Exercises
+Δημιουργήστε ένα αρχείο με το όνομα `index.js` (ή άλλο όνομα της επιλογής σας) και αρχίστε να προσθέτετε λύσεις στις παρακάτω ασκήσεις.
 
-Create a file named `index.js` (or another name of your choice) and start adding solutions to the exercises below.
+Δοκιμάστε τον κώδικά σας εκτελώντας το αρχείο `index.js` χρησιμοποιώντας την εντολή `node index.js`.
 
-Test your code by running the `index.js` file using the `node index.js` command.
+Μπορείτε επίσης να δοκιμάσετε τον Κώδικά σας με διαφορετικές τιμές για τις μεταβλητές.
 
-You can also test Your code with different values for the variables.
+### Άσκηση 1
 
-### Exercise 1
+Δημιουργήστε έναν βρόχο `for` που επαναλαμβάνεται πάνω από τους αριθμούς από `1` έως `10` και τους εκτυπώνει στην κονσόλα.
 
-Create a `for` loop that iterates over the numbers from `1` to `10` and prints them to the console.
-
-**Expected output**:
+**Αναμενόμενο αποτέλεσμα**:
 
 ```javascript
 1
@@ -241,12 +240,12 @@ Create a `for` loop that iterates over the numbers from `1` to `10` and prints t
 10
 ```
 
-> Hint: Use the `console.log()` method to print the numbers to the console.
+> Συμβουλή: Χρησιμοποιήστε τη μέθοδο `console.log()` για να εκτυπώσετε τους αριθμούς στην κονσόλα.
 >
-> Pay attention to the value of the loop counter.
+> Δώστε προσοχή στην τιμή του μετρητή βρόχου.
 
 <details>
-  <summary>Solution</summary>
+  <summary>Λύση </summary>
 
 ```javascript
 for (let i = 1; i <= 10; i++) {
@@ -258,13 +257,13 @@ for (let i = 1; i <= 10; i++) {
 
 </details>
 
-### Exercise 2
+### Άσκηση 2
 
-Create a `for` loop that iterates over the numbers from `1` to `10` and prints only the even numbers to the console.
+Δημιουργήστε έναν βρόχο `for` που επαναλαμβάνεται πάνω από τους αριθμούς από `1` έως `10` και εκτυπώνει μόνο τους ζυγούς αριθμούς στην κονσόλα.
 
-> Hint: Use the `%` operator to check if a number is even or odd.
+> Συμβουλή: Χρησιμοποιήστε τον τελεστή `%` για να ελέγξετε εάν ένας αριθμός είναι άρτιος ή μονός.
 
-**Expected output**:
+**Αναμενόμενο αποτέλεσμα**:
 
 ```javascript
 2
@@ -275,7 +274,7 @@ Create a `for` loop that iterates over the numbers from `1` to `10` and prints o
 ```
 
 <details>
-  <summary>Solution</summary>
+  <summary>Λύση </summary>
 
 ```javascript
 for (let i = 1; i <= 10; i++) {
@@ -287,11 +286,11 @@ for (let i = 1; i <= 10; i++) {
 </details>
 
 
-### Exercise 3
+### Άσκηση 3
 
-Create multiplication table using nested `for` loops.
+Δημιουργήστε πίνακα πολλαπλασιασμού χρησιμοποιώντας ένθετους βρόχους `for`.
 
-**Expected output**:
+**Αναμενόμενο αποτέλεσμα**:
 
 ```javascript
 1 x 1 = 1
@@ -303,4 +302,4 @@ Create multiplication table using nested `for` loops.
 10 x 10 = 100
 ```
 
-> Hint: Use nested `for` loops to create the multiplication table. Nested means that one loop is inside another loop.
+>Συμβουλή: Χρησιμοποιήστε ένθετους βρόχους `for` για να δημιουργήσετε τον πίνακα πολλαπλασιασμού. Ένθετο σημαίνει ότι ένας βρόχος βρίσκεται μέσα σε έναν άλλο βρόχο.
