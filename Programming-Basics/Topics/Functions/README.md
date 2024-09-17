@@ -1,44 +1,44 @@
-# Functions
+# Συναρτήσεις
 
-In this topic, we will learn about functions in Javascript.
+Σε αυτό τη θεματική ενότητα, θα μάθουμε για τις συναρτήσεις στη Javascript.
 
-- [Functions](#functions)
-  - [Learning Outcomes](#learning-outcomes)
-  - [What is a Function?](#what-is-a-function)
-  - [Function Declaration](#function-declaration)
-  - [Function Expression](#function-expression)
-  - [Function Invocation](#function-invocation)
-  - [Function Scope](#function-scope)
-  - [Function Hoisting](#function-hoisting)
+- [Συναρτήσεις](# Συναρτήσεις)
+  - [Μαθησιακά Αποτελέσματα](#Μαθησιακά-Αποτελέσματα)
+  - [Τι είναι μια Συνάρτηση;](#Τι-είναι-μια-Συνάρτηση-;)
+  - [Δήλωση Συνάρτησης](#Δήλωση-Συνάρτησης)
+  - [Έκφραση Συνάρτησης](#Έκφραση-Συνάρτησης)
+  - [Κλήση συνάρτησης ](#Κλήση-συνάρτησης)
+  - [Εύρος Συνάρτησης](#Εύρος-Συνάρτησης)
+  - [Hoisting Συνάρτησης](#Hoisting-Συνάρτησης)
   - [Arrow Functions](#arrow-functions)
-  - [Exercises](#exercises)
-    - [Exercise 1 - Basic Function Definition and Call](#exercise-1---basic-function-definition-and-call)
-    - [Exercise 2 - Function with Return Value](#exercise-2---function-with-return-value)
-    - [Exercise 3 - Function Manipulating Array Data](#exercise-3---function-manipulating-array-data)
+  - [Ασκήσεις](#exercises)
+    - [Άσκηση 1 - Βασικός ορισμός συνάρτησης και κλήση](#Άσκηση-1---Βασικός-ορισμός-συνάρτησης-και-κλήση)
+    - [Άσκηση 2 - Συνάρτηση με Επιστρεφόμενη Τιμή](#Άσκηση-2---Συνάρτηση-με-Επιστρεφόμενη-Τιμή)
+    - [Άσκηση 3 - Συνάρτηση για Χειρισμό Δεδομένων Πίνακα](#Άσκηση-3--Συνάρτηση-για-Χειρισμό-Δεδομένων-Πίνακα)
 
-## Learning Outcomes
+## Μαθησιακά Αποτελέσματα
 
-After completing this topic, you'll be able to:
+Αφού ολοκληρώσετε αυτή τη θεματική ενότητα, θα είστε σε θέση:
 
-- Define what a function is
-- Explain the difference between function declaration and function expression
-- Explain what function invocation is
-- Explain what function scope is
-- Explain what function hoisting is
-- Explain what arrow functions are
+- Ορίστε τι είναι συνάρτηση.
+- Εξηγήστε τη διαφορά μεταξύ δήλωσης συνάρτησης και έκφρασης συνάρτησης.
+- Εξηγήστε τι είναι η κλήση συνάρτησης.
+- Εξηγήστε τι είναι το εύρος της συνάρτησης.
+- Εξηγήστε τι είναι το function hoisting.
+- Εξηγήστε ποιες είναι οι arrow functions.
 
-## What is a Function?
+## Τι είναι μια Συνάρτηση;
 
-A function is a block of code that performs a specific task. Functions are used to organize code into logical units that can be reused in other parts of the program.
+Μια συνάρτηση είναι ένα μπλοκ κώδικα που εκτελεί μια συγκεκριμένη εργασία. Οι συναρτήσεις χρησιμοποιούνται για την οργάνωση του κώδικα σε λογικές μονάδες που μπορούν να επαναχρησιμοποιηθούν σε άλλα μέρη του προγράμματος.
 
-Function consist (and can consist) of the following parts:
+Η συνάρτηση αποτελείται (και μπορεί να αποτελείται) από τα ακόλουθα μέρη:
 
-- keyword to declare a function
-- name of the function
-- parameters of the function (optional)
-- function body
-- return statement (optional)
-- return value (optional)
+- keyword για να δηλώσετε μια συνάρτηση
+- όνομα της συνάρτησης
+- παράμετροι της συνάρτησης (προαιρετικό)
+- σώμα συνάρτησης 
+- return δήλωση (προαιρετική)
+- return τιμή (προαιρετική)
 
 ```javascript
 function add(a, b) {
@@ -47,9 +47,9 @@ function add(a, b) {
 }
 ```
 
-In previous example, we declared a function named `add` with keyword `function`, that takes two parameters `a` and `b` and returns the sum of `a` and `b`. The function body consists of two statements: `const sum = a + b;` and `return sum;`. The first statement declares a variable named `sum` and assigns the value of `a + b` to it. The second statement returns the value of `sum` variable.
+Στο προηγούμενο παράδειγμα, δηλώσαμε μια συνάρτηση με το όνομα "add" με λέξη-κλειδί "function", η οποία λαμβάνει δύο παραμέτρους "a" και "b" και επιστρέφει το άθροισμα των "a" και "b". Το σώμα της συνάρτησης αποτελείται από δύο προτάσεις: «const sum = a + b;» και «return sum;». Η πρώτη δήλωση δηλώνει μια μεταβλητή με το όνομα «sum» και της εκχωρεί την τιμή «a + b». Η δεύτερη πρόταση επιστρέφει την τιμή της μεταβλητής «sum».
 
-> We should remember, that parameters are variables that are used to store values that are passed to the function when it is called. If we don't need to pass any values to the function, we can omit the parameters. For example, if we want to declare a function named `sayHello` that prints the words "Hello World!" to the console, we can declare it like this:
+>Θα πρέπει να θυμόμαστε ότι οι παράμετροι είναι μεταβλητές που χρησιμοποιούνται για την αποθήκευση τιμών που μεταβιβάζονται στη συνάρτηση όταν καλείται. Εάν δεν χρειάζεται να περάσουμε καμία τιμή στη συνάρτηση, μπορούμε να παραλείψουμε τις παραμέτρους. Για παράδειγμα, αν θέλουμε να δηλώσουμε μια συνάρτηση με το όνομα `sayHello` που εκτυπώνει τις λέξεις "Hello World!" στην κονσόλα, μπορούμε να το δηλώσουμε ως εξής:
 
 ```javascript
 function sayHello() {
@@ -57,13 +57,13 @@ function sayHello() {
 }
 ```
 
-> Next important thing to remember is that function always returns a value. If we don't specify the return value, the function will return `undefined`. In our previous `sum` function, we specified the return value using the `return` keyword. If we don't specify the return value (like in `sayHello` function), the function will return `undefined`. 
+> Το επόμενο σημαντικό πράγμα που πρέπει να θυμάστε είναι ότι η συνάρτηση επιστρέφει πάντα μια τιμή. Εάν δεν καθορίσουμε την τιμή επιστροφής, η συνάρτηση θα επιστρέψει `undefined`. Στην προηγούμενη συνάρτηση `sum`, καθορίσαμε την επιστρεφόμενη τιμή χρησιμοποιώντας τη λέξη-κλειδί `return`. Εάν δεν καθορίσουμε την τιμή επιστροφής (όπως στη συνάρτηση `sayHello`), η συνάρτηση θα επιστρέψει `undefined`.
 
-In Javascript we can declare functions in two ways: function declaration and function expression.
+Στο Javascript μπορούμε να δηλώσουμε συναρτήσεις με δύο τρόπους: δήλωση συνάρτησης και έκφραση συνάρτησης.
 
-## Function Declaration
+## Δήλωση Συνάρτησης
 
-For function declaration, we use the `function` keyword followed by the name of the function, optional parameters, and function body. Similarily to previous examples, we declare functions like this:
+Για τη δήλωση συνάρτησης, χρησιμοποιούμε τη λέξη-κλειδί `function`  ακολουθούμενη από το όνομα της συνάρτησης, τις προαιρετικές παραμέτρους και το σώμα της συνάρτησης. Ομοίως με προηγούμενα παραδείγματα, δηλώνουμε συναρτήσεις όπως αυτή:
 
 ```javascript
 function functionName(parameter1, parameter2) {
@@ -72,9 +72,9 @@ function functionName(parameter1, parameter2) {
 }
 ```
 
-## Function Expression
+## Έκφραση Συνάρτησης
 
-But we can also declare functions using function expressions. For function expression, we use the `const` keyword followed by the name of the function, optional parameters, and function body. It means, that we declare function and assign it to a variable. For example:
+Αλλά μπορούμε επίσης να δηλώσουμε συναρτήσεις χρησιμοποιώντας εκφράσεις συναρτήσεων. Για την έκφραση συνάρτησης, χρησιμοποιούμε τη λέξη-κλειδί `const` ακολουθούμενη από το όνομα της συνάρτησης, τις προαιρετικές παραμέτρους και το σώμα της συνάρτησης. Σημαίνει ότι δηλώνουμε συνάρτηση και την εκχωρούμε σε μια μεταβλητή. Για παράδειγμα:
 
 ```javascript
 const add = function(a, b) {
@@ -83,7 +83,7 @@ const add = function(a, b) {
 }
 ```
 
-Even though we use the `const` keyword to declare the function, we can still call the function using the function name followed by parentheses. For example:
+EΠαρόλο που χρησιμοποιούμε τη λέξη-κλειδί `const` για να δηλώσουμε τη συνάρτηση, μπορούμε να καλέσουμε τη συνάρτηση χρησιμοποιώντας το όνομα της συνάρτησης ακολουθούμενο από παρενθέσεις. Για παράδειγμα:
 
 ```javascript
 const sum = add(1, 2);
@@ -91,9 +91,9 @@ const sum = add(1, 2);
 console.log(sum); // 3
 ```
 
-## Function Invocation
+## Κλήση συνάρτησης
 
-To execute a function, we need to call it. We can call a function by using the function name followed by parentheses. For example, if we want to call the `add` function, we can type `add(1, 2);` in the code. This will call the `add` function with the values `1` and `2` as arguments. The function will return the sum of `1` and `2` and we can store the return value in a variable like this:
+Για να εκτελέσουμε μια συνάρτηση, πρέπει να την καλέσουμε. Μπορούμε να καλέσουμε μια συνάρτηση χρησιμοποιώντας το όνομα της συνάρτησης ακολουθούμενο από παρενθέσεις. Για παράδειγμα, εάν θέλουμε να καλέσουμε τη συνάρτηση `add` , μπορούμε να πληκτρολογήσουμε `add(1, 2);` στον κώδικα. Αυτό θα καλέσει τη συνάρτηση `add`  με τις τιμές `1` και `2` ως ορίσματα. Η συνάρτηση θα επιστρέψει το άθροισμα των `1` και `2` και μπορούμε να αποθηκεύσουμε την επιστρεφόμενη τιμή σε μια μεταβλητή όπως αυτή:
 
 ```javascript
 const sum = add(1, 2);
@@ -101,19 +101,20 @@ const sum = add(1, 2);
 console.log(sum); // 3
 ```
 
-If we don't store the return value in a variable, the return value will be lost. For example, if we call the `add` function like this:
+Εάν δεν αποθηκεύσουμε την επιστρεφόμενη τιμή σε μια μεταβλητή, η τιμή επιστροφής θα χαθεί. Για παράδειγμα, αν καλέσουμε τη συνάρτηση `add` ως εξής:
 
 ```javascript
 add(1, 2);
 ```
 
-The function will return the sum of `1` and `2`, but we won't be able to store the return value. The return value will be lost.
+Η συνάρτηση θα επιστρέψει το άθροισμα των `1` και `2`, αλλά δεν θα μπορούμε να αποθηκεύσουμε την επιστρεφόμενη τιμή. Η επιστρεφόμενη τιμή θα χαθεί.
 
-## Function Scope
+## Εύρος Συνάρτησης
 
-The scope of a variable is the part of the program where the variable can be accessed. In Javascript, there are two types of scope: **global scope** and **local scope**. A variable that is declared outside of a function has a **global scope** and can be accessed anywhere in the program. A variable that is declared inside of a function has a **local scope** and can only be accessed inside of the function.
+Το εύρος μιας μεταβλητής είναι το μέρος του προγράμματος όπου μπορεί να προσπελαστεί η μεταβλητή. Στο Javascript, υπάρχουν δύο τύποι εύρους: **καθολική εμβέλεια** και **τοπική εμβέλεια**. Μια μεταβλητή που δηλώνεται εκτός συνάρτησης έχει **καθολικό εύρος** και μπορεί να προσπελαστεί οπουδήποτε στο πρόγραμμα. Μια μεταβλητή που δηλώνεται μέσα σε μια συνάρτηση έχει **τοπικό εύρος** και μπορεί να προσπελαστεί μόνο μέσα στη συνάρτηση.
 
-For example, if we declare a variable named `x` outside of a function, we can access it anywhere in the program. For example:
+Για παράδειγμα, αν δηλώσουμε μια μεταβλητή με το όνομα `x` έξω από μια συνάρτηση, μπορούμε να έχουμε πρόσβαση σε αυτήν οπουδήποτε στο πρόγραμμα. Για παράδειγμα:
+
 
 ```javascript
 let x = 5; // declare a variable named x and assign the value 5 to it
@@ -125,9 +126,10 @@ function printX() {
 printX(); // 5
 ```
 
-In this example, we declared a variable named `x` outside of a function and assigned the value `5` to it. We also declared a function named `printX` that prints the value of the `x` variable to the console. We called the `printX` function and it printed the value of the `x` variable to the console.
 
-But if we declare a variable named `x` inside of a function, we can only access it inside of the function. For example:
+Σε αυτό το παράδειγμα, δηλώσαμε μια μεταβλητή με το όνομα `x` έξω από μια συνάρτηση και της εκχωρήσαμε την τιμή `5`. Δηλώσαμε επίσης μια συνάρτηση με το όνομα «printX» που εκτυπώνει την τιμή της μεταβλητής `x` στην κονσόλα. Καλέσαμε τη συνάρτηση «printX» και εκτύπωσε την τιμή της μεταβλητής `x` στην κονσόλα.
+
+Αλλά αν δηλώσουμε μια μεταβλητή με το όνομα `x` μέσα σε μια συνάρτηση, μπορούμε να έχουμε πρόσβαση σε αυτήν μόνο μέσα στη συνάρτηση. Για παράδειγμα:
 
 ```javascript
 function printX() {
@@ -140,11 +142,12 @@ printX(); // 5
 console.log(x); // ReferenceError: x is not defined
 ```
 
-In this example, we declared a function named `printX` that declares a variable named `x` and assigns the value `5` to it. We also declared a function named `printX` that prints the value of the `x` variable to the console. We called the `printX` function and it printed the value of the `x` variable to the console. But if we try to access the `x` variable outside of the `printX` function, we will get a `ReferenceError` because the `x` variable is not defined outside of the `printX` function.
+
+Σε αυτό το παράδειγμα, δηλώσαμε μια συνάρτηση με το όνομα `printX` που δηλώνει μια μεταβλητή με το όνομα `x` και της εκχωρεί την τιμή `5`. Δηλώσαμε επίσης μια συνάρτηση με το όνομα «printX» που εκτυπώνει την τιμή της μεταβλητής `x` στην κονσόλα. Καλέσαμε τη συνάρτηση `printX` και εκτύπωσε την τιμή της μεταβλητής `x` στην κονσόλα. Αλλά αν προσπαθήσουμε να αποκτήσουμε πρόσβαση στη μεταβλητή `x` εκτός της συνάρτησης `printX` », θα λάβουμε ένα `ReferenceError` επειδή η μεταβλητή `x` δεν ορίζεται εκτός της συνάρτησης `printX`.
 
 ## Function Hoisting
 
-Function hoisting is a Javascript mechanism that moves function declarations to the top of the current scope. This means that we can call a function before it is declared. For example:
+Function hoisting είναι ένας μηχανισμός Javascript που μετακινεί τις δηλώσεις συναρτήσεων στην κορυφή του τρέχοντος πεδίου. Αυτό σημαίνει ότι μπορούμε να καλέσουμε μια συνάρτηση πριν δηλωθεί. Για παράδειγμα:
 
 ```javascript
 printX(); // 5
@@ -155,9 +158,9 @@ function printX() {
 }
 ```
 
-In this example, we called the `printX` function before it was declared. This is possible because of function hoisting. Function hoisting moves the function declaration to the top of the current scope, so we can call the function before it is declared.
+Σε αυτό το παράδειγμα, καλέσαμε τη συνάρτηση `printX` πριν δηλωθεί. Αυτό είναι δυνατό λόγω της λειτουργίας ανύψωσης. Η Function hoisting μετακινεί τη δήλωση συνάρτησης στην κορυφή του τρέχοντος εύρους, έτσι μπορούμε να καλέσουμε τη συνάρτηση πριν δηλωθεί.
 
-But we have to rememeber, that function hoisting only works with function declarations, not with function expressions. For example:
+Αλλά πρέπει να θυμόμαστε ότι η Function hoisting λειτουργεί μόνο με δηλώσεις συναρτήσεων, όχι με εκφράσεις συναρτήσεων. Για παράδειγμα:
 
 ```javascript
 printX(); // TypeError: printX is not a function
@@ -168,13 +171,13 @@ const printX = function() {
 }
 ```
 
-In this example, we tried to call the `printX` function before it was declared. But we got a `TypeError` because function hoisting only works with function declarations, not with function expressions.
+Σε αυτό το παράδειγμα, προσπαθήσαμε να καλέσουμε τη συνάρτηση «printX» προτού δηλωθεί. Αλλά πήραμε ένα 'TypeError' επειδή η ανύψωση συναρτήσεων λειτουργεί μόνο με δηλώσεις συναρτήσεων, όχι με εκφράσεις συναρτήσεων.
 
-So basically, it is a good practice to declare functions before we call them, but we can call functions before they are declared because of function hoisting.
+Επομένως, βασικά, είναι καλή πρακτική να δηλώνουμε συναρτήσεις πριν τις καλέσουμε, αλλά μπορούμε να καλέσουμε συναρτήσεις πριν δηλωθούν λόγω ανύψωσης συναρτήσεων.
 
 ## Arrow Functions
 
-Arrow functions are a new way to declare functions in Javascript. They are similar to function expressions, but they have a shorter syntax. For example, if we want to declare a function named `add` that takes two parameters `a` and `b` and returns the sum of `a` and `b`, we can declare it like this:
+Arrow functions είναι ένας νέος τρόπος δήλωσης συναρτήσεων σε Javascript. Μοιάζουν με τις εκφράσεις συναρτήσεων, αλλά έχουν μικρότερη σύνταξη. Για παράδειγμα, αν θέλουμε να δηλώσουμε μια συνάρτηση με το όνομα `add` που λαμβάνει δύο παραμέτρους `a` και `b` και επιστρέφει το άθροισμα των `a` και `b`, μπορούμε να τη δηλώσουμε ως εξής:
 
 ```javascript
 const add = (a, b) => {
@@ -186,24 +189,24 @@ const result = add(1, 2);
 console.log(result); // 3
 ```
 
-In this example we declared a function using arrow function syntax. We can see, that the arrow function syntax is bit different and shorter, but calling the function is the same as with function expressions.
+Σε αυτό το παράδειγμα δηλώσαμε μια συνάρτηση χρησιμοποιώντας τη σύνταξη της arrow function . Μπορούμε να δούμε ότι η σύνταξη της arrow function είναι λίγο διαφορετική και πιο σύντομη, αλλά η κλήση της συνάρτησης είναι η ίδια με τις εκφράσεις συνάρτησης.
 
-## Exercises
+## Ασκήσεις
 
-Create a file named index.js (or another name of your choice) and start adding solutions to the exercises below.
+Δημιουργήστε ένα αρχείο με το όνομα index.js (ή άλλο όνομα της επιλογής σας) και αρχίστε να προσθέτετε λύσεις στις παρακάτω ασκήσεις.
 
-Test your code by running the index.js file using the node index.js command.
+Δοκιμάστε τον κώδικά σας εκτελώντας το αρχείο index.js χρησιμοποιώντας την εντολή node index.js.
 
-Test your code with different values
+Δοκιμάστε τον κώδικα σας με διαφορετικές τιμές.
 
-### Exercise 1 - Basic Function Definition and Call
+### Άσκηση 1 - Βασικός ορισμός συνάρτησης και κλήση
 
-**Objective**: Write a function that prints a greeting message.
+**Στόχος**: Γράψτε μια λειτουργία που εκτυπώνει ένα μήνυμα χαιρετισμού.
 
-**Description**: Define a function named greet that takes a name as an argument and prints "Hello, [name]!". Call this function with a name.
+**Περιγραφή**:Ορίστε μια συνάρτηση με το όνομα greet που παίρνει ένα όνομα ως όρισμα και εκτυπώνει"Hello, [name]!". Καλέστε αυτή τη συνάρτηση με ένα όνομα.
 
 <details>
-  <summary>Solution</summary>
+  <summary>Λύση</summary>
 
 ```javascript
 function greet(name) {
@@ -213,7 +216,7 @@ function greet(name) {
 greet('John');
 ```
 
-**Expected output**:
+**Αναμενόμενο αποτέλεσμα**:
 
 ```javascript
 Hello, John!
@@ -222,18 +225,18 @@ Hello, John!
 
 </details>
 
-### Exercise 2 - Function with Return Value
+### Άσκηση 2 - Συνάρτηση με Επιστρεφόμενη Τιμή
 
-**Objective**: Create a function that calculates and returns the area of a rectangle.
+**Στόχος**: Δημιουργήστε μια συνάρτηση που υπολογίζει και επιστρέφει το εμβαδόν ενός ορθογωνίου.
 
-**Description**: Write a function named `calculateArea` that takes the `length` and `width` of a rectangle as arguments and returns its area. Call this function with different sets of values and print the results.
+**Περιγραφή**:Γράψτε μια συνάρτηση με το όνομα `calculateArea` που παίρνει το `length` και το `width` ενός ορθογωνίου ως ορίσματα και επιστρέφει το εμβαδόν του. Καλέστε αυτήν τη συνάρτηση με διαφορετικά σύνολα τιμών και εκτυπώστε τα αποτελέσματα.
 
-> Hint: You can give multiple arguments to a function by separating them with commas.
+> Συμβουλή: Μπορείτε να δώσετε πολλά ορίσματα σε μια συνάρτηση διαχωρίζοντάς τα με κόμματα.
 > 
-> Hint: The area of a rectangle is calculated by multiplying its length by its width.
+> Συμβουλή: Το εμβαδόν ενός ορθογωνίου υπολογίζεται πολλαπλασιάζοντας το μήκος του επί το πλάτος του.
 
 <details>
-  <summary>Solution</summary>
+  <summary>Λύση</summary>
 
 ```javascript
 function calculateArea(length, width) {
@@ -248,7 +251,7 @@ const area2 = calculateArea(2, 4);
 console.log(area2);
 ```
 
-**Expected output**:
+**Αναμενόμενο αποτέλεσμα**:
 
 ```javascript
 50
@@ -256,17 +259,17 @@ console.log(area2);
 ```
 </details>
 
-### Exercise 3 - Function Manipulating Array Data
+### Άσκηση 3 - Συνάρτηση για Χειρισμό Δεδομένων Πίνακα
 
-**Objective**: Write a function that filters even numbers from an array and returns a new array.
+**Στόχος**:Γράψτε μια συνάρτηση που φιλτράρει ζυγούς αριθμούς από έναν πίνακα και επιστρέφει έναν νέο πίνακα.
 
-**Description**: Define a function named `filterEvenNumbers` that takes an array of numbers as an argument. This function should return a new array containing only the even numbers from the original array.
+**Περιγραφή**:Ορίστε μια συνάρτηση με το όνομα `filterEvenNumbers` που λαμβάνει ως όρισμα έναν πίνακα αριθμών. Αυτή η συνάρτηση θα πρέπει να επιστρέψει έναν νέο πίνακα που θα περιέχει μόνο τους ζυγούς αριθμούς από τον αρχικό πίνακα.
 
-> Hint: You can use the modulus operator (%) to check if a number is even or odd. If a number is even, the result of the modulus operation will be 0. If a number is odd, the result of the modulus operation will be 1.
+> Συμβουλή: Μπορείτε να χρησιμοποιήσετε τον τελεστή συντελεστή (%) για να ελέγξετε εάν ένας αριθμός είναι άρτιος ή μονός. Εάν ένας αριθμός είναι άρτιος, το αποτέλεσμα της πράξης συντελεστή θα είναι 0. Εάν ένας αριθμός είναι περιττός, το αποτέλεσμα της πράξης συντελεστή θα είναι 1.
 >
-> Hint: You can use the push() method to add an element to the end of an array.
+>Συμβουλή: Μπορείτε να χρησιμοποιήσετε τη μέθοδο push() για να προσθέσετε ένα στοιχείο στο τέλος ενός πίνακα.
 
-**Example**:
+**Παράδειγμα**:
 
 ```javascript
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -276,7 +279,7 @@ const evenNumbers = filterEvenNumbers(numbers);
 console.log(evenNumbers);
 ```
 
-**Expected output**:
+**Αναμενόμενο αποτέλεσμα**:
 
 ```javascript
 [2, 4, 6, 8]
