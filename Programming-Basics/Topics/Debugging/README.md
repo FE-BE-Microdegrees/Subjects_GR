@@ -1,41 +1,41 @@
-# Debugging
+# Εντοπισμός σφαλμάτων-Debugging
 
-In this topic, we'll learn about debugging in Node JS.
+Σε αυτό τη θεματική ενότητα, θα μάθουμε για τον εντοπισμό σφαλμάτων στο Node JS.
 
-- [Debugging](#debugging)
-  - [Learning Outcomes](#learning-outcomes)
-  - [What is Debugging?](#what-is-debugging)
-  - [Debugging Tools](#debugging-tools)
-  - [Debugging Tips](#debugging-tips)
+- [Εντοπισμός σφαλμάτων-Debugging](#Εντοπισμός-σφαλμάτων---Debugging)
+  - [Μαθησιακά Αποτελέσματα](#Μαθησιακά-Αποτελέσματα)
+  - [Τι είναι ο εντοπισμός σφαλμάτων;](#Τι-είναι-ο-εντοπισμός-σφαλμάτων-;)
+  - [Εργαλεία εντοπισμού σφαλμάτων](#Εργαλεία-εντοπισμού-σφαλμάτων)
+  - [Συμβουλές εντοπισμού σφαλμάτων](#Συμβουλές-εντοπισμού-σφαλμάτων)
 
-## Learning Outcomes
+## Μαθησιακά Αποτελέσματα
 
-After completing this topic, you'll be able to:
+Αφού ολοκληρώσετε αυτή τη θεματική ενότητα, θα είστε σε θέση να:
 
-- Define what debugging is
-- Use different methods to debug your code
+- Καθορίστε τι είναι ο εντοπισμός σφαλμάτων..
+- Χρησιμοποιήστε διαφορετικές μεθόδους για τον εντοπισμό σφαλμάτων του κώδικά σας.
 
-## What is Debugging?
+## Τι είναι ο εντοπισμός σφαλμάτων;
 
-If we want to know how something works in real life, we can observe the process, sometimes we can intercept the process and see what happens. For example when we are cooking, we can measure some *parameters* like taste, temperature and time. Based on the result of the measurement, we can decide what to do next - add some salt or other spices, change the temperature or modify the cooking time.
+Αν θέλουμε να μάθουμε πώς λειτουργεί κάτι στην πραγματική ζωή, μπορούμε να παρατηρήσουμε τη διαδικασία, μερικές φορές μπορούμε να παρεμποδίσουμε τη διαδικασία και να δούμε τι συμβαίνει. Για παράδειγμα, όταν μαγειρεύουμε, μπορούμε να μετρήσουμε ορισμένες *παραμέτρους* όπως γεύση, θερμοκρασία και χρόνος. Με βάση το αποτέλεσμα της μέτρησης, μπορούμε να αποφασίσουμε τι θα κάνουμε στη συνέχεια - να προσθέσουμε λίγο αλάτι ή άλλα μπαχαρικά, να αλλάξουμε τη θερμοκρασία ή να τροποποιήσουμε το χρόνο μαγειρέματος.
 
-In programming, sometimes we don't understand why our program doesn't work as expected. We can use the same approach as in real life - we can observe the process and see what happens. This process is called **debugging**.
+Στον προγραμματισμό, μερικές φορές δεν καταλαβαίνουμε γιατί το πρόγραμμά μας δεν λειτουργεί όπως αναμενόταν. Μπορούμε να χρησιμοποιήσουμε την ίδια προσέγγιση όπως στην πραγματική ζωή - μπορούμε να παρατηρήσουμε τη διαδικασία και να δούμε τι συμβαίνει. Αυτή η διαδικασία ονομάζεται **debugging**.
 
-Debugging is the process of finding and fixing bugs in a program. A bug is an error in a program that causes it to behave in an unexpected way. Debugging is an important skill for programmers because it allows them to find and fix bugs in their programs.
+Ο εντοπισμός σφαλμάτων είναι η διαδικασία εύρεσης και διόρθωσης σφαλμάτων σε ένα πρόγραμμα. Ένα σφάλμα είναι ένα σφάλμα σε ένα πρόγραμμα που προκαλεί τη συμπεριφορά του με απροσδόκητο τρόπο. Ο εντοπισμός σφαλμάτων είναι μια σημαντική δεξιότητα για τους προγραμματιστές, επειδή τους επιτρέπει να βρίσκουν και να διορθώνουν σφάλματα στα προγράμματά τους.
 
-## Debugging Tools
+## Εργαλεία εντοπισμού σφαλμάτων
 
-Despite the fact that Node JS has built in debugger, it is easier to use a debugger that is built into a code editor. Most code editors have built-in debuggers that allow us to step through our code line by line and inspect the values of variables at each step. For example, **Visual Studio Code** has a built-in debugger that allows us to step through our code line by line and inspect the values of variables at each step. We can use the built-in debugger in Visual Studio Code to find and fix bugs in our programs.
+Παρά το γεγονός ότι το Node JS έχει ενσωματωμένο πρόγραμμα εντοπισμού σφαλμάτων, είναι ευκολότερο να χρησιμοποιήσετε ένα πρόγραμμα εντοπισμού σφαλμάτων που είναι ενσωματωμένο σε έναν επεξεργαστή κώδικα. Οι περισσότεροι επεξεργαστές κώδικα έχουν ενσωματωμένους διορθωτές σφαλμάτων που μας επιτρέπουν να περνάμε τον κώδικά μας γραμμή προς γραμμή και να επιθεωρούμε τις τιμές των μεταβλητών σε κάθε βήμα. Για παράδειγμα, ο **Visual Studio Code** έχει ενσωματωμένο πρόγραμμα εντοπισμού σφαλμάτων που μας επιτρέπει να περνάμε τον κώδικα γραμμή προς γραμμή και να επιθεωρούμε τις τιμές των μεταβλητών σε κάθε βήμα. Μπορούμε να χρησιμοποιήσουμε το ενσωματωμένο πρόγραμμα εντοπισμού σφαλμάτων στον κώδικα του Visual Studio για να βρούμε και να διορθώσουμε σφάλματα στα προγράμματά μας.
 
-To use built-in debugger in Visual Studio Code, we need to start our program in debugging mode by pressing `F5` or by clicking the `Run > Start Debugging` menu item. Then we can choose debugging environment, which in our case is `Node.js`. Then we can set breakpoints in our code by clicking on the line number where we want to set a **breakpoint**. Breakpoint is a point in our code where we want the debugger to pause execution and allow us to inspect the values of variables. Then we can start debugging by pressing `F5` or by clicking the `Run > Start Debugging` menu item. Then we can step through our code line by line and inspect the values of variables at each step.
+Για να χρησιμοποιήσουμε το ενσωματωμένο πρόγραμμα εντοπισμού σφαλμάτων στον κώδικα του Visual Studio, πρέπει να ξεκινήσουμε το πρόγραμμά μας σε λειτουργία εντοπισμού σφαλμάτων πατώντας «F5» ή κάνοντας κλικ στο στοιχείο μενού «Εκτέλεση > Έναρξη εντοπισμού σφαλμάτων». Στη συνέχεια μπορούμε να επιλέξουμε περιβάλλον εντοπισμού σφαλμάτων, το οποίο στην περίπτωσή μας είναι «Node.js». Στη συνέχεια, μπορούμε να ορίσουμε σημεία διακοπής στον κώδικά μας κάνοντας κλικ στον αριθμό γραμμής όπου θέλουμε να ορίσουμε ένα **breakpoint**. Το σημείο διακοπής είναι ένα σημείο στον κώδικά μας όπου θέλουμε το πρόγραμμα εντοπισμού σφαλμάτων να σταματήσει την εκτέλεση και να μας επιτρέψει να επιθεωρήσουμε τις τιμές των μεταβλητών. Στη συνέχεια, μπορούμε να ξεκινήσουμε τον εντοπισμό σφαλμάτων πατώντας «F5» ή κάνοντας κλικ στο στοιχείο μενού «Run > Start Debugging». Στη συνέχεια, μπορούμε να διασχίσουμε τον κώδικα γραμμή προς γραμμή και να επιθεωρήσουμε τις τιμές των μεταβλητών σε κάθε βήμα.
 
 ![Debugging in VSCode](DebuggingNodeJSInVSCode.gif)
 
-For simple programs, we can use `console.log()` statements to print the values of variables at different points in our code. For example, if we want to know the value of variable `x` at a certain point in our code, we can add a `console.log(x)` statement at that point in our code and run our program. Then we can check the output of the `console.log(x)` statement to see the value of variable `x` at that point in our code. This is a simple way to debug our code, but it is not very efficient because we have to add `console.log()` statements to our code and run our program every time we want to check the value of a variable.
+Για απλά προγράμματα, μπορούμε να χρησιμοποιήσουμε δηλώσεις «console.log()» για να εκτυπώσουμε τις τιμές των μεταβλητών σε διαφορετικά σημεία του κώδικά μας. Για παράδειγμα, εάν θέλουμε να μάθουμε την τιμή της μεταβλητής «x» σε ένα συγκεκριμένο σημείο του κώδικά μας, μπορούμε να προσθέσουμε μια δήλωση «console.log(x)» σε αυτό το σημείο του κώδικά μας και να εκτελέσουμε το πρόγραμμά μας. Στη συνέχεια, μπορούμε να ελέγξουμε την έξοδο της δήλωσης «console.log(x)» για να δούμε την τιμή της μεταβλητής «x» σε εκείνο το σημείο του κώδικά μας. Αυτός είναι ένας απλός τρόπος για τον εντοπισμό σφαλμάτων του κώδικά μας, αλλά δεν είναι πολύ αποτελεσματικός γιατί πρέπει να προσθέτουμε δηλώσεις «console.log()» στον κώδικά μας και να εκτελούμε το πρόγραμμά μας κάθε φορά που θέλουμε να ελέγχουμε την τιμή μιας μεταβλητής.
 
-## Debugging Tips
+## Συμβουλές για εντοπισμού σφαλμάτων
 
-First of all, we should test our code as we write it. We should not wait until we have written a lot of code before testing it. We should test our code frequently. This will help us find bugs in our code early on and fix them before they become bigger problems later on. Most of the bugs are caused by simple mistakes, such as typos, missing semicolons, and missing parentheses. We should always check our code for these simple mistakes before running it.
+Πρώτα απ 'όλα, θα πρέπει να δοκιμάσουμε τον κώδικά μας καθώς τον γράφουμε. Δεν πρέπει να περιμένουμε μέχρι να γράψουμε πολύ κώδικα πριν τον δοκιμάσουμε. Θα πρέπει να δοκιμάζουμε συχνά τον κώδικά μας. Αυτό θα μας βοηθήσει να βρούμε σφάλματα στον κώδικά μας από νωρίς και να τα διορθώσουμε πριν γίνουν μεγαλύτερα προβλήματα αργότερα. Τα περισσότερα σφάλματα προκαλούνται από απλά λάθη, όπως τυπογραφικά λάθη, ελλείψεις ερωτηματικών και έλλειψη παρενθέσεων. Πρέπει πάντα να ελέγχουμε τον κώδικά μας για αυτά τα απλά λάθη πριν τον εκτελέσουμε.
 
-- Use the built-in debugger to set breakpoints in your code and inspect the values of variables at those breakpoints.
-- Use `console.log()` statements to print the values of variables at different points in your code.
+- Χρησιμοποιήστε το ενσωματωμένο πρόγραμμα εντοπισμού σφαλμάτων για να ορίσετε σημεία διακοπής στον κώδικά σας και να επιθεωρήσετε τις τιμές των μεταβλητών σε αυτά τα σημεία διακοπής.
+- Χρησιμοποιήστε δηλώσεις `console.log()` για να εκτυπώσετε τις τιμές των μεταβλητών σε διαφορετικά σημεία του κώδικά σας.
