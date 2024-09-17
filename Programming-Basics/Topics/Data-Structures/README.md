@@ -32,15 +32,15 @@
 
 Γνωρίζουμε ήδη τι είναι η μεταβλητή και ότι χρησιμοποιείται για την αποθήκευση δεδομένων. Αλλά μέχρι τώρα ήμασταν σε θέση να αποθηκεύσουμε μόνο μια τιμή σε μια μεταβλητή ή να περιγράψουμε μόνο ένα πράγμα. Για παράδειγμα, θα μπορούσαμε να έχουμε μια μεταβλητή με το όνομα `firstName` που αποθηκεύει το πρώτο όνομα ενός ατόμου. Τι γίνεται όμως αν θέλουμε να αποθηκεύσουμε το όνομα, το επώνυμο, την ηλικία και τη διεύθυνση ενός ατόμου; Θα μπορούσαμε να δημιουργήσουμε μια μεταβλητή για κάθε μια από αυτές τις τιμές, αλλά αυτό θα ήταν πολύ αναποτελεσματικό. Αντ' αυτού, μπορούμε να χρησιμοποιήσουμε μια δομή δεδομένων για να αποθηκεύσουμε όλες αυτές τις τιμές σε ένα μέρος.
 
-Μια δομή δεδομένων είναι ένας τρόπος οργάνωσης δεδομένων στη μνήμη ενός υπολογιστή. Οι δομές δεδομένων χρησιμοποιούνται για την αποθήκευση συλλογών δεδομένων. Για παράδειγμα, μπορούμε να χρησιμοποιήσουμε μια **array** για να αποθηκεύσουμε μια λίστα αριθμών ή μια λίστα ονομάτων. Μπορούμε να χρησιμοποιήσουμε ένα **object** για να αποθηκεύσουμε πληροφορίες σχετικά με ένα άτομο (όνομα, επώνυμο, ηλικία, διεύθυνση κ.λπ.). Μπορούμε να χρησιμοποιήσουμε ένα **set** για να αποθηκεύσουμε μια λίστα μοναδικών τιμών. Μπορούμε να χρησιμοποιήσουμε ένα **map** για να αποθηκεύσουμε μια λίστα από ζεύγη κλειδιών-τιμών.
+Μια δομή δεδομένων είναι ένας τρόπος οργάνωσης δεδομένων στη μνήμη ενός υπολογιστή. Οι δομές δεδομένων χρησιμοποιούνται για την αποθήκευση συλλογών δεδομένων. Για παράδειγμα, μπορούμε να χρησιμοποιήσουμε ένα **πίνακα** για να αποθηκεύσουμε μια λίστα αριθμών ή μια λίστα ονομάτων. Μπορούμε να χρησιμοποιήσουμε ένα **αντιμείμενο** για να αποθηκεύσουμε πληροφορίες σχετικά με ένα άτομο (όνομα, επώνυμο, ηλικία, διεύθυνση κ.λπ.). Μπορούμε να χρησιμοποιήσουμε ένα **set** για να αποθηκεύσουμε μια λίστα μοναδικών τιμών. Μπορούμε να χρησιμοποιήσουμε ένα **map** για να αποθηκεύσουμε μια λίστα από ζεύγη κλειδιών-τιμών.
 
 > Παρόλο που υπάρχουν πολλές διαφορετικές δομές δεδομένων, σε αυτό το θέμα θα επικεντρωθούμε στους πίνακες και τα αντικείμενα.
 
-## Array
+## Πίνακας
 
-An array is a collection of values that are stored in a single variable. Arrays are used to store lists of values. Arrays are used to store collections of data that are related to each other. For example, we can use an array to store a list of numbers or a list of names.
+Ένας πίνακας είναι μια συλλογή τιμών που αποθηκεύονται σε μια ενιαία μεταβλητή. Οι πίνακες χρησιμοποιούνται για την αποθήκευση λιστών τιμών. Οι πίνακες χρησιμοποιούνται για την αποθήκευση συλλογών δεδομένων που σχετίζονται μεταξύ τους. Για παράδειγμα, μπορούμε να χρησιμοποιήσουμε έναν πίνακα για την αποθήκευση μιας λίστας αριθμών ή μιας λίστας ονομάτων.
 
-To create an array, we use the `[]` operator. For example, we can create an array named `numbers` that contains the numbers `1`, `2`, and `3` like this:
+Για να δημιουργήσουμε έναν πίνακα, χρησιμοποιούμε τον τελεστή `[]`. Για παράδειγμα, μπορούμε να δημιουργήσουμε έναν πίνακα με όνομα `numbers` που περιέχει τους αριθμούς `1`, `2` και `3` ως εξής:
 
 ```javascript
 const numbers = [1, 2, 3];
@@ -51,20 +51,21 @@ Or we can create an array named `names` that contains the names `John`, `Jane`, 
 const names = ['John', 'Jane', 'Jack'];
 ```
 
-We can access the values in an array using the index of the value. The index of the first value in an array is `0`. For example, if we want to access the first value in the `numbers` array, we can use the index `0` like this:
+Μπορούμε να έχουμε πρόσβαση στις τιμές ενός πίνακα χρησιμοποιώντας το δείκτη της τιμής. Ο δείκτης της πρώτης τιμής σε έναν πίνακα είναι `0`. Για παράδειγμα, αν θέλουμε να προσπελάσουμε την πρώτη τιμή στον πίνακα `numbers`, μπορούμε να χρησιμοποιήσουμε τον δείκτη `0` ως εξής:
 
 ```javascript
 const numbers = [1, 2, 3];
 
 console.log(numbers[0]);
 ```
-**Expected output**:
+**Αναμενόμενο αποτέλεσμα:**:
 
 ```
 1
 ```
 
-We can also use the index of the value to change the value in the array. For example, if we want to change the value of the first value in the `numbers` array to `10`, we can use the index `0` like this:
+Μπορούμε επίσης να χρησιμοποιήσουμε τον δείκτη της τιμής για να αλλάξουμε την τιμή στον πίνακα. Για παράδειγμα, αν θέλουμε να αλλάξουμε την τιμή της πρώτης τιμής στον πίνακα `numbers` σε `10`, μπορούμε να χρησιμοποιήσουμε τον δείκτη `0` ως εξής:
+
 
 ```javascript
 const numbers = [1, 2, 3];
@@ -73,23 +74,24 @@ numbers[0] = 10;
 
 console.log(numbers);
 ```
-**Expected output**:
+**Αναμενόμενο αποτέλεσμα:**:
 
 ```
 [10, 2, 3]
 ```
 
-### Array Methods
+### Μέθοδοι Πινάκων
 
-Methods are functions that are associated with an object. It means that in Javascript we can do something with an object by calling a built-in function that is associated with that object.
+Οι μέθοδοι είναι λειτουργίες που σχετίζονται με ένα αντικείμενο. Αυτό σημαίνει ότι στη Javascript μπορούμε να κάνουμε κάτι με ένα αντικείμενο καλώντας μια ενσωματωμένη συνάρτηση που σχετίζεται με αυτό το αντικείμενο.
 
-There are lots of methods that we can use to manipulate arrays. For example, we can use the `push()` method to add a value to the end of an array, the `pop()` method to remove a value from the end of an array, the `shift()` method to remove a value from the beginning of an array, and the `unshift()` method to add a value to the beginning of an array.
+Υπάρχουν πολλές μέθοδοι που μπορούμε να χρησιμοποιήσουμε για να χειριστούμε πίνακες. Για παράδειγμα, μπορούμε να χρησιμοποιήσουμε τη μέθοδο `push()` για να προσθέσουμε μια τιμή στο τέλος ενός πίνακα, τη μέθοδο `pop()` για να αφαιρέσουμε μια τιμή από το τέλος ενός πίνακα, τη μέθοδο `shift()` για να αφαιρέσουμε μια τιμή από την αρχή ενός πίνακα και τη μέθοδο `unshift()` για να προσθέσουμε μια τιμή στην αρχή ενός πίνακα.
 
-All array methods are listed in the [Array Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) section of the MDN web docs.
+Όλες οι μέθοδοι συστοιχιών παρατίθενται στην ενότητα [Μέθοδοι πινάκων](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) section of the MDN web docs.
 
-#### Adding Values to an Array
+#### Προσθήκη τιμών σε πίνακα
 
-We can use the `push()` method to add a value to the end of an array. For example, if we want to add the number `4` to the end of the `numbers` array, we can use the `push()` method like this:
+Μπορούμε να χρησιμοποιήσουμε τη μέθοδο `push()` για να προσθέσουμε μια τιμή στο τέλος ενός πίνακα. Για παράδειγμα, αν θέλουμε να προσθέσουμε τον αριθμό `4` στο τέλος του πίνακα `numbers`, μπορούμε να χρησιμοποιήσουμε τη μέθοδο `push()` ως εξής:
+
 
 ```javascript
 const numbers = [1, 2, 3];
@@ -98,33 +100,35 @@ numbers.push(4);
 
 console.log(numbers);
 ```
-**Expected output**:
+**Αναμενόμενο αποτέλεσμα**:
 
 ```
 [1, 2, 3, 4]
 ```
 
 
-#### Finding Values in an Array
+#### Εύρεση τιμών σε πίνακα
 
-We can use the `indexOf()` method to find the index of a value in an array. For example, if we want to find the index of the number `2` in the `numbers` array, we can use the `indexOf()` method like this:
+Μπορούμε να χρησιμοποιήσουμε τη μέθοδο `indexOf()` για να βρούμε το δείκτη μιας τιμής σε έναν πίνακα. Για παράδειγμα, αν θέλουμε να βρούμε το δείκτη του αριθμού `2` στον πίνακα `numbers`, μπορούμε να χρησιμοποιήσουμε τη μέθοδο `indexOf()` ως εξής:
 
 ```javascript
 const numbers = [1, 2, 3];
 
 console.log(numbers.indexOf(2));
 ```
-**Expected output**:
+**Αναμενόμενο αποτέλεσμα**:
 
 ```
 1
 ```
 
-> If the value is not found in the array, the `indexOf()` method will return `-1`.
+> Εάν η τιμή δεν βρεθεί στον πίνακα, η μέθοδος `indexOf()` θα επιστρέψει `-1`.
 
-#### Removing Values from an Array
 
-We can use splice() method to remove a value from an array. For example, if we want to remove the number `2` from the `numbers` array, we can use the `splice()` method like this:
+#### Αφαίρεση τιμών από πίνακα
+
+Μπορούμε να χρησιμοποιήσουμε τη μέθοδο splice() για να αφαιρέσουμε μια τιμή από έναν πίνακα. Για παράδειγμα, αν θέλουμε να αφαιρέσουμε τον αριθμό `2` από τον πίνακα `numbers`, μπορούμε να χρησιμοποιήσουμε τη μέθοδο `splice()` ως εξής:
+
 
 ```javascript
 const numbers = [1, 2, 3];
@@ -133,21 +137,20 @@ numbers.splice(1, 1);
 
 console.log(numbers);
 ```
-**Expected output**:
+**Αναμενόμενο αποτέλεσμα**:
 
 ```
 [1, 3]
 ```
+> Το πρώτο όρισμα της μεθόδου `splice()` είναι ο δείκτης της τιμής που θέλουμε να αφαιρέσουμε και το δεύτερο όρισμα είναι ο αριθμός των τιμών που θέλουμε να αφαιρέσουμε.
+> Η μέθοδος `splice()` θα επιστρέψει έναν πίνακα με τις τιμές που αφαιρέθηκαν.
+> Αν δεν καθορίσουμε το δεύτερο όρισμα, η μέθοδος `splice()` θα αφαιρέσει όλες τις τιμές ξεκινώντας από το δείκτη που καθορίσαμε στο πρώτο όρισμα.
+> Αν καθορίσουμε το δεύτερο όρισμα ως `0`, η μέθοδος `splice()` δεν θα αφαιρέσει καμία τιμή.
+> Θυμηθείτε, ότι για να αφαιρέσουμε μια τιμή από πίνακα χρησιμοποιώντας αυτή τη μέθοδο, πρέπει να γνωρίζουμε το δείκτη της τιμής που θέλουμε να αφαιρέσουμε.
 
-> The first argument of the `splice()` method is the index of the value that we want to remove and the second argument is the number of values that we want to remove.
-> The `splice()` method will return an array of the removed values.
-> If we don't specify the second argument, the `splice()` method will remove all values starting from the index that we specified in the first argument.
-> If we specify the second argument as `0`, the `splice()` method will not remove any values.
-> Remember, that to remove a value from array using this method, we need to know the index of the value that we want to remove.
+### Επανάληψη πίνακα
 
-### Array Iteration
-
-We can use the `for` loop to iterate over an array. For example, if we want to print each value in the `numbers` array on a new line, we can use the `for` loop like this:
+Μπορούμε να χρησιμοποιήσουμε τον βρόχο `for` για να διατρέξουμε έναν πίνακα. Για παράδειγμα, αν θέλουμε να εκτυπώσουμε κάθε τιμή στον πίνακα `numbers` σε μια νέα γραμμή, μπορούμε να χρησιμοποιήσουμε τον βρόχο `for` ως εξής:
 
 ```javascript
 const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
@@ -156,7 +159,7 @@ for (let i = 0; i < numbers.length; i++) {
   console.log(numbers[i]);
 }
 ```
-**Expected output**:
+**Αναμενόμενο αποτέλεσμα**:
 
 ```
 Monday
@@ -168,21 +171,21 @@ Saturday
 Sunday
 ```
 
-> Pay attention to the condition of the `for` loop. We need to use the `length` property of the array in the condition of the `for` loop to make sure that we don't go out of bounds of the array.
-> 
-> The `length` property of an array returns the number of values in the array.
-> 
-> The `length` property of an array is always one more than the index of the last value in the array.
-> 
-> Also, remember, that `i` is the value, that increments on each iteration of the `for` loop. We can use the value of `i` to access the values in the array.
-> 
-> Index of the first value in an array is `0`, so the index of the last value in an array is `length - 1`.
+> Δώστε προσοχή στη συνθήκη του βρόχου `for`. Πρέπει να χρησιμοποιήσουμε την ιδιότητα `length` του πίνακα στη συνθήκη του βρόχου `for` για να βεβαιωθούμε ότι δεν θα βγούμε εκτός ορίων του πίνακα.
 
-## Object
+> Η ιδιότητα `length` ενός πίνακα επιστρέφει τον αριθμό των τιμών του πίνακα.
 
-An object is a collection of key-value pairs that are stored in a single variable. Objects are used to store information about something. For example, we can use an object to store information about a person (first name, last name, age, address, etc.).
+> Η ιδιότητα `length` ενός πίνακα είναι πάντα κατά ένα μεγαλύτερο από το δείκτη της τελευταίας τιμής του πίνακα.
 
-To create an object, we use the `{}` operator. For example, we can create an object named `person` that contains the first name `John`, the last name `Doe`, and the age `25` like this:
+> Επίσης, θυμηθείτε ότι το `i` είναι η τιμή που αυξάνεται σε κάθε επανάληψη του βρόχου `for`. Μπορούμε να χρησιμοποιήσουμε την τιμή του `i` για να έχουμε πρόσβαση στις τιμές του πίνακα.
+
+> Ο δείκτης της πρώτης τιμής σε έναν πίνακα είναι `0`, οπότε ο δείκτης της τελευταίας τιμής σε έναν πίνακα είναι `μήκος - 1`.
+
+## Αντικείμενο
+
+Ένα αντικείμενο είναι μια συλλογή από ζεύγη κλειδιών-τιμών που αποθηκεύονται σε μια ενιαία μεταβλητή. Τα αντικείμενα χρησιμοποιούνται για την αποθήκευση πληροφοριών σχετικά με κάτι. Για παράδειγμα, μπορούμε να χρησιμοποιήσουμε ένα αντικείμενο για να αποθηκεύσουμε πληροφορίες σχετικά με ένα άτομο (όνομα, επώνυμο, ηλικία, διεύθυνση κ.λπ.).
+
+Για να δημιουργήσουμε ένα αντικείμενο, χρησιμοποιούμε τον τελεστή `{}`. Για παράδειγμα, μπορούμε να δημιουργήσουμε ένα αντικείμενο με όνομα `person` που περιέχει το όνομα `John`, το επώνυμο `Doe` και την ηλικία `25` ως εξής:
 
 ```javascript
 const person = {
@@ -192,7 +195,7 @@ const person = {
 };
 ```
 
-We can access the values in an object using the key of the value. For example, if we want to access the first name in the `person` object, we can use the key `firstName` like this:
+Μπορούμε να έχουμε πρόσβαση στις τιμές ενός αντικειμένου χρησιμοποιώντας το κλειδί της τιμής. Για παράδειγμα, αν θέλουμε να αποκτήσουμε πρόσβαση στο πρώτο όνομα στο αντικείμενο `person`, μπορούμε να χρησιμοποιήσουμε το κλειδί `firstName` ως εξής:
 
 ```javascript
 const person = {
@@ -204,7 +207,7 @@ const person = {
 console.log(person.firstName); // John
 ```
 
-We can also use the key of the value to change the value in the object. For example, if we want to change the value of the first name in the `person` object to `Jane`, we can use the key `firstName` like this:
+Μπορούμε επίσης να χρησιμοποιήσουμε το κλειδί της τιμής για να αλλάξουμε την τιμή στο αντικείμενο. Για παράδειγμα, αν θέλουμε να αλλάξουμε την τιμή του πρώτου ονόματος στο αντικείμενο `person` σε `Jane`, μπορούμε να χρησιμοποιήσουμε το κλειδί `firstName` ως εξής:
 
 ```javascript
 const person = {
@@ -218,28 +221,28 @@ person.firstName = 'Jane';
 console.log(person); // { firstName: 'Jane', lastName: 'Doe', age: 25 }
 ```
 
-As for arrays, there are lots of methods that we can use to manipulate objects also. For example, we can use the `Object.keys()` method to get an array of the keys in an object, the `Object.values()` method to get an array of the values in an object, and the `Object.entries()` method to get an array of the key-value pairs in an object.
+Όσον αφορά τους πίνακες, υπάρχουν πολλές μέθοδοι που μπορούμε να χρησιμοποιήσουμε για να χειριστούμε αντικείμενα. Για παράδειγμα, μπορούμε να χρησιμοποιήσουμε τη μέθοδο `Object.keys()` για να λάβουμε έναν πίνακα με τα κλειδιά ενός αντικειμένου, τη μέθοδο `Object.values()` για να λάβουμε έναν πίνακα με τις τιμές ενός αντικειμένου και τη μέθοδο `Object.entries()` για να λάβουμε έναν πίνακα με τα ζεύγη κλειδιών-τιμών ενός αντικειμένου.
 
-All object methods are listed in the [Object Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) section of the MDN web docs.
+Όλες οι μέθοδοι αντικειμένων παρατίθενται στην ενότητα [Μέθοδοι αντικειμένων](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) τμήμα των εγγράφων του MDN.
 
-## Exercises
+## Ασκήσεις
 
-Create a file named `index.js` (or another name of your choice) and start adding solutions to the exercises below.
+Δημιουργήστε ένα αρχείο με όνομα `index.js` (ή άλλο όνομα της επιλογής σας) και αρχίστε να προσθέτετε λύσεις στις παρακάτω ασκήσεις.
 
-> Always test your code by running the `index.js` file using the `node index.js` command.
+> Να δοκιμάζετε πάντα τον κώδικά σας εκτελώντας το αρχείο `index.js` χρησιμοποιώντας την εντολή `node index.js`.
 
-### Exercise 1 - Basic Array Operations
+### Άσκηση 1 - Βασικές λειτουργίες πινάκων
 
-**Objective**: Add elements to an array and print them.
+**Στόχος**: Προσθήκη στοιχείων σε έναν πίνακα και εκτύπωσή τους
 
-**Description**: Create an array to store a list of three favorite fruits. Add two more fruits to the array using array methods. Finally, print each fruit in the array on a new line.
+**Περιγραφή**: Δημιουργήστε έναν πίνακα για να αποθηκεύσετε μια λίστα με τρία αγαπημένα φρούτα. Προσθέστε άλλα δύο φρούτα στον πίνακα χρησιμοποιώντας μεθόδους πίνακα. Τέλος, εκτυπώστε κάθε φρούτο του πίνακα σε μια νέα γραμμή.
 
-> You can use the `push()` method to add elements to an array.
-> 
-> Use the `for` loop to print each element in the array on a new line.
+> Μπορείτε να χρησιμοποιήσετε τη μέθοδο `push()` για να προσθέσετε στοιχεία σε έναν πίνακα.
+
+> Χρησιμοποιήστε το βρόχο `for` για να εκτυπώσετε κάθε στοιχείο του πίνακα σε μια νέα γραμμή.
 
 <details>
-  <summary>Solution</summary>
+  <summary>Λύση </summary>
 
 ```javascript
 const fruits = ['apple', 'banana', 'orange'];
@@ -255,16 +258,16 @@ for (let i = 0; i < fruits.length; i++) {
 
 </details>
 
-### Exercise 2 - Array Iteration
+### Άσκηση 2 - Επανάληψη πίνακα
 
-**Objective**: Find the sum of all numbers in an array.
+**Στόχος**: Βρείτε το άθροισμα όλων των αριθμών ενός πίνακα.
 
-**Description**: Write a JavaScript program that creates an array of numbers. Iterate over the array and compute the sum of its elements. Print the final sum.
+**Περιγραφή**: Γράψτε ένα πρόγραμμα JavaScript που δημιουργεί έναν πίνακα αριθμών. Διατρέξτε τον πίνακα και υπολογίστε το άθροισμα των στοιχείων του. Εκτυπώστε το τελικό άθροισμα.
 
-> Probably You need to use extra variable to store the sum of all numbers.
+> Πιθανότατα θα πρέπει να χρησιμοποιήσετε επιπλέον μεταβλητή για να αποθηκεύσετε το άθροισμα όλων των αριθμών.
 
 <details>
-  <summary>Solution</summary>
+  <summary>Λύση </summary>
 
 ```javascript
 const numbers = [1, 2, 3, 4, 5];
@@ -277,25 +280,25 @@ for (let i = 0; i < numbers.length; i++) {
 
 console.log(sum);
 ```
-**Expected output**:
+**Αναμενόμενο αποτέλεσμα**:
 
 ```
 15
 ```
 </details>
 
-### Exercise 3 - Basic Object Operations
+### Άσκηση 3 - Βασικές λειτουργίες αντικειμένων
 
-**Objective**: Create an object and access its properties.
+**Στόχος**: Δημιουργία ενός αντικειμένου και πρόσβαση στις ιδιότητές του.
 
-**Description**: Define a JavaScript object named `car` with properties `make`, `model`, and `year`. Assign appropriate values to each. Then, print the `make` and `year` of the car in a sentence.
+**Περιγραφή**: Ορίστε ένα αντικείμενο JavaScript με όνομα `car` και ιδιότητες `make`, `model` και `year`. Αναθέστε κατάλληλες τιμές σε καθεμία από αυτές. Στη συνέχεια, εκτυπώστε τη «model» και το «year» του αυτοκινήτου σε μια πρόταση.
 
-> You can access the properties of an object using the `.` operator.
+> Μπορείτε να αποκτήσετε πρόσβαση στις ιδιότητες ενός αντικειμένου χρησιμοποιώντας τον τελεστή `.`.
 >
-> You can use the `+` operator to concatenate strings or use template literals.
+> πορείτε να χρησιμοποιήσετε τον τελεστή `+` για να συνδυάσετε συμβολοσειρές ή να χρησιμοποιήσετε κυριολεκτικά πρότυπα.
 
 <details>
-  <summary>Solution</summary>
+  <summary>Λύση </summary>
 
 ```javascript
 const car = {
@@ -307,7 +310,7 @@ const car = {
 console.log(`I drive a ${car.year} ${car.make} ${car.model}.`);
 ```
 
-**Expected output**:
+**Αναμενόμενο αποτέλεσμα**:
 
 ```
 I drive a 2019 Toyota Corolla.
@@ -316,13 +319,13 @@ I drive a 2019 Toyota Corolla.
 
 </details>
 
-### Exercise 4 - Modifying Object Properties
+### Άσκηση 4 - Τροποποίηση ιδιοτήτων αντικειμένου
 
-**Objective**: Update and add new properties to an object.
+**Στόχος**: Ενημερώστε και προσθέστε νέες ιδιότητες σε ένα αντικείμενο.
 
-**Description**: Given an object `student` with properties `name`, `age`, and `grade`, update the `age`, add a new property `subject`, and then print the entire object.
+**Περιγραφή**: Δεδομένου ενός αντικειμένου «μαθητής» με ιδιότητες «όνομα», «ηλικία» και «βαθμός», ενημερώστε το «ηλικία», προσθέστε μια νέα ιδιότητα «θέμα» και, στη συνέχεια, εκτυπώστε ολόκληρο το αντικείμενο.
 
-Example `student` object:
+Παράδειγμα αντικειμένου `student`:
 
 ```javascript
 const student = {
@@ -332,11 +335,11 @@ const student = {
 };
 ```
 
-> You can update the properties of an object using the `.` operator.
+> Μπορείτε να ενημερώσετε τις ιδιότητες ενός αντικειμένου χρησιμοποιώντας τον τελεστή `.`.
 >
-> You can add new properties to an object using the `.` operator.
+> Μπορείτε να προσθέσετε νέες ιδιότητες σε ένα αντικείμενο χρησιμοποιώντας τον τελεστή `.`.
 >
-> You can use `console.log()` to print the entire object.
+> Μπορείτε να χρησιμοποιήσετε το "console.log()" για να εκτυπώσετε ολόκληρο το αντικείμενο.
 
 <details>
   <summary>Solution</summary>
@@ -355,7 +358,7 @@ student.subject = 'Math';
 console.log(student);
 ```
 
-**Expected output**:
+**Αναμενόμενο αποτέλεσμα**:
 
 ```
 { name: 'John Doe', age: 17, grade: 10, subject: 'Math' }
