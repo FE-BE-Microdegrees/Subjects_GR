@@ -1,74 +1,74 @@
-# Operators and Expressions
+# Τελεστές και εκφράσεις
 
-In this topic, we'll learn about operators and expressions in Javascript.
+Σε αυτή τη θεματική ενότητσ, θα μάθουμε για τους τελεστές και τις εκφράσεις στη Javascript.
 
-- [Operators and Expressions](#operators-and-expressions)
-  - [Learning Outcomes](#learning-outcomes)
-  - [What is an Operator?](#what-is-an-operator)
-  - [What is an Expression?](#what-is-an-expression)
-  - [Relationship between Operators and Expressions:](#relationship-between-operators-and-expressions)
-  - [Operator Types](#operator-types)
-    - [Arithmetic Operators](#arithmetic-operators)
-    - [Assignment Operators](#assignment-operators)
-    - [Comparison Operators](#comparison-operators)
-    - [Logical Operators](#logical-operators)
-    - [Bitwise Operators (optional - not used during the course)](#bitwise-operators-optional---not-used-during-the-course)
-    - [String Operators](#string-operators)
-    - [Conditional (Ternary) Operator](#conditional-ternary-operator)
-    - [Comma Operator](#comma-operator)
-    - [Unary Operators](#unary-operators)
-    - [Relational Operators](#relational-operators)
-  - [Exercises](#exercises)
-    - [Exercise 1 -  Basic Arithmetic Operators](#exercise-1----basic-arithmetic-operators)
-    - [Exercise 2 -  Comparison Operators](#exercise-2----comparison-operators)
-    - [Exercise 3: Logical Operators and Conditional Statements](#exercise-3-logical-operators-and-conditional-statements)
+- [ Τελεστές και εκφράσεις](#Τελεστές-και-εκφράσεις)
+  - [Μαθησιακά αποτελέσματα](#Μαθησιακά-αποτελέσματα)
+  - [Τι είναι ο Τελεστής;](#Τι-είναι-ο-Τελεστής-;)
+  - [Τι είναι η Έκφραση;](#Τι-είναι-η-Έκφραση-;)
+  - [Σχέση μεταξύ τελεστών και εκφράσεων:](#Σχέση-μεταξύ-τελεστών-και-εκφράσεων:)
+  - [Τύποι τελεστών](#Τύποι-τελεστών)
+    - [Αριθμητικοί τελεστές](#Αριθμητικοί-τελεστές)
+    - [Αριθμητικοί τελεστές](#Αριθμητικοί-τελεστές)
+    - [Τελεστές σύγκρισης](#Τελεστές-σύγκρισης)
+    - [Λογικοί τελεστές](#Λογικοί-τελεστές)
+    - [Bitwise Operators (προαιρετικοί - δεν χρησιμοποιούνται κατά τη διάρκεια του μαθήματος))](#Bitwise-Operators-(-προαιρετικοί---δεν-χρησιμοποιούνται-κατά-τη-διάρκεια-του-μαθήματος))
+    - [Τελεστές συμβολοσειρών](#Τελεστές-συμβολοσειρών)
+    - [Τελεστής υπό συνθήκη (τριμερής)](#Τελεστής-υπό-συνθήκη-(τριμερής))
+    - [Χειριστής με κόμμα](#Χειριστής-με-κόμμα)
+    - [Μοναδιαίοι τελεστές](#Μοναδιαίοι-τελεστές)
+    - [Σχεσιακοί τελεστές](#Σχεσιακοί-τελεστές)
+  - [Ασκήσεις](#exercises)
+    - [Άσκηση 1 - Βασικοί αριθμητικοί τελεστές](#Άσκηση-1---Βασικοί-αριθμητικοί-τελεστές)
+    - [Άσκηση 2 - Τελεστές σύγκρισης](#Άσκηση-2---Τελεστές-σύγκρισης)
+    - [Άσκηση 3: Λογικοί τελεστές και δηλώσεις υπό όρους](#Άσκηση-3:-Λογικοί-τελεστές-και-δηλώσεις-υπό-όρους)
 
-## Learning Outcomes
+## Μαθησιακά αποτελέσματα
 
-After completing this topic, you'll be able to:
+Αφού ολοκληρώσετε αυτή τη θεματική ενότητα, θα είστε σε θέση να:
 
-- Define what an operator is
-- Define what an expression is
-- Differentiate between operators and expressions
-- List the most common operators in Javascript
-- Explain the difference between the different types of operators
-- Use operators in your programs
-- Explain the difference between the equality operator (`==`) and the strict equality operator (`===`)
-- Explain the difference between the inequality operator (`!=`) and the strict inequality operator (`!==`)
+- Ορίσετε τι είναι ένας χειριστής
+- Καθορίσετε τι είναι μια έκφραση
+- Ξεχωρίσετε τις διαφορές των τελεστών και εκφράσεων
+- Αναφέρετε τους πιο συνηθισμένους τελεστές στη Javascript
+- Εξηγήσετε τη διαφορά μεταξύ των διαφόρων τύπων τελεστών
+- Χρησιμοποιήσετε τελεστές στα προγράμματά σας
+- Εξηγήσετε τη διαφορά μεταξύ του τελεστή ισότητας (`==`) και του τελεστή αυστηρής ισότητας (`===`)
+- Εξηγήσετε τη διαφορά μεταξύ του τελεστή ανισότητας (`!=`) και του τελεστή αυστηρής ανισότητας (`!==`)
 
-## What is an Operator?
+## Τι είναι ο Τελεστής;
 
-An operator is a symbol that is used to perform an operation on one or more values. For example, the `+` symbol is used to add two values together. The values that an operator operates on are called operands. For example, in the expression `5 + 10`, the `+` symbol is the operator and `5` and `10` are the operands.
+Ένας τελεστής είναι ένα σύμβολο που χρησιμοποιείται για την εκτέλεση μιας πράξης σε μία ή περισσότερες τιμές. Για παράδειγμα, το σύμβολο `+` χρησιμοποιείται για την πρόσθεση δύο τιμών. Οι τιμές πάνω στις οποίες λειτουργεί ένας τελεστής ονομάζονται τελεστές. Για παράδειγμα, στην έκφραση `5 + 10`, το σύμβολο `+` είναι ο τελεστής και τα `5` και `10` είναι τα τελεστέα.
 
 ```javascript
 let x = 5 + 10; // 5 and 10 are operands, + is the operator. x is the variable that stores the result of the operation
 ```
 
-## What is an Expression?
+## Τι είναι η Έκφραση;
 
-An expression is a combination of values, variables, operators, and functions that are evaluated to produce a result. For example, `2 + 3` is an expression that evaluates to `5`. Expressions can be used to perform calculations, manipulate strings, and more.
+Μια έκφραση είναι ένας συνδυασμός τιμών, μεταβλητών, τελεστών και συναρτήσεων που αξιολογούνται για την παραγωγή ενός αποτελέσματος. Για παράδειγμα, το `2 + 3` είναι μια έκφραση που αξιολογείται σε `5`. Οι εκφράσεις μπορούν να χρησιμοποιηθούν για την εκτέλεση υπολογισμών, τον χειρισμό συμβολοσειρών και πολλά άλλα.
 
-## Relationship between Operators and Expressions:
+## Σχέση μεταξύ τελεστών και εκφράσεων:
 
-- The primary relationship is that operators are used within expressions to define the kind of operation being performed on the operands. An expression might consist of a simple operation with only one operator (like x + y) or a more complex operation with multiple operators (like (x + y) * (a - b)).
-- The type of the operator dictates the type of the expression. For instance, arithmetic operators create arithmetic expressions, logical operators create logical expressions, and so on.
-- The evaluation of expressions often follows a specific order of operations, determined by the precedence and associativity of the operators involved.
+- Η πρωταρχική σχέση είναι ότι οι τελεστές χρησιμοποιούνται μέσα σε εκφράσεις για να καθορίσουν το είδος της πράξης που εκτελείται στους τελεστέους. Μια έκφραση μπορεί να αποτελείται από μια απλή πράξη με έναν μόνο τελεστή (όπως x + y) ή μια πιο σύνθετη πράξη με πολλούς τελεστές (όπως (x + y) * (a - b)).
+- Ο τύπος του τελεστή υπαγορεύει τον τύπο της έκφρασης. Για παράδειγμα, οι αριθμητικοί τελεστές δημιουργούν αριθμητικές εκφράσεις, οι λογικοί τελεστές δημιουργούν λογικές εκφράσεις κ.ο.κ.
+- Η αξιολόγηση των εκφράσεων ακολουθεί συχνά μια συγκεκριμένη σειρά πράξεων, η οποία καθορίζεται από την προτεραιότητα και τη συνειρμικότητα των εμπλεκόμενων τελεστών.
 
-## Operator Types
+## Τύποι τελεστών
 
-There are many different types of operators in Javascript. We'll cover the most common ones in this topic.
+Υπάρχουν πολλοί διαφορετικοί τύποι τελεστών στη Javascript. Θα καλύψουμε τους πιο συνηθισμένους σε αυτό το θέμα.
 
-### Arithmetic Operators
+### Αριθμητικοί τελεστές
 
-Arithmetic operators are used to perform arithmetic operations on numeric values. We need arithmetic operators when we want to do calculations in our programs. For example, we might want to add two numbers together or multiply two numbers together.
+Οι αριθμητικοί τελεστές χρησιμοποιούνται για την εκτέλεση αριθμητικών πράξεων σε αριθμητικές τιμές. Χρειαζόμαστε αριθμητικούς τελεστές όταν θέλουμε να κάνουμε υπολογισμούς στα προγράμματά μας. Για παράδειγμα, μπορεί να θέλουμε να προσθέσουμε δύο αριθμούς μαζί ή να πολλαπλασιάσουμε δύο αριθμούς μαζί.
 
-There are 5 arithmetic operators in Javascript:
+Υπάρχουν 5 αριθμητικοί τελεστές στη Javascript:
 
-- `+`: addition - adds two values together
-- `-`: subtraction - subtracts one value from another
-- `*`: multiplication - multiplies two values together
-- `/`: division - divides one value by another
-- `%`: modulus - returns the remainder of dividing one value by another
+- `+`: πρόσθεση - προσθέτει δύο τιμές μαζί
+- `-`: αφαίρεση - αφαιρεί μια τιμή από μια άλλη
+- `*`: πολλαπλασιασμός - πολλαπλασιάζει δύο τιμές μαζί
+- `/`: διαίρεση - διαιρεί μια τιμή με μια άλλη
+- `%`: modulus - επιστρέφει το υπόλοιπο της διαίρεσης μιας τιμής με μια άλλη
 
 ```javascript
 let x = 5 + 10; // addition - result is 15
@@ -78,20 +78,21 @@ let w = 5 / 10; // division - result is 0.5
 let v = 5 % 10; // modulus - result is 5
 ```
 
-### Assignment Operators
+### Τελεστές ανάθεσης
 
-Assignment operators are used to assign values to variables. Sometimes we want to assign a value to a variable and then perform an operation on the variable. For example, we might want to add 10 to a variable and then assign the result to the variable.
-There are 8 assignment operators in Javascript:
+Οι τελεστές ανάθεσης χρησιμοποιούνται για την ανάθεση τιμών σε μεταβλητές. Μερικές φορές θέλουμε να εκχωρήσουμε μια τιμή σε μια μεταβλητή και στη συνέχεια να εκτελέσουμε μια πράξη στη μεταβλητή. Για παράδειγμα, μπορεί να θέλουμε να προσθέσουμε 10 σε μια μεταβλητή και στη συνέχεια να αναθέσουμε το αποτέλεσμα στη μεταβλητή.
+Υπάρχουν 8 τελεστές ανάθεσης στη Javascript:
 
-- `=`: assigns a value to a variable
-- `+=`: adds a value to a variable and assigns the result to the variable
-- `-=`: subtracts a value from a variable and assigns the result to the variable
-- `*=`: multiplies a variable by a value and assigns the result to the variable
-- `/=`: divides a variable by a value and assigns the result to the variable
-- `%=`: divides a variable by a value and assigns the remainder to the variable
-- `**=`: raises a variable to the power of a value and assigns the result to the variable
-- `++`: increments a variable by 1
-- `--`: decrements a variable by 1
+
+- `=`: αναθέτει μια τιμή σε μια μεταβλητή
+- `+=`: προσθέτει μια τιμή σε μια μεταβλητή και αναθέτει το αποτέλεσμα στη μεταβλητή
+- `-=`: αφαιρεί μια τιμή από μια μεταβλητή και αναθέτει το αποτέλεσμα στη μεταβλητή
+- `*=`: πολλαπλασιάζει μια μεταβλητή με μια τιμή και αναθέτει το αποτέλεσμα στη μεταβλητή
+- `/=`: διαιρεί μια μεταβλητή με μια τιμή και αναθέτει το αποτέλεσμα στη μεταβλητή
+- `%=`: διαιρεί μια μεταβλητή με μια τιμή και αναθέτει το υπόλοιπο στη μεταβλητή
+- `**=`: αυξάνει μια μεταβλητή στη δύναμη μιας τιμής και αναθέτει το αποτέλεσμα στη μεταβλητή
+- `++`: αυξάνει μια μεταβλητή κατά 1
+- `--`: μειώνει μια μεταβλητή κατά 1
 
 ```javascript
 let x = 5; // declares variable x and assigns the value 5 to x
@@ -105,10 +106,10 @@ x++; // increments x by 1 - result is 26
 x--; // decrements x by 1 - result is 25
 ```
 
-### Comparison Operators
+### Τελεστές σύγκρισης
 
-Comparison operators are used to compare two values. Comparing values is useful when we want to check if two values are equal or not, or if one value is greater than or less than another value. Result of a comparison is a boolean value (`true` or `false`).
-There are 8 comparison operators in Javascript:
+Οι τελεστές σύγκρισης χρησιμοποιούνται για τη σύγκριση δύο τιμών. Η σύγκριση τιμών είναι χρήσιμη όταν θέλουμε να ελέγξουμε αν δύο τιμές είναι ίσες ή όχι, ή αν μια τιμή είναι μεγαλύτερη ή μικρότερη από μια άλλη τιμή. Το αποτέλεσμα μιας σύγκρισης είναι μια boolean τιμή (`true` ή `false`).
+Υπάρχουν 8 τελεστές σύγκρισης στη Javascript:
 
 - `==`: equal to - returns `true` if two values are equal
 - `!=`: not equal to - returns `true` if two values are not equal
@@ -136,19 +137,19 @@ x == z; // true
 x === z; // false
 ```
 
-> We should always use strict equality (`===`) and strict inequality (`!==`) when comparing values, because as we can see in the example above, the equality operator (`==`) and the inequality operator (`!=`) can produce unexpected results.
+> Θα πρέπει πάντα να χρησιμοποιούμε την αυστηρή ισότητα (`===`) και την αυστηρή ανισότητα (`!==`) όταν συγκρίνουμε τιμές, γιατί όπως βλέπουμε στο παραπάνω παράδειγμα, ο τελεστής ισότητας (`==`) και ο τελεστής ανισότητας (`!=`) μπορεί να παράγουν απροσδόκητα αποτελέσματα.
 >
-> For example, `5 == '5'` returns `true`, but `5 === '5'` returns `false`. This is because the equality operator (`==`) converts the operands to the same type before comparing them, but the strict equality operator (`===`) does not convert the operands to the same type before comparing them.
+> Για παράδειγμα, το `5 == '5'` επιστρέφει `true`, αλλά το `5 === '5'` επιστρέφει `false`. Αυτό συμβαίνει επειδή ο τελεστής ισότητας (`==`) μετατρέπει τους τελεστές στον ίδιο τύπο πριν από τη σύγκρισή τους, αλλά ο τελεστής αυστηρής ισότητας (`===`) δεν μετατρέπει τους τελεστές στον ίδιο τύπο πριν από τη σύγκρισή τους.
 
-### Logical Operators
+### Λογικοί τελεστές
 
-Logical operators are used to combine two or more boolean values and return a single boolean value. For example, we might want to check if a number is greater than 10 and less than 20. We can do this by combining two comparison operators using the logical AND operator (`&&`).
+Οι λογικοί τελεστές χρησιμοποιούνται για να συνδυάσουν δύο ή περισσότερες τιμές boolean και να επιστρέψουν μια ενιαία τιμή boolean. Για παράδειγμα, μπορεί να θέλουμε να ελέγξουμε αν ένας αριθμός είναι μεγαλύτερος από 10 και μικρότερος από 20. Μπορούμε να το κάνουμε αυτό συνδυάζοντας δύο τελεστές σύγκρισης χρησιμοποιώντας τον λογικό τελεστή AND (`&&`).
 
-There are 3 logical operators in Javascript:
+Υπάρχουν 3 λογικοί τελεστές στη Javascript:
 
-- `&&`: logical AND - returns `true` if both operands are `true`
-- `||`: logical OR - returns `true` if one of the operands is `true`
-- `!`: logical NOT - returns `true` if the operand is `false`
+- `&&`: λογικό AND - επιστρέφει `true` αν και οι δύο τελεστές είναι `true`
+- `||`: λογικό OR - επιστρέφει `true` αν ένα από τα τελεστέα είναι  `true`
+- `!`: λογικό NOT - επιστρέφει `true` εάν ο τελεστής είναι `false`
 
 ```javascript
 let x = 5;
@@ -159,19 +160,19 @@ x > 5 || x < 10; // true
 !(x > 5); // true
 ```
 
-### Bitwise Operators (optional - not used during the course)
+### Bitwise Operators (προαιρετικά - δεν χρησιμοποιούνται κατά τη διάρκεια του μαθήματος)
 
-Bitwise operators are used to perform bitwise operations on numeric values. Bitwise operations are operations that are performed on the binary representation of a number. For example, the binary representation of the number `5` is `101`. The binary representation of the number `10` is `1010`. The bitwise AND operation on the numbers `5` and `10` is `0`, because `101` AND `1010` is `0`. Counting from right to left, the first bit of the result is `0` because the first bits of the operands are `1` and `0`. The second bit of the result is `0` because the second bits of the operands are `0` and `1`. The third bit of the result is `0` because the third bits of the operands are `1` and `0`.
+Οι τελεστές bitwise χρησιμοποιούνται για την εκτέλεση πράξεων bitwise σε αριθμητικές τιμές. Οι πράξεις bitwise είναι πράξεις που εκτελούνται στη δυαδική αναπαράσταση ενός αριθμού. Για παράδειγμα, η δυαδική αναπαράσταση του αριθμού `5` είναι `101`. Η δυαδική αναπαράσταση του αριθμού `10` είναι `1010`. Η πράξη bitwise AND στους αριθμούς `5` και `10` είναι `0`, επειδή `101` ΚΑΙ `1010` είναι `0`. Μετρώντας από τα δεξιά προς τα αριστερά, το πρώτο bit του αποτελέσματος είναι `0` επειδή τα πρώτα bits των τελεστών είναι `1` και `0`. Το δεύτερο bit του αποτελέσματος είναι `0` επειδή τα δεύτερα bits των τελεστών είναι `0` και `1`. Το τρίτο bit του αποτελέσματος είναι `0` επειδή τα τρίτα bits των τελεστών είναι `1` και `0`.
 
-There are 7 bitwise operators in Javascript:
+Υπάρχουν 7 bitwise τελεστές στη Javascript:
 
-- `&`: bitwise AND - returns `1` if both bits are `1`
-- `|`: bitwise OR - returns `1` if one of the bits is `1`
-- `^`: bitwise XOR - returns `1` if one of the bits is `1` and the other is `0`
-- `~`: bitwise NOT - flips the bits
-- `<<`: bitwise left shift - shifts the bits to the left
-- `>>`: bitwise right shift - shifts the bits to the right
-- `>>>`: bitwise unsigned right shift - shifts the bits to the right and fills the empty bits with `0`
+- `&`: bitwise AND - επιστρέφει `1` αν και τα δύο bit είναι `1`
+- `|`: bitwise OR - επιστρέφει `1` αν ένα από τα bits είναι `1`
+- `^`: bitwise XOR - επιστρέφει `1` αν ένα από τα bits είναι `1` και το άλλο `0`.
+- `~`: bitwise NOT - αντιστρέφει τα bits
+- `<<`: bitwise left shift - μετατοπίζει τα bit προς τα αριστερά
+- `>>`: bitwise right shift - μετατοπίζει τα bit προς τα δεξιά
+- `>>>`: bitwise unsigned right shift - μετατοπίζει τα bits προς τα δεξιά και γεμίζει τα κενά bits με «0».
 
 ```javascript
 let x = 5; // 101
@@ -186,11 +187,11 @@ x >> 1; // 2 - shifts the bits of 101 to the right by 1 to get 10
 x >>> 1; // 2 - shifts the bits of 101 to the right by 1 to get 10 and fills the empty bit with 0
 ```
 
-### String Operators
+### Τελεστές συμβολοσειράς
 
-String operators are used to concatenate strings together. For example, we might want to concatenate the first name and last name of a person to get their full name.
+Οι τελεστές συμβολοσειρών χρησιμοποιούνται για τη συνένωση συμβολοσειρών. Για παράδειγμα, μπορεί να θέλουμε να συνδέσουμε το όνομα και το επώνυμο ενός ατόμου για να πάρουμε το πλήρες όνομά του.
 
-There is only one string operator in Javascript:
+Υπάρχει μόνο ένας τελεστής συμβολοσειράς στη Javascript:
 
 - `+`: concatenation - concatenates two strings together
 
@@ -201,13 +202,14 @@ let lastName = 'Doe';
 firstName + ' ' + lastName; // 'John Doe'
 ```
 
-### Conditional (Ternary) Operator
+### Τελεστής υπό συνθήκη (τριμερής)
 
-The conditional operator is used to assign a value to a variable based on a condition. For example, we might want to assign a value of `true` to a variable if a number is greater than 10, or a value of `false` if a number is less than 10.
+Ο τελεστής υπό συνθήκη χρησιμοποιείται για την ανάθεση μιας τιμής σε μια μεταβλητή βάσει μιας συνθήκης. Για παράδειγμα, μπορεί να θέλουμε να εκχωρήσουμε την τιμή `true` σε μια μεταβλητή αν ένας αριθμός είναι μεγαλύτερος από 10, ή την τιμή `false` αν ένας αριθμός είναι μικρότερος από 10.
 
-There is only one conditional operator in Javascript:
+Υπάρχει μόνο ένας τελεστής υπό συνθήκη στη Javascript:
 
-- `?:`: conditional - assigns a value to a variable based on a condition
+
+- `?:`: conditional - αναθέτει μια τιμή σε μια μεταβλητή με βάση μια συνθήκη
 
 ```javascript
 let x = 5;
@@ -215,13 +217,13 @@ let x = 5;
 x > 10 ? true : false; // false
 ```
 
-### Comma Operator
+### Χειριστής με κόμμα
 
-The comma operator is used to evaluate multiple expressions and return the result of the last expression. For example, we might want to evaluate two expressions and return the result of the second expression.
+Ο τελεστής κόμμα χρησιμοποιείται για την αξιολόγηση πολλαπλών εκφράσεων και την επιστροφή του αποτελέσματος της τελευταίας έκφρασης. Για παράδειγμα, μπορεί να θέλουμε να αξιολογήσουμε δύο εκφράσεις και να επιστρέψουμε το αποτέλεσμα της δεύτερης έκφρασης.
 
-There is only one comma operator in Javascript:
+Υπάρχει μόνο ένας τελεστής κόμματος στη Javascript:
 
-- `,`: comma - evaluates multiple expressions and returns the result of the last expression
+- `,`: κόμμα - αξιολογεί πολλαπλές εκφράσεις και επιστρέφει το αποτέλεσμα της τελευταίας έκφρασης
 
 ```javascript
 let x = 5;
@@ -229,15 +231,16 @@ let x = 5;
 (x = 10, x + 5); // 15
 ```
 
-### Unary Operators
+### Μοναδιαίοι τελεστές
 
-Unary operators are used to perform unary operations on a single value. For example, we might want to increment a number by 1 or decrement a number by 1.
+Οι μοναδιαίοι τελεστές χρησιμοποιούνται για την εκτέλεση μοναδιαίων πράξεων σε μία μόνο τιμή. Για παράδειγμα, μπορεί να θέλουμε να αυξήσουμε έναν αριθμό κατά 1 ή να μειώσουμε έναν αριθμό κατά 1.
 
-There are 3 unary operators in Javascript:
+Υπάρχουν 3 μοναδιαίοι τελεστές στη Javascript:
 
-- `+`: unary plus - converts a value to a number
-- `-`: unary minus - converts a value to a number and negates it
-- `!`: logical NOT - returns `true` if the operand is `false`
+
+- `+`: μοναδιαίο συν - μετατρέπει μια τιμή σε αριθμό
+- `-`: μοναδιαίο μείον - μετατρέπει μια τιμή σε αριθμό και την αναιρεί
+- `!`: λογικό ΟΧΙ - επιστρέφει`true` αν ο τελεστής είναι  `false`
 
 ```javascript
 let x = '5';
@@ -247,14 +250,14 @@ let x = '5';
 !x; // false
 ```
 
-### Relational Operators
+### Σχεσιακοί τελεστές
 
-Relational operators are used to compare two values. For example, we might want to check if a number is greater than 10 or less than 10.
+Οι σχετικοί τελεστές χρησιμοποιούνται για τη σύγκριση δύο τιμών. Για παράδειγμα, μπορεί να θέλουμε να ελέγξουμε αν ένας αριθμός είναι μεγαλύτερος από 10 ή μικρότερος από 10.
 
-There are 2 relational operators in Javascript:
+Υπάρχουν 2 σχεσιακοί τελεστές στη Javascript:
 
-- `in`: returns `true` if a property exists in an object
-- `instanceof`: returns `true` if an object is an instance of a class
+- `in`: επιστρέφει `true` αν μια ιδιότητα υπάρχει σε ένα αντικείμενο
+- `instanceof`: επιστρέφει `true` αν ένα αντικείμενο είναι παράδειγμα μιας κλάσης
 
 ```javascript
 let person = {
@@ -269,24 +272,24 @@ let person = {
 person instanceof Object; // true
 ```
 
-## Exercises
+## Ασκήσεις
 
-Create a file `index.js` and write the code for the following exercises in this file.
+Δημιουργήστε ένα αρχείο `index.js` και γράψτε τον κώδικα για τις παρακάτω ασκήσεις σε αυτό το αρχείο.
 
-Test your code by running the `index.js` file using the `node index.js` command.
+Δοκιμάστε τον κώδικά σας εκτελώντας το αρχείο `index.js` χρησιμοποιώντας την εντολή `node index.js`.
 
-Also, test your code with different values for the variables.
+Επίσης, δοκιμάστε τον κώδικά σας με διαφορετικές τιμές για τις μεταβλητές.
 
-### Exercise 1 -  Basic Arithmetic Operators
+### Άσκηση 1 - Βασικοί αριθμητικοί τελεστές
 
-**Objective**: Perform basic arithmetic operations.
+**Σκοπός**: Εκτέλεση βασικών αριθμητικών πράξεων.
 
-**Description**: Write a program that declares two variables, `num1` and `num2`, assigned with numbers. Perform addition, subtraction, multiplication, and division on these variables. Print the results of each operation.
+**Περιγραφή**: Γράψτε ένα πρόγραμμα που δηλώνει δύο μεταβλητές, `num1` και `num2`, στις οποίες ανατίθενται αριθμοί. Εκτελέστε πρόσθεση, αφαίρεση, πολλαπλασιασμό και διαίρεση σε αυτές τις μεταβλητές. Εκτυπώστε τα αποτελέσματα κάθε πράξης.
 
-**Expected output**: The sum, difference, product, and quotient of `num1` and `num2`.
+**Αναμενόμενο αποτέλεσμα**: Το άθροισμα, η διαφορά, το γινόμενο και το πηλίκο των αριθμών `num1` και `num2`.
 
 <details>
-  <summary>Solution</summary>
+  <summary>Λύση</summary>
 
   ```javascript
   let num1 = 5;
@@ -301,15 +304,16 @@ Also, test your code with different values for the variables.
 
 </details>
 
-### Exercise 2 -  Comparison Operators
-**Objective**: Compare two values using different comparison operators.
+### Άσκηση 2 - Τελεστές σύγκρισης
 
-**Description**: Define two variables with numeric values. Use comparison operators (`==`, `!=`, `>`, `<`, `>=`, `<=`) to compare these values, and print the results of each comparison in a descriptive way.
+**Σκοπός**: Να συγκρίνετε δύο τιμές χρησιμοποιώντας διαφορετικούς τελεστές σύγκρισης.
 
-**Expected output**: Statements indicating the result of each comparison between `a` and `b`.
+**Περιγραφή**: Ορισμός δύο μεταβλητών με αριθμητικές τιμές. Χρησιμοποιήστε τελεστές σύγκρισης (`==`, `!=`, `>`, `<`, `>=`, `<=`) για να συγκρίνετε αυτές τις τιμές και εκτυπώστε τα αποτελέσματα κάθε σύγκρισης με περιγραφικό τρόπο.
+
+**Προσδοκώμενη έξοδος**: Δηλώσεις που υποδεικνύουν το αποτέλεσμα κάθε σύγκρισης μεταξύ `a` και `b`.
 
 <details>
-  <summary>Solution</summary>
+  <summary>Λύση</summary>
 
   ```javascript
   let a = 5;
@@ -324,21 +328,21 @@ Also, test your code with different values for the variables.
   ```
 </details>
 
-### Exercise 3: Logical Operators and Conditional Statements
+### Άσκηση 3: Λογικοί τελεστές και δηλώσεις υπό όρους
 
-**Objective**: Make decisions using logical operators.
+**Σκοπός**: Λήψη αποφάσεων με χρήση λογικών τελεστών.
 
-**Description**: Write a program that declares three variables `age`, `license`, and `goodVision`. Using logical operators (`&&`, `||`, `!`), determine if a person is eligible to drive a car. The criteria for eligibility are: age must be 18 or over, must have a driving license, and must have good vision.
+**Περιγραφή**: Γράψτε ένα πρόγραμμα που δηλώνει τρεις μεταβλητές `ηλικία`, `αδεια` και `καλή όραση`. Χρησιμοποιώντας λογικούς τελεστές (`&&`, `||`, `!`), προσδιορίστε αν ένα άτομο έχει το δικαίωμα να οδηγεί αυτοκίνητο. Τα κριτήρια για την επιλεξιμότητα είναι τα εξής: η ηλικία πρέπει να είναι 18 ετών και άνω, πρέπει να έχει δίπλωμα οδήγησης και πρέπει να έχει καλή όραση.
 
-> Hint: To make a decision, we can use the `if` statement.
+> Συμβουλή: Για να πάρουμε μια απόφαση, μπορούμε να χρησιμοποιήσουμε τη δήλωση `if`.
 >
-> `&&` is the logical AND operator. It returns `true` if both operands are `true`.
+> ``&&` είναι ο λογικός τελεστής AND. Επιστρέφει `true` αν και οι δύο τελεστές είναι  `true`.
 >
-> `||` is the logical OR operator. It returns `true` if one of the operands is `true`.
+> `||` είναι ο λογικός τελεστής OR. Επιστρέφει `true` εάν ένας από τους τελεστές είναι `true`.
 >
-> `!` is the logical NOT operator. It returns `true` if the operand is `false`.
+> `!` είναι ο λογικός τελεστής NOT. Επιστρέφει `true` εάν ο τελεστής είναι `false`.
 
-**Example Code**:
+**Παράδειγμα Κώδικα**:
 ```javascript
 let age = 25;
 let license = true;
@@ -347,4 +351,4 @@ let goodVision = true;
 // Determine eligibility to drive and print the result
 ```
 
-**Expected output**: A statement indicating whether the person meets the driving eligibility criteria.
+**Αναμενόμενο αποτέλεσμα**: Μια δήλωση που δείχνει αν το άτομο πληροί τα κριτήρια καταλληλότητας για οδήγηση.
