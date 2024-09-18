@@ -48,11 +48,11 @@ let firstName; // declare a variable named x
 let age, lastName; // declare multiple variables 
 ```
 
-In previous example, we declared variables named `firstName`, `age`, and `lastName`. We can also declare variables and assign values to them at the same time.
+Στο προηγούμενο παράδειγμα, δηλώσαμε μεταβλητές με τα ονόματα `firstName`, `age` και `lastName`. Μπορούμε επίσης να δηλώσουμε μεταβλητές και να τους εκχωρήσουμε τιμές ταυτόχρονα.
 
-## Assigning Values to Variables
+## Ανάθεση τιμών σε μεταβλητές
 
-We can assign values to variables using the assignment operator `=`. The value on the right side of the assignment operator is assigned to the variable on the left side of the assignment operator.
+Μπορούμε να αναθέσουμε τιμές σε μεταβλητές χρησιμοποιώντας τον τελεστή ανάθεσης `=`. Η τιμή στη δεξιά πλευρά του τελεστή ανάθεσης εκχωρείται στη μεταβλητή στην αριστερή πλευρά του τελεστή ανάθεσης.
 
 ```javascript
 let firstName = 'John'; // declare a variable named firstName and assign the value 'John' to it
@@ -60,24 +60,24 @@ let age = 25, lastName = 'Doe'; // declare multiple variables and assign values 
 const PI = 3.14; // declare a constant named PI and assign the value 3.14 to it
 ```
 
-## Exercises
+## Ασκήσεις
 
-Create a file named `index.js` (or another name of your choice) and start adding solutions to the exercises below.
+Δημιουργήστε ένα αρχείο με όνομα `index.js` (ή άλλο όνομα της επιλογής σας) και αρχίστε να προσθέτετε λύσεις στις παρακάτω ασκήσεις.
 
-Test your code by running the `index.js` file using the `node index.js` command.
+Δοκιμάστε τον κώδικά σας εκτελώντας το αρχείο `index.js` χρησιμοποιώντας την εντολή `node index.js`.
 
-You can also test Your code with different values for the variables.
+Μπορείτε επίσης να δοκιμάσετε τον κώδικά σας με διαφορετικές τιμές για τις μεταβλητές.
 
-### Exercise 1
+### Άσκηση 1
 
-Declare a variable named `firstName` and assign the value `John` to it.
+Δηλώστε μια μεταβλητή με όνομα `firstName` και αναθέστε σε αυτήν την τιμή `John`.
 
-Print the value of the `firstName` variable to the console.
+Εκτυπώστε την τιμή της μεταβλητής `firstName` στην κονσόλα.
 
-Test your code by running the `index.js` file using the `node index.js` command.
+Δοκιμάστε τον κώδικά σας εκτελώντας το αρχείο `index.js` χρησιμοποιώντας την εντολή `node index.js`.
 
 <details>
-  <summary>Solution</summary>
+  <summary>Λύση</summary>
 
 ```javascript
 let firstName = 'John'; // declare a variable named firstName and assign the value 'John' to it
@@ -88,18 +88,18 @@ console.log(firstName); // print the value of the firstName variable to the cons
 
 </details>
 
-### Exercise 2
+### Άσκηση 2
 
-In the same file, declare a variable named `lastName` and assign the value `Doe` to it.
+Στο ίδιο αρχείο, δηλώστε μια μεταβλητή με όνομα `lastName` και αναθέστε της την τιμή `Doe`.
 
-Print out values of the `firstName` and `lastName` variables in a single line. Output should look like this: `John Doe`.
+Εκτυπώστε τις τιμές των μεταβλητών `firstName` και `lastName` σε μία μόνο γραμμή. Η έξοδος θα πρέπει να έχει την εξής μορφή: `John Doe`.
 
-Test your code by running the `index.js` file using the `node index.js` command.
+Δοκιμάστε τον κώδικά σας εκτελώντας το αρχείο `index.js` χρησιμοποιώντας την εντολή `node index.js`.
 
-> Hint: Use the `+` operator to concatenate the values of the `firstName` and `lastName` variables.
+> Συμβουλή: Χρησιμοποιήστε τον τελεστή `+` για να συνδέσετε τις τιμές των μεταβλητών `firstName` και `lastName`.
 
 <details>
-  <summary>Solution</summary>
+  <summary>Λύση</summary>
 
 ```javascript
 let firstName = 'John'; // declare a variable named firstName and assign the value 'John' to it
@@ -110,8 +110,8 @@ console.log(firstName + ' ' + lastName); // print out values of the firstName an
 
 </details>
 
-### Exercise 3
+### Άσκηση 3
 
-In the same file, declare a variable named `age` and assign the value `25` to it.
+Στο ίδιο αρχείο, δηλώστε μια μεταβλητή με το όνομα `age` και αναθέστε της την τιμή `25`.
 
-Print out text `John is 25 years old.` using the `firstName` and `age` variables.
+Εκτυπώστε το κείμενο `John is 25 years old.` χρησιμοποιώντας τις μεταβλητές `firstName` και `age`.
