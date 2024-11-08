@@ -4,109 +4,109 @@
 
 Η δημιουργία πρωτοτύπων είναι μια τεχνική που χρησιμοποιείται στην ανάπτυξη λογισμικού για τη δημιουργία πρώιμων λειτουργικών εκδόσεων ενός προϊόντος ή συστήματος λογισμικού. Η δημιουργία πρωτοτύπων περιλαμβάνει τη δημιουργία μιας απλουστευμένης αλλά λειτουργικής έκδοσης του τελικού προϊόντος, η οποία μπορεί να χρησιμοποιηθεί για τη συλλογή ανατροφοδότησης, τη δοκιμή ιδεών και τη βελτίωση των απαιτήσεων πριν από την κατασκευή της τελικής έκδοσης.
 
-Translated with DeepL.com (free version)
 
 - [Prototyping](#prototyping)
-  - [Learning Outcomes](#learning-outcomes)
-  - [General Overview of Prototyping](#general-overview-of-prototyping)
-  - [Paper Prototyping](#paper-prototyping)
-  - [Paper Prototyping - Advantages](#paper-prototyping---advantages)
-  - [Paper Prototyping - Disadvantages](#paper-prototyping---disadvantages)
-  - [Digital Prototyping Tools](#digital-prototyping-tools)
+  - [Μαθησιακά αποτελέσματα](#Μαθησιακά-αποτελέσματα)
+  - [Γενική-επισκόπηση-της-δημιουργίας-πρωτοτύπων](#Γενική-επισκόπηση-της-δημιουργίας-πρωτοτύπων)
+  - [Δημιουργία πρωτοτύπων από χαρτί](#Δημιουργία-πρωτοτύπων-από-χαρτί)
+  - [Δημιουργία πρωτοτύπων από χαρτί- Πλεονεκτήματα](#Δημιουργία-πρωτοτύπων-από-χαρτί---Πλεονεκτήματα)
+  - [Δημιουργία πρωτοτύπων από χαρτί- Μειονεκτήματα](#Δημιουργία-πρωτοτύπων-από-χαρτί---Μειονεκτήματα)
+  - [Εργαλεία ψηφιακής πρωτοτυποποίησης](#Εργαλεία-ψηφιακής-πρωτοτυποποίησης)
   - [Advantages of Digital Prototyping Tools](#advantages-of-digital-prototyping-tools)
   - [Disadvantages of Digital Prototyping Tools](#disadvantages-of-digital-prototyping-tools)
 
-## Learning Outcomes
+## Μαθησιακά αποτελέσματα
+Μετά την ολοκλήρωση αυτού του υλικού:
 
-After completing this material:
+- Μπορείτε να εξηγήσετε τα οφέλη της δημιουργίας πρωτοτύπων στην ανάπτυξη λογισμικού.
+- Μπορείτε να εξηγήσετε τα πλεονεκτήματα της δημιουργίας πρωτοτύπων σε χαρτί στην ανάπτυξη λογισμικού.
+- Μπορείτε να αναφέρετε ορισμένα εργαλεία ψηφιακής πρωτοτυποποίησης.
 
-- You can explain the benefits of prototyping in software development.
-- You can explain the advantages of paper prototyping in software development.
-- You can name some digital prototyping tools.
+## Γενική επισκόπηση της δημιουργίας πρωτοτύπων
 
-## General Overview of Prototyping
+Ο πρωταρχικός στόχος της δημιουργίας πρωτοτύπων είναι να παρέχει μια απτή, διαδραστική αναπαράσταση του τελικού προϊόντος που μπορεί να χρησιμοποιηθεί για τον εντοπισμό πιθανών προβλημάτων και περιοχών για βελτίωση. Με τη δημιουργία ενός πρωτοτύπου, οι προγραμματιστές μπορούν να δοκιμάσουν και να επαναλάβουν γρήγορα διαφορετικές σχεδιαστικές έννοιες και ροές εργασίας, αποκτώντας καλύτερη κατανόηση του τρόπου λειτουργίας του τελικού προϊόντος και του τρόπου με τον οποίο οι τελικοί χρήστες θα αλληλεπιδρούν με αυτό.
 
-The primary goal of prototyping is to provide a tangible, interactive representation of the final product that can be used to identify potential problems and areas for improvement. By creating a prototype, developers can quickly test and iterate on different design concepts and workflows, gaining a better understanding of how the final product will function and how end users will interact with it.
+Η δημιουργία πρωτοτύπων μπορεί να λάβει πολλές μορφές, από απλά σκίτσα και πρωτότυπα σε χαρτί έως προηγμένα ψηφιακά πρωτότυπα που δημιουργούνται με εξειδικευμένα εργαλεία λογισμικού. Ο τύπος του πρωτοτύπου που χρησιμοποιείται εξαρτάται από τις ανάγκες του έργου, τον προϋπολογισμό και το χρονοδιάγραμμα.
 
-Prototyping can take many forms, from simple sketches and paper prototypes to advanced digital prototypes created with specialized software tools. The type of prototype used depends on the project's needs, budget, and timeline.
+Ορισμένα πλεονεκτήματα της δημιουργίας πρωτοτύπων στην ανάπτυξη λογισμικού περιλαμβάνουν:
 
-Some benefits of creating prototypes in software development include:
+- Καλύτερη επικοινωνία και συνεργασία μεταξύ των μελών της ομάδας και των ενδιαφερομένων μερών.
+- Έγκαιρος εντοπισμός πιθανών προβλημάτων και περιοχών προς βελτίωση.
+- Μείωση των παρεξηγήσεων μεταξύ προγραμματιστών και ενδιαφερομένων μερών.
+- Ταχύτερη επανάληψη και δοκιμή των εννοιών σχεδιασμού και των ροών εργασίας.
+- Βελτιωμένη δέσμευση και ικανοποίηση των χρηστών μέσω της έγκαιρης ανατροφοδότησης και εισήγησης.
 
-- Better communication and collaboration between team members and stakeholders.
-- Early identification of potential problems and areas for improvement.
-- Reducing misunderstandings between developers and stakeholders.
-- Faster iteration and testing of design concepts and workflows.
-- Improved user engagement and satisfaction through early feedback and input.
+Συνολικά, η δημιουργία πρωτοτύπων είναι μια πολύτιμη τεχνική στην ανάπτυξη λογισμικού που βοηθά τους προγραμματιστές να δημιουργούν καλύτερα, με επίκεντρο τον χρήστη, προϊόντα που ανταποκρίνονται στις ανάγκες των τελικών χρηστών.
 
-Overall, prototyping is a valuable technique in software development that helps developers create better, user-centered products that meet the needs of end users.
 
-## Paper Prototyping
+## Δημιουργία πρωτοτύπων από χαρτί
 
 ![Paper Prototype for a Mobile Game](Paper_prototype.jpg)
 Image by Oliver Õunap
 
-Paper prototyping is a low-cost, low-fidelity prototyping technique used in software development to create a quick, simple, and interactive representation of a product or system. It involves using paper, pens, and other basic materials to create a physical model of the user interface or workflow.
+Η δημιουργία πρωτοτύπων σε χαρτί είναι μια τεχνική χαμηλού κόστους και χαμηλής πιστότητας που χρησιμοποιείται στην ανάπτυξη λογισμικού για τη δημιουργία μιας γρήγορης, απλής και διαδραστικής αναπαράστασης ενός προϊόντος ή συστήματος. Περιλαμβάνει τη χρήση χαρτιού, στυλό και άλλων βασικών υλικών για τη δημιουργία ενός φυσικού μοντέλου της διεπαφής χρήστη ή της ροής εργασίας.
 
-To create a paper prototype, developers use sketches, drawings, and other simple materials to represent different screens, menus, and interface elements. These elements can be arranged and rearranged as needed to simulate various user interactions and workflows.
+Για τη δημιουργία ενός χάρτινου πρωτοτύπου, οι προγραμματιστές χρησιμοποιούν σκίτσα, σχέδια και άλλα απλά υλικά για να αναπαραστήσουν διάφορες οθόνες, μενού και στοιχεία διεπαφής. Αυτά τα στοιχεία μπορούν να τοποθετηθούν και να αναδιαταχθούν όπως απαιτείται για την προσομοίωση διαφόρων αλληλεπιδράσεων και ροών εργασίας του χρήστη.
 
-Paper prototypes are a quick and easy way to explore different design concepts and workflows and gather feedback from stakeholders and end users. Since the prototypes are simple and low-fidelity, they can be created and modified quickly without requiring expensive software or special skills.
+Τα χάρτινα πρωτότυπα είναι ένας γρήγορος και εύκολος τρόπος για τη διερεύνηση διαφορετικών σχεδιαστικών ιδεών και ροών εργασίας και τη συλλογή ανατροφοδότησης από τα ενδιαφερόμενα μέρη και τους τελικούς χρήστες. Δεδομένου ότι τα πρωτότυπα είναι απλά και χαμηλής πιστότητας, μπορούν να δημιουργηθούν και να τροποποιηθούν γρήγορα χωρίς να απαιτείται ακριβό λογισμικό ή ειδικές δεξιότητες.
 
-## Paper Prototyping - Advantages
+## Δημιουργία πρωτοτύπων από χαρτί- Πλεονεκτήματα
 
-Some advantages of paper prototyping include:
+Ορισμένα πλεονεκτήματα της κατασκευής πρωτοτύπων σε χαρτί περιλαμβάνουν:
 
-- **Low cost:** Paper prototyping is a low-cost technique that requires minimal resources, making it accessible to developers and designers of all skill levels and budgets.
-- **Fast iteration:** Paper prototypes can be created and modified quickly, allowing developers to test and iterate on different design concepts and workflows in a short amount of time.
-- **Improved communication:** Paper prototypes can help developers and stakeholders better understand and communicate complex ideas and workflows and identify potential problems and areas for improvement.
-- **Increased user involvement:** Paper prototypes can be used to gather feedback from end users early in the development process, enabling developers to create products that better meet the needs and expectations of their target audience.
+- **Χαμηλό κόστος:** Η κατασκευή πρωτοτύπων σε χαρτί είναι μια τεχνική χαμηλού κόστους που απαιτεί ελάχιστους πόρους, καθιστώντας την προσιτή σε προγραμματιστές και σχεδιαστές όλων των επιπέδων δεξιοτήτων και προϋπολογισμών.
+- **Γρήγορη επαναληπτική διαδικασία:** Τα χάρτινα πρωτότυπα μπορούν να δημιουργηθούν και να τροποποιηθούν γρήγορα, επιτρέποντας στους προγραμματιστές να δοκιμάσουν και να επαναλάβουν διαφορετικές σχεδιαστικές ιδέες και ροές εργασίας σε σύντομο χρονικό διάστημα.
+- **Καλύτερη επικοινωνία:** Τα πρωτότυπα σε χαρτί μπορούν να βοηθήσουν τους προγραμματιστές και τα ενδιαφερόμενα μέρη να κατανοήσουν και να επικοινωνήσουν καλύτερα πολύπλοκες ιδέες και ροές εργασίας και να εντοπίσουν πιθανά προβλήματα και περιοχές για βελτίωση.
+- **Αυξημένη συμμετοχή των χρηστών:** Τα χάρτινα πρωτότυπα μπορούν να χρησιμοποιηθούν για τη συλλογή ανατροφοδότησης από τους τελικούς χρήστες σε πρώιμο στάδιο της διαδικασίας ανάπτυξης, επιτρέποντας στους προγραμματιστές να δημιουργήσουν προϊόντα που ανταποκρίνονται καλύτερα στις ανάγκες και τις προσδοκίες του κοινού-στόχου τους.
 
-## Paper Prototyping - Disadvantages
+## Δημιουργία πρωτοτύπων από χαρτί- Μειονεκτήματα
 
-Some disadvantages of paper prototyping include:
+Ορισμένα μειονεκτήματα της πρωτοτυποποίησης σε χαρτί περιλαμβάνουν:
 
-- **Low fidelity:** Paper prototypes are simple and low-fidelity, which may limit their usefulness for more complex design concepts and workflows.
-- **Limited functionality:** Paper prototypes may not be able to simulate all interactions and functionalities that may be required in the final product.
-- **Limited usability:** Paper prototypes may have limited usability and interactivity, making them less suitable for more complex user interfaces and workflows.
-- **Environmental limitations:** Paper prototypes require a physical environment and materials, which can be limiting, especially for remote work and distributed teams.
+- **Χαμηλή αξιοπιστία:** Τα χάρτινα πρωτότυπα είναι απλά και χαμηλής πιστότητας, γεγονός που μπορεί να περιορίσει τη χρησιμότητά τους για πιο σύνθετες σχεδιαστικές έννοιες και ροές εργασίας.
+- **Περιορισμένη λειτουργικότητα:** Τα χάρτινα πρωτότυπα μπορεί να μην είναι σε θέση να προσομοιώσουν όλες τις αλληλεπιδράσεις και τις λειτουργίες που μπορεί να απαιτούνται στο τελικό προϊόν.
+- **Περιορισμένη δυνατότητα χρήσης:** Τα χάρτινα πρωτότυπα μπορεί να έχουν περιορισμένη χρηστικότητα και διαδραστικότητα, καθιστώντας τα λιγότερο κατάλληλα για πιο σύνθετες διεπαφές χρήστη και ροές εργασίας.
+- **Περιβαλλοντικοί περιορισμοί:** Τα πρωτότυπα από χαρτί απαιτούν ένα φυσικό περιβάλλον και υλικά, τα οποία μπορεί να είναι περιοριστικά, ειδικά για απομακρυσμένη εργασία και κατανεμημένες ομάδες.
 
-Overall, paper prototyping is a valuable technique in software development that helps developers and designers create better, user-centered products. By using simple and inexpensive materials to create interactive models of user interfaces and workflows, developers can quickly test and refine different design concepts and gather feedback from stakeholders and end users to ensure that the final product meets user needs and expectations.
+Συνολικά, η δημιουργία πρωτοτύπων σε χαρτί είναι μια πολύτιμη τεχνική στην ανάπτυξη λογισμικού που βοηθά τους προγραμματιστές και τους σχεδιαστές να δημιουργήσουν καλύτερα προϊόντα με επίκεντρο τον χρήστη. Με τη χρήση απλών και φθηνών υλικών για τη δημιουργία διαδραστικών μοντέλων διεπαφών χρήστη και ροών εργασίας, οι προγραμματιστές μπορούν να δοκιμάζουν και να βελτιώνουν γρήγορα διάφορες σχεδιαστικές έννοιες και να συγκεντρώνουν σχόλια από τους ενδιαφερόμενους και τους τελικούς χρήστες, ώστε να διασφαλίζουν ότι το τελικό προϊόν ανταποκρίνεται στις ανάγκες και τις προσδοκίες των χρηστών.
 
-## Digital Prototyping Tools
+## Εργαλεία ψηφιακής πρωτοτυποποίησης
 
-Prototyping tools are an essential class of tools in software development that help developers quickly create and test interactive user interface (UI) designs without the need to code. Prototyping tools allow developers to create realistic simulations of user interfaces and workflows that can be used to gather feedback from stakeholders, test usability, and iterate on designs before writing code.
+Τα εργαλεία πρωτοτυποποίησης είναι μια βασική κατηγορία εργαλείων στην ανάπτυξη λογισμικού που βοηθούν τους προγραμματιστές να δημιουργούν και να δοκιμάζουν γρήγορα διαδραστικά σχέδια διεπαφής χρήστη (UI) χωρίς την ανάγκη κωδικοποίησης. Τα εργαλεία πρωτοτυποποίησης επιτρέπουν στους προγραμματιστές να δημιουργούν ρεαλιστικές προσομοιώσεις διεπαφών χρήστη και ροών εργασίας που μπορούν να χρησιμοποιηθούν για τη συλλογή ανατροφοδότησης από τα ενδιαφερόμενα μέρη, τον έλεγχο της χρηστικότητας και την επανάληψη των σχεδίων πριν από τη συγγραφή κώδικα.
 
-There are many different prototyping tools available, ranging from simple web-based tools that don’t require installation to more advanced desktop applications with a wide range of features. Some examples of popular prototyping tools include:
+Υπάρχουν πολλά διαφορετικά διαθέσιμα εργαλεία πρωτοτυποποίησης, που κυμαίνονται από απλά εργαλεία που βασίζονται στον ιστό και δεν απαιτούν εγκατάσταση έως πιο προηγμένες εφαρμογές γραφείου με ευρύ φάσμα χαρακτηριστικών. Ορισμένα παραδείγματα δημοφιλών εργαλείων πρωτοτυποποίησης περιλαμβάνουν:
 
-- **Sketch:** Sketch is a popular UI design tool that includes built-in prototyping features. Users can create clickable prototypes by linking artboards together and adding transition effects.
+- **Sketch:** Το Sketch είναι ένα δημοφιλές εργαλείο σχεδιασμού UI που περιλαμβάνει ενσωματωμένες δυνατότητες δημιουργίας πρωτοτύπων. Οι χρήστες μπορούν να δημιουργήσουν πρωτότυπα με δυνατότητα κλικ συνδέοντας πίνακες τέχνης μεταξύ τους και προσθέτοντας εφέ μετάβασης.
   - <https://www.sketch.com/>
 
-- **Adobe XD:** Adobe XD is a UI/UX design tool that includes features for creating and sharing interactive prototypes. Users can create interactive designs with animations, transitions, and other effects.
+- **Adobe XD:** Το Adobe XD είναι ένα εργαλείο σχεδιασμού UI/UX που περιλαμβάνει λειτουργίες για τη δημιουργία και την κοινή χρήση διαδραστικών πρωτοτύπων. Οι χρήστες μπορούν να δημιουργούν διαδραστικά σχέδια με κινούμενα σχέδια, μεταβάσεις και άλλα εφέ.
   - <https://www.adobe.com/products/xd/learn/get-started-xd-prototype.html>
 
-- **InVision:** InVision is a web-based prototyping tool that allows users to create interactive designs with animations, hotspots, and other interactive elements. InVision also includes features for collaborating on designs and gathering feedback from stakeholders.
+- **InVision:** Το InVision είναι ένα διαδικτυακό εργαλείο πρωτοτυποποίησης που επιτρέπει στους χρήστες να δημιουργούν διαδραστικά σχέδια με κινούμενα σχέδια, hotspots και άλλα διαδραστικά στοιχεία. Το InVision περιλαμβάνει επίσης λειτουργίες για τη συνεργασία σε σχέδια και τη συλλογή ανατροφοδότησης από τους ενδιαφερόμενους.
   - <https://www.invisionapp.com/>
 
-- **Figma:** Figma is a web-based UI design and prototyping tool that allows users to create and share interactive designs with animations, transitions, and other effects. Figma also includes features for real-time collaboration and version control.
+- **Figma:** Το Figma είναι ένα διαδικτυακό εργαλείο σχεδιασμού και πρωτοτυποποίησης UI που επιτρέπει στους χρήστες να δημιουργούν και να μοιράζονται διαδραστικά σχέδια με κινούμενα σχέδια, μεταβάσεις και άλλα εφέ. Το Figma περιλαμβάνει επίσης χαρακτηριστικά για συνεργασία σε πραγματικό χρόνο και έλεγχο εκδόσεων.
   - <https://www.figma.com/>
 
 ![Figma Prototype](FigmaProto.png)
 
-- **Axure RP:** Axure RP is a desktop application that allows users to create interactive wireframes, prototypes, and specifications for web and mobile applications. Axure RP includes advanced features for designing complex interactions and workflows.
+- **Axure RP:** Το Axure RP είναι μια εφαρμογή γραφείου που επιτρέπει στους χρήστες να δημιουργούν διαδραστικά συρματοπλάνα, πρωτότυπα και προδιαγραφές για εφαρμογές ιστού και κινητών τηλεφώνων. Το Axure RP περιλαμβάνει προηγμένα χαρακτηριστικά για το σχεδιασμό σύνθετων αλληλεπιδράσεων και ροών εργασίας.
+
   - <https://www.axure.com/>
 
-- Many other web-based and desktop applications allow users to create interactive or non-interactive prototypes and designs.
+- Πολλές άλλες διαδικτυακές και επιτραπέζιες εφαρμογές επιτρέπουν στους χρήστες να δημιουργούν διαδραστικά ή μη διαδραστικά πρωτότυπα και σχέδια.
 
-## Advantages of Digital Prototyping Tools
+## Πλεονεκτήματα των εργαλείων ψηφιακής πρωτοτυποποίησης
 
-Some advantages of digital prototyping tools include:
+Ορισμένα πλεονεκτήματα των εργαλείων ψηφιακής πρωτοτυποποίησης περιλαμβάνουν:
 
-- **Interactivity:** Digital prototypes allow users to create interactive designs that simulate real-world user experiences and interactions.
-- **Animations and transitions:** Digital prototypes allow users to add animations, transitions, and other effects to better visualize design concepts and workflows.
-- **Collaboration and sharing:** Digital prototypes enable users to collaborate on and share designs and prototypes with team members and stakeholders in real-time.
-- **Feedback and iteration:** Digital prototypes allow users to gather feedback and input from stakeholders and end users and quickly iterate and adjust design concepts based on the feedback received.
-- **Reusability:** Digital prototypes allow users to reuse design elements and interactions, which can save time and resources during the design process.
-- **Support for design systems:** Some digital prototyping tools support design systems and component libraries, enabling users to create reusable and consistent designs.
-- **Code export for developers:** Some digital prototyping tools allow users to export design elements and interactions for developers to write code and create the final product.
+- **Διαδραστικότητα:** Τα ψηφιακά πρωτότυπα επιτρέπουν στους χρήστες να δημιουργούν διαδραστικά σχέδια που προσομοιώνουν τις πραγματικές εμπειρίες και αλληλεπιδράσεις των χρηστών.
+- **Κινούμενα σχέδια και μεταβάσεις:** Τα ψηφιακά πρωτότυπα επιτρέπουν στους χρήστες να προσθέτουν κινούμενα σχέδια, μεταβάσεις και άλλα εφέ για την καλύτερη οπτικοποίηση των εννοιών σχεδιασμού και των ροών εργασίας.
+- **Συνεργασία και διαμοιρασμός:** Τα ψηφιακά πρωτότυπα επιτρέπουν στους χρήστες να συνεργάζονται και να μοιράζονται σχέδια και πρωτότυπα με τα μέλη της ομάδας και τα ενδιαφερόμενα μέρη σε πραγματικό χρόνο.
+- **Ανατροφοδότηση και επανάληψη:** Τα ψηφιακά πρωτότυπα επιτρέπουν στους χρήστες να συγκεντρώνουν σχόλια και πληροφορίες από τους ενδιαφερόμενους και τους τελικούς χρήστες και να επαναλαμβάνουν και να προσαρμόζουν γρήγορα τις έννοιες του σχεδιασμού με βάση τα σχόλια που λαμβάνουν.
+- **Επαναχρησιμοποίηση:** Τα ψηφιακά πρωτότυπα επιτρέπουν στους χρήστες να επαναχρησιμοποιούν στοιχεία σχεδιασμού και αλληλεπιδράσεις, γεγονός που μπορεί να εξοικονομήσει χρόνο και πόρους κατά τη διαδικασία σχεδιασμού.
+- **Υποστήριξη για συστήματα σχεδιασμού:** Ορισμένα εργαλεία ψηφιακής πρωτοτυποποίησης υποστηρίζουν συστήματα σχεδιασμού και βιβλιοθήκες εξαρτημάτων, επιτρέποντας στους χρήστες να δημιουργούν επαναχρησιμοποιήσιμα και συνεπή σχέδια.
+- **Εξαγωγή κώδικα για προγραμματιστές:** Ορισμένα εργαλεία ψηφιακής πρωτοτυποποίησης επιτρέπουν στους χρήστες να εξάγουν στοιχεία σχεδιασμού και αλληλεπιδράσεις για να γράψουν οι προγραμματιστές κώδικα και να δημιουργήσουν το τελικό προϊόν.
 
 ## Disadvantages of Digital Prototyping Tools
 
