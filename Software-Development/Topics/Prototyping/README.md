@@ -2,7 +2,9 @@
 
 ![Prototyping](Prototyping.webp)
 
-Prototyping is a technique used in software development to create early working versions of a software product or system. Prototyping involves creating a simplified but functional version of the final product, which can be used to gather feedback, test ideas, and refine requirements before the final version is built.
+Η δημιουργία πρωτοτύπων είναι μια τεχνική που χρησιμοποιείται στην ανάπτυξη λογισμικού για τη δημιουργία πρώιμων λειτουργικών εκδόσεων ενός προϊόντος ή συστήματος λογισμικού. Η δημιουργία πρωτοτύπων περιλαμβάνει τη δημιουργία μιας απλουστευμένης αλλά λειτουργικής έκδοσης του τελικού προϊόντος, η οποία μπορεί να χρησιμοποιηθεί για τη συλλογή ανατροφοδότησης, τη δοκιμή ιδεών και τη βελτίωση των απαιτήσεων πριν από την κατασκευή της τελικής έκδοσης.
+
+Translated with DeepL.com (free version)
 
 - [Prototyping](#prototyping)
   - [Learning Outcomes](#learning-outcomes)
