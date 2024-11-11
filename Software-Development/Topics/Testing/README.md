@@ -1,77 +1,79 @@
-# Testing in Software Development
+# Testing στην ανάπτυξη λογισμικού
 
-- [Testing in Software Development](#testing-in-software-development)
-  - [Learning Outcomes:](#learning-outcomes)
+- [Testing στην ανάπτυξη λογισμικού](#Testing-στην-ανάπτυξη-λογισμικού)
+  - [Μαθησιακά αποτελέσματα:](#Μαθησιακά-αποτελέσματα)
   - [Importance of Testing:](#importance-of-testing)
-  - [Types of Testing:](#types-of-testing)
-  - [Testing Approaches:](#testing-approaches)
-  - [Testing Methods:](#testing-methods)
+  - [Σημασία του Testing:](#Σημασία-του-Testing)
+  - [Είδη Testing:](#Είδη-Testing)
+  - [Testing Προσεγγίσεων:](#Testing-Προσεγγίσεων)
+  - [Testing Μέθοδοι:](#Testing-Μέθοδοι)
   - [Software Development Life Cycle (SDLC) and Testing:](#software-development-life-cycle-sdlc-and-testing)
   - [Popular Testing Tools:](#popular-testing-tools)
   - [Excercises and Assignments](#excercises-and-assignments)
 
-## Learning Outcomes:
+## Μαθησιακά αποτελέσματα:
 
-After completing this topic, you'll be able to:
+Αφού ολοκληρώσετε αυτό τη θεματική ενότητα, θα είστε σε θέση να:
 
-- understand the importance of testing in software development;
-- identify the different types of testing;
-- describe various testing approaches and methods;
-- apply testing principles to software development.
+- κατανοήσετε τη σημασία του testing στην ανάπτυξη λογισμικού,
+- προσδιορίσετε τους διάφορους τύπους testing,
+- περιγράψετε διάφορες προσεγγίσεις και μεθόδους testing,
+- να εφαρμόζουν τις αρχές του testing στην ανάπτυξη λογισμικού.
 
-Testing in software development refers to the process of executing a program or application with the intent of finding software bugs. It ensures the software product meets the specified requirements and delivers a quality product to the end-user.
+Το testing στην ανάπτυξη λογισμικού αναφέρεται στη διαδικασία εκτέλεσης ενός προγράμματος ή μιας εφαρμογής με σκοπό την εύρεση σφαλμάτων λογισμικού. Διασφαλίζει ότι το προϊόν λογισμικού πληροί τις καθορισμένες απαιτήσεις και παραδίδει ένα ποιοτικό προϊόν στον τελικό χρήστη.
 
-## Importance of Testing:
 
-- **Quality Assurance:** Ensures the product meets the desired quality standards and is free from defects.
-- **Cost-Efficient:** Identifying and fixing issues early in the development lifecycle can save money in the long run.
-- **Security:** Helps in identifying vulnerabilities and weaknesses in the software.
-- **User Satisfaction:** Ensures that the product aligns with user requirements and can be used efficiently.
-- **Reliability and Performance:** Assures the software performs optimally under load and is reliable in various conditions.
+## Σημασία του Testing:
 
-## Types of Testing:
+- **Διασφάλιση ποιότητας:** Διασφαλίζει ότι το προϊόν πληροί τα επιθυμητά πρότυπα ποιότητας και είναι απαλλαγμένο από ελαττώματα.
+- **Αποδοτικό από πλευράς κόστους:** Ο εντοπισμός και η επιδιόρθωση προβλημάτων σε πρώιμο στάδιο του κύκλου ζωής της ανάπτυξης μπορεί να εξοικονομήσει χρήματα μακροπρόθεσμα.
+- **Ασφάλεια:** Βοηθά στον εντοπισμό τρωτών σημείων και αδυναμιών στο λογισμικό.
+- **Ικανοποίηση χρηστών:** Διασφαλίζει ότι το προϊόν ευθυγραμμίζεται με τις απαιτήσεις των χρηστών και μπορεί να χρησιμοποιηθεί αποτελεσματικά.
+- **Αξιοπιστία και απόδοση:** Διασφαλίζει τη βέλτιστη απόδοση του λογισμικού υπό πίεση και την αξιοπιστία του σε διάφορες συνθήκες.
 
-- **Unit Testing:** Testing of individual units or components of the software.
+## Είδη Testing:
 
-- **Integration Testing:** Testing interactions between integrated units to produce outputs.
+- **Unit Testing:** Δοκιμές μεμονωμένων μονάδων ή στοιχείων του λογισμικού.
 
-- **Functional Testing:** Testing the software to ensure it behaves according to specified requirements.
+- **Testing Eνσωμάτωσης:** Δοκιμή αλληλεπιδράσεων μεταξύ ολοκληρωμένων μονάδων για την παραγωγή εκροών.
 
-- **System Testing:** Testing the software as a complete system to ensure it works as expected.
+- **Functional Testing:** Testing του λογισμικού για να διασφαλιστεί ότι συμπεριφέρεται σύμφωνα με τις καθορισμένες απαιτήσεις.
+  
+- **System Testing:** Testing του λογισμικού ως πλήρες σύστημα για να διασφαλιστεί ότι λειτουργεί όπως αναμένεται.
 
-- **End-to-End Testing:** Testing the flow of an application to ensure the entire process of user input and outputs work smoothly.
+- **End-to-End Testing:** Testing της ροής μιας εφαρμογής για να διασφαλιστεί η ομαλή λειτουργία ολόκληρης της διαδικασίας εισόδου και εξόδου του χρήστη.
 
-- **Regression Testing:** Ensuring that new code changes haven't negatively impacted existing functionalities.
+- **Testing παλινδρόμησης:** Διασφάλιση ότι οι νέες αλλαγές στον κώδικα δεν έχουν επηρεάσει αρνητικά τις υπάρχουσες λειτουργίες.
 
-- **Acceptance Testing:** Ensuring the software meets the acceptance criteria before delivery to the customer.
+- **Acceptance Testing:** Διασφάλιση ότι το λογισμικό πληροί τα κριτήρια αποδοχής πριν από την παράδοση στον πελάτη.
 
-- **Performance Testing:** Evaluating the software's performance, speed, and responsiveness. Subtypes include Load Testing, Stress Testing, and Volume Testing.
+- **Performance Testing:** Αξιολόγηση των επιδόσεων, της ταχύτητας και της απόκρισης του λογισμικού. Οι υποκατηγορίες περιλαμβάνουν Load Testing, Stress Testing, και Volume Testing.
 
-- **Usability Testing:** Evaluating the software from an end-user's perspective to ensure it's user-friendly.
+- **Usability Testing:** Αξιολόγηση του λογισμικού από τη σκοπιά του τελικού χρήστη για να διασφαλιστεί ότι είναι φιλικό προς το χρήστη.
 
-- **Security Testing:** Identifying vulnerabilities, threats, risks in a software application.
+- **Security Testing:** Εντοπισμός τρωτών σημείων, απειλών, κινδύνων σε μια εφαρμογή λογισμικού.
 
-- **Compatibility Testing:** Ensuring the software is compatible across different devices, browsers, and operating systems.
+- **Compatibility Testing:** Διασφάλιση της συμβατότητας του λογισμικού σε διαφορετικές συσκευές, προγράμματα περιήγησης και λειτουργικά συστήματα.
 
-- **Exploratory Testing:** Unstructured approach where testers actively explore the application to find defects.
+- **Exploratory Testing:** Μη δομημένη προσέγγιση όπου οι ελεγκτές εξερευνούν ενεργά την εφαρμογή για να βρουν ελαττώματα.
 
-## Testing Approaches:
+## Testing Προσεγγίσεων :
 
-- **Manual Testing:** Testers execute test cases manually without any tool support. It's hands-on work, and the tester must be a keen observer.
+- **Manual Testing:** Οι δοκιμαστές εκτελούν τις περιπτώσεις δοκιμών χειροκίνητα χωρίς καμία υποστήριξη από εργαλεία. Πρόκειται για πρακτική εργασία και ο ελεγκτής πρέπει να είναι οξυδερκής παρατηρητής. 
 
-- **Automated Testing:** Test cases are executed with the help of tools, scripts, and software. This approach is beneficial for regression testing, load testing, and repetitive tasks.
+- **Automated Testing:** Οι περιπτώσεις δοκιμών εκτελούνται με τη βοήθεια εργαλείων, σεναρίων και λογισμικού. Αυτή η προσέγγιση είναι επωφελής για δοκιμές παλινδρόμησης, δοκιμές φορτίου και επαναλαμβανόμενες εργασίες.
 
-## Testing Methods:
+## Testing Μέθοδοι:
 
-- **White Box Testing (or Glass Box Testing):** Testing based on the software's internal code, design, and structure. It requires knowledge of the code.
+- **White Box Testing (or Glass Box Testing):** Δοκιμές με βάση τον εσωτερικό κώδικα, το σχεδιασμό και τη δομή του λογισμικού. Απαιτεί γνώση του κώδικα.
 
-- **Black Box Testing:** Testing based on software requirements and functionality, without knowledge of the internal workings.
+- **Black Box Testing:** Δοκιμές με βάση τις απαιτήσεις και τη λειτουργικότητα του λογισμικού, χωρίς γνώση των εσωτερικών λειτουργιών.
 
-- **Grey Box Testing:** A combination of both White and Black Box Testing.
+- **Grey Box Testing:** Ένας συνδυασμός White και Black Box Testing.
 
 ## Software Development Life Cycle (SDLC) and Testing:
 
-- **Waterfall Model:** Testing starts only after the development is complete.
+- **Waterfall Model:** Το Testing ξεκινά μόνο μετά την ολοκλήρωση της ανάπτυξης.
 
 - **Agile Model:** Testing is concurrent with development and is iterative.
 
