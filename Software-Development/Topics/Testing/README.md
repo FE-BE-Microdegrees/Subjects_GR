@@ -75,25 +75,25 @@
 
 - **Waterfall Model:** Το Testing ξεκινά μόνο μετά την ολοκλήρωση της ανάπτυξης.
 
-- **Agile Model:** Testing is concurrent with development and is iterative.
+- **Agile Model:** Testing διεξάγεται ταυτόχρονα με την ανάπτυξη και είναι επαναληπτικές.
 
-- **V-Model (Validation and Verification):** Development and testing happen concurrently, with each development stage having a corresponding testing phase.
+- **V-Model (Επικύρωση και επαλήθευση):** Η ανάπτυξη και οι δοκιμές πραγματοποιούνται ταυτόχρονα, με κάθε στάδιο ανάπτυξης να έχει μια αντίστοιχη φάση δοκιμών.
+  
+## Δημοφιλή εργαλεία δοκιμών:
 
-## Popular Testing Tools:
+- **JUnit:** Ένα ευρέως χρησιμοποιούμενο εργαλείο δοκιμών για Java.
 
-- **JUnit:** A widely-used testing tool for Java.
+- **Selenium:** Ένα ισχυρό εργαλείο για τον έλεγχο ενός προγράμματος περιήγησης ιστού μέσω προγραμμάτων.
 
-- **Selenium:** A powerful tool for controlling a web browser through programs.
+- **QTP (Quick Test Professional):** Ένα αυτοματοποιημένο εργαλείο λειτουργικών δοκιμών.
 
-- **QTP (Quick Test Professional):** An automated functional testing tool.
+- **LoadRunner:** Ένα εργαλείο ελέγχου επιδόσεων.
 
-- **LoadRunner:** A performance testing tool.
+- **TestNG:** Εμπνευσμένο από το JUnit και σχεδιασμένο για διαμόρφωση δοκιμών και παράλληλη εκτέλεση.
 
-- **TestNG:** Inspired by JUnit and designed for test configuration and parallel execution.
+- **NUnit:** Ένα πλαίσιο ελέγχου μονάδας για γλώσσες .NET.
 
-- **NUnit:** A unit-testing framework for .NET languages.
+Εν κατακλείδι, οι δοκιμές αποτελούν αναπόσπαστο μέρος της ανάπτυξης λογισμικού που διασφαλίζει την παράδοση ενός αξιόπιστου προϊόντος υψηλής ποιότητας. Εντοπίζει και διορθώνει σφάλματα, τρωτά σημεία και ελλείψεις στα αρχικά στάδια, διασφαλίζοντας ότι το λογισμικό ανταποκρίνεται στις προσδοκίες των χρηστών και στα πρότυπα του κλάδου. Οι σωστές δοκιμές έχουν ως αποτέλεσμα αξιόπιστο λογισμικό, ελαχιστοποιούν τους κινδύνους και ενισχύουν την ικανοποίηση των χρηστών.
 
-In conclusion, testing is an integral part of software development that ensures the delivery of a robust, high-quality product. It identifies and rectifies bugs, vulnerabilities, and deficiencies in the early stages, ensuring the software meets user expectations and industry standards. Proper testing results in reliable software, minimizes risks, and enhances user satisfaction.
-
-## Excercises and Assignments
+## Ασκήσεις και εργασίες
 
