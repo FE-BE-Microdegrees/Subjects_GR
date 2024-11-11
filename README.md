@@ -1,19 +1,19 @@
-# Subjects
+# Θεματικές
 
-This repository contains the subjects for [Front-End Microdegree](https://github.com/FE-BE-Microdegrees/Front-End-Microdegree) and [Back-End Microdegree](https://github.com/FE-BE-Microdegrees/Back-End-Microdegree).
+Αυτό το αποθετήριο περιέχει τα θέματα για [Front-End Microdegree](https://github.com/FE-BE-Microdegrees/Front-End-Microdegree) και [Back-End Microdegree](https://github.com/FE-BE-Microdegrees/Back-End-Microdegree).
 
-## Front-End Microdegree subjects:
+## Θεματικές ενότητες Front-End Microdegree:
 
 - [Software Development](./Software-Development/README.md)
 - [Programming Basics](./Programming-Basics/README.md)
 - [Front-End Technologies](./Front-End-Technologies/README.md)
 - [Front-End Frameworks](./Front-End-Frameworks/README.md)
 
-## Back-End Microdegree subjects:
+## Θεματικές ενότητες Back-End Microdegree:
 
 - [Software Development](./Software-Development/README.md)
 - [Programming Basics](./Programming-Basics/README.md)
 - [Back-End Frameworks](./Back-End-Frameworks/README.md)
 - [Databases](./Databases/README.md)
 
-Both microdegrees share the same subjects for *Software Development* and *Programming Basics* and differ in the other two subjects. The **Front-End Microdegree** has *Front-End Technologies* and *Front-End Frameworks*, while the **Back-End Microdegree** has *Back-End Frameworks* and *Databases* subjects. First two subjects are the same for both microdegrees because they are the foundation for both front-end and back-end development. 
+Και για τα δύο microdegrees μοιράζονται τις ίδιες θεματικές για *Software Development* και *Programming Basics* και διαφέρουν στα άλλα δύο θέματα. Το **Front-End Microdegree** περιέχει *Front-End Technologies* και *Front-End Frameworks*, ενώ το **Back-End Microdegree** περιέχει *Back-End Frameworks* και *Databases* θεματικές. Τα δύο πρώτα θέματα είναι τα ίδια και για τα δύο microdegrees  επειδή αποτελούν τα θεμέλια τόσο για την front-end όσο και για την back-end ανάπτυξη.  
