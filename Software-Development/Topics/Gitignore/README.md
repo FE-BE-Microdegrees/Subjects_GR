@@ -1,10 +1,10 @@
 # .gitignore
 
-In this topic, we'll learn about the `.gitignore` file, what it is, and why it's important. We'll also learn how to use it to exclude files from version control.
+Σε αυτό το θέμα, θα μάθουμε για το αρχείο `.gitignore`, τι είναι και γιατί είναι σημαντικό. Θα μάθουμε επίσης πώς να το χρησιμοποιούμε για να αποκλείουμε αρχεία από τον έλεγχο εκδόσεων.
 
 - [.gitignore](#gitignore)
-  - [Learing Outcomes](#learing-outcomes)
-  - [What is `.gitignore`?](#what-is-gitignore)
+  - [Μαθησιακά αποτελέσματα](#Μαθησιακά-αποτελέσματα)
+  - [Τι είναι το `.gitignore`;](#Τι-είναι-το-`.gitignore`-;)
   - [Why Should We Use `.gitignore`?](#why-should-we-use-gitignore)
   - [How to Use `.gitignore`:](#how-to-use-gitignore)
   - [Caveats:](#caveats)
@@ -14,7 +14,7 @@ In this topic, we'll learn about the `.gitignore` file, what it is, and why it's
     - [What Not to Put into `.gitignore`:](#what-not-to-put-into-gitignore)
   - [Excercises](#excercises)
 
-## Learing Outcomes
+## Μαθησιακά αποτελέσματα
 
 After completing this topic, you'll be able to:
 
@@ -22,7 +22,7 @@ After completing this topic, you'll be able to:
 - create a `.gitignore` file;
 - use `.gitignore` to exclude files from version control.
 
-## What is `.gitignore`?
+## Τι είναι το `.gitignore`;
 
 `.gitignore` is a special file used by Git to determine which files and directories to ignore when committing changes. It's a way to exclude unnecessary files from being tracked by version control, such as compiled code, logs, or environment-specific configurations.
 
