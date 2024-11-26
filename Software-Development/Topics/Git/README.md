@@ -58,7 +58,7 @@
 - **Κατανεμημένο σύστημα**: Σε αντίθεση με τα συγκεντρωτικά συστήματα ελέγχου εκδόσεων όπου υπάρχει ένα μοναδικό κεντρικό αποθετήριο, στο **Git**, το αντίγραφο του κώδικα κάθε 
    προγραμματιστή είναι επίσης ένα αποθετήριο που μπορεί να περιέχει ολόκληρο το ιστορικό και τις δυνατότητες παρακολούθησης εκδόσεων. Αυτό εξασφαλίζει πλεονασμό και καθιστά λειτουργίες      όπως η διακλάδωση και η συγχώνευση εξαιρετικά αποτελεσματικές.
 - **Διακλάδωση και συγχώνευση**: Το μοντέλο διακλάδωσης του **Git**επιτρέπει στους προγραμματιστές να δημιουργούν απομονωμένους κλάδους για την ανάπτυξη χαρακτηριστικών ή τη διόρθωση         σφαλμάτων. Αυτοί οι κλάδοι μπορούν στη συνέχεια να συγχωνευθούν πίσω στον κύριο κλάδο, συνήθως γνωστό ως «master».
-- **Ιστορία**: **Git** παρακολουθεί ολόκληρο το ιστορικό του έργου. Κάθε δέσμευση ελέγχεται και ανακτάται, εξασφαλίζοντας ακεραιότητα και δυνατότητα εντοπισμού.
+- **Ιστορικό**: **Git** παρακολουθεί ολόκληρο το ιστορικό του έργου. Κάθε δέσμευση ελέγχεται και ανακτάται, εξασφαλίζοντας ακεραιότητα και δυνατότητα εντοπισμού.
 - **Staging Area**: **Git** εισάγει μια μοναδική έννοια της  _staging area_ ή _index_. Πρόκειται για μια ενδιάμεση περιοχή όπου οι δεσμεύσεις μπορούν να μορφοποιηθούν και να       
     επανεξεταστούν πριν από την ολοκλήρωση της δέσμευσης.
 - **Απόδοση**: **Git** οι λειτουργίες εκτελούνται τοπικά, καθιστώντας το ταχύτερο από πολλά συστήματα ελέγχου εκδόσεων που βασίζονται σε λειτουργίες δικτύου.
@@ -67,67 +67,69 @@
 - **Πλατφόρμες συνεργασίας**: Πλατφόρμες όπως _GitHub_, _GitLab_, and _Bitbucket_ ενισχύει τις συνεργατικές δυνατότητες του **Git**, παρέχοντας την υποστήριξη κώδικα, των pull requests,       των αξιολογήσεων κώδικα και του εντοπισμού προβλημάτων.
 - **Free and Open Source**: **Git** είναι ελεύθερο λογισμικό που διανέμεται υπό τους όρους της Γενικής Άδειας Δημόσιας Χρήσης GNU έκδοση 2.
 
-## Basic Git Architecture
+## Βασική αρχιτεκτονική του Git
 
-Git has a unique architecture and data model that makes it efficient and powerful. Here's a breakdown of the basic components of Git's architecture:
+Το Git έχει μια μοναδική αρχιτεκτονική και ένα μοναδικό μοντέλο δεδομένων που το καθιστά αποτελεσματικό και ισχυρό. Ακολουθεί μια ανάλυση των βασικών στοιχείων της αρχιτεκτονικής του Git:
 
 - **Blobs**:
-  - Represents the content of a file in Git.
-  - A blob holds the file data but doesn’t contain any metadata about the file.
-  - It's a binary large object and is identified by a SHA-1 hash of its content.
-- **Trees**:
-  - Represents a directory or folder in Git.
-  - A tree object maps names to blobs or trees (essentially, it can reference other trees for subdirectories).
-  - Like blobs, trees are identified by a SHA-1 hash.
-- **Commits**:
-  - Represents a particular point in the repository's history.
-  - A commit points to a tree that captures the state of the repository at a certain point in time.
-  - Contains metadata such as:
-    - Author
-    - Committer
-    - Date
-    - Commit message
-  - Each commit also points to its parent commit(s), forming a linked list. This is what creates the "history" in Git. Merge commits can point to multiple parents.
-  - Identified by a SHA-1 hash.
-- **Branches**:
-  - A moving pointer to a commit.
-  - When you create a branch, Git creates a pointer to the commit you're currently on.
-  - As new commits are created, the branch pointer automatically moves to point to the latest commit.
-  - The default branch in most repositories is named "master" (though a shift towards naming it "main" has been observed recently).
-  - Branches allow for divergent development, where features or experiments can be developed in isolation before merging them back into the main codebase.
+  - Αντιπροσωπεύει το περιεχόμενο ενός αρχείου στο Git.
+  - Ένα blob περιέχει τα δεδομένα του αρχείου, αλλά δεν περιέχει μεταδεδομένα σχετικά με το αρχείο.
+  - Είναι ένα δυαδικό μεγάλο αντικείμενο και ταυτοποιείται από έναν κατακερματισμό SHA-1 του περιεχομένου του.
+- **(Δέντρα)Trees**:
+  - Αντιπροσωπεύει έναν κατάλογο ή φάκελο στο Git.
+  - Ένα αντικείμενο tree αντιστοιχίζει ονόματα σε blobs ή δέντρα (ουσιαστικά, μπορεί να παραπέμπει σε άλλα δέντρα για υποκαταλόγους).
+  - Όπως και τα blobs, τα δέντρα αναγνωρίζονται από έναν κατακερματισμό SHA-1.
+- **Δεσμεύσεις (Commits)**:
+  - Αντιπροσωπεύει ένα συγκεκριμένο σημείο στο ιστορικό του αποθετηρίου.
+  - Μια δέσμευση παραπέμπει σε ένα δέντρο που αποτυπώνει την κατάσταση του αποθετηρίου σε μια συγκεκριμένη χρονική στιγμή.
+  - Περιέχει μεταδεδομένα όπως:
+    - Συγγραφέας
+    - Επιμελητής (Committer)
+    - Ημερομηνία
+    - Μήνυμα δέσμευσης
+  - Κάθε δέσμευση παραπέμπει επίσης στις γονικές της δεσμεύσεις, σχηματίζοντας μια συνδεδεμένη λίστα. Αυτό είναι που δημιουργεί το «ιστορικό» στο Git. Οι δεσμεύσεις συγχώνευσης μπορούν να 
+    παραπέμπουν σε πολλαπλούς γονείς.
+  - Αναγνωρίζεται από έναν κατακερματισμό SHA-1.
+- **Κλάδοι (Branches)**:
+  - Ένας κινούμενος δείκτης σε μια δέσμευση.
+  - Όταν δημιουργείτε έναν κλάδο, το Git δημιουργεί έναν δείκτη στη δέσμευση στην οποία βρίσκεστε αυτή τη στιγμή.
+  - Καθώς δημιουργούνται νέες δεσμεύσεις, ο δείκτης κλάδου μετακινείται αυτόματα ώστε να δείχνει στην τελευταία δέσμευση.
+  - Ο προεπιλεγμένος κλάδος στα περισσότερα αποθετήρια ονομάζεται «master» (αν και πρόσφατα παρατηρήθηκε μια στροφή προς την ονομασία «main»).
+  - Οι διακλαδώσεις επιτρέπουν την αποκλίνουσα ανάπτυξη, όπου χαρακτηριστικά ή πειράματα μπορούν να αναπτυχθούν μεμονωμένα πριν από τη συγχώνευσή τους πίσω στην κύρια βάση κώδικα.
 
-This architecture, built around a directed acyclic graph of objects, is what allows Git to efficiently track changes, create branches, and merge histories. The use of SHA-1 hashes ensures the integrity and consistency of the repository across clones and versions.
+Αυτή η αρχιτεκτονική, που βασίζεται σε έναν κατευθυνόμενο ακυκλοειδή γράφο αντικειμένων, επιτρέπει στο Git να παρακολουθεί αποτελεσματικά τις αλλαγές, να δημιουργεί κλάδους και να συγχωνεύει ιστορικά. Η χρήση των κατακερματισμών SHA-1 εξασφαλίζει την ακεραιότητα και τη συνέπεια του αποθετηρίου σε κλώνους και εκδόσεις.
 
-## Installing Git
+## Εγκαθιστώντας το Git
 
-Latest version of Git and instructions for installation can be found from [git-scm.com](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+Την τελευταία έκδοση του Git και οδηγίες για την εγκατάσταση μπορείτε να βρείτε στο [git-scm.com](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
-## Basic Git vocabulary
+## Βασικό λεξιλόγιο Git
 
-Git has its own unique vocabulary, and understanding these terms is key to working effectively with Git. Here's a basic overview of some essential Git terminology:
-- **Repository (Repo)**:
-  - A directory or storage space where your project lives. It contains all of the project files and the entire revision history.
-  - Can be local (on your computer) or remote (e.g., on a server or service like GitHub).
-- **Commit**:
-  - A set of changes or modifications to files. Each commit is uniquely identified by a SHA-1 hash code.
-  - Represents a snapshot of the repository's files and directory structure at a particular point in time.
-- **Branch**:
-  - A parallel version of a repository. It diverges from the main working project into a separate area where you can work without affecting the main or "master" branch.
-  - Useful for developing new features or testing out ideas.
+Το Git έχει το δικό του μοναδικό λεξιλόγιο και η κατανόηση αυτών των όρων είναι το κλειδί για την αποτελεσματική εργασία με το Git. Ακολουθεί μια βασική επισκόπηση ορισμένων βασικών όρων της ορολογίας του Git:
+- **Αποθετήριο - Repository (Repo)**:
+  - Ένας φάκελος(directory) ή χώρος αποθήκευσης όπου βρίσκεται το έργο σας. Περιέχει όλα τα αρχεία του έργου και ολόκληρο το ιστορικό αναθεωρήσεων.
+  - Μπορεί να είναι τοπικό (στον υπολογιστή σας) ή απομακρυσμένο (π.χ. σε διακομιστή ή υπηρεσία όπως το GitHub).
+- **Δέσμευση (Commit)**:
+  - Ένα σύνολο αλλαγών ή τροποποιήσεων σε αρχεία. Κάθε δέσμευση αναγνωρίζεται μοναδικά από έναν κωδικό κατακερματισμού SHA-1.
+  - Αντιπροσωπεύει ένα στιγμιότυπο της δομής των αρχείων και των καταλόγων του αποθετηρίου σε μια συγκεκριμένη χρονική στιγμή.
+- **Κλάδος (Branch)**:
+  - Μια παράλληλη έκδοση ενός αποθετηρίου. Αποκλίνει από το κύριο έργο εργασίας σε μια ξεχωριστή περιοχή όπου μπορείτε να εργαστείτε χωρίς να επηρεάσετε τον κύριο (main ή "master") κλάδο.
+  - Χρήσιμο για την ανάπτυξη νέων λειτουργιών ή τη δοκιμή ιδεών.
 - **Master or main**:
-  - The default development branch. Whenever you create a Git repository, a branch named "master" or "main" is created, and becomes the active branch.
-  - Note: There's a shift in the industry to rename this default branch to "main" for inclusivity reasons.
-- **Clone**:
-  - A copy of a repository that lives on your computer instead of on a server elsewhere or the original repository site.
-  - `git clone [URL]` is the command used to clone (or copy) a repository from an existing URL.
+  - Ο προεπιλεγμένος κλάδος ανάπτυξης. Κάθε φορά που δημιουργείτε ένα αποθετήριο Git, δημιουργείται ένας κλάδος που ονομάζεται «master» ή «main» και γίνεται ο ενεργός κλάδος.
+  - Σημείωση: Υπάρχει μια τάση στη βιομηχανία να μετονομάζεται αυτός ο προεπιλεγμένος κλάδος σε «main» για λόγους συνοχής.
+- **Κλωνοποίηση (Clone)**:
+  - Ένα αντίγραφο ενός αποθετηρίου που βρίσκεται στον υπολογιστή σας αντί σε έναν διακομιστή αλλού ή στην αρχική τοποθεσία του αποθετηρίου.
+  - `git clone [URL]` είναι η εντολή που χρησιμοποιείται για να κλωνοποιήσετε (ή να αντιγράψετε) ένα αποθετήριο από μια υπάρχουσα διεύθυνση URL.
 - **Fork**:
-  - A personal copy of another user's repository. Forking is used to suggest changes to someone else's project or to use someone else's project as a starting point for your own idea.
+  - Ένα προσωπικό αντίγραφο του αποθετηρίου ενός άλλου χρήστη. Το Forking χρησιμοποιείται για να προτείνετε αλλαγές στο έργο κάποιου άλλου ή για να χρησιμοποιήσετε το έργο κάποιου άλλου 
+    ως αφετηρία για τη δική σας ιδέα.
 - **Pull**:
-  - Refers to when you fetch in changes from a remote repository or branch and merge them into your current branch.
-  - `git pull [remote] [branch_name]` is the command used to pull changes.
+  - Αναφέρεται όταν μεταφέρετε αλλαγές από ένα απομακρυσμένο αποθετήριο ή κλάδο και τις συγχωνεύετε στον τρέχοντα κλάδο σας.
+  - `git pull [remote] [branch_name]` είναι η εντολή που χρησιμοποιείται για την ανάσυρση(pull) αλλαγών.
 - **Push**:
-  - Sending your committed changes to a remote repository.
-  - `git push [remote] [branch_name]` is the command used to push your changes.
+  - Αποστολή των τροποποιημένων αλλαγών σας σε ένα απομακρυσμένο αποθετήριο.
+  - `git push [remote] [branch_name]` είναι η εντολή που χρησιμοποιείται για να προωθήσετε(push) τις αλλαγές σας.
 - **HEAD**:
   - A special pointer or reference to a specific commit in the repository. By default, it points to the latest commit in the branch you're currently on.
 - **Merge**:
