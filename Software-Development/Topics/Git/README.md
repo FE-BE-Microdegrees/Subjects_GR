@@ -1,4 +1,4 @@
-# Git
+ # Git
 
 Σε αυτό το θέμα, θα μάθουμε τα βασικά για το Git και τον έλεγχο εκδόσεων. Θα καλύψουμε τη σημασία των συστημάτων ελέγχου εκδόσεων, τα βασικά στοιχεία του Git και τη διαδικασία ροής του Git.
 
@@ -131,100 +131,101 @@
   - Αποστολή των τροποποιημένων αλλαγών σας σε ένα απομακρυσμένο αποθετήριο.
   - `git push [remote] [branch_name]` είναι η εντολή που χρησιμοποιείται για να προωθήσετε(push) τις αλλαγές σας.
 - **HEAD**:
-  - A special pointer or reference to a specific commit in the repository. By default, it points to the latest commit in the branch you're currently on.
-- **Merge**:
-  - The process of integrating changes from one branch into another.
-- **Merge Conflict**:
-  - Occurs when competing changes are made to the same line of a file, or when one person edits a file and another person deletes the same file.
-  - Git will highlight the differences and require you to choose which changes to keep.
+  - Ένας ειδικός δείκτης ή αναφορά σε μια συγκεκριμένη δέσμευση στο αποθετήριο. Από προεπιλογή, παραπέμπει στην πιο πρόσφατη δέσμευση του κλάδου στον οποίο βρίσκεστε αυτή τη στιγμή.
+- **Συγχώνευση (Merge)**:
+  - Η διαδικασία ενσωμάτωσης αλλαγών από έναν κλάδο σε έναν άλλο.
+- **Σύγκρουση συγχώνευσης (Merge Conflict)**:
+  - Συμβαίνει όταν γίνονται πολλαπλές αλλαγές στην ίδια γραμμή ενός αρχείου ή όταν ένα άτομο επεξεργάζεται ένα αρχείο και ένα άλλο άτομο διαγράφει το ίδιο αρχείο.
+  - Το Git θα επισημάνει τις διαφορές και θα σας ζητήσει να επιλέξετε ποιες αλλαγές θα διατηρήσετε.
 - **Pull Request (PR)**:
-  - On platforms like GitHub, a pull request is a way to propose changes from a fork or a branch which can then be merged into another branch, typically the master/main branch.
+  - Σε πλατφόρμες όπως το GitHub, ένα pull request είναι ένας τρόπος να προτείνετε αλλαγές από ένα fork ή ένα branch, οι οποίες μπορούν στη συνέχεια να συγχωνευθούν σε ένα άλλο branch, 
+    συνήθως το master/main branch.
 - **Remote**:
-  - A version of your project that is hosted on the internet or network somewhere. You can have multiple remotes, and they are handy for collaborating with others.
-- **Staging Area (or Index)**:
-  - An intermediate area where commits can be formatted and reviewed before completing the commit.
-  - `git add [file_name]` is used to add changes to the staging area.
+  - Μια έκδοση του έργου σας που φιλοξενείται στο διαδίκτυο ή σε κάποιο δίκτυο. Μπορείτε να έχετε πολλαπλές απομακρυσμένες εκδόσεις και είναι χρήσιμες για τη συνεργασία με άλλους.
+- **Περιοχή στάθμευσης (ή δείκτης)- Staging Area (or Index)**:
+  - Μια ενδιάμεση περιοχή όπου οι δεσμεύσεις μπορούν να μορφοποιηθούν και να επανεξεταστούν πριν από την ολοκλήρωση της δέσμευσης.
+  - Το `git add [όνομα_αρχείου]` χρησιμοποιείται για την προσθήκη αλλαγών στην περιοχή σταδιοποίησης.
 - **Fetch**:
-  - The act of downloading new data from a remote repository. Unlike `pull`, `fetch` gets the data but does not merge it.
-- **Tag**:
-  - A reference or pointer to a specific commit, often used to capture a point in history that is significant, such as a release version.
+  - Η πράξη λήψης νέων δεδομένων από ένα απομακρυσμένο αποθετήριο. Σε αντίθεση με το `pull`, το `fetch` παίρνει τα δεδομένα αλλά δεν τα συγχωνεύει.
+- **Ετικέτα (Tag)**:
+  - Μια αναφορά ή ένας δείκτης σε μια συγκεκριμένη δέσμευση, που χρησιμοποιείται συχνά για να αποτυπώσει ένα σημαντικό σημείο της ιστορίας, όπως μια έκδοση έκδοσης.
 
-This overview covers the basic terms you'll encounter when starting with Git. As you delve deeper, you'll naturally come across more advanced concepts and terms.
+Αυτή η επισκόπηση καλύπτει τους βασικούς όρους που θα συναντήσετε ξεκινώντας με το Git. Καθώς θα εμβαθύνετε, θα συναντήσετε φυσικά πιο προχωρημένες έννοιες και όρους.
 
-## Basic Git Commands
+## Βασικές εντολές του Git
 
-Here's a basic overview of some essential Git commands and their descriptions:
+Ακολουθεί μια βασική επισκόπηση ορισμένων βασικών εντολών του Git και των περιγραφών τους:
 
 - **`git init`**:
-  - Initializes a new Git repository and starts tracking an existing directory.
-  - Adds a hidden subfolder within the existing directory that houses the internal data structure required for version control.
+  - Αρχικοποιεί ένα νέο αποθετήριο Git και ξεκινά την παρακολούθηση ενός υπάρχοντος καταλόγου.
+  - Προσθέτει έναν κρυφό υποφάκελο εντός του υπάρχοντος καταλόγου(directory) που φιλοξενεί την εσωτερική δομή δεδομένων που απαιτείται για τον έλεγχο εκδόσεων.
 - **`git clone [url]`**:
-  - Creates a local copy of a project that already exists remotely.
-  - The clone includes all the project’s files, history, and branches.
+  - Δημιουργεί ένα τοπικό αντίγραφο ενός έργου που υπάρχει ήδη απομακρυσμένα.
+  - Ο κλώνος περιλαμβάνει όλα τα αρχεία, το ιστορικό και τους κλάδους του έργου.
 - **`git add [file-name.txt]`**:
-  - Adds changes in the file to the staging area.
-  - Prepares and packages up changes for a commit.
+  - Προσθέτει τις αλλαγές στο αρχείο στην περιοχή σταδιοποίησης.
+  - Προετοιμάζει και ομαδοποιεί τις αλλαγές για μια μεταβίβαση(commit).
 - **`git add .`**:
-  - Adds all the changes in the current directory to the staging area (useful for tracking several changes across different files).
+  - Προσθέτει όλες τις αλλαγές στον τρέχοντα κατάλογο στην περιοχή σταδιοποίησης (χρήσιμο για την παρακολούθηση πολλών αλλαγών σε διαφορετικά αρχεία).
 - **`git commit -m "[commit message]"`**:
-  - Captures a snapshot of the project's currently staged changes.
+  - Καταγράφει ένα στιγμιότυπο των τρεχουσών αλλαγών του έργου.
 - **`git status`**:
-  - Shows the status of changes as untracked, modified, or staged.
+  - Εμφανίζει την κατάσταση των αλλαγών ως μη παρακολουθούμενες, τροποποιημένες ή σταδιακές.
 - **`git branch`**:
-  - Lists all local branches in the repository.
-  - If you need to see all branches (including remote), use `git branch -a`.
+  - Εμφανίζει όλους τους τοπικούς κλάδους του αποθετηρίου.
+  - Αν θέλετε να δείτε όλους τους κλάδους (συμπεριλαμβανομένων των απομακρυσμένων), χρησιμοποιήστε `git branch -a`.
 - **`git branch [branch-name]`**:
-  - Creates a new branch.
+  - Δημιουργεί έναν νέο κλάδο(branch).
 - **`git checkout [branch-name]`**:
-  - Switches to the specified branch and updates the working directory.
-  - Note: The command has evolved. You can now use `git switch [branch-name]` in newer versions of Git.
+  - Μεταβαίνει στον καθορισμένο κλάδο και ενημερώνει τον κατάλογο εργασίας.
+  - Σημείωση: Η εντολή έχει εξελιχθεί. Μπορείτε τώρα να χρησιμοποιήσετε την εντολή `git switch [branch-name]` σε νεότερες εκδόσεις του Git.
 - **`git merge [branch-name]`**:
-  - Merges the specified branch’s history into the current branch.
+  - Συγχωνεύει το ιστορικό του καθορισμένου κλάδου στον τρέχοντα κλάδο.
 - **`git pull`**:
-  - Updates your current local working branch with all new commits from the corresponding remote branch on GitHub.
+  - Ενημερώνει τον τρέχοντα τοπικό κλάδο εργασίας σας με όλες τις νέες δεσμεύσεις από τον αντίστοιχο απομακρυσμένο κλάδο στο GitHub.
 - **`git push [remote-name] [branch-name]`**:
-  - Pushes your local branch updates to the corresponding remote branch on GitHub.
+  - Μεταφέρει τις ενημερώσεις του τοπικού σας κλάδου στον αντίστοιχο απομακρυσμένο κλάδο στο GitHub.
 - **`git log`**:
-  - Displays an ordered list of all the commits which lead up to the current state of the branch.
-  - There are many options to tailor the output format, like `git log --oneline` for a condensed view.
+  - Εμφανίζει μια ταξινομημένη λίστα όλων των μεταβιβάσεων που οδήγησαν στην τρέχουσα κατάσταση του κλάδου.
+  - Υπάρχουν πολλές επιλογές για να προσαρμόσετε τη μορφή εξόδου, όπως `git log --oneline` για μια συμπυκνωμένη προβολή.
 - **`git diff`**:
-  - Shows the file differences that are not yet staged.
+  - Εμφανίζει τις διαφορές αρχείων που δεν έχουν ακόμη σταδιοποιηθεί.
 - **`git diff --staged`**:
-  - Shows file differences when comparing the staged changes to the last commit.
+  - Εμφανίζει τις διαφορές αρχείων κατά τη σύγκριση των σταδιακών αλλαγών με την τελευταία δέσμευση.
 - **`git remote add [alias] [url]`**:
-  - Adds a remote repository to your local project.
+  - Προσθέτει ένα απομακρυσμένο αποθετήριο στο τοπικό σας έργο.
 - **`git remote -v`**:
-  - Lists all remote repositories connected to the local project.
+  -Εμφανίζει όλα τα απομακρυσμένα αποθετήρια που είναι συνδεδεμένα με το τοπικό έργο.
 - **`git fetch`**:
-  - Fetches all the updates from the remote repository (does not merge them).
+  - Λαμβάνει όλες τις ενημερώσεις από το απομακρυσμένο αποθετήριο (δεν τις συγχωνεύει).
 - **`git revert [commit]`**:
-  - Undoes all the changes made in a particular commit with a new commit.
+  - Αναιρεί όλες τις αλλαγές που έγιναν σε μια συγκεκριμένη δέσμευση με μια νέα δέσμευση.
 - **`git reset`**:
-  - Resets your staging area to match the most recent commit, but leaves the working directory unchanged. Useful for undoing `git add`.
+  - Επαναφέρει την περιοχή σταδιοποίησης ώστε να ταιριάζει με την πιο πρόσφατη δέσμευση, αλλά αφήνει τον κατάλογο εργασίας αμετάβλητο. Χρήσιμο για την αναίρεση του `git add`.
 
-This list covers the basics to get you started. Git is a deep tool with a variety of commands, and as you gain more experience, you'll discover many more advanced commands and options that can be used in various scenarios.
+Αυτός ο κατάλογος καλύπτει τα βασικά για να ξεκινήσετε. Το Git είναι ένα εκτενές εργαλείο με μια ποικιλία εντολών και καθώς αποκτάτε περισσότερη εμπειρία, θα ανακαλύψετε πολλές πιο προηγμένες εντολές και επιλογές που μπορούν να χρησιμοποιηθούν σε διάφορα σενάρια.
 
 ## Graphical Git Clients
 
-**Graphical Git Clients** are applications that provide a visual interface to interact with Git, rather than relying solely on the command-line. They visually represent the version history, branches, and other aspects of a Git repository.
+**Graphical Git Clients** είναι εφαρμογές που παρέχουν μια οπτική διεπαφή για την αλληλεπίδραση με το Git, αντί να βασίζονται αποκλειστικά στη γραμμή εντολών. Αναπαριστούν οπτικά το ιστορικό εκδόσεων, τα κλαδιά και άλλες πτυχές ενός αποθετηρίου Git.
 
-While graphical clients can be incredibly helpful, especially for those not comfortable with the command line, they do abstract away some of the intricacies of Git. For deeper, more complex operations, or to truly understand the inner workings of Git, familiarity with the command line is beneficial. Both approaches have their advantages, and many developers find a hybrid approach (using both command line and GUI) to be the most efficient.
+Παρόλο που οι γραφικοί πελάτες μπορούν να είναι εξαιρετικά χρήσιμοι, ειδικά για όσους δεν είναι άνετοι με τη γραμμή εντολών, αφαιρούν κάποιες από τις περιπλοκές του Git. Για βαθύτερες, πιο σύνθετες λειτουργίες ή για να κατανοήσετε πραγματικά τις εσωτερικές λειτουργίες του Git, η εξοικείωση με τη γραμμή εντολών είναι επωφελής. Και οι δύο προσεγγίσεις έχουν τα πλεονεκτήματά τους και πολλοί προγραμματιστές βρίσκουν μια υβριδική προσέγγιση (χρησιμοποιώντας τόσο τη γραμμή εντολών όσο και το GUI) ως την πιο αποτελεσματική.
 
-### Some Popular Graphical Clients for Git:
+### Μερικοί δημοφιλείς Graphical Clients για το Git:
 
-- [**GitHub Desktop**](https://desktop.github.com/): This is the official GUI for GitHub. It’s open-source and cross-platform (available for macOS and Windows).
-- [**Sourcetree**](https://www.sourcetreeapp.com/): Developed by Atlassian, it's a free tool available for macOS and Windows. It offers visual interaction with your repositories and supports Mercurial as well as Git.
-- [**GitKraken**](https://www.gitkraken.com/): This cross-platform tool (available for Windows, macOS, and Linux) offers a vibrant and interactive interface. It's known for its graph visualization and has integrations with GitHub, GitLab, Bitbucket, and more.
-- [**TortoiseGit**](https://tortoisegit.org/): Primarily for Windows, TortoiseGit integrates directly into the Windows shell, so you can right-click on a folder to access its features.
+- [**GitHub Desktop**](https://desktop.github.com/): Αυτό είναι το επίσημο γραφικό περιβάλλον για το GitHub. Είναι ανοιχτού κώδικα και cross-platform (διαθέσιμο για macOS και Windows).
+- [**Sourcetree**](https://www.sourcetreeapp.com/): Αναπτύχθηκε από την Atlassian και είναι ένα δωρεάν εργαλείο διαθέσιμο για macOS και Windows. Προσφέρει οπτική αλληλεπίδραση με τα αποθετήριά σας και υποστηρίζει το Mercurial καθώς και το Git.
+- [**GitKraken**](https://www.gitkraken.com/): Αυτό το εργαλείο πολλαπλών πλατφορμών (διαθέσιμο για Windows, macOS και Linux) προσφέρει ένα ζωντανό και διαδραστικό περιβάλλον εργασίας. Είναι γνωστό για την οπτικοποίηση γραφημάτων και διαθέτει ενσωματώσεις με το GitHub, το GitLab, το Bitbucket και άλλα.
+- [**TortoiseGit**](https://tortoisegit.org/): Κατά κύριο λόγο για τα Windows, το TortoiseGit ενσωματώνεται απευθείας στο κέλυφος των Windows, ώστε να μπορείτε να κάνετε δεξί κλικ σε έναν φάκελο για να αποκτήσετε πρόσβαση στις λειτουργίες του.
 
-### Reasons to Use Graphical Git Clients:
+### Λόγοι χρήσης Graphical Git Clients:
 
-- **User-Friendly**: For beginners, the command line can be intimidating. Graphical clients offer a more approachable and intuitive interface to interact with Git.
-- **Visualization**: They provide a clear visual representation of branches, commits, merges, and more. This is especially helpful in understanding the flow and structure of commits in a repository.
-- **Simplifies Complex Tasks**: Some Git tasks can be complex and verbose on the command line. GUI clients often simplify these processes into more manageable steps or provide a drag-and-drop interface.
-- **Conflict Resolution**: Many graphical clients offer a visual way to resolve merge conflicts, making it clearer and sometimes easier than manually editing conflict markers in a text editor.
-- **Integrated Tooling**: Graphical clients might come with built-in tools or integrations, such as Git blame, repository hosting services, and more.
-- **Multitasking**: GUIs usually allow you to work on multiple repositories in separate tabs/windows, making context switching easier.
+- **Φιλική προς το χρήστη**: Για τους αρχάριους, η γραμμή εντολών μπορεί να είναι εκφοβιστική. Οι γραφικοί πελάτες προσφέρουν μια πιο προσιτή και διαισθητική διεπαφή για την αλληλεπίδραση     με το Git.
+- **Οπτικοποίηση**: Παρέχουν μια σαφή οπτική αναπαράσταση των κλάδων, των δεσμεύσεων, των συγχωνεύσεων και άλλων. Αυτό είναι ιδιαίτερα χρήσιμο για την κατανόηση της ροής και της δομής των     commits σε ένα αποθετήριο.
+- **Simplifies Complex Tasks**: Ορισμένες εργασίες του Git μπορεί να είναι πολύπλοκες και μακροσκελείς στη γραμμή εντολών. Οι πελάτες GUI συχνά απλοποιούν αυτές τις διαδικασίες σε πιο         εύχρηστα βήματα ή παρέχουν μια διεπαφή drag-and-drop.
+- **Επίλυση συγκρούσεων**: Πολλά προγράμματα-πελάτες γραφικών προσφέρουν έναν οπτικό τρόπο επίλυσης συγκρούσεων συγχώνευσης, καθιστώντας την πιο ξεκάθαρη και μερικές φορές ευκολότερη από      τη χειροκίνητη επεξεργασία των δεικτών σύγκρουσης σε έναν επεξεργαστή κειμένου.
+- **Ενσωματωμένα εργαλεία**: Οι γραφικοί πελάτες ενδέχεται να διαθέτουν ενσωματωμένα εργαλεία ή ενσωματώσεις, όπως το Git blame, υπηρεσίες φιλοξενίας αποθετηρίων και άλλα.
+- **Multitasking**: Τα γραφικά περιβάλλοντα συνήθως σας επιτρέπουν να εργάζεστε σε πολλαπλά αποθετήρια σε ξεχωριστές καρτέλες/παράθυρα, διευκολύνοντας την εναλλαγή περιβάλλοντος.
 - **Immediate Feedback**: Many GUIs provide immediate visual feedback for most operations, such as the result of a merge or the changes introduced in a particular commit.
 - **Support for Non-Git Operations**: Some GUIs offer features that aren't strictly Git operations, like the ability to open a file in a preferred editor, view the command history, or even run custom scripts.
 
