@@ -59,20 +59,20 @@
    - `**` ταιριάζει με πολλαπλά επίπεδα καταλόγου. Για παράδειγμα, το `**/logs` ταιριάζει με οποιονδήποτε κατάλογο `logs` στο αποθετήριο.
    - `?` ταιριάζει με ένα μόνο χαρακτήρα.
 6. **Χρήση προτύπων:** Πολλές γλώσσες προγραμματισμού και πλαίσια έχουν κοινά πρότυπα αρχείων που πρέπει να αγνοούνται. Υπάρχουν διαθέσιμα πρότυπα (όπως στο [gitignore.io](https://www.gitignore.io/)) για να ξεκινήσετε με βάση τον τύπο του έργου στο οποίο εργάζεστε.
-7. **Checking Ignored Files:** Αν θέλετε να δείτε ποια αρχεία στο αποθετήριό σας αγνοούνται λόγω των προτύπων `.gitignore`, μπορείτε να χρησιμοποιήσετε την εντολή `git status --ignored`.
-8. **Commit `.gitignore`:** Don't forget to add and commit your `.gitignore` file to the repository so that other collaborators will have the same set of ignored files.
-9. **Global `.gitignore`:** If you have files that you want to ignore across all repositories on your system (e.g., editor backup files), you can set up a global `.gitignore` file. Use `git config --global core.excludesfile ~/.gitignore_global` and then add your patterns to the `~/.gitignore_global` file.
+7. **Έλεγχος αγνοημένων αρχείων:** Αν θέλετε να δείτε ποια αρχεία στο αποθετήριό σας αγνοούνται λόγω των προτύπων `.gitignore`, μπορείτε να χρησιμοποιήσετε την εντολή `git status --ignored`.
+8. **Δέσμευση (Commit) `.gitignore`:** Μην ξεχάσετε να προσθέσετε και να δεσμεύσετε το αρχείο `.gitignore` στο αποθετήριο, ώστε οι άλλοι συνεργάτες να έχουν το ίδιο σύνολο αγνοούμενων αρχείων.
+9. **Global `.gitignore`:** Αν έχετε αρχεία που θέλετε να αγνοήσετε σε όλα τα αποθετήρια του συστήματός σας (π.χ. αρχεία αντιγράφων ασφαλείας του συντάκτη), μπορείτε να δημιουργήσετε ένα παγκόσμιο αρχείο `.gitignore`. Χρησιμοποιήστε `git config --global core.excludesfile ~/.gitignore_global` και στη συνέχεια προσθέστε τα μοτίβα σας στο αρχείο `~/.gitignore_global`.
 
 ## Caveats:
 
-- If a file was already tracked by Git before it was added to `.gitignore`, it won't be automatically ignored. You would need to manually untrack it using `git rm --cached <filename>`.
-- Make sure you thoroughly understand the patterns you're adding to `.gitignore` to avoid accidentally ignoring important files.
+- Αν ένα αρχείο είχε ήδη εντοπιστεί από το Git πριν προστεθεί στο `.gitignore`, δεν θα αγνοηθεί αυτόματα. Θα πρέπει να το ξε-παρακολουθήσετε χειροκίνητα χρησιμοποιώντας το `git rm --cached <filename>`.
+- Βεβαιωθείτε ότι έχετε κατανοήσει πλήρως τα μοτίβα που προσθέτετε στο `.gitignore` για να αποφύγετε να αγνοήσετε κατά λάθος σημαντικά αρχεία.
 
-In summary, the `.gitignore` file is an essential tool for maintaining a clean and efficient Git repository. It ensures that unwanted files are excluded from version control, providing both security and efficiency benefits.
+Συνοψίζοντας, το αρχείο `.gitignore` είναι ένα απαραίτητο εργαλείο για τη διατήρηση ενός καθαρού και αποτελεσματικού αποθετηρίου Git. Εξασφαλίζει ότι τα ανεπιθύμητα αρχεία αποκλείονται από τον έλεγχο εκδόσεων, παρέχοντας τόσο οφέλη ασφάλειας όσο και αποδοτικότητας.
 
-## .gitignore in context of Node.js
+## .gitignore στο πλαίσιο του Node.js
 
-Here is one example of a `.gitignore` file for a Node.js project:
+Ακολουθεί ένα παράδειγμα αρχείου `.gitignore` για ένα έργο Node.js:
 
 Certainly! Below is an example of a typical `.gitignore` file for Node.js projects:
 
