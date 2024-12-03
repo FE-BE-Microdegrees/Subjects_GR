@@ -1,65 +1,65 @@
-# Requirements
+# Απαιτήσεις (Requirements)
 
-In this topic we'll explore the concepts of software requirements - what they are, why they're important, and how to write them.
+Σε αυτό το θέμα θα εξερευνήσουμε τις έννοιες των προδιαγραφών λογισμικού - τι είναι, γιατί είναι σημαντικές και πώς να τις γράψετε.
 
-## Learning Outcomes
+## Μαθησιακά αποτελέσματα
 
-By the end of this topic you should be able to:
+Στο τέλος αυτού του θέματος θα πρέπει να είστε σε θέση να:
 
 
-## What are Software Requirements?
+## Τι είναι οι απαιτήσεις λογισμικού;
 
-Software requirements are the *functional* and *non-functional* requirements that define the scope of a software project. Requirements are a key part of the software development process, and they're important to get right. Requirements describe the expected behavior of the software, and they're used to guide the development process.
+Οι απαιτήσεις λογισμικού είναι οι *λειτουργικές* και *μη λειτουργικές* απαιτήσεις που καθορίζουν το πεδίο εφαρμογής ενός έργου λογισμικού. Οι απαιτήσεις αποτελούν βασικό μέρος της διαδικασίας ανάπτυξης λογισμικού και είναι σημαντικό να είναι σωστές. Οι απαιτήσεις περιγράφουν την αναμενόμενη συμπεριφορά του λογισμικού και χρησιμοποιούνται για να καθοδηγήσουν τη διαδικασία ανάπτυξης.
 
-**Functional** requirements describe what the software should do. They're the features and functionality that the software should have. For example, a functional requirement might be:
-- `the software should allow users to log in`;
-- `the software should allow users to change their password`;
-- `the software should allow users to reset their password`.
+Οι **λειτουργικές (Functional)** απαιτήσεις περιγράφουν τι πρέπει να κάνει το λογισμικό. Είναι τα χαρακτηριστικά και η λειτουργικότητα που πρέπει να έχει το λογισμικό. Για παράδειγμα, μια λειτουργική απαίτηση μπορεί να είναι:
+- `το λογισμικό θα πρέπει να επιτρέπει στους χρήστες να συνδέονται`;
+- `το λογισμικό θα πρέπει να επιτρέπει στους χρήστες να αλλάζουν τον κωδικό πρόσβασής τους`;
+- `το λογισμικό θα πρέπει να επιτρέπει στους χρήστες να επαναφέρουν τον κωδικό πρόσβασής τους`.
 
-**Non-functional** requirements describe how the software should do it. They're the constraints and limitations that the software should have (including technical requirement). For example, a non-functional requirement might be:
-- `the software should be able to handle 1000 concurrent users`;
-- `the software should use bcrypt to hash passwords`;
-- `the software should be able to run on Linux, Windows, and macOS`.
+Οι **μη λειτουργικές (Non-functional)** απαιτήσεις περιγράφουν τον τρόπο με τον οποίο το λογισμικό πρέπει να το κάνει. Είναι οι δεσμεύσεις και οι περιορισμοί που πρέπει να έχει το λογισμικό (συμπεριλαμβανομένης της τεχνικής απαίτησης). Για παράδειγμα, μια μη λειτουργική απαίτηση μπορεί να είναι:
+- `το λογισμικό θα πρέπει να μπορεί να χειριστεί 1000 ταυτόχρονους χρήστες`;
+- `το λογισμικό θα πρέπει να χρησιμοποιεί bcrypt για την κατακερματισμό των κωδικών πρόσβασης`;
+- `το λογισμικό θα πρέπει να μπορεί να τρέχει σε Linux, Windows και macOS`.
 
-Requirements can be described in different levels of detail. For example, a high-level requirement might be
-- `the software should allow users to log in`.
+Οι απαιτήσεις μπορούν να περιγραφούν σε διαφορετικά επίπεδα λεπτομέρειας. Για παράδειγμα, μια απαίτηση υψηλού επιπέδου μπορεί να είναι
+- `το λογισμικό θα πρέπει να επιτρέπει στους χρήστες να συνδέονται`.
 
-A more detailed requirement might be
-- `the software should allow users to log in with their email address and password`.
+Μια πιο λεπτομερής απαίτηση θα μπορούσε να είναι
+- `το λογισμικό θα πρέπει να επιτρέπει στους χρήστες να συνδέονται με τη διεύθυνση ηλεκτρονικού ταχυδρομείου και τον κωδικό πρόσβασής τους`.
 
-A very detailed requirement might be
-- `the software should allow users to log in with their email address and password, and it should use bcrypt to hash the password before storing it in the database`.
+Μια πολύ λεπτομερής απαίτηση θα μπορούσε να είναι
+- `το λογισμικό θα πρέπει να επιτρέπει στους χρήστες να συνδέονται με τη διεύθυνση ηλεκτρονικού ταχυδρομείου και τον κωδικό πρόσβασής τους, και θα πρέπει να χρησιμοποιεί bcrypt για να κατακερματιστεί ο κωδικός πρόσβασης πριν αποθηκευτεί στη βάση δεδομένων`.
 
-### User Requirements vs System Requirements
+### Απαιτήσεις χρήστη έναντι απαιτήσεων συστήματος
 
-We can also categorize requirements as *user* requirements or *system* requirements.
+Μπορούμε επίσης να κατηγοριοποιήσουμε τις απαιτήσεις ως απαιτήσεις *χρήστη* ή *συστήματος*.
 
-**User requirements** describe what the user wants the software to do. Users requirements can be written using the user's own words with possible diagrams and pictures about what system should do or look like. It would be written in user's perspective.
+**Οι απαιτήσεις του χρήστη** περιγράφουν τι θέλει ο χρήστης να κάνει το λογισμικό. Οι απαιτήσεις των χρηστών μπορούν να γραφτούν χρησιμοποιώντας τα λόγια του ίδιου του χρήστη με πιθανά διαγράμματα και εικόνες σχετικά με το τι πρέπει να κάνει ή να μοιάζει το σύστημα. Θα γράφονται από την οπτική γωνία του χρήστη.
 
-**System requirements** describe what the system needs to do to meet the user requirements.This is more detailed description about system functionality, interfaces and performance and what exactly would be needed to meet user requirements. It is more technical description of what system should do.
+**Απαιτήσεις συστήματος** περιγράφουν τι πρέπει να κάνει το σύστημα για να ικανοποιήσει τις απαιτήσεις του χρήστη.Πρόκειται για μια πιο λεπτομερή περιγραφή της λειτουργικότητας, των διεπαφών και των επιδόσεων του συστήματος και τι ακριβώς θα χρειαστεί για να ικανοποιήσει τις απαιτήσεις του χρήστη. Είναι μια πιο τεχνική περιγραφή του τι πρέπει να κάνει το σύστημα.
 
-> There are lot of different ways to categorize or describe requirements. The most important thing is to write them down and make sure that they are clear and understandable.
+> Υπάρχουν πολλοί διαφορετικοί τρόποι κατηγοριοποίησης ή περιγραφής των απαιτήσεων. Το πιο σημαντικό είναι να τις καταγράψετε και να βεβαιωθείτε ότι είναι σαφείς και κατανοητές.
 >
-> We should always validate our requirements with our users and stakeholders. We should always make sure that we understand what they want and need, and that they understand what we're building.
+> Θα πρέπει πάντα να επικυρώνουμε τις απαιτήσεις μας με τους χρήστες και τα ενδιαφερόμενα μέρη. Θα πρέπει πάντα να βεβαιωνόμαστε ότι καταλαβαίνουμε τι θέλουν και τι χρειάζονται και ότι καταλαβαίνουν τι κατασκευάζουμε.
 
-## How to develop Software Requirements?
+## Πώς να αναπτύξετε απαιτήσεις λογισμικού;
 
-During the development of requirements, information is collected about the software to be created and the existing (working in real life) system.
+Κατά την ανάπτυξη των απαιτήσεων, συλλέγονται πληροφορίες σχετικά με το λογισμικό που πρόκειται να δημιουργηθεί και το υπάρχον («πραγματικό») σύστημα.
 
-User requirements and system requirements are created using collected information. The following activities are performed for this purpose:
-- documents related to the field are consulted;
-- communicating with the interest group;
-- similar systems are studied.
+Οι απαιτήσεις των χρηστών και οι απαιτήσεις του συστήματος δημιουργούνται χρησιμοποιώντας τις πληροφορίες που συλλέγονται. Για το σκοπό αυτό εκτελούνται οι ακόλουθες δραστηριότητες:
+- συμβουλεύονται έγγραφα σχετικά με τον τομέα,
+- επικοινωνία με την ομάδα ενδιαφερομένων,
+- μελετώνται παρόμοια συστήματα.
 
-### Stakeholders
+### Ενδιαφερόμενοι
 
-Stakeholders are the people who have an interest in the software. They can be:
-- users;
-- customers;
-- managers;
-- business analysts;
+Τα ενδιαφερόμενα μέρη είναι τα άτομα που έχουν ένα ιδιαίτερο ενδιαφέρον για το λογισμικό. Μπορεί να είναι:
+- χρήστες,
+- πελάτες,
+- διαχειριστές,
+- αναλυτές επιχειρήσεων,
 - ...
 
 
-## Exercises
+## Ασκήσεις
 
