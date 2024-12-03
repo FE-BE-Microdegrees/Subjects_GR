@@ -1,27 +1,27 @@
-# Programming
+# Προγραμματισμός
 
-## Description
+## Περιγραφή
 
-- What is software?
-- Open source vs proprietary software
-- What is computer program?
-- What is programming?
-- What is programming language?
-- What is code?
-- What is software development?
+- Τι είναι το λογισμικό;
+- Λογισμικό ανοικτού κώδικα έναντι ιδιόκτητου λογισμικού
+- Τι είναι το πρόγραμμα υπολογιστή;
+- Τι είναι ο προγραμματισμός;
+- Τι είναι η γλώσσα προγραμματισμού;
+- Τι είναι ο κώδικας;
+- Τι είναι η ανάπτυξη λογισμικού;
 
-## Learning Outcomes
+## Μαθησιακά αποτελέσματα
 
 TODO
 
-## What is Software?
+## Τι είναι το λογισμικό;
 
-Software is a collection of instructions that tells a computer how to perform a certain task. Software can be divided into two categories:
-- system software;
-- application software.
+Το λογισμικό είναι μια συλλογή οδηγιών που λένε σε έναν υπολογιστή πώς να εκτελέσει μια συγκεκριμένη εργασία. Το λογισμικό μπορεί να χωριστεί σε δύο κατηγορίες:
+- Λογισμικό συστήματος,
+- λογισμικό εφαρμογών.
 
-System software is used to manage the hardware resources of a computer system. Application software is used to perform a specific task.
+Το λογισμικό συστήματος χρησιμοποιείται για τη διαχείριση των πόρων υλικού ενός συστήματος υπολογιστή. Το λογισμικό εφαρμογών χρησιμοποιείται για την εκτέλεση μιας συγκεκριμένης εργασίας.
 
-## Open Source vs Proprietary Software
+## Λογισμικό ανοικτού κώδικα έναντι ιδιόκτητου λογισμικού
 
 
