@@ -1,147 +1,148 @@
-# Tools
+# Εργαλεία
 
-- [Tools](#tools)
-  - [Learning Outcomes](#learning-outcomes)
-  - [Excercises and Assignments](#excercises-and-assignments)
+- [Εργαλεία](#Εργαλεία)
+  - [Μαθησιακά αποτελέσματα](#Μαθησιακά-αποτελέσματα)
+  - [Ασκήσεις και εργασίες](#Ασκήσεις-και-εργασίες)
 
-## Learning Outcomes
+## Μαθησιακά αποτελέσματα
 
-After completing this topic, you'll be able to:
+Αφού ολοκληρώσετε αυτή τη θεματική ενότητα, θα είστε σε θέση να:
 
-- identify the different types of tools used in software development;
-- describe various tools used in software development;
-- use different tools in software development.
+- προσδιορίσετε τους διάφορους τύπους εργαλείων που χρησιμοποιούνται στην ανάπτυξη λογισμικού,
+- να περιγράψετε διάφορα εργαλεία που χρησιμοποιούνται στην ανάπτυξη λογισμικού,
+- χρησιμοποιούν διαφορετικά εργαλεία στην ανάπτυξη λογισμικού.
 
-In the context of software development, tools encompass a wide range of software applications, libraries, frameworks, and utilities that developers use to aid in various stages of the software development life cycle (*SDLC*). These tools are designed to streamline processes, enhance productivity, ensure code quality, and facilitate collaboration. Here's an overview of the different types of tools that are commonly used in software development:
 
-- **Integrated Development Environments (IDEs):**
-    - **Purpose:** Lightweight tools for writing and editing code, often used for scripting or web development. Likely the first tool developers use.
-    - **Examples:** 
+Στο πλαίσιο της ανάπτυξης λογισμικού, τα εργαλεία περιλαμβάνουν ένα ευρύ φάσμα εφαρμογών λογισμικού, βιβλιοθηκών, πλαισίων και βοηθητικών προγραμμάτων που χρησιμοποιούν οι προγραμματιστές για να βοηθήσουν σε διάφορα στάδια του κύκλου ζωής της ανάπτυξης λογισμικού (*SDLC*). Τα εργαλεία αυτά έχουν σχεδιαστεί για να εξορθολογίζουν τις διαδικασίες, να βελτιώνουν την παραγωγικότητα, να διασφαλίζουν την ποιότητα του κώδικα και να διευκολύνουν τη συνεργασία. Ακολουθεί μια επισκόπηση των διαφόρων τύπων εργαλείων που χρησιμοποιούνται συνήθως στην ανάπτυξη λογισμικού:
+
+- **Ενσωματωμένα περιβάλλοντα ανάπτυξης(IDEs):**
+    - **Σκοπός:** Ελαφριά εργαλεία για τη συγγραφή και την επεξεργασία κώδικα, που χρησιμοποιούνται συχνά για την ανάπτυξη σεναρίων ή ιστοσελίδων. Πιθανώς το πρώτο εργαλείο που χρησιμοποιούν οι προγραμματιστές.
+    - **Παραδείγματα:** 
       - [Eclipse](https://www.eclipse.org/) 
       - [Visual Studio](https://visualstudio.microsoft.com/)
       - [IntelliJ IDEA](https://www.jetbrains.com/idea/)
       - [PyCharm](https://www.jetbrains.com/pycharm/)
       - [Xcode](https://developer.apple.com/xcode/)
 
-- **Version Control Systems:**
-    - **Purpose:** Track and manage changes to code over time.  Code is a critical asset in software development that must be carefully maintained and protected. Version control systems allow developers to collaborate easily, track changes, and restore previous versions of an application if necessary.
-    - **Examples:** 
+- **Συστήματα ελέγχου εκδόσεων:**
+    - **Σκοπός:** Παρακολούθηση και διαχείριση των αλλαγών στον κώδικα με την πάροδο του χρόνου.  Ο κώδικας είναι ένα κρίσιμο περιουσιακό στοιχείο στην ανάπτυξη λογισμικού που πρέπει να συντηρείται και να προστατεύεται προσεκτικά. Τα συστήματα ελέγχου εκδόσεων επιτρέπουν στους προγραμματιστές να συνεργάζονται εύκολα, να παρακολουθούν τις αλλαγές και να επαναφέρουν προηγούμενες εκδόσεις μιας εφαρμογής, εάν είναι απαραίτητο.
+    - **Παραδείγματα:** 
       - [Git](https://git-scm.com/)
       - [Mercurial](https://www.mercurial-scm.org/)
       - [Subversion (SVN)](https://subversion.apache.org/)
       - [CVS](https://www.gnu.org/software/trans-coord/manual/cvs/cvs.html)
 
-- **Build Tools:**
-    - **Purpose:** Automate the process of compiling and building applications.
-    - **Examples:** Maven, Gradle, Ant, Make.
+- **Εργαλεία δημιουργίας:**
+    - **Σκοπός:** Αυτοματοποιήστε τη διαδικασία μεταγλώττισης και δημιουργίας εφαρμογών.
+    - **Παραδείγματα:** Maven, Gradle, Ant, Make.
 
-- **Continuous Integration/Continuous Deployment (CI/CD) Tools:**
-    - **Purpose:** Automate the processes of compiling, testing, and deploying applications. Nowadays, development processes are moving towards being carried out in small and rapid steps. If we had to manually perform all these steps each time an update is made, it would take a lot of time, and errors would be prone to occur. CI/CD tools help automate this process, speed it up, and reduce the likelihood of errors.
-    - **Examples:** 
+- **Εργαλεία συνεχούς ολοκλήρωσης/συνεχούς ανάπτυξης (CI/CD):**
+    - **Σκοπός:** Αυτοματοποιήστε τις διαδικασίες μεταγλώττισης, δοκιμής και ανάπτυξης εφαρμογών. Στις μέρες μας, οι διαδικασίες ανάπτυξης κινούνται προς την κατεύθυνση να πραγματοποιούνται σε μικρά και γρήγορα βήματα. Αν έπρεπε να εκτελούμε χειροκίνητα όλα αυτά τα βήματα κάθε φορά που γίνεται μια ενημέρωση, θα χρειαζόταν πολύς χρόνος και θα ήταν επιρρεπείς στην εμφάνιση σφαλμάτων. Τα εργαλεία CI/CD βοηθούν στην αυτοματοποίηση αυτής της διαδικασίας, την επιταχύνουν και μειώνουν την πιθανότητα σφαλμάτων.
+    - **Παραδείγματα:** 
       - [Jenkins](https://www.jenkins.io/)
       - [Travis CI](https://www.travis-ci.com/)
       - [CircleCI](https://circleci.com/)
       - [GitLab CI/CD](https://docs.gitlab.com/ee/ci/)
 
-- **Dependency Management Tools:**
-    - **Purpose:** Manage software dependencies and libraries.
-    - **Examples:** npm (Node.js), pip (Python), Maven (Java), NuGet (.NET).
+- **Εργαλεία διαχείρισης αλληλεξαρτήσεων:**
+    - **Σκοπός:** Διαχείριση εξαρτήσεων και βιβλιοθηκών λογισμικού.
+    - **Παραδείγματα:** npm (Node.js), pip (Python), Maven (Java), NuGet (.NET).
 
-- **Testing Tools:**
-- **Purpose:** Automatically test software quality, performance, and security. As applications grow during development, the risk of not noticing all the bugs the application contains increases. It's always possible to manually check the application's functionality after making changes to ensure everything works as it should, but this is a time-consuming and expensive process. Various tools help automate this process.
-    - **Unit Testing:** 
+- **Εργαλεία ελέγχου:**
+- **Σκοπός:** Ελέγξτε αυτόματα την ποιότητα, τις επιδόσεις και την ασφάλεια του λογισμικού. Καθώς οι εφαρμογές αναπτύσσονται κατά τη διάρκεια της ανάπτυξης, αυξάνεται ο κίνδυνος να μην παρατηρηθούν όλα τα σφάλματα που περιέχει η εφαρμογή. Είναι πάντα δυνατό να ελέγξετε χειροκίνητα τη λειτουργικότητα της εφαρμογής μετά την πραγματοποίηση αλλαγών για να βεβαιωθείτε ότι όλα λειτουργούν όπως πρέπει, αλλά αυτή είναι μια χρονοβόρα και δαπανηρή διαδικασία. Διάφορα εργαλεία βοηθούν στην αυτοματοποίηση αυτής της διαδικασίας.
+    - **Δοκιμή μονάδας(Unit Testing):** 
       - [JUnit (Java)](https://junit.org/junit5/)
       - [NUnit (.NET)](https://nunit.org/)
       - [Pytest (Python)](https://docs.pytest.org/en/8.0.x/)
-    - **Functional/End-to-End Testing:** 
+    - **Λειτουργικές δοκιμές/δοκιμές από άκρο σε άκρο(Functional/End-to-End Testing):** 
       - [Selenium](https://www.selenium.dev/)
       - [Cypress](https://www.cypress.io/)
       - [Protractor](https://www.protractortest.org/#/)
-    - **Performance Testing:**
+    - **Δοκιμή απόδοσης(Performance Testing):**
       - [JMeter](https://jmeter.apache.org/)
       - [LoadRunner](https://www.microfocus.com/en-us/products/loadrunner-professional/overview)
 
-- **Code Quality and Review Tools:**
-    - **Purpose:** Analyze code quality, style, and potential issues. Most activities in software development are aimed at ensuring the application works as it should. However, that's not the only thing developers need to consider. It's important to remember that software development is teamwork, and if the code is written in a way that makes it difficult for other developers to understand, it can cause problems. It's also important for the code to be written securely and without bugs. All these aspects are important, and there are various tools to help check these aspects.
-    - **Examples:** 
+- **Εργαλεία ποιότητας και αναθεώρησης κώδικα:**
+    - **Σκοπός:** Αναλύστε την ποιότητα του κώδικα, το στυλ και τα πιθανά προβλήματα. Οι περισσότερες δραστηριότητες στην ανάπτυξη λογισμικού έχουν ως στόχο να διασφαλίσουν ότι η εφαρμογή λειτουργεί όπως πρέπει. Ωστόσο, αυτό δεν είναι το μόνο πράγμα που πρέπει να εξετάζουν οι προγραμματιστές. Είναι σημαντικό να θυμάστε ότι η ανάπτυξη λογισμικού είναι ομαδική εργασία, και αν ο κώδικας είναι γραμμένος με τρόπο που καθιστά δύσκολη την κατανόησή του από άλλους προγραμματιστές, μπορεί να προκαλέσει προβλήματα. Είναι επίσης σημαντικό ο κώδικας να είναι γραμμένος με ασφάλεια και χωρίς σφάλματα. Όλες αυτές οι πτυχές είναι σημαντικές και υπάρχουν διάφορα εργαλεία που βοηθούν στον έλεγχο αυτών των πτυχών.
+    - **Παραδείγματα:** 
       - [SonarQube](https://www.sonarsource.com/products/sonarqube/)
       - [ESLint](https://eslint.org/)
       - [Pylint](https://pypi.org/project/pylint/)
       - [CodeClimate](https://codeclimate.com/quality)
-- **Package Managers:**
-    - **Purpose:** Manage and organize libraries and modules for specific programming languages.
-    - **Examples:** npm, pip, Composer, RubyGems.
+- **Διαχειριστές πακέτου:**
+    - **Σκοπός:** Διαχείριση και οργάνωση βιβλιοθηκών και ενοτήτων για συγκεκριμένες γλώσσες προγραμματισμού.
+    - **Παραδείγματα:** npm, pip, Composer, RubyGems.
 
-- **Bug Tracking/Issue Tracking Systems:**
-    - **Purpose:** Track, manage, and prioritize software bugs and tasks. Developers inevitably make mistakes. The error might not even be in the code written by the developer but in poorly described requirements that the developer followed. Various tools exist to help manage and track these errors.
-    - **Examples:**
+- **Συστήματα εντοπισμού σφαλμάτων / εντοπισμού ζητημάτων:**
+    - **Σκοπός:** Παρακολούθηση, διαχείριση και ιεράρχηση σφαλμάτων και εργασιών λογισμικού. Οι προγραμματιστές κάνουν αναπόφευκτα λάθη. Το λάθος μπορεί να μην είναι καν στον κώδικα που έγραψε ο προγραμματιστής αλλά σε κακώς περιγραφόμενες απαιτήσεις που ακολούθησε ο προγραμματιστής. Υπάρχουν διάφορα εργαλεία που βοηθούν στη διαχείριση και την παρακολούθηση αυτών των σφαλμάτων.
+    - **Παραδείγματα:**
       - [JIRA](https://www.atlassian.com/software/jira)
       - [Bugzilla](https://www.bugzilla.org/)
       - [GitHub Issues](https://github.com/features/issues)
       - [Trello](https://trello.com/)
-- **Documentation Tools:**
-    - **Purpose:** Create and manage software documentation. Documentation is crucial in software development as it helps new developers quickly understand existing code and how the application works. Besides various text-based documentation (user manuals, etc.), there are also different tools specifically for creating and managing documentation about software code.
-  - **Examples:**
+- **Εργαλεία τεκμηρίωσης:**
+    - **Σκοπός:** Δημιουργία και διαχείριση τεκμηρίωσης λογισμικού. Η τεκμηρίωση είναι ζωτικής σημασίας στην ανάπτυξη λογισμικού, καθώς βοηθά τους νέους προγραμματιστές να κατανοήσουν γρήγορα τον υπάρχοντα κώδικα και τον τρόπο λειτουργίας της εφαρμογής. Εκτός από διάφορα κείμενα τεκμηρίωσης (εγχειρίδια χρήσης κ.λπ.), υπάρχουν επίσης διάφορα εργαλεία ειδικά για τη δημιουργία και διαχείριση τεκμηρίωσης σχετικά με τον κώδικα λογισμικού.
+  - **Παραδείγματα:**
     - [Doxygen](https://www.doxygen.nl/)
     - [Sphinx](https://www.sphinx-doc.org/en/master/)
     - [JSDoc](https://jsdoc.app/about-getting-started)
 
-- **Database Management Tools:**
-    - **Purpose:** Design, manage, and communicate with databases. Applications often require some type of database to store data. Designing, creating, and managing databases is quite a complex process that can be done manually, but there are also various tools that simplify this process.
-    - **Examples:**
+- **Εργαλεία διαχείρισης βάσεων δεδομένων:**
+    - **Παραδείγματα:** Σχεδιασμός, διαχείριση και επικοινωνία με βάσεις δεδομένων. Οι εφαρμογές συχνά απαιτούν κάποιο είδος βάσης δεδομένων για την αποθήκευση δεδομένων. Ο σχεδιασμός, η δημιουργία και η διαχείριση βάσεων δεδομένων είναι μια αρκετά πολύπλοκη διαδικασία που μπορεί να γίνει χειροκίνητα, αλλά υπάρχουν επίσης διάφορα εργαλεία που απλοποιούν αυτή τη διαδικασία.
+    - **Παραδείγματα:**
       - [MySQL Workbench](https://www.mysql.com/products/workbench/)
       - [pgAdmin](https://www.pgadmin.org/)
       - [Microsoft SQL Server Management Studio](https://learn.microsoft.com/en-us/sql/ssms/sql-server-management-studio-ssms?view=sql-server-ver16)
-- **Containerization and Virtualization Tools:**
-    - **Purpose:** Create, deploy, and manage containers or virtualized environments. Containers and virtualized environments have become very popular in recent years because they allow developers to create environments similar to where the application will later run, which are easy to create and delete. There are various tools that help simplify this process and avoid situations where the application works on the developer's computer/server but not on the client's computer/server.
-    - **Examples:**
+- **Εργαλεία Containerization και Virtualization:**
+    - **Σκοπός:** Δημιουργία, ανάπτυξη και διαχείριση εμπορευματοκιβωτίων ή εικονικών περιβαλλόντων. Τα εμπορευματοκιβώτια και τα εικονικοποιημένα περιβάλλοντα έχουν γίνει πολύ δημοφιλή τα τελευταία χρόνια, επειδή επιτρέπουν στους προγραμματιστές να δημιουργούν περιβάλλοντα παρόμοια με εκείνα όπου θα εκτελεστεί αργότερα η εφαρμογή, τα οποία είναι εύκολο να δημιουργηθούν και να διαγραφούν. Υπάρχουν διάφορα εργαλεία που βοηθούν στην απλοποίηση αυτής της διαδικασίας και στην αποφυγή καταστάσεων όπου η εφαρμογή λειτουργεί στον υπολογιστή/εξυπηρετητή του προγραμματιστή αλλά όχι στον υπολογιστή/εξυπηρετητή του πελάτη.
+    - **Παραδείγματα:**
       - [Docker](https://www.docker.com/)
       - [Kubernetes](https://kubernetes.io/)
       - [VMware](https://www.vmware.com/)
       - [VirtualBox](https://www.virtualbox.org/)
 
 
-- **Cloud Platforms and Tools:**
-    - **Purpose:** Develop, deploy, and scale applications in cloud environments. Increasingly, applications are not kept on client's own servers but are hosted in various cloud environments, which are flexible and often more cost-effective in the long run.
-    - **Examples:** 
+- **Πλατφόρμες και εργαλεία νέφους:**
+    - **Σκοπός** Ανάπτυξη, ανάπτυξη και κλιμάκωση εφαρμογών σε περιβάλλοντα νέφους. Όλο και περισσότερο, οι εφαρμογές δεν διατηρούνται στους δικούς τους διακομιστές του πελάτη, αλλά φιλοξενούνται σε διάφορα περιβάλλοντα νέφους, τα οποία είναι ευέλικτα και συχνά μακροπρόθεσμα πιο οικονομικά αποδοτικά.
+    - **Παραδείγματα:** 
       - [AWS](https://aws.amazon.com/)
       - [Google Cloud Platform](https://cloud.google.com/)
       - [Microsoft Azure](https://azure.microsoft.com/en-us)
       - [Heroku](https://www.heroku.com/)
 
-- **Collaboration and Communication Tools:**
-    - **Purpose:** Facilitate team communication and collaboration. Software development is mostly teamwork, and it's important for team members to communicate and collaborate with each other. Simple communication tools like email or a common messaging app can often be used, but there are also special tools designed to facilitate teamwork in software development. For example, it may be necessary in a messaging app to share code snippets that other team members can quickly review, and ordinary communication tools may not facilitate this very well.
-    - **Examples:** 
+- **Εργαλεία συνεργασίας και επικοινωνίας:**
+    - **Σκοπός:** Διευκόλυνση της ομαδικής επικοινωνίας και συνεργασίας. Η ανάπτυξη λογισμικού είναι ως επί το πλείστον ομαδική εργασία και είναι σημαντικό τα μέλη της ομάδας να επικοινωνούν και να συνεργάζονται μεταξύ τους. Συχνά μπορούν να χρησιμοποιηθούν απλά εργαλεία επικοινωνίας, όπως το ηλεκτρονικό ταχυδρομείο ή μια κοινή εφαρμογή ανταλλαγής μηνυμάτων, αλλά υπάρχουν επίσης ειδικά εργαλεία που έχουν σχεδιαστεί για να διευκολύνουν την ομαδική εργασία στην ανάπτυξη λογισμικού. Για παράδειγμα, μπορεί να είναι απαραίτητο σε μια εφαρμογή ανταλλαγής μηνυμάτων να μοιράζονται αποσπάσματα κώδικα που μπορούν να αναθεωρήσουν γρήγορα άλλα μέλη της ομάδας και τα συνηθισμένα εργαλεία επικοινωνίας μπορεί να μην το διευκολύνουν πολύ καλά αυτό.
+    - **Παραδείγματα:** 
       - [Slack](https://slack.com/) 
       - [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software) 
       - [Zoom](https://zoom.us/)
       - [Confluence](https://www.atlassian.com/software/confluence)
 
-- **Development Frameworks and Libraries:**
-    - **Purpose:** Provide a structured foundation for more efficient application development. In addition to the dependencies mentioned above, there are also various frameworks and libraries that help developers create applications faster. For example, there may be a framework that helps quickly create web applications or libraries that simplify interacting with databases.applications more efficiently.
-    - **Examples:** 
+- **Πλαίσια ανάπτυξης και βιβλιοθήκες:**
+    - **Σκοπός:** Παροχή μιας δομημένης βάσης για την αποτελεσματικότερη ανάπτυξη εφαρμογών. Εκτός από τις εξαρτήσεις που αναφέρθηκαν παραπάνω, υπάρχουν επίσης διάφορα πλαίσια και βιβλιοθήκες που βοηθούν τους προγραμματιστές να δημιουργούν εφαρμογές ταχύτερα. Για παράδειγμα, μπορεί να υπάρχει ένα πλαίσιο που βοηθά στη γρήγορη δημιουργία εφαρμογών ιστού ή βιβλιοθήκες που απλοποιούν την αλληλεπίδραση με βάσεις δεδομένων.εφαρμογές πιο αποτελεσματικά.
+    - **Παραδείγματα:** 
       - [Angular](https://angular.io/)
       - [React](https://react.dev/)
       - [Vue.js](https://vuejs.org/)
       - [Spring Boot (Java)](https://spring.io/guides/gs/spring-boot)
-      - ... and many others
-- **Code Editors:**
-  - **Purpose:** Lightweight tools for writing and editing code, often used for scripting or web development. Likely the first tool developers use.
-  - **Examples:**
+      - ... και πολλοί άλλοι
+- **Επεξεργαστές κώδικα:**
+  - **Σκοπός:** Lightweight tools for writing and editing code, often used for scripting or web development. Likely the first tool developers use.
+  - **Παραδείγματα:**
     - [Visual Studio Code](https://code.visualstudio.com/)
     - [Sublime Text](https://www.sublimetext.com/)
     - [Atom](https://atom-editor.cc/)
 
-- **API Development and Testing Tools:**
-    - **Purpose:** esign, simulate, test, and document APIs. Application interfaces (*APIs*) are very important in modern software development as they offer a great way to exchange data between different applications. Sometimes we can test a simpler API just by typing something in the browser's address bar, but for more complex APIs, there are special tools that help simplify the creation, testing, and documentation of APIs.
-    - **Examples:**
+- **Εργαλεία ανάπτυξης και δοκιμής του API:**
+    - **Σκοπός:** σχεδιασμός, προσομοίωση, δοκιμή και τεκμηρίωση APIs. Οι διεπαφές εφαρμογών (*APIs*) είναι πολύ σημαντικές στη σύγχρονη ανάπτυξη λογισμικού, καθώς προσφέρουν έναν εξαιρετικό τρόπο ανταλλαγής δεδομένων μεταξύ διαφορετικών εφαρμογών. Μερικές φορές μπορούμε να δοκιμάσουμε ένα απλούστερο API απλά πληκτρολογώντας κάτι στη γραμμή διευθύνσεων του προγράμματος περιήγησης, αλλά για πιο σύνθετα API υπάρχουν ειδικά εργαλεία που βοηθούν στην απλούστευση της δημιουργίας, της δοκιμής και της τεκμηρίωσης των API.
+    - **Παραδείγματα:**
       - [Postman](https://www.postman.com/)
       - [Swagger/OpenAPI](https://swagger.io/specification/)
       - [Insomnia](https://insomnia.rest/)
 
-- **Task & Project Tracking:**
-  - **Purpose:**  Plan, track, and manage software projects from start to finish. As mentioned several times before, software development is teamwork, and for teamwork to be smooth, all team members need to know what they are supposed to do and when. Various project and task management/tracking tools help simplify this process and ensure project success.
-  - **Examples:**
+- **Παρακολούθηση εργασιών και έργων:**
+  - **Σκοπός:**  Σχεδιασμός, παρακολούθηση και διαχείριση έργων λογισμικού από την αρχή έως το τέλος. Όπως αναφέρθηκε αρκετές φορές προηγουμένως, η ανάπτυξη λογισμικού είναι ομαδική εργασία και για να είναι ομαλή η ομαδική εργασία, όλα τα μέλη της ομάδας πρέπει να γνωρίζουν τι πρέπει να κάνουν και πότε. Διάφορα εργαλεία διαχείρισης/παρακολούθησης έργων και εργασιών συμβάλλουν στην απλοποίηση αυτής της διαδικασίας και στη διασφάλιση της επιτυχίας του έργου.
+  - **Παραδείγματα:**
     - [JIRA (Atlassian)](https://www.atlassian.com/software/jira)
     - [Trello](https://trello.com/)
     - [GitHub Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
