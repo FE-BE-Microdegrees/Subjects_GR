@@ -1,31 +1,31 @@
-# Software Development Life Cycle (SDLC):
+# Κύκλος ζωής ανάπτυξης λογισμικού (SDLC):
 
-- [Software Development Life Cycle (SDLC):](#software-development-life-cycle-sdlc)
-  - [Learning Outcomes:](#learning-outcomes)
-  - [Typical SDLC Phases:](#typical-sdlc-phases)
-  - [Importance of SDLC:](#importance-of-sdlc)
-  - [Common SDLC Models:](#common-sdlc-models)
-    - [**Waterfall Model:**](#waterfall-model)
+- [Κύκλος ζωής ανάπτυξης λογισμικού (SDLC):](#Κύκλος-ζωής-ανάπτυξης-λογισμικού-sdlc)
+  - [Μαθησιακά αποτελέσματα:](#Μαθησιακά-αποτελέσματα)
+  - [Χαρακτηριστικές φάσεις SDLC:](#Χαρακτηριστικές-φάσεις-SDLC)
+  - [Σπουδαιότητα του SDLC:](#Σπουδαιότητα-του-SDLC)
+  - [Συνήθη μοντέλα SDLC:](#Συνήθη-μοντέλα-SDLC)
+    - [**Waterfall Μοντέλο:**](#Waterfall-Μοντέλο)
     - [**Lean**](#lean)
-    - [**Spiral Model:**](#spiral-model)
-    - [**Agile Model:**](#agile-model)
-    - [**Feature-Driven Development (FDD)**](#feature-driven-development-fdd)
-    - [**Extreme Programming (XP)**](#extreme-programming-xp)
+    - [**Spiral Μοντέλο:**](#Spiral-Μοντέλο)
+    - [**Agile Μοντέλο:**](#agile-Μοντέλο)
+    - [**Ανάπτυξη με γνώμονα τα χαρακτηριστικά  (FDD)**](#Ανάπτυξη-με-γνώμονα-τα-χαρακτηριστικά-fdd)
+    - [**Extreme Προγραμματισμός (XP)**](#Extreme-Προγραμματισμός-(XP))
     - [**Kanban:**](#kanban)
     - [**Scrum:**](#scrum)
-  - [Excercises and Assignments](#excercises-and-assignments)
+  - [Ασκήσεις και εργασίες](#Ασκήσεις-και-εργασίες)
 
-## Learning Outcomes:
+## Μαθησιακά αποτελέσματα:
 
-After completing this topic, you'll be able to:
+Αφού ολοκληρώσετε αυτή τη θεματική ενότητα, θα είστε σε θέση να:
 
-- understand the Software Development Life Cycle (SDLC);
-- identify the different phases of the SDLC;
-- describe the importance of SDLC;
-- identify the common SDLC models.
-- apply SDLC principles to software development.
+- κατανοήσετε τον κύκλο ζωής της ανάπτυξης λογισμικού (SDLC),
+- να προσδιορίσετε τις διάφορες φάσεις του SDLC, 
+- περιγράψετε τη σημασία του SDLC,
+- προσδιορίσετε τα κοινά μοντέλα SDLC,
+- εφαρμόζουν τις αρχές του SDLC στην ανάπτυξη λογισμικού.
 
-The Software Development Life Cycle (SDLC) is a systematic process for planning, creating, testing, deploying, and maintaining software. It defines the stages and tasks involved in producing software from inception to retirement.
+Ο κύκλος ζωής ανάπτυξης λογισμικού (SDLC) είναι μια συστηματική διαδικασία για τον σχεδιασμό, τη δημιουργία, τη δοκιμή, την ανάπτυξη και τη συντήρηση λογισμικού. Καθορίζει τα στάδια και τις εργασίες που εμπλέκονται στην παραγωγή λογισμικού από την αρχή μέχρι την απόσυρση.
 
 ```mermaid
 graph TD
@@ -40,111 +40,112 @@ graph TD
 
 ```
 
-## Typical SDLC Phases:
+## Χαρακτηριστικές φάσεις SDLC:
 
-The Software Development Life Cycle (SDLC) is a structured process that defines the phases or steps involved in producing software. While there are different models or frameworks for SDLC, many share common phases. Here's an overview of the typical steps involved:
+Ο Κύκλος Ζωής Ανάπτυξης Λογισμικού (SDLC) είναι μια δομημένη διαδικασία που ορίζει τις φάσεις ή τα βήματα που εμπλέκονται στην παραγωγή λογισμικού. Αν και υπάρχουν διαφορετικά μοντέλα ή πλαίσια για το SDLC, πολλά μοιράζονται κοινές φάσεις. Ακολουθεί μια επισκόπηση των τυπικών βημάτων που εμπλέκονται:
 
-1. **Planning:**
-   - Determine the scope of the project.
-   - Identify potential risks, constraints, and resources.
-   - Develop a project plan, including timelines, milestones, and budget estimates.
-   - User research to understand user needs and expectations.
-2. **Requirement Analysis:**
-   - Gather and document the needs and specifications from stakeholders (*end-users, clients, etc.*).
-   - Analyze the feasibility of requirements.
-   - Prioritize and finalize the list of requirements.
-3. **System Design:**
-   - Translate requirements into system specifications.
-   - Design the system architecture and framework.
-   - Create high-level and detailed design documents.
-   - Select appropriate technologies, platforms, and tools.
-4. **Implementation/Development:**
-   - Write the actual code for the software.
-   - Translate design documentation into functional software.
-   - Integrate various components and ensure they work together.
+1. **Σχεδιασμός:**
+   - Καθορίστε το πεδίο εφαρμογής του έργου.
+   - Προσδιορισμός πιθανών κινδύνων, περιορισμών και πόρων.
+   - Ανάπτυξη σχεδίου έργου, συμπεριλαμβανομένων χρονοδιαγραμμάτων, ορόσημων και εκτιμήσεων προϋπολογισμού.
+   - Έρευνα χρηστών για την κατανόηση των αναγκών και των προσδοκιών των χρηστών.
+2. **Ανάλυση απαιτήσεων:**
+   - Συγκέντρωση και τεκμηρίωση των αναγκών και των προδιαγραφών των ενδιαφερομένων μερών (* τελικοί χρήστες, πελάτες κ.λπ.*).
+   - Αναλύστε τη δυνατότητα υλοποίησης των απαιτήσεων.
+   - Ιεράρχηση και οριστικοποίηση της λίστας των απαιτήσεων.
+3. **Σχεδιασμός συστήματος:**
+   - Μετατροπή των απαιτήσεων σε προδιαγραφές συστήματος.
+   - Σχεδιασμός της αρχιτεκτονικής και του πλαισίου του συστήματος.
+   - Δημιουργία εγγράφων σχεδιασμού υψηλού επιπέδου και αναλυτικής μελέτης.
+   - Επιλογή των κατάλληλων τεχνολογιών, πλατφορμών και εργαλείων.
+4. **Υλοποίηση/Ανάπτυξη:**
+   - Γράψτε τον πραγματικό κώδικα για το λογισμικό.
+   - Μεταφράστε την τεκμηρίωση σχεδιασμού σε λειτουργικό λογισμικό.
+   - Ενσωμάτωση διαφόρων στοιχείων και διασφάλιση της ομαλής τους λειτουργίας.
 5. **Testing:**
-   - Verify that the software meets the requirements.
-   - Identify and fix bugs, errors, and inconsistencies.
-   - Use various testing methods like unit testing, integration testing, system testing, acceptance testing, etc.
-   - Validate the software's functionality, performance, security, and usability.
-6. **Deployment:**
-   - Prepare the environment for the software's launch.
-   - Install and configure the software in the production environment.
-   - Provide necessary training to end-users if required.
-   - Monitor the software's performance and ensure smooth operation.
-7. **Maintenance and Support:**
-   - Address any issues or bugs that arise post-deployment.
-   - Provide updates, patches, or enhancements based on user feedback.
-   - Ensure the software remains operational, efficient, and relevant over time.
-   - Address any security vulnerabilities or compatibility issues that may arise.
-8. **Review and Feedback:**
-   - Gather feedback from stakeholders and end-users.
-   - Analyze the software's performance and identify areas for improvement.
-   - Plan for the next iteration or version of the software.
+   - Επαληθεύστε ότι το λογισμικό πληρεί τις απαιτήσεις.
+   - Εντοπίστε και διορθώστε σφάλματα, λάθη και ασυνέπειες.
+   - Χρήση διαφόρων μεθόδων δοκιμών, όπως δοκιμές μονάδας, δοκιμές ενσωμάτωσης, δοκιμές συστήματος, δοκιμές αποδοχής κ.λπ.
+   - Επικυρώστε τη λειτουργικότητα, τις επιδόσεις, την ασφάλεια και τη χρηστικότητα του λογισμικού.
+6. **Εφαρμογή:**
+   - Προετοιμάστε το περιβάλλον για την εκκίνηση του λογισμικού.
+   - Εγκαταστήστε και ρυθμίστε το λογισμικό στο περιβάλλον λειτουργίας.
+   - Παροχή της απαραίτητης κατάρτισης στους τελικούς χρήστες, εάν απαιτείται.
+   - Παρακολουθήστε την απόδοση του λογισμικού και διασφαλίστε την ομαλή λειτουργία.
+7. **Συντήρηση και υποστήριξη:**
+   - Αντιμετώπιση τυχόν ζητημάτων ή σφαλμάτων που προκύπτουν μετά την ανάπτυξη.
+   - Παρέχετε ενημερώσεις, διορθώσεις ή βελτιώσεις με βάση τα σχόλια των χρηστών.
+   - Διασφαλίστε ότι το λογισμικό παραμένει λειτουργικό, αποτελεσματικό και σχετικό με την πάροδο του χρόνου.
+   - Αντιμετώπιση τυχόν τρωτών σημείων ασφαλείας ή ζητημάτων συμβατότητας που ενδέχεται να προκύψουν.
+8. **Ανασκόπηση και ανατροφοδότηση:**
+   - Συγκεντρώστε ανατροφοδότηση από τα ενδιαφερόμενα μέρη και τους τελικούς χρήστες.
+   - Αναλύστε τις επιδόσεις του λογισμικού και εντοπίστε περιοχές για βελτίωση.
+   - Σχεδιάστε την επόμενη επανάληψη ή έκδοση του λογισμικού.
 
-Each of these phases can be iterative, especially in agile or spiral models, where the software is developed in cycles or iterations. The exact steps and their sequence can vary based on the SDLC model chosen, organizational processes, and the nature of the project. However, the aim remains consistent: to produce high-quality software that aligns with user needs and expectations in an organized and efficient manner.
+Καθεμία από αυτές τις φάσεις μπορεί να είναι επαναληπτική, ιδίως σε ευέλικτα ή σπειροειδή μοντέλα, όπου το λογισμικό αναπτύσσεται σε κύκλους ή επαναλήψεις. Τα ακριβή βήματα και η αλληλουχία τους μπορεί να ποικίλλουν ανάλογα με το μοντέλο SDLC που επιλέγεται, τις οργανωτικές διαδικασίες και τη φύση του έργου. Ωστόσο, ο στόχος παραμένει σταθερός: η παραγωγή λογισμικού υψηλής ποιότητας που ευθυγραμμίζεται με τις ανάγκες και τις προσδοκίες των χρηστών με οργανωμένο και αποτελεσματικό τρόπο.
 
-## Importance of SDLC:
+## Σπουδαιότητα του SDLC:
 
-- **Structured Process:** SDLC offers a structured approach to software development, ensuring that critical steps are not missed.
-- **Quality Assurance:** Each phase of the SDLC has specific deliverables and review processes, leading to better software quality.
-- **Risk Management:** Early identification of issues or risks allows for timely mitigation.
-- **Project Management:** SDLC offers a clear framework for project managers to track progress, allocate resources, and adhere to budgets.
-- **Stakeholder Communication:** By defining clear phases and deliverables, stakeholders are kept in the loop regarding progress and expected outcomes.
-- **Efficiency and Cost-effectiveness:** By systematically addressing the software development process, wastage is minimized, and efficiency is improved.
-- **Documentation:** Proper documentation is an integral part of the SDLC, ensuring that knowledge is preserved and system details are well understood.
+- **Δομημένη διαδικασία:** Το SDLC προσφέρει μια δομημένη προσέγγιση στην ανάπτυξη λογισμικού, διασφαλίζοντας ότι δεν παραλείπονται κρίσιμα βήματα.
+- **Διασφάλιση ποιότητας:** Κάθε φάση του SDLC έχει συγκεκριμένα παραδοτέα και διαδικασίες αναθεώρησης, που οδηγούν σε καλύτερη ποιότητα λογισμικού.
+- **Διαχείριση κινδύνων:** Ο έγκαιρος εντοπισμός ζητημάτων ή κινδύνων επιτρέπει τον έγκαιρο μετριασμό τους.
+- **Διαχείριση έργου:** Το SDLC προσφέρει ένα σαφές πλαίσιο για τους διαχειριστές έργων ώστε να παρακολουθούν την πρόοδο, να κατανέμουν τους πόρους και να τηρούν τους προϋπολογισμούς.
+- **Επικοινωνία με τα ενδιαφερόμενα μέρη:** Καθορίζοντας σαφείς φάσεις και παραδοτέα, τα ενδιαφερόμενα μέρη διατηρούνται ενήμερα σχετικά με την πρόοδο και τα αναμενόμενα αποτελέσματα.
+- **Αποδοτικότητα και σχέση κόστους-αποτελεσματικότητας:** Με τη συστηματική αντιμετώπιση της διαδικασίας ανάπτυξης λογισμικού, ελαχιστοποιείται η σπατάλη και βελτιώνεται η αποδοτικότητα.
+- **Τεκμηρίωση:** Η σωστή τεκμηρίωση αποτελεί αναπόσπαστο μέρος του SDLC, διασφαλίζοντας τη διατήρηση της γνώσης και την κατανόηση των λεπτομερειών του συστήματος.
 
-## Common SDLC Models:
+## Συνήθη μοντέλα SDLC:
 
-### **Waterfall Model:**
+### **Waterfall Μοντέλο:**
 
-- **Description:** A linear and sequential approach where each phase must be completed before the next one starts. It's the earliest SDLC approach.
-- **Pros:** Clear structure, simple to understand, well-defined stages.
-- **Cons:** Difficult to make changes after the phase is complete, not suitable for complex projects.
-
+- **Περιγραφή:** A linear and sequential approach where each phase must be completed before the next one starts. It's the earliest SDLC approach.
+- **Πλεονεκτήματα:** Clear structure, simple to understand, well-defined stages.
+- **Μειονεκτήματα:** Δύσκολο να γίνουν αλλαγές μετά την ολοκλήρωση της φάσης, ακατάλληλο για πολύπλοκα έργα.
+  
 ### **Lean**
 
-- **Description:** Originating from manufacturing, it focuses on resource optimization and customer value delivery. It aims to cut out any "waste" from the process.
-- **Pros:** Efficient resource utilization, focuses on delivering value.
-- **Cons:** May overlook necessary tasks as "waste," requires a deep understanding to implement correctly.
+- **Περιγραφή:** Προερχόμενη από τη μεταποίηση, εστιάζει στη βελτιστοποίηση των πόρων και την παράδοση αξίας στον πελάτη. Στοχεύει στην αποκοπή κάθε «σπατάλης» από τη διαδικασία.
+- **Πλεονεκτήματα:** Αποτελεσματική χρήση των πόρων, επικεντρώνεται στην παροχή αξίας.
+- **Μειονεκτήματα:** Μπορεί να παραβλέψει τις απαραίτητες εργασίες ως «σπατάλη», απαιτεί βαθιά κατανόηση για τη σωστή εφαρμογή.
 
-### **Spiral Model:**
+### **Spiral Μοντέλο:**
 
-- **Description:** Combines the design phase of the Waterfall model with the iterative philosophy of prototyping. Focuses on risk assessment at every spiral.
-- **Pros:** Focus on risk management, flexibility in design and requirements.
-- **Cons:** Can be expensive, requires risk assessment expertise.
+- **Περιγραφή:** Συνδυάζει τη φάση σχεδιασμού του μοντέλου καταρράκτη (Waterfall) με την επαναληπτική φιλοσοφία της δημιουργίας πρωτοτύπων. Επικεντρώνεται στην αξιολόγηση του κινδύνου σε κάθε σπειροειδή πορεία.
+- **Πλεονεκτήματα:** Focus on risk management, flexibility in design and requirements.
+- **Μειονεκτήματα:** Can be expensive, requires risk assessment expertise.
 
-### **Agile Model:**
+### **Agile Μοντέλο:**
 
-- **Description:** An iterative approach to software delivery that builds software incrementally, with a focus on customer feedback and rapid iterations.
-- **Pros:** Flexible, promotes iterative feedback, encourages customer involvement.
-- **Cons:** Less predictability, can be hard to grasp for those used to traditional methods.
+- **Περιγραφή:** Μια επαναληπτική προσέγγιση στην παράδοση λογισμικού που δημιουργεί λογισμικό σταδιακά, με έμφαση στην ανατροφοδότηση από τον πελάτη και στις γρήγορες επαναλήψεις.
+- **Πλεονεκτήματα:** Ευέλικτη, προωθεί την επαναληπτική ανατροφοδότηση, ενθαρρύνει τη συμμετοχή του πελάτη.
+- **Μειονεκτήματα:** Λιγότερη προβλεψιμότητα, μπορεί να είναι δύσκολο να κατανοήσουν όσοι έχουν συνηθίσει τις παραδοσιακές μεθόδους.
 
-### **Feature-Driven Development (FDD)**
+### **Ανάπτυξη με γνώμονα τα χαρακτηριστικά (FDD)**
 
-- **Description:** An iterative and incremental software development process driven by feature lists.
-- **Pros:** Focus on building and delivering tangible, client-valued functions.
-- **Cons:** Not as flexible as other Agile methodologies, requires detailed documentation.
+- **Περιγραφή:** Μια επαναληπτική και σταδιακή διαδικασία ανάπτυξης λογισμικού που καθοδηγείται από λίστες χαρακτηριστικών.
+- **Πλεονεκτήματα:** Επικεντρωθείτε στην οικοδόμηση και την παροχή απτών λειτουργιών με αξία για τον πελάτη.
+- **Μειονεκτήματα:** Δεν είναι τόσο ευέλικτη όσο άλλες ευέλικτες μεθοδολογίες, απαιτεί λεπτομερή τεκμηρίωση.
 
 ### **Extreme Programming (XP)**
 
-- **Description:** An Agile framework that emphasizes customer satisfaction, with frequent "releases" in short development cycles aimed at improving productivity and introducing checkpoints.
-- **Pros:** Emphasizes code quality, encourages customer involvement.
-- **Cons:** Requires extensive customer involvement, can be intense for developers.
-
+- **Περιγραφή:** Ένα ευέλικτο πλαίσιο που δίνει έμφαση στην ικανοποίηση του πελάτη, με συχνές «κυκλοφορίες» σε σύντομους κύκλους ανάπτυξης που αποσκοπούν στη βελτίωση της παραγωγικότητας και στην εισαγωγή σημείων ελέγχου.
+- **Πλεονεκτήματα:** Δίνει έμφαση στην ποιότητα του κώδικα, ενθαρρύνει τη συμμετοχή του πελάτη.
+- **Μειονεκτήματα::** Απαιτεί εκτεταμένη συμμετοχή του πελάτη, μπορεί να είναι έντονη για τους προγραμματιστές.
+- 
 ### **Kanban:**
 
-- **Description:** A visual approach to process management, taking cues from lean manufacturing and emphasizing just-in-time delivery.
-- **Pros:** Flexibility, continuous delivery, visual nature helps in identifying bottlenecks.
-- **Cons:** Less structured, can lead to scope creep if not managed correctly.
+- **Περιγραφή:** Μια οπτική προσέγγιση για τη διαχείριση διαδικασιών, που λαμβάνει στοιχεία από την λιτή παραγωγή και δίνει έμφαση στην παράδοση just-in-time.
+- **Πλεονεκτήματα:** Ευελιξία, συνεχής παράδοση, οπτικός χαρακτήρας που βοηθά στον εντοπισμό σημείων συμφόρησης.
+- **Μειονεκτήματα:** Λιγότερο δομημένο, μπορεί να οδηγήσει σε « συρρίκνωση» του πεδίου εφαρμογής αν δεν γίνει σωστή διαχείριση.
 
 ### **Scrum:**
 
-- **Description:** A type of Agile methodology that organizes work into cycles known as "Sprints," typically lasting 2-4 weeks.
-- **Pros:** Regular product deliveries, high visibility, adaptability.
-- **Cons:** Requires experienced team members, scope can sometimes be too flexible.
+- **Περιγραφή:** Ένας τύπος ευέλικτης μεθοδολογίας που οργανώνει την εργασία σε κύκλους γνωστούς ως «Sprints», οι οποίοι συνήθως διαρκούν 2-4 εβδομάδες.
+- **Πλεονεκτήματα:** Τακτικές παραδόσεις προϊόντων, υψηλή προβολή, προσαρμοστικότητα.
+- **Μειονεκτήματα:** Απαιτεί έμπειρα μέλη της ομάδας, το πεδίο εφαρμογής μπορεί μερικές φορές να είναι πολύ ευέλικτο.
 
-In conclusion, the choice of SDLC framework often depends on the nature of the project, organizational preferences, team size, project scope, and other factors. The ultimate aim is to produce high-quality software that meets user expectations while maintaining a time and budgetary framework.
+Συμπερασματικά, η επιλογή του πλαισίου SDLC εξαρτάται συχνά από τη φύση του έργου, τις οργανωτικές προτιμήσεις, το μέγεθος της ομάδας, το πεδίο εφαρμογής του έργου και άλλους παράγοντες. Απώτερος στόχος είναι η παραγωγή λογισμικού υψηλής ποιότητας που ανταποκρίνεται στις προσδοκίες των χρηστών, διατηρώντας παράλληλα ένα χρονικό και δημοσιονομικό πλαίσιο.
 
-## Excercises and Assignments
+
+## Ασκήσεις και εργασίες
 
