@@ -106,42 +106,42 @@ gitGraph
 3. **Κεντρική Αρχή**: Όλες οι λειτουργίες όπως η διακλάδωση και η συγχώνευση γίνονται κεντρικά στο αποθετήριο.
 4. **Παραδείγματα**: Subversion (SVN), Concurrent Versions System (CVS), Perforce.
 
-**Advantages**:
-1. **Administrative Control**: Easier to enforce access controls and permissions.
-2. **Linear History**: Maintaining a linear history of changes is straightforward.
-3. **Easier Setup**: Generally simpler to set up and configure than DVCS.
-4. **Central Backup**: The central server can be backed up to prevent data loss.
+**Πλεονεκτήματα**:
+1. **Διοικητικός έλεγχος**: Ευκολότερη επιβολή ελέγχων πρόσβασης και δικαιωμάτων.
+2. **Γραμμική ιστορία**: Η διατήρηση ενός γραμμικού ιστορικού αλλαγών είναι απλή.
+3. **Ευκολότερη εγκατάσταση**: Γενικά απλούστερο στη ρύθμιση και τη διαμόρφωση από το DVCS.
+4. **Κεντρικό εφεδρικό αντίγραφο ασφαλείας**: Ο κεντρικός διακομιστής μπορεί να δημιουργήσει αντίγραφα ασφαλείας για την αποφυγή απώλειας δεδομένων.
 
-**Disadvantages**:
-1. **Single Point of Failure**: If the central server crashes and there are no backups, code history can be lost.
-2. **Network Dependency**: Most operations, like committing changes, require a connection to the central repository, potentially slowing down workflows.
-3. **Merge Conflicts**: As everyone commits to the central repository, the likelihood of merge conflicts can be higher, especially in large teams.
+**Μειονεκτήματα**:
+1. **Μοναδικό σημείο αποτυχίας**: Εάν ο κεντρικός διακομιστής καταρρεύσει και δεν υπάρχουν αντίγραφα ασφαλείας, το ιστορικό του κώδικα μπορεί να χαθεί.
+2. **Εξάρτηση από το δίκτυο**: Οι περισσότερες λειτουργίες, όπως η δέσμευση αλλαγών, απαιτούν σύνδεση με το κεντρικό αποθετήριο, επιβραδύνοντας ενδεχομένως τις ροές εργασίας.
+3. **Συγκρούσεις συγχώνευσης**: Καθώς όλοι δεσμεύουν στο κεντρικό αποθετήριο, η πιθανότητα συγκρούσεων συγχώνευσης μπορεί να είναι μεγαλύτερη, ειδικά σε μεγάλες ομάδες.
 
-### Distributed Version Control Systems (DVCS):
+### Κατανεμημένα συστήματα ελέγχου εκδόσεων (DVCS):
 
-**Overview**:
-1. **Multiple Repositories**: Every developer has their own local repository containing the entire codebase and its full history.
-2. **Full Version History**: Developers clone the entire repository, not just the latest snapshot.
-3. **Peer-to-Peer**: Merging and branching can be done locally. Commits are made to the local repository and then synchronized (pushed) to a central or remote repository.
-4. **Examples**: Git, Mercurial, Bazaar, Fossil.
+**Επισκόπηση**:
+1. **Πολλαπλά αποθετήρια**: Κάθε προγραμματιστής έχει το δικό του τοπικό αποθετήριο που περιέχει ολόκληρη την κωδικοποιημένη βάση και το πλήρες ιστορικό της.
+2. **Ιστορικό πλήρους έκδοσης**: Οι προγραμματιστές κλωνοποιούν ολόκληρο το αποθετήριο, όχι μόνο το τελευταίο στιγμιότυπο.
+3. **Peer-to-Peer**: Η συγχώνευση και η διακλάδωση μπορούν να γίνουν τοπικά. Οι δεσμεύσεις γίνονται στο τοπικό αποθετήριο και στη συνέχεια συγχρονίζονται (προωθούνται) σε ένα κεντρικό ή απομακρυσμένο αποθετήριο.
+4. **Παραδείγματα**: Git, Mercurial, Bazaar, Fossil.
 
-**Advantages**:
-1. **Fast Operations**: Since most operations (commit, branch, merge) are local, they are faster and don't rely on a network connection.
-2. **Backup Redundancy**: Every clone of the repository acts as a full backup, reducing the risk of data loss.
-3. **Flexible Workflows**: Developers can commit changes locally, enabling more flexible workflows and frequent commits without disturbing the main codebase.
-4. **Branch Management**: Branching and merging are typically more advanced and easier to handle in DVCS.
-5. **Encourages Collaboration**: Features like forks and pull requests (especially on platforms like GitHub and GitLab) promote collaborative coding.
+**Πλεονεκτήματα**:
+1. **Γρήγορη λειτουργία**: Δεδομένου ότι οι περισσότερες λειτουργίες (commit, branch, merge) είναι τοπικές, είναι ταχύτερες και δεν βασίζονται σε σύνδεση δικτύου.
+2. **Εφεδρικός πλεονασμός**: Κάθε κλώνος του αποθετηρίου λειτουργεί ως πλήρες αντίγραφο ασφαλείας, μειώνοντας τον κίνδυνο απώλειας δεδομένων.
+3. **Ευέλικτες ροές εργασίας**: Οι προγραμματιστές μπορούν να δεσμεύουν αλλαγές τοπικά, επιτρέποντας πιο ευέλικτες ροές εργασίας και συχνές δεσμεύσεις χωρίς να διαταράσσεται η κύρια βάση κώδικα.
+4. **Διαχείριση υποκλάδων**: Η διακλάδωση και η συγχώνευση είναι συνήθως πιο εξελιγμένες και ευκολότερες στο χειρισμό στο DVCS.
+5. **Ενθαρρύνει τη συνεργασία**: Χαρακτηριστικά όπως τα forks και τα pull requests (ειδικά σε πλατφόρμες όπως το GitHub και το GitLab) προωθούν τη συνεργατική κωδικοποίηση.
 
-**Disadvantages**:
-1. **Complexity**: The flexibility and power of DVCS can also introduce complexity, especially for those new to the concept.
-2. **Large Repositories**: Storing the entire version history can be problematic if the repository is very large.
+**Μειονεκτήματα**:
+1. **Πολυπλοκότητα**: Η ευελιξία και η ισχύς του DVCS μπορεί επίσης να επιφέρει πολυπλοκότητα, ειδικά για όσους είναι νέοι στην έννοια.
+2. **Μεγάλα αποθετήρια**: Η αποθήκευση ολόκληρου του ιστορικού εκδόσεων μπορεί να είναι προβληματική αν το αποθετήριο είναι πολύ μεγάλο.
 
-### Comparison:
+### Σύγκριση:
 
-| Feature/Aspect           | Centralized Version Control (CVCS) | Distributed Version Control (DVCS) |
+| Χαρακτηριστικό γνώρισμα/παράμετρος    | Κεντρικός έλεγχος εκδόσεων (CVCS) | Κατανεμημένος έλεγχος εκδόσεων (DVCS) |
 |--------------------------|------------------------------------|------------------------------------|
-| **Repository Structure** | Single central repository          | Every developer has a full-fledged local repository |
-| **Network Dependency**   | Required for most operations       | Most operations can be done offline |
+| **Δομή αποθετηρίου** | Ενιαίο κεντρικό αποθετήριο          | Κάθε προγραμματιστής έχει ένα πλήρες τοπικό αποθετήριο |
+| **Εξάρτηση δικτύου**   | Απαιτείται για τις περισσότερες λειτουργίες       | Most operations can be done offline |
 | **Data Redundancy**      | Centralized backup                 | Every clone is a complete backup   |
 | **Learning Curve**       | Generally simpler                  | Can be more complex due to added capabilities |
 | **Scalability**          | Better suited for smaller teams    | Suited for large projects and teams |
