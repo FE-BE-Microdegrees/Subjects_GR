@@ -1,88 +1,88 @@
-# User Stories
+# Ιστορίες χρήστη (User Stories) 
 
-In this topic we'll discuss the concept of user stories - what they are, why they're important, and how to write them.
+Σε αυτό το θέμα θα συζητήσουμε την έννοια των ιστοριών χρήστη - τι είναι, γιατί είναι σημαντικές και πώς να τις γράψετε.
 
-## Learning Outcomes
+## Μαθησιακά αποτελέσματα
 
-By the end of this topic you should be able to:
-- Define user stories and explain their importance in software development.
-- Write user stories for a given software project.
-- Prioritize user stories using the MoSCoW method.
+Στο τέλος αυτού του θέματος θα πρέπει να είστε σε θέση να:
+- Ορισμός των ιστοριών χρήστη και εξήγηση της σημασίας τους στην ανάπτυξη λογισμικού.
+- Γράψτε ιστορίες χρηστών για ένα συγκεκριμένο έργο λογισμικού.
+- Ιεράρχηση των ιστοριών χρήστη με τη μέθοδο MoSCoW.
 
 
-## What is a User Story?
+## Τι είναι ένα User Story;
 
-A user story is a short, simple description of a feature told from the perspective of the person who desires the new capability, usually a user or customer of the system. They typically follow a simple template:
+Μια ιστορία χρήστη είναι μια σύντομη, απλή περιγραφή ενός χαρακτηριστικού από τη σκοπιά του ατόμου που επιθυμεί τη νέα δυνατότητα, συνήθως ενός χρήστη ή πελάτη του συστήματος. Ακολουθούν συνήθως ένα απλό πρότυπο:
 
-As a [type of user], I want [some goal] so that [some reason].
+Ως [τύπος χρήστη], θέλω [κάποιο στόχο] ώστε [κάποιος λόγος].
 
-For example:
+Για παράδειγμα:
 
-- As a user, I want to be able to log in so that I can access my account.
-- As a customer, I want to be able to pay my bill online so that I don't have to mail a check.
-- As a user, I want to be able to search for a product so that I can find what I'm looking for.
+- Ως χρήστης, θέλω να μπορώ να συνδεθώ ώστε να έχω πρόσβαση στο λογαριασμό μου.
+- Ως πελάτης, θέλω να μπορώ να πληρώνω τον λογαριασμό μου ηλεκτρονικά, ώστε να μην χρειάζεται να στέλνω επιταγή με το ταχυδρομείο.
+- Ως χρήστης, θέλω να μπορώ να κάνω αναζήτηση για ένα προϊόν, ώστε να μπορώ να βρω αυτό που ψάχνω.
 
-The goal of a user story is to describe a feature in a way that is easy to understand and that can be easily translated into a test case. They are typically written on index cards or sticky notes, and are often arranged on a wall or whiteboard to facilitate planning and discussion.
+Ο στόχος μιας ιστορίας χρήστη είναι να περιγράψει ένα χαρακτηριστικό με τρόπο που να είναι εύκολα κατανοητός και να μπορεί εύκολα να μεταφραστεί σε περίπτωση δοκιμής. Συνήθως γράφονται σε καρτέλες ή αυτοκόλλητες σημειώσεις και συχνά τοποθετούνται σε έναν τοίχο ή πίνακα για να διευκολύνουν τον προγραμματισμό και τη συζήτηση.
 
-## How to Write a User Story
+## Πώς να γράψετε ένα User Story
 
-To write a User Story, You can follow the following steps:
+Για να γράψετε μια Ιστορία χρήστη, μπορείτε να ακολουθήσετε τα ακόλουθα βήματα:
 
-1. Identify your users - start with indentifying user or role, from whose perspective you are writing the story. It can be specific user or group of users, who have similar needs and goals.
-2. Describe the action - describe what the user wants to do. It should be short and simple.
-3. Describe the goal - describe the benefit or value that the user will get from the action. It should describe why the user wants to do the action and what they will get from it.
+1. Προσδιορίστε τους χρήστες σας - ξεκινήστε με τον προσδιορισμό του χρήστη ή του ρόλου, από την οπτική γωνία του οποίου γράφετε την ιστορία. Μπορεί να είναι συγκεκριμένος χρήστης ή ομάδα χρηστών, οι οποίοι έχουν παρόμοιες ανάγκες και στόχους.
+2. Περιγράψτε την ενέργεια - περιγράψτε τι θέλει να κάνει ο χρήστης. Πρέπει να είναι σύντομη και απλή.
+3. Περιγράψτε τον στόχο - περιγράψτε το όφελος ή την αξία που θα έχει ο χρήστης από την ενέργεια. Θα πρέπει να περιγράφει γιατί ο χρήστης θέλει να κάνει την ενέργεια και τι θα αποκομίσει από αυτήν.
 
-> User Stories should be short and simple and they should focus on the user and their needs.
+> Οι Ιστορίες χρήστη (User Stories) πρέπει να είναι σύντομες και απλές και να επικεντρώνονται στον χρήστη και τις ανάγκες του.
 >
-> User Stories should be written simply and clearly, so that they can be easily understood by everyone involved in the project.
+> Οι Ιστορίες χρήστη (User Stories) πρέπει να γράφονται απλά και με σαφήνεια, ώστε να είναι εύκολα κατανοητές από όλους όσους συμμετέχουν στο έργο.
 
-## Prioritizing User Stories
+## Ιεράρχηση Ιστοριών Χρήστη (User Stories)
 
-User Stories are typically prioritized based on their importance to the user. The most important stories are those that provide the most value to the user, and the least important stories are those that provide the least value, so that the team can focus on the most important stories first.
+Οι User Storiesσυνήθως ιεραρχούνται με βάση τη σημασία τους για τον χρήστη. Οι πιο σημαντικές ιστορίες είναι αυτές που παρέχουν τη μεγαλύτερη αξία στον χρήστη και οι λιγότερο σημαντικές ιστορίες είναι αυτές που παρέχουν τη μικρότερη αξία, έτσι ώστε η ομάδα να μπορεί να εστιάσει πρώτα στις πιο σημαντικές ιστορίες.
+ 
+Υπάρχουν πολλοί τρόποι για την ιεράρχηση των ιστοριών χρήστη, αλλά ένας από τους πιο συνηθισμένους είναι η μέθοδος MoSCoW. Το MosCoW είναι ένα ακρωνύμιο των λέξεων Must Have, Should Have, Could Have και Won't Have. Αυτές είναι οι τέσσερις κατηγορίες στις οποίες τοποθετούνται συνήθως οι ιστορίες χρηστών, με βάση τη σημασία τους για τον χρήστη.
 
-There are many ways to prioritize user stories, but one of the most common is the MoSCoW method. MosCoW is an acronym for Must Have, Should Have, Could Have, and Won't Have. These are the four categories that user stories are typically placed in, based on their importance to the user.
+- **Πρέπει να έχει:** Αυτές είναι οι πιο σημαντικές ιστορίες και πρέπει να ολοκληρωθούν για να θεωρηθεί το έργο επιτυχές.
+- **Θα έπρεπε να έχει:** Αυτές είναι σημαντικές ιστορίες, αλλά δεν είναι ουσιαστικές. Θα πρέπει να συμπληρωθούν αν είναι δυνατόν, αλλά μπορούν να παραλειφθούν αν είναι απαραίτητο.
+- **Θα μπορούσε να έχει:** Αυτές είναι ιστορίες που είναι ωραίες, αλλά δεν είναι απαραίτητες. Μπορούν να συμπληρωθούν εάν υπάρχει χρόνος, αλλά μπορούν επίσης να παραλειφθούν εάν είναι απαραίτητο.
+- **Δεν θα έχει:** Πρόκειται για ιστορίες που δεν είναι απαραίτητες και δεν θα ολοκληρωθούν για το παρόν έργο.
 
-- **Must Have:** These are the most important stories, and they must be completed for the project to be considered a success.
-- **Should Have:** These are important stories, but they are not essential. They should be completed if possible, but they can be left out if necessary.
-- **Could Have:** These are nice-to-have stories, but they are not essential. They can be completed if there is time, but they can also be left out if necessary.
-- **Won't Have:** These are stories that are not essential, and they will not be completed for this project.
+## Παράδειγμα:
+ 
+Ας δούμε μερικά παραδείγματα ιστοριών χρήστη για ένα λογισμικό προγραμματισμού σχολικών μαθημάτων, κατηγοριοποιημένα με τη μέθοδο MoSCoW:
 
-## Example:
+### Πρέπει να έχει (Must Have (M))
+Αυτές είναι κρίσιμες απαιτήσεις που πρέπει να πληρεί το λογισμικό για να είναι επιτυχημένο.
+1. **Ως εκπαιδευτικός, πρέπει να μπορώ να βλέπω το εβδομαδιαίο πρόγραμμά μου, ώστε να γνωρίζω το ωράριο διδασκαλίας μου.**
+2. **Ως φοιτητής, πρέπει να μπορώ να έχω πρόσβαση στο πρόγραμμα μαθημάτων μου για το τρέχον εξάμηνο, ώστε να οργανώνω τον χρόνο μελέτης μου.**
+3. **Ως διαχειριστής, πρέπει να είμαι σε θέση να ενημερώσω το πρόγραμμα για κάθε τάξη σε περίπτωση αλλαγών στη διαθεσιμότητα των καθηγητών ή στις αναθέσεις στην τάξη.**
 
-Let's consider some example user stories for a school lesson schedule software, categorized using the MoSCoW method:
+### Θα έπρεπε να έχει (Should Have (S))
+Αυτά είναι σημαντικά αλλά όχι κρίσιμα- το έργο μπορεί να είναι βιώσιμο ακόμη και αν ορισμένα από αυτά δεν περιλαμβάνονται στην πρώτη έκδοση.
 
-### Must Have (M)
-These are critical requirements that the software must meet for it to be successful.
-1. **As a teacher, I must be able to view my weekly schedule so that I know my teaching timetable.**
-2. **As a student, I must be able to access my class schedule for the current semester to organize my study time.**
-3. **As an administrator, I must be able to update the schedule for any class in case of changes in teacher availability or classroom assignments.**
+1. **Ως εκπαιδευτικός, θα πρέπει να μπορώ να ζητήσω αλλαγή στο πρόγραμμά μου για να εξυπηρετήσω προσωπικές υποχρεώσεις.**
+2. **Ως φοιτητής, θα πρέπει να λαμβάνω ειδοποιήσεις εάν κάποιο από τα προγραμματισμένα μαθήματα μου αλλάξει ή ακυρωθεί.**
+3. **Ως διαχειριστής, θα πρέπει να μπορώ να δημιουργώ αναφορές σχετικά με τη χρήση των αιθουσών διδασκαλίας για τη βελτιστοποίηση της χρήσης του χώρου.**
 
-### Should Have (S)
-These are important but not critical; the project can be viable even if some of these are not included in the first release.
+### Θα μπορούσε να έχει (Could Have (C))
+Αυτά είναι επιθυμητά χαρακτηριστικά που δεν είναι ζωτικής σημασίας. Θα μπορούσαν να βελτιώσουν την εμπειρία του χρήστη ή τη λειτουργικότητα του λογισμικού, αλλά δεν είναι απαραίτητα.
 
-1. **As a teacher, I should be able to request a change in my schedule to accommodate personal commitments.**
-2. **As a student, I should receive notifications if any of my scheduled classes are changed or cancelled.**
-3. **As an administrator, I should be able to generate reports on classroom utilization to optimize space usage.**
+1. **Ως εκπαιδευτικός, θα μπορούσα να έχω τη δυνατότητα συγχρονισμού του σχολικού μου προγράμματος με το προσωπικό μου ημερολόγιο για καλύτερο προγραμματισμό.**
+2. **Ως μαθητής, θα μπορούσα να έχω μια λειτουργία για την ενσωμάτωση του σχολικού προγράμματος με εργαλεία σχεδιασμού μελέτης.**
+3. **Ως διαχειριστής, θα μπορούσα να έχω αναλυτικά στοιχεία για να παρακολουθώ τις τάσεις της προσέλευσης και να προσαρμόζω τα προγράμματα αναλόγως.**
 
-### Could Have (C)
-These are desirable features which are not vital. They could improve user experience or software functionality but are not essential.
+### Δεν θα έχει(Won't Have (W))
+Πρόκειται για χαρακτηριστικά που έχουν αναγνωριστεί αλλά δεν θα υλοποιηθούν στον τρέχοντα κύκλο του έργου.
 
-1. **As a teacher, I could have the ability to sync my school schedule with my personal calendar for better planning.**
-2. **As a student, I could have a feature to integrate the school schedule with study planning tools.**
-3. **As an administrator, I could have analytics to monitor attendance trends and adjust schedules accordingly.**
+1. **Ως εκπαιδευτικός, δεν θα έχω τη δυνατότητα να τροποποιήσω άμεσα το συνολικό σχολικό πρόγραμμα, παρά μόνο να ζητήσω αλλαγές.**
+2. **Ως φοιτητής, δεν θα έχω τη δυνατότητα να προσαρμόσω την οπτική διάταξη του προγράμματός μου στην πρώτη έκδοση.**
+3. **Ως διαχειριστής, δεν θα έχω παρακολούθηση σε πραγματικό χρόνο της παρουσίας κάθε μαθητή στην αρχική έκδοση.**
 
-### Won't Have (W)
-These are features that have been recognized but will not be implemented in the current project cycle.
+Αυτή η κατηγοριοποίηση βοηθά στην εστίαση σε ό,τι είναι απαραίτητο για να είναι το λογισμικό λειτουργικό και πολύτιμο, ενώ προσδιορίζει τι μπορεί να προστεθεί αργότερα ή να παραλειφθεί ανάλογα με τη διαθεσιμότητα πόρων και τους περιορισμούς του έργου.
 
-1. **As a teacher, I won't have the ability to directly modify the overall school schedule, only to request changes.**
-2. **As a student, I won't have the option to customize the visual layout of my schedule in the first version.**
-3. **As an administrator, I won't have real-time tracking of each student's attendance in the initial release.**
+Τώρα είναι εύκολο να μετατρέψετε αυτές τις ιστορίες χρήστη σε εργασίες και να προγραμματίσετε το έργο αναλόγως.
 
-This categorization helps in focusing on what is essential for the software to be functional and valuable, while identifying what can be added later or omitted as per resource availability and project constraints.
+## Ασκήσεις
 
-Now it is easy to convert these user stories into tasks and plan the project accordingly.
-
-## Exercises
-
-### Exercise 1
+### Άσκηση 1
 
