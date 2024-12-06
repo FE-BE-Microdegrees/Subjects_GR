@@ -141,10 +141,10 @@ gitGraph
 | Χαρακτηριστικό γνώρισμα/παράμετρος    | Κεντρικός έλεγχος εκδόσεων (CVCS) | Κατανεμημένος έλεγχος εκδόσεων (DVCS) |
 |--------------------------|------------------------------------|------------------------------------|
 | **Δομή αποθετηρίου** | Ενιαίο κεντρικό αποθετήριο          | Κάθε προγραμματιστής έχει ένα πλήρες τοπικό αποθετήριο |
-| **Εξάρτηση δικτύου**   | Απαιτείται για τις περισσότερες λειτουργίες       | Most operations can be done offline |
-| **Data Redundancy**      | Centralized backup                 | Every clone is a complete backup   |
-| **Learning Curve**       | Generally simpler                  | Can be more complex due to added capabilities |
-| **Scalability**          | Better suited for smaller teams    | Suited for large projects and teams |
+| **Εξάρτηση δικτύου**   | Απαιτείται για τις περισσότερες λειτουργίες       | Οι περισσότερες λειτουργίες μπορούν να γίνουν εκτός σύνδεσης |
+| **Εφεδρεία δεδομένων**      | Κεντρική δημιουργία αντιγράφων ασφαλείας                 | Κάθε κλώνος είναι ένα πλήρες αντίγραφο ασφαλείας   |
+| **Καμπύλη μάθησης**       | Γενικά απλούστερο                  | Μπορεί να είναι πιο πολύπλοκο λόγω των πρόσθετων δυνατοτήτων |
+| **Επεκτασιμότητα**          | Better suited for smaller teams    | Suited for large projects and teams |
 | **Version History**      | Latest snapshot on local machine   | Full version history on local machine |
 | **Performance**          | Slower due to network dependency   | Faster for most operations as they are local |
 | **Backup & Recovery**    | Single point of failure            | Redundancy reduces risk of data loss |
