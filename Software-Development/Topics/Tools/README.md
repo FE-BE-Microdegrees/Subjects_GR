@@ -147,5 +147,5 @@
     - [Trello](https://trello.com/)
     - [GitHub Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
 
-## Excercises and Assignments
+## Ασκήσεις και εργασίες
 
