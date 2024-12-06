@@ -1,52 +1,52 @@
-# User Research
+# Έρευνα για τους χρήστες
 
-In this topic, we'll explore the concepts of user research - what it is, why it's important, and how to do it.
+Σε αυτό το θέμα, θα εξερευνήσουμε τις έννοιες της έρευνας χρηστών - τι είναι, γιατί είναι σημαντική και πώς να την κάνετε.
 
-## Learning Outcomes
+## Μαθησιακά αποτελέσματα
 
-By the end of this topic, you should be able to:
+Στο τέλος αυτής της θεματικής ενότητας, θα πρέπει να είστε σε θέση να:
 
-- understand the concept of user research;
-- identify the different types of user research;
-- describe the importance of user research.
+- κατανόησετε την έννοια της έρευνας χρηστών,
+- προσδιορίσετε τους διάφορους τύπους έρευνας χρηστών,
+- περιγράψετε τη σημασία της έρευνας χρηστών.
 
-## What is User Research?
+## Τι είναι η Έρευνα Χρήστη;
 
-We all have our own experiences, opinions, and biases. When we're building software, it's important to remember that we're not building it for ourselves, we're building it for our users. And the only way to know what our users want and need is to ask them. That's where user research comes in.
+Όλοι έχουμε τις δικές μας εμπειρίες, απόψεις και προκαταλήψεις. Όταν δημιουργούμε λογισμικό, είναι σημαντικό να θυμόμαστε ότι δεν το δημιουργούμε για τον εαυτό μας, αλλά για τους χρήστες μας. Και ο μόνος τρόπος για να μάθουμε τι θέλουν και τι χρειάζονται οι χρήστες μας είναι να τους ρωτήσουμε. Εδώ έρχεται η έρευνα χρηστών.
 
-**It is very important to remember, that we can't build software for other people without understanding their needs and wants.**
+**Είναι πολύ σημαντικό να θυμόμαστε ότι δεν μπορούμε να δημιουργήσουμε λογισμικό για άλλους ανθρώπους χωρίς να κατανοήσουμε τις ανάγκες και τις επιθυμίες τους.**
 
-User research is the process of understanding the needs, wants, and behaviors of your users. It's a critical part of the software development process, and it's important to do it early and often.
+Η έρευνα χρηστών είναι η διαδικασία κατανόησης των αναγκών, των επιθυμιών και των συμπεριφορών των χρηστών σας. Αποτελεί κρίσιμο μέρος της διαδικασίας ανάπτυξης λογισμικού και είναι σημαντικό να την κάνετε νωρίς και συχνά.
 
-The easiest way to do user research is to talk to your users. Ask them questions about what they want, what they need, and how they use your software. You can also observe them using your software, and see what they do and how they do it.
+Ο ευκολότερος τρόπος για να κάνετε έρευνα χρηστών είναι να μιλήσετε με τους χρήστες σας. Κάντε τους ερωτήσεις σχετικά με το τι θέλουν, τι χρειάζονται και πώς χρησιμοποιούν το λογισμικό σας. Μπορείτε επίσης να τους παρατηρήσετε να χρησιμοποιούν το λογισμικό σας και να δείτε τι κάνουν και πώς το κάνουν.
 
-In short, user research is the process of understanding your users, and using that understanding to build better software.
+Εν ολίγοις, η έρευνα χρηστών είναι η διαδικασία κατανόησης των χρηστών σας και η χρήση αυτής της κατανόησης για τη δημιουργία καλύτερου λογισμικού.
 
-To do that, we can do a number of things, including:
+Για να το πετύχουμε αυτό, μπορούμε να κάνουμε διάφορα πράγματα, όπως:
 
-- User Interviews
-- Surveys and Questionnaires
-- Observations
+- Συνεντεύξεις με χρήστες
+- Έρευνες και ερωτηματολόγια
+- Παρατηρήσεις
 - ...
 
-Before we start building software, we also can use some of the following techniques to understand our users and what they expect from our software:
+Πριν αρχίσουμε να δημιουργούμε λογισμικό, μπορούμε επίσης να χρησιμοποιήσουμε μερικές από τις ακόλουθες τεχνικές για να κατανοήσουμε τους χρήστες μας και τι περιμένουν από το λογισμικό μας:
 
-- User Stories
-- User Persona Development
-- User Journey Mapping
-- User Flow Mapping
-- User Testing
+- Ιστορίες χρηστών
+- Ανάπτυξη Persona χρηστών
+- Χαρτογράφηση διαδρομής χρήστη
+- Χαρτογράφηση ροής χρήστη
+- Testing χρήστη
 - ...
 
-We have to understand, that during this course we will not be able to cover all of these topics in depth. We will only scratch the surface of these topics, but we will try to give you a good overview of what these topics are and how they can be used in software development.
+Πρέπει να καταλάβουμε ότι κατά τη διάρκεια αυτού του μαθήματος δεν θα μπορέσουμε να καλύψουμε σε βάθος όλα αυτά τα θέματα. Θα αγγίξουμε μόνο την επιφάνεια αυτών των θεμάτων, αλλά θα προσπαθήσουμε να σας δώσουμε μια καλή επισκόπηση του τι είναι αυτά τα θέματα και πώς μπορούν να χρησιμοποιηθούν στην ανάπτυξη λογισμικού.
 
-## Exercises
+## Ασκήσεις
 
-- Describe the concept of user research.
-- Describe the different types of user research.
-- Describe the importance of user research.
+- Περιγράψτε την έννοια της έρευνας χρηστών.
+- Περιγράψτε τα διάφορα είδη έρευνας χρηστών.
+- Περιγράψτε τη σημασία της έρευνας χρηστών.
 
-## Next steps
+## Επόμενα βήματα
 
 - [User Stories](../User-Stories/README.md)
 - [Persona](../Persona/README.md)
