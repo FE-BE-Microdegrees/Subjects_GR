@@ -1,10 +1,10 @@
-# Version Control
+# Έλεγχος εκδόσεων (Version Control)
 
 - [Version Control](#version-control)
   - [Μαθησιακά αποτελέσματα](#Μαθησιακά-αποτελέσματα)
-  - [Τι είναι το Version Control;](#Τι-είναι-το-Version-Control)
-  - [Why is Version Control Important?](#why-is-version-control-important)
-  - [Brief History of Version Control](#brief-history-of-version-control)
+  - [Τι είναι ο έλεγχος εκδόσεων (Version Control);](#Τι-είναι-το-Version-Control)
+  - [Γιατί είναι σημαντικός ο έλεγχος εκδόσεων;](#why-is-version-control-important)
+  - [Σύντομη ιστορία του ελέγχου εκδόσεων](#Σύντομη-ιστορία-του-ελέγχου-εκδόσεων)
   - [Centralized vs. Distributed version control systems](#centralized-vs-distributed-version-control-systems)
     - [Centralized Version Control Systems (CVCS):](#centralized-version-control-systems-cvcs)
     - [Distributed Version Control Systems (DVCS):](#distributed-version-control-systems-dvcs)
@@ -19,11 +19,11 @@
 - να περιγράψετε διαφορετικούς τύπους συστημάτων ελέγχου εκδόσεων,
 - να συγκρίνετε και να αντιπαραβάλλετε κεντρικά και κατανεμημένα συστήματα ελέγχου εκδόσεων,
 
-## Τι είναι το Version Control;
+## Τι είναι ο έλεγχος εκδόσεων (Version Control);
 
 Το να γράφετε μόνοι σας σε ένα έγγραφο και να κάνετε αλλαγές μπορεί να μην είναι απαραίτητο να παρακολουθείτε πότε και ποιες αλλαγές έγιναν. Ωστόσο, η συνεργασία με άλλους που κάνουν αλλαγές στο ίδιο έγγραφο μπορεί να γίνει ζωτικής σημασίας. Ειδικά αν το έγγραφο μεταβιβάζεται μπρος-πίσω και μπορεί να τροποποιηθεί από πολλούς διαφορετικούς ανθρώπους. Πώς γνωρίζουμε **ποια είναι η τελευταία έκδοση; ** Πώς γνωρίζουμε **ποιος έκανε την τελευταία αλλαγή; ** Πώς γνωρίζουμε **τι άλλαξε; ** Οι εφαρμογές συχνά αποτελούνται από πολλά αρχεία και οι αλλαγές στον κώδικα μπορεί να είναι πολύ περίπλοκες. Η διατήρηση μιας επισκόπησης των αλλαγών και του ιστορικού σε αυτά τα αρχεία είναι ζωτικής σημασίας για τη διασφάλιση της ποιότητας και της σταθερότητας του λογισμικού.
 
-Searching the internet for version control often finds a similar image that visualizes the history and changes of code:
+Ψάχνοντας στο διαδίκτυο για τον έλεγχο εκδόσεων βρίσκει κανείς συχνά μια παρόμοια εικόνα που απεικονίζει το ιστορικό και τις αλλαγές του κώδικα:
 
 ```mermaid
 gitGraph
@@ -43,68 +43,68 @@ gitGraph
   commit id: "Update documentation"
 ```
 
-**Version Control**, also known as **Source Code Management** (*SCM*), is a system that tracks and manages changes to files, directories, and codebases over time. It allows multiple people to work on a single project without conflicting with one another and maintains a history of every modification.
+Ο **Έλεγχος εκδόσεων**, επίσης γνωστός ως **Διαχείριση πηγαίου κώδικα** (*SCM*), είναι ένα σύστημα που παρακολουθεί και διαχειρίζεται τις αλλαγές σε αρχεία, καταλόγους και βάσεις κώδικα με την πάροδο του χρόνου. Επιτρέπει σε πολλά άτομα να εργάζονται σε ένα ενιαίο έργο χωρίς να συγκρούονται μεταξύ τους και διατηρεί το ιστορικό κάθε τροποποίησης.
 
-Nowadays, version control is an essential part of the software development process. It is used by developers to collaborate on projects, track changes, and maintain a history of their work. It is also used by companies to manage their codebases and ensure that changes are made in a controlled and secure manner.
+Στις μέρες μας, ο έλεγχος εκδόσεων αποτελεί ουσιαστικό μέρος της διαδικασίας ανάπτυξης λογισμικού. Χρησιμοποιείται από τους προγραμματιστές για να συνεργάζονται σε έργα, να παρακολουθούν τις αλλαγές και να διατηρούν το ιστορικό της εργασίας τους. Χρησιμοποιείται επίσης από εταιρείες για να διαχειρίζονται τις βάσεις κωδικών τους και να διασφαλίζουν ότι οι αλλαγές γίνονται με ελεγχόμενο και ασφαλή τρόπο.
 
-## Why is Version Control Important?
+## Γιατί είναι σημαντικός ο έλεγχος εκδόσεων;
 
-Version control is important for a number of reasons:
+Ο έλεγχος εκδόσεων είναι σημαντικός για διάφορους λόγους:
 
-- **History & Audit Trail**: Version control provides a detailed history of changes made to the code. This helps in understanding how the code has evolved over time, identifying when a particular change was made, and by whom.
-- **Collaboration**: Multiple developers can work on the same project simultaneously without stepping on each other's toes. Different developers can work on separate features or bug fixes and then merge their changes back into the main codebase without conflict.
-- **Reversion**: Mistakes happen. With version control, if a new change causes a bug or issue, developers can easily revert to a previous state of the code, effectively "rolling back" the problematic change.
-- **Branching & Merging**: Developers can create branches to work on new features, bug fixes, or experiments without affecting the main or stable version of the software. Once ready, these changes can be merged back into the main branch.
-- **Backup**: While not a replacement for a proper backup system, version control systems can act as an additional layer of backup. If something happens to a developer's local machine, the code can be easily retrieved from the version control repository.
-- **Documentation**: Commit messages in version control provide a chronological documentation trail. They can give context about why certain decisions were made at specific points in time.
-- **Code Review**: Version control systems, especially when combined with platforms like *GitHub* or *GitLab*, facilitate code reviews by allowing other developers to review, comment on, and suggest modifications to the code before it's merged.
-- **Release Management**: Version control helps in managing releases and patches. Developers can tag certain points in their code history as specific versions of the product. This makes it easier to track updates and patches.
-- **Accountability**: With a proper log of who made what changes and when, there's a clear record of accountability. This is especially useful in team settings to understand contributions and to ensure that code changes can be tracked to specific individuals.
-- **Parallel Development**: Version control systems allow for the possibility of parallel development, where multiple versions of a software application can be developed concurrently.
+- **Ιστορικό & διαδρομή ελέγχου**: Ο έλεγχος εκδόσεων παρέχει ένα λεπτομερές ιστορικό των αλλαγών που έγιναν στον κώδικα. Αυτό βοηθά στην κατανόηση του τρόπου με τον οποίο ο κώδικας έχει εξελιχθεί με την πάροδο του χρόνου, προσδιορίζοντας πότε έγινε μια συγκεκριμένη αλλαγή και από ποιον.
+- **Συνεργασία**: Πολλοί προγραμματιστές μπορούν να εργάζονται ταυτόχρονα στο ίδιο έργο χωρίς να ενοχλούν ο ένας τον άλλον. Διαφορετικοί προγραμματιστές μπορούν να εργάζονται σε ξεχωριστά χαρακτηριστικά ή διορθώσεις σφαλμάτων και στη συνέχεια να συγχωνεύουν τις αλλαγές τους πίσω στην κύρια βάση κώδικα χωρίς συγκρούσεις.
+- **Επαναφορά**: Λάθη συμβαίνουν. Με τον έλεγχο εκδόσεων, εάν μια νέα αλλαγή προκαλέσει σφάλμα ή πρόβλημα, οι προγραμματιστές μπορούν εύκολα να επανέλθουν σε μια προηγούμενη κατάσταση του κώδικα, ουσιαστικά «επαναφέροντας» την προβληματική αλλαγή.
+- **Διακλάδωση & συγχώνευση**: Οι προγραμματιστές μπορούν να δημιουργούν κλάδους για να εργάζονται σε νέα χαρακτηριστικά, διορθώσεις σφαλμάτων ή πειράματα χωρίς να επηρεάζουν την κύρια ή σταθερή έκδοση του λογισμικού. Μόλις είναι έτοιμες, αυτές οι αλλαγές μπορούν να συγχωνευθούν πίσω στον κύριο κλάδο.
+- **Backup**: Αν και δεν αντικαθιστούν ένα κατάλληλο σύστημα δημιουργίας αντιγράφων ασφαλείας, τα συστήματα ελέγχου εκδόσεων μπορούν να λειτουργήσουν ως ένα πρόσθετο επίπεδο δημιουργίας αντιγράφων ασφαλείας. Εάν συμβεί κάτι στον τοπικό υπολογιστή ενός προγραμματιστή, ο κώδικας μπορεί εύκολα να ανακτηθεί από το αποθετήριο ελέγχου εκδόσεων.
+- **Τεκμηρίωση (Documentation)**: Τα μηνύματα δέσμευσης στον έλεγχο εκδόσεων παρέχουν μια χρονολογική διαδρομή τεκμηρίωσης. Μπορούν να δώσουν ένα πλαίσιο σχετικά με το γιατί ορισμένες αποφάσεις ελήφθησαν σε συγκεκριμένες χρονικές στιγμές.
+- **Ανασκόπηση κώδικα**: Τα συστήματα ελέγχου εκδόσεων, ειδικά όταν συνδυάζονται με πλατφόρμες όπως το *GitHub* ή το *GitLab*, διευκολύνουν τις αναθεωρήσεις κώδικα επιτρέποντας σε άλλους προγραμματιστές να αναθεωρούν, να σχολιάζουν και να προτείνουν τροποποιήσεις στον κώδικα πριν από τη συγχώνευσή του.
+- **Διαχείριση έκδοσης**: Ο έλεγχος εκδόσεων βοηθά στη διαχείριση των εκδόσεων και των διορθώσεων. Οι προγραμματιστές μπορούν να επισημάνουν ορισμένα σημεία στο ιστορικό του κώδικά τους ως συγκεκριμένες εκδόσεις του προϊόντος. Αυτό διευκολύνει την παρακολούθηση των ενημερώσεων και των διορθώσεων.
+- **Υπευθυνότητα**: Με μια σωστή καταγραφή του ποιος έκανε ποιες αλλαγές και πότε, υπάρχει μια σαφής καταγραφή της λογοδοσίας. Αυτό είναι ιδιαίτερα χρήσιμο σε ομαδικές ρυθμίσεις για την κατανόηση των συνεισφορών και για να διασφαλιστεί ότι οι αλλαγές στον κώδικα μπορούν να εντοπιστούν σε συγκεκριμένα άτομα.
+- **Παράλληλη ανάπτυξη**: Τα συστήματα ελέγχου εκδόσεων επιτρέπουν τη δυνατότητα παράλληλης ανάπτυξης, όπου πολλαπλές εκδόσεις μιας εφαρμογής λογισμικού μπορούν να αναπτυχθούν ταυτόχρονα.
 
-In summary, version control is a cornerstone of modern software development practices. It ensures smoother collaboration, provides safety nets for mistakes, and maintains a clear and auditable record of how a software project evolves over time. Whether you are a solo developer or part of a large team, using version control is essential today.
+Συνοψίζοντας, ο έλεγχος εκδόσεων αποτελεί ακρογωνιαίο λίθο των σύγχρονων πρακτικών ανάπτυξης λογισμικού. Εξασφαλίζει την ομαλότερη συνεργασία, παρέχει δικλείδες ασφαλείας για λάθη και διατηρεί ένα σαφές και ελέγξιμο αρχείο του τρόπου με τον οποίο εξελίσσεται ένα έργο λογισμικού με την πάροδο του χρόνου. Είτε είστε σόλο προγραμματιστής είτε μέλος μιας μεγάλης ομάδας, η χρήση του ελέγχου εκδόσεων είναι απαραίτητη σήμερα.
 
-## Brief History of Version Control
+## Σύντομη ιστορία του ελέγχου εκδόσεων
 
-Version control has evolved over the years from simple manual methods to sophisticated distributed systems. Here's a brief overview of its history:
+Ο έλεγχος εκδόσεων έχει εξελιχθεί με την πάροδο των ετών από απλές χειροκίνητες μεθόδους σε εξελιγμένα κατανεμημένα συστήματα. Ακολουθεί μια σύντομη επισκόπηση της ιστορίας του:
 
-1. **Manual Version Control (Pre-1970s)**:
-   - Before proper version control systems (VCS), developers would make copies of their code and store them in separate directories, often labeling them with dates or version numbers.
-   - As one can imagine, this method was error-prone, lacked scalability, and made collaboration challenging.
+1. **Χειροκίνητος έλεγχος εκδόσεων (πριν από τη δεκαετία του 1970)**:
+   - Πριν από τα κατάλληλα συστήματα ελέγχου εκδόσεων (VCS), οι προγραμματιστές έφτιαχναν αντίγραφα του κώδικά τους και τα αποθήκευαν σε ξεχωριστούς καταλόγους, επισημαίνοντάς τα συχνά με ημερομηνίες ή αριθμούς εκδόσεων.
+   - Όπως μπορεί κανείς να φανταστεί, η μέθοδος αυτή ήταν επιρρεπής σε σφάλματα, δεν είχε δυνατότητα κλιμάκωσης και καθιστούσε δύσκολη τη συνεργασία.
 
-2. **Centralized Version Control Systems (CVCS, 1970s-1990s)**:
-   - The main idea behind CVCS is having a single central repository where all changes are tracked.
-   - **RCS (Revision Control System)**: Introduced in the late 1970s, RCS was one of the first tools to manage and track revisions for individual files. It used a simple mechanism of storing the latest version and differences between versions.
-   - **SCCS (Source Code Control System)**: Another early system, parallel in time to RCS, but had some different features.
-   - **CVS (Concurrent Versions System)**: Emerging in the 1980s, CVS was an improvement over RCS and allowed multiple developers to work on a project simultaneously.
-   - **Perforce**: Proprietary software that became popular with many large organizations in the 1990s.
-   - **Subversion (SVN)**: Introduced in 2000 as an improvement over CVS, offering better branch management, atomic commits, and a more consistent data model.
+2. **Κεντρικά συστήματα ελέγχου εκδόσεων (CVCS, δεκαετία 1970-1990)**:
+   - Η βασική ιδέα πίσω από το CVCS είναι η ύπαρξη ενός ενιαίου κεντρικού αποθετηρίου όπου παρακολουθούνται όλες οι αλλαγές.
+   - **RCS (Σύστημα ελέγχου αναθεώρησης)**: Το RCS παρουσιάστηκε στα τέλη της δεκαετίας του 1970 και ήταν ένα από τα πρώτα εργαλεία για τη διαχείριση και την παρακολούθηση των αναθεωρήσεων μεμονωμένων αρχείων. Χρησιμοποιούσε έναν απλό μηχανισμό αποθήκευσης της τελευταίας έκδοσης και των διαφορών μεταξύ των εκδόσεων.
+   - **SCCS (Σύστημα ελέγχου πηγαίου κώδικα)**: Ένα άλλο πρώιμο σύστημα, παράλληλο χρονικά με το RCS, αλλά με κάποια διαφορετικά χαρακτηριστικά.
+   - **CVS (Σύστημα ταυτόχρονων εκδόσεων)**: Το CVS εμφανίστηκε τη δεκαετία του 1980, ήταν μια βελτίωση σε σχέση με το RCS και επέτρεπε σε πολλούς προγραμματιστές να εργάζονται ταυτόχρονα σε ένα έργο.
+   - **Perforce**: Ιδιόκτητο λογισμικό που έγινε δημοφιλές σε πολλούς μεγάλους οργανισμούς τη δεκαετία του 1990.
+   - **Subversion (SVN)**: Παρουσιάστηκε το 2000 ως βελτίωση του CVS, προσφέροντας καλύτερη διαχείριση κλάδων, ατομικές δεσμεύσεις και ένα πιο συνεπές μοντέλο δεδομένων.
 
-3. **Distributed Version Control Systems (DVCS, 2000s-Present)**:
-   - In DVCS, every developer has their own local copy of the entire repository, not just the working files. This facilitates more flexible workflows.
-   - **BitKeeper**: In the early 2000s, BitKeeper was one of the first DVCS. It was proprietary, but it was used by the Linux kernel developers for a time.
-   - **Git**: Created by Linus Torvalds in 2005, Git was developed out of the need for a free, open-source DVCS after the relationship between the Linux development community and BitKeeper broke down. Git emphasizes speed, data integrity, and support for distributed, non-linear workflows.
-   - **Mercurial**: Also emerging in 2005, Mercurial was another response to the need for an open-source DVCS. It's often praised for its simplicity and ease of use.
-   - **Bazaar**: Developed by Canonical, it had a flexible architecture that allowed both centralized and distributed version control.
-   - **Fossil**: Not only a DVCS but also integrated bug tracking and a wiki, wrapped up in a single cohesive package.
+3. **Κατανεμημένα συστήματα ελέγχου εκδόσεων (DVCS, δεκαετία 2000-σήμερα)**:
+   - Στο DVCS, κάθε προγραμματιστής έχει το δικό του τοπικό αντίγραφο ολόκληρου του αποθετηρίου, όχι μόνο των αρχείων εργασίας. Αυτό διευκολύνει πιο ευέλικτες ροές εργασίας.
+   - **BitKeeper**: Στις αρχές της δεκαετίας του 2000, το BitKeeper ήταν ένα από τα πρώτα DVCS. Ήταν ιδιόκτητο, αλλά χρησιμοποιήθηκε από τους προγραμματιστές του πυρήνα του Linux για ένα διάστημα.
+   - **Git**: Το Git δημιουργήθηκε από τον Linus Torvalds το 2005 και αναπτύχθηκε από την ανάγκη για ένα ελεύθερο DVCS ανοιχτού κώδικα μετά τη διάλυση της σχέσης μεταξύ της κοινότητας ανάπτυξης του Linux και του BitKeeper. Το Git δίνει έμφαση στην ταχύτητα, την ακεραιότητα των δεδομένων και την υποστήριξη κατανεμημένων, μη γραμμικών ροών εργασίας.
+   - **Mercurial**: Το Mercurial εμφανίστηκε επίσης το 2005 και ήταν μια άλλη απάντηση στην ανάγκη για ένα DVCS ανοιχτού κώδικα. Συχνά επαινείται για την απλότητα και την ευκολία χρήσης του.
+   - **Bazaar**: Αναπτύχθηκε από την Canonical και διέθετε μια ευέλικτη αρχιτεκτονική που επέτρεπε τόσο τον κεντρικό όσο και τον κατανεμημένο έλεγχο εκδόσεων.
+   - **Fossil**: Όχι μόνο ένα DVCS, αλλά και ολοκληρωμένη παρακολούθηση σφαλμάτων και ένα wiki, τυλιγμένο σε ένα ενιαίο συνεκτικό πακέτο.
 
-4. **Modern Era (2010s-Present)**:
-   - Platforms like **GitHub, GitLab, and Bitbucket** have enhanced the collaborative aspects of version control, introducing features like Pull Requests, Code Reviews, Continuous Integration, and social coding.
-   - The rise of these platforms has made Git the dominant version control system, given its integration and central role in these platforms.
+4. **Σύγχρονη εποχή (δεκαετία 2010-σήμερα)**:
+   - Πλατφόρμες όπως το **GitHub, το GitLab και το Bitbucket** έχουν ενισχύσει τις συνεργατικές πτυχές του ελέγχου εκδόσεων, εισάγοντας χαρακτηριστικά όπως τα Pull Requests, οι Code Reviews, η συνεχής ενσωμάτωση και ο κοινωνικός προγραμματισμός.
+   - Η άνοδος αυτών των πλατφορμών έχει καταστήσει το Git το κυρίαρχο σύστημα ελέγχου εκδόσεων, δεδομένης της ενσωμάτωσης και του κεντρικού του ρόλου σε αυτές τις πλατφόρμες.
 
-While this is a concise overview, the history of version control is a testament to the ongoing efforts of the software community to optimize collaborative development, ensure data integrity, and streamline workflows.
+Αν και αυτή είναι μια συνοπτική επισκόπηση, η ιστορία του ελέγχου εκδόσεων είναι μια απόδειξη των συνεχών προσπαθειών της κοινότητας λογισμικού για τη βελτιστοποίηση της συνεργατικής ανάπτυξης, τη διασφάλιση της ακεραιότητας των δεδομένων και τον εξορθολογισμό των ροών εργασίας.
 
-## Centralized vs. Distributed version control systems
+## Κεντρικοποιημένα vs. Κατανεμημένα συστήματα ελέγχου εκδόσεων
 
-Next, let's delve into an overview and comparison of Centralized and Distributed Version Control Systems (VCS):
+Στη συνέχεια, ας εμβαθύνουμε σε μια επισκόπηση και σύγκριση των Κεντρικών και Κατανεμημένων Συστημάτων Ελέγχου Έκδοσης (VCS):
 
-### Centralized Version Control Systems (CVCS):
+### Συστήματα κεντρικού ελέγχου εκδόσεων (CVCS):
 
-**Overview**:
-1. **Single Repository**: In CVCS, there's a single, centralized repository on a server. Developers get the latest version from this central repository and commit changes back to it.
-2. **Working Copy**: Developers only get the latest snapshot (or working copy) of the codebase, not the entire version history.
-3. **Central Authority**: All operations like branching and merging are done centrally on the repository.
-4. **Examples**: Subversion (SVN), Concurrent Versions System (CVS), Perforce.
+**Σύνοψη**:
+1. **Ενιαίο αποθετήριο**: Στο CVCS, υπάρχει ένα ενιαίο, κεντρικό αποθετήριο σε έναν διακομιστή. Οι προγραμματιστές λαμβάνουν την τελευταία έκδοση από αυτό το κεντρικό αποθετήριο και δεσμεύουν τις αλλαγές σε αυτό.
+2. **Αντίγραφο εργασίας**: Οι προγραμματιστές λαμβάνουν μόνο το τελευταίο στιγμιότυπο (ή αντίγραφο εργασίας) της βάσης κώδικα, όχι ολόκληρο το ιστορικό εκδόσεων.
+3. **Κεντρική Αρχή**: Όλες οι λειτουργίες όπως η διακλάδωση και η συγχώνευση γίνονται κεντρικά στο αποθετήριο.
+4. **Παραδείγματα**: Subversion (SVN), Concurrent Versions System (CVS), Perforce.
 
 **Advantages**:
 1. **Administrative Control**: Easier to enforce access controls and permissions.
