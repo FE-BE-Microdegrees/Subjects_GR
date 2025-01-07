@@ -7,27 +7,27 @@
 Image source: Dall-E by OpenAI
 
 - [API - Application Programming Interface](#api---application-programming-interface)
-  - [Learning Outcomes](#learning-outcomes)
-  - [Types of Web APIs](#types-of-web-apis)
-  - [API Resource](#api-resource)
+  - [Mαθησιακά αποτελέσματα](#Mαθησιακά-αποτελέσματα)
+  - [Τύποι διαδικτυακών APIs](#Τύποι-διαδικτυακών-APIs)
+  - [Πόροι API](#Πόροι-API)
   - [API Response](#api-response)
   - [CRUD API](#crud-api)
 
-## Learning Outcomes
+## Mαθησιακά αποτελέσματα
 
-By the end of this chapter, you will be able to:
+Στο τέλος αυτού του κεφαλαίου, θα είστε σε θέση να:
 
-- Explain what a web API is and how it works.
-- Describe the various types of web APIs, including RESTful APIs, SOAP APIs, and GraphQL APIs.
-- Define API resources and URIs.
-- Describe the structure of API responses and data formats such as JSON and XML.
-- Explain the core operations of a CRUD API and their relationship to HTTP methods.
+- Εξηγήστε τι είναι ένα διαδικτυακό API και πώς λειτουργεί.
+- Περιγράψτε τους διάφορους τύπους διαδικτυακών APIs, συμπεριλαμβανομένων των RESTful APIs, SOAP APIs και GraphQL APIs.
+- Καθορισμός πόρων και URIs API.
+- Περιγράψτε τη δομή των απαντήσεων API και τις μορφές δεδομένων όπως JSON και XML.
+- Εξηγήστε τις βασικές λειτουργίες ενός CRUD API και τη σχέση τους με τις μεθόδους HTTP.
 
-In the context of this course, we are referring to APIs that operate over the HTTP protocol, known as Web APIs.
+Στο πλαίσιο αυτού του μαθήματος, αναφερόμαστε σε API που λειτουργούν μέσω του πρωτοκόλλου HTTP, γνωστά ως API ιστού.
 
-A web API represents a programming interface for web applications. It is a collection of protocols, tools, and mechanisms for creating web-based applications that can communicate with each other over the Internet.
+Ένα διαδικτυακό API αντιπροσωπεύει μια διεπαφή προγραμματισμού για διαδικτυακές εφαρμογές. Πρόκειται για μια συλλογή πρωτοκόλλων, εργαλείων και μηχανισμών για τη δημιουργία εφαρμογών που βασίζονται στον ιστό και μπορούν να επικοινωνούν μεταξύ τους μέσω του Διαδικτύου.
 
-Web APIs are typically accessed via HTTP requests and responses, allowing web applications to interact with data and services provided by other applications, often on different servers or in different locations around the world.
+Η πρόσβαση στα διαδικτυακά API γίνεται συνήθως μέσω αιτημάτων και απαντήσεων HTTP, επιτρέποντας στις διαδικτυακές εφαρμογές να αλληλεπιδρούν με δεδομένα και υπηρεσίες που παρέχονται από άλλες εφαρμογές, συχνά σε διαφορετικούς διακομιστές ή σε διαφορετικές τοποθεσίες ανά τον κόσμο.
 
 ```mermaid
 sequenceDiagram
@@ -41,40 +41,42 @@ sequenceDiagram
   API->>Client: Forwards HTTP response
 ```
 
-## Types of Web APIs
+## Τύποι διαδικτυακών APIs
 
-- **RESTful APIs**: Representational State Transfer (REST) is a popular architectural style for creating web APIs that use HTTP requests to fetch and manipulate data. RESTful APIs are designed to be scalable, reliable, and easy to use.
-- **SOAP APIs**: Simple Object Access Protocol (SOAP) is another popular protocol for creating web APIs that exchange XML-based messages. SOAP APIs are often used in enterprise-level applications that require complex messaging and transaction support.
-- **GraphQL APIs**: GraphQL is a relatively new technology for creating web APIs that allows clients to request only the data they need, rather than retrieving entire resources. GraphQL APIs are commonly used in modern web and mobile applications that require efficient data retrieval and processing.
+- **RESTful APIs**: Η μεταφορά κατάστασης αναπαράστασης (Representational State Transfer - REST) είναι ένα δημοφιλές αρχιτεκτονικό στυλ για τη δημιουργία διαδικτυακών APIs που χρησιμοποιούν αιτήσεις HTTP για την άντληση και τον χειρισμό δεδομένων. Τα RESTful APIs έχουν σχεδιαστεί για να είναι κλιμακούμενα, αξιόπιστα και εύχρηστα.
+- **SOAP APIs**: Το πρωτόκολλο SOAP (Simple Object Access Protocol) είναι ένα άλλο δημοφιλές πρωτόκολλο για τη δημιουργία διαδικτυακών API που ανταλλάσσουν μηνύματα βασισμένα σε XML. Τα API SOAP χρησιμοποιούνται συχνά σε εφαρμογές επιχειρηματικού επιπέδου που απαιτούν πολύπλοκη υποστήριξη μηνυμάτων και συναλλαγών.
+- **GraphQL APIs**: Η GraphQL είναι μια σχετικά νέα τεχνολογία για τη δημιουργία διαδικτυακών API που επιτρέπει στους πελάτες να ζητούν μόνο τα δεδομένα που χρειάζονται, αντί να ανακτούν ολόκληρους πόρους. Τα GraphQL APIs χρησιμοποιούνται συνήθως σε σύγχρονες εφαρμογές ιστού και κινητών τηλεφώνων που απαιτούν αποτελεσματική ανάκτηση και επεξεργασία δεδομένων.
 
-Web APIs are essential components of modern web development, enabling developers to create complex and feature-rich applications by leveraging the power of the Internet and the collective resources of the global developer community.
+Τα web APIs είναι βασικά στοιχεία της σύγχρονης ανάπτυξης ιστοσελίδων, επιτρέποντας στους προγραμματιστές να δημιουργούν σύνθετες και πλούσιες σε χαρακτηριστικά εφαρμογές αξιοποιώντας τη δύναμη του Διαδικτύου και τους συλλογικούς πόρους της παγκόσμιας κοινότητας προγραμματιστών.
+
 
 ## API Resource
 
-In the context of web APIs, a resource is any piece of data or functionality that can be accessed or manipulated over the Internet using a URI (Uniform Resource Identifier) and HTTP requests.
+Στο πλαίσιο των διαδικτυακών APIs, ένας πόρος είναι οποιοδήποτε κομμάτι δεδομένων ή λειτουργικότητας που μπορεί να προσπελαστεί ή να χειριστεί μέσω του Διαδικτύου χρησιμοποιώντας ένα URI (Uniform Resource Identifier) και αιτήσεις HTTP.
 
-A resource can be anything from a single data unit (e.g., a customer record in a database) to a collection of related items, such as a list of products in an online store. Resources can also include more complex functionalities, such as a search engine or payment gateway.
+Ένας πόρος μπορεί να είναι οτιδήποτε, από μια μεμονωμένη μονάδα δεδομένων (π.χ. μια εγγραφή πελάτη σε μια βάση δεδομένων) έως μια συλλογή σχετικών στοιχείων, όπως μια λίστα προϊόντων σε ένα ηλεκτρονικό κατάστημα. Οι πόροι μπορούν επίσης να περιλαμβάνουν πιο σύνθετες λειτουργίες, όπως μια μηχανή αναζήτησης ή μια πύλη πληρωμών.
 
-In a RESTful API, resources are typically represented as nouns in URIs, and HTTP methods (GET, POST, PUT, DELETE, etc.) are used to perform actions on these resources. For example, a typical RESTful API might have URIs like:
+Σε ένα RESTful API, οι πόροι αναπαρίστανται συνήθως ως ουσιαστικά σε URI και οι μέθοδοι HTTP (GET, POST, PUT, DELETE κ.λπ.) χρησιμοποιούνται για την εκτέλεση ενεργειών σε αυτούς τους πόρους. Για παράδειγμα, ένα τυπικό RESTful API μπορεί να έχει URIs όπως:
 
 - `/customers`
 - `/customers/123`
 - `/orders/456`
 - `/products/search?q=keyword`
 
-In this example, the first URI represents a collection of customers, the second URI represents a specific customer with ID 123, the third URI represents a specific order with ID 456, and the fourth URI represents a search query for products matching the keyword "keyword."
+Σε αυτό το παράδειγμα, το πρώτο URI αντιπροσωπεύει μια συλλογή πελατών, το δεύτερο URI αντιπροσωπεύει έναν συγκεκριμένο πελάτη με αναγνωριστικό 123, το τρίτο URI αντιπροσωπεύει μια συγκεκριμένη παραγγελία με αναγνωριστικό 456 και το τέταρτο URI αντιπροσωπεύει ένα ερώτημα αναζήτησης για προϊόντα που ταιριάζουν με τη λέξη-κλειδί "keyword".
 
-By clearly and consistently defining resources and URIs, web APIs can provide a simple and intuitive interface for accessing data and functionalities over the Internet, making it easier for developers to build web applications that can communicate with other systems and services, regardless of their location or implementation details.
+Με τον σαφή και συνεπή ορισμό πόρων και URIs, τα web APIs μπορούν να παρέχουν μια απλή και διαισθητική διεπαφή για την πρόσβαση σε δεδομένα και λειτουργίες μέσω του Διαδικτύου, διευκολύνοντας τους προγραμματιστές να δημιουργούν web εφαρμογές που μπορούν να επικοινωνούν με άλλα συστήματα και υπηρεσίες, ανεξάρτητα από την τοποθεσία ή τις λεπτομέρειες υλοποίησής τους.
 
-You can find a selection of free public web APIs here: [Public APIs](https://github.com/public-apis/public-apis)
+Μπορείτε να βρείτε μια επιλογή από δωρεάν δημόσια διαδικτυακά API εδώ: [Public APIs](https://github.com/public-apis/public-apis)
 
 ## API Response
 
-Typically, a web API returns data in response to a request, formatted in JSON (JavaScript Object Notation) or XML (Extensible Markup Language). JSON has become the standard response format for web APIs because it is lightweight and easy to read and write. XML is still used in some web APIs, especially SOAP APIs, but it is less common compared to JSON.
+Συνήθως, ένα διαδικτυακό API επιστρέφει δεδομένα ως απάντηση σε ένα αίτημα, μορφοποιημένα σε JSON (JavaScript Object Notation) ή XML (Extensible Markup Language). Το JSON έχει γίνει η τυπική μορφή απόκρισης για web APIs επειδή είναι ελαφρύ και εύκολο στην ανάγνωση και τη συγγραφή. Η XML εξακολουθεί να χρησιμοποιείται σε ορισμένα web APIs, ιδίως σε SOAP APIs, αλλά είναι λιγότερο διαδεδομένη σε σύγκριση με το JSON.
 
-A web API response may also contain additional data, such as the status of the request, error messages, metadata, and other useful information. For example, a web API response might include an HTTP status code indicating whether the request was successful, along with an error message explaining why the request failed.
+Μια απόκριση web API μπορεί επίσης να περιέχει πρόσθετα δεδομένα, όπως η κατάσταση της αίτησης, μηνύματα σφάλματος, μεταδεδομένα και άλλες χρήσιμες πληροφορίες. Για παράδειγμα, μια απόκριση web API μπορεί να περιλαμβάνει έναν κωδικό κατάστασης HTTP που υποδεικνύει αν η αίτηση ήταν επιτυχής, μαζί με ένα μήνυμα σφάλματος που εξηγεί γιατί η αίτηση απέτυχε.
 
-An example of a typical API response might look like this:
+Ένα παράδειγμα τυπικής απόκρισης API μπορεί να μοιάζει ως εξής:
+
 
 ```json
 {
@@ -89,9 +91,9 @@ An example of a typical API response might look like this:
 }
 ```
 
-In this example, the web API response is a JSON object containing three key-value pairs. The first key-value pair includes the status of the request. The second key-value pair contains a message about the request. The third key-value pair includes the data returned as a result of the request.
+Σε αυτό το παράδειγμα, η απόκριση web API είναι ένα αντικείμενο JSON που περιέχει τρία ζεύγη κλειδιών-τιμών. Το πρώτο ζεύγος κλειδιών-τιμών περιλαμβάνει την κατάσταση της αίτησης. Το δεύτερο ζεύγος κλειδιών-τιμών περιέχει ένα μήνυμα σχετικά με την αίτηση. Το τρίτο ζεύγος κλειδιών-τιμών περιλαμβάνει τα δεδομένα που επιστρέφονται ως αποτέλεσμα της αίτησης.
 
-If the API response includes a list of data, such as a list of customer records, it might look like this:
+Εάν η απόκριση API περιλαμβάνει μια λίστα δεδομένων, όπως μια λίστα με εγγραφές πελατών, μπορεί να μοιάζει με αυτό:
 
 ```json
 {
@@ -116,16 +118,16 @@ If the API response includes a list of data, such as a list of customer records,
 
 ## CRUD API
 
-`CRUD` is an acronym that stands for the four basic operations that can be performed on data: **Create**, **Read**, **Update**, and **Delete**. These are also the core operations that can be performed using web APIs.
+Το «CRUD» είναι ένα ακρωνύμιο που συμβολίζει τις τέσσερις βασικές πράξεις που μπορούν να εκτελεστούν σε δεδομένα: **Create**, **Read**, **Update**, και **Delete**. Αυτές είναι επίσης οι βασικές λειτουργίες που μπορούν να εκτελεστούν με τη χρήση APIs ιστού.
 
-- **Create** - creates a new data record.
-- **Read** - retrieves an existing data record.
-- **Update** - modifies an existing data record.
-- **Delete** - removes an existing data record.
+- **Create** - δημιουργεί ένα νέο αρχείο δεδομένων.
+- **Read** - ανακτά ένα υπάρχον αρχείο δεδομένων.
+- **Update** - τροποποιεί ένα υπάρχον αρχείο δεδομένων.
+- **Delete** - διαγράφει ένα υπάρχον αρχείο δεδομένων.
 
-These operations often correlate with HTTP methods used to perform them:
+Αυτές οι λειτουργίες συχνά συσχετίζονται με τις μεθόδους HTTP που χρησιμοποιούνται για την εκτέλεσή τους:
 
-- **Create** - uses the HTTP POST method.
-- **Read** - uses the HTTP GET method.
-- **Update** - uses the HTTP PUT or PATCH method.
-- **Delete** - uses the HTTP DELETE method.
+- **Create** - χρησιμοποιεί τη μέθοδο HTTP POST.
+- **Read** - χρησιμοποιεί τη μέθοδο HTTP GET.
+- **Update** - χρησιμοποιεί τη μέθοδο HTTP PUT ή PATCH.
+- **Delete** - χρησιμοποιεί τη μέθοδο HTTP DELETE.
