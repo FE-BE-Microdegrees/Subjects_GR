@@ -1,29 +1,29 @@
 # JWT (_JSON Web Token_)
 
-In this section, we will discuss JWT (_JSON Web Token_), an open standard used for securely transmitting data between parties in JSON format.
+Σε αυτή την ενότητα, θα συζητήσουμε το JWT (_JSON Web Token_), ένα ανοιχτό πρότυπο που χρησιμοποιείται για την ασφαλή μετάδοση δεδομένων μεταξύ των μερών σε μορφή JSON.
 
 ![JWT](JWT.webp)
 
 Image source: DALL-E by OpenAI
 
-## Learning Outcomes
+## Μαθησιακά αποτελέσματα
 
-By the end of this section, students should be able to:
+Στο τέλος αυτής της ενότητας, οι μαθητές θα πρέπει να είναι σε θέση να:
 
-- Explain what JWT is and how it works.
-- Describe the structure of JWT and its components.
-- Create and validate JWTs.
-- Use JWTs in authentication and authorization processes.
+- Εξηγήστε τι είναι το JWT και πώς λειτουργεί.
+- Περιγράψτε τη δομή του JWT και τα στοιχεία του.
+- Δημιουργία και επικύρωση JWT.
+- Χρήση JWT σε διαδικασίες ελέγχου ταυτότητας και εξουσιοδότησης.
 
 ## JWT
 
-JWT (_JSON Web Token_) is an open standard (RFC 7519) used for securely transmitting data between parties in JSON format. It is particularly useful for authentication and information exchange, allowing reliable and efficient information transfer. JWTs are compact and easy to use in various scenarios, including authentication and authorization in web applications.
+Το JWT (_JSON Web Token_) είναι ένα ανοικτό πρότυπο (RFC 7519) που χρησιμοποιείται για την ασφαλή μετάδοση δεδομένων μεταξύ μερών σε μορφή JSON. Είναι ιδιαίτερα χρήσιμο για τον έλεγχο ταυτότητας και την ανταλλαγή πληροφοριών, επιτρέποντας την αξιόπιστη και αποτελεσματική μεταφορά πληροφοριών. Τα JWT είναι συμπαγή και εύκολα στη χρήση σε διάφορα σενάρια, όπως η αυθεντικοποίηση και η εξουσιοδότηση σε διαδικτυακές εφαρμογές.
 
-### JWT Components
+### Στοιχεία JWT
 
-A JWT consists of three parts, separated by periods (.):
+Ένα JWT αποτελείται από τρία μέρη, τα οποία χωρίζονται με τελείες (.):
 
-- **Header:** Contains information about the type of token and the signing algorithm being used (e.g., HMAC SHA256 or RSA).
+- **Επικεφαλίδα:** Περιέχει πληροφορίες σχετικά με τον τύπο του διακριτικού και τον αλγόριθμο υπογραφής που χρησιμοποιείται (π.χ. HMAC SHA256 ή RSA).
 
 ```json
 {
@@ -32,7 +32,8 @@ A JWT consists of three parts, separated by periods (.):
 }
 ```
 
-- **Payload:** Contains claims, which are the encoded information in the JWT. Claims can be standardized, public, or private.
+- **Payload:** Περιέχει ισχυρισμούς, οι οποίοι είναι οι κωδικοποιημένες πληροφορίες στο JWT. Οι αξιώσεις μπορεί να είναι τυποποιημένες, δημόσιες ή ιδιωτικές.
+
 
 ```json
 {
@@ -42,7 +43,7 @@ A JWT consists of three parts, separated by periods (.):
 }
 ```
 
-- **Signature:** Created to ensure the integrity and authenticity of the token. The signature is generated using a secret key or a public/private key pair.
+- **Υπογραφή:** Δημιουργήθηκε για να διασφαλίσει την ακεραιότητα και την αυθεντικότητα του διακριτικού. Η υπογραφή δημιουργείται χρησιμοποιώντας ένα μυστικό κλειδί ή ένα ζεύγος δημόσιου/ιδιωτικού κλειδιού.
 
 ```bash
 HMACSHA256(
@@ -52,48 +53,48 @@ HMACSHA256(
 )
 ```
 
-### JWT Structure
+### Δομή του JWT
 
-The complete JWT structure looks like this:
+TΗ πλήρης δομή του JWT μοιάζει ως εξής:
 
 ```bash
 xxxxx.yyyyy.zzzzz
 ```
 
-Where `xxxxx` is the header, `yyyyy` is the payload, and `zzzzz` is the signature, all encoded in base64-url.
+Όπου `xxxxx` είναι η επικεφαλίδα, `yyyyy` είναι το ωφέλιμο φορτίο και `zzzzz` είναι η υπογραφή, όλα κωδικοποιημένα σε base64-url.
 
-## When to Use JWT?
+## Πότε να χρησιμοποιήσετε το JWT;
 
-- **Authorization:** This is the most common scenario for using JWTs. Once a user logs in, each subsequent request contains a JWT, allowing the user to access the routes, services, and resources authorized for that token.
-- **Information Exchange:** JSON Web Tokens are a good way to securely transmit information between parties. Since JWTs can be signed, for example, using public/private key pairs, you can be sure the senders are who they say they are. Additionally, because the signature is computed using the header and payload, you can also verify that the content has not been altered.
+- **Εξουσιοδότηση:** Αυτό είναι το πιο συνηθισμένο σενάριο για τη χρήση JWT. Μόλις συνδεθεί ένας χρήστης, κάθε επόμενη αίτηση περιέχει ένα JWT, επιτρέποντας στον χρήστη να έχει πρόσβαση στις διαδρομές, τις υπηρεσίες και τους πόρους που είναι εξουσιοδοτημένοι για το συγκεκριμένο token.
+- **Ανταλλαγή πληροφοριών:** Τα JSON Web Tokens είναι ένας καλός τρόπος για την ασφαλή μετάδοση πληροφοριών μεταξύ των μερών. Δεδομένου ότι τα JWT μπορούν να υπογραφούν, για παράδειγμα, χρησιμοποιώντας ζεύγη δημόσιων/ιδιωτικών κλειδιών, μπορείτε να είστε σίγουροι ότι οι αποστολείς είναι αυτοί που λένε ότι είναι. Επιπλέον, επειδή η υπογραφή υπολογίζεται χρησιμοποιώντας την επικεφαλίδα και το ωφέλιμο φορτίο, μπορείτε επίσης να επαληθεύσετε ότι το περιεχόμενο δεν έχει τροποποιηθεί.
 
-### Advantages
+### Πλεονεκτήματα
 
-- **Compactness:** JWTs are compact, meaning they can be easily transmitted via URLs, HTTP headers, and POST data.
-- **Self-Contained:** Tokens are self-contained as they contain all the necessary information. You can validate the token without additional data, making the system more efficient and flexible.
-- **Security:** JWTs ensure data integrity and enable authentication and authorization, which is useful for establishing secure connections.
+- **Compactness:** Τα JWT είναι συμπαγή, πράγμα που σημαίνει ότι μπορούν να μεταδοθούν εύκολα μέσω διευθύνσεων URL, κεφαλίδων HTTP και δεδομένων POST.
+- **Αυτόνομο:** Τα διακριτικά είναι αυτοτελή, καθώς περιέχουν όλες τις απαραίτητες πληροφορίες. Μπορείτε να επικυρώσετε το token χωρίς πρόσθετα δεδομένα, καθιστώντας το σύστημα πιο αποτελεσματικό και ευέλικτο.
+- **Ασφάλεια:** Τα JWT διασφαλίζουν την ακεραιότητα των δεδομένων και επιτρέπουν τον έλεγχο ταυτότητας και την εξουσιοδότηση, κάτι που είναι χρήσιμο για τη δημιουργία ασφαλών συνδέσεων.
 
-### Disadvantages
+### Μειονεκτήματα
 
-- **Token Leakage:** JWTs cannot be revoked or invalidated once issued. If a JWT is leaked, it can be dangerous as it may grant unauthorized access, necessitating additional protective measures.
+- **Διαρροή Token:** Τα JWT δεν μπορούν να ανακληθούν ή να ακυρωθούν μετά την έκδοσή τους. Εάν ένα JWT διαρρεύσει, μπορεί να είναι επικίνδυνο, καθώς μπορεί να παρέχει μη εξουσιοδοτημένη πρόσβαση, γεγονός που απαιτεί πρόσθετα μέτρα προστασίας.
 
-## Creating and Validating JWTs
+## Δημιουργία και επικύρωση JWTs
 
-### Creating JWTs
+### Δημιουργία JWTs
 
-The process of creating a JWT involves generating the header, payload, and signature, then combining them.
+Η διαδικασία δημιουργίας ενός JWT περιλαμβάνει τη δημιουργία της επικεφαλίδας, του ωφέλιμου φορτίου και της υπογραφής και, στη συνέχεια, τον συνδυασμό τους.
 
-#### Example in Node.js
+#### Παράδειγμα σε Node.js
 
-To create and validate JWTs in Node.js, you can use the `jsonwebtoken` library.
+Για να δημιουργήσετε και να επικυρώσετε JWTs στο Node.js, μπορείτε να χρησιμοποιήσετε τη βιβλιοθήκη `jsonwebtoken`.
 
-- **Install the jsonwebtoken library:**
+- **Εγκαταστήστε τη βιβλιοθήκη jsonwebtoken:**
 
 ```bash
 npm install jsonwebtoken
 ```
 
-- **Creating a JWT:**
+- **Δημιουργία ενός JWT:**
 
 ```javascript
 const jwt = require("jsonwebtoken");
@@ -110,13 +111,13 @@ const token = jwt.sign(payload, secret, { algorithm: "HS256" });
 console.log(token);
 ```
 
-### Validating JWTs
+### Επικύρωση JWTs
 
-Validating a JWT involves decoding the received token and verifying the signature to ensure its authenticity and integrity.
+Επικύρωση JWTs
 
-#### Example in Node.js
+#### Παράδειγμα σε Node.js
 
-1. **Validating a JWT:**
+1. **Επικύρωση ενός JWT:**
 
 ```javascript
 const token =
@@ -131,15 +132,16 @@ jwt.verify(token, secret, (err, decoded) => {
 });
 ```
 
-## Using JWT for Authentication and Authorization
+## Χρήση του JWT για έλεγχο ταυτότητας και εξουσιοδότηση
 
-### Authentication
+### Αυθεντικοποίηση
 
-JWTs are often used for user authentication. When a user logs in, the server creates a JWT containing the user's identity and possible permissions. This JWT is sent back to the user and stored in the browser as a cookie or in local storage.
+Τα JWT χρησιμοποιούνται συχνά για τον έλεγχο ταυτότητας χρηστών. Όταν ένας χρήστης συνδέεται, ο διακομιστής δημιουργεί ένα JWT που περιέχει την ταυτότητα του χρήστη και πιθανά δικαιώματα. Αυτό το JWT αποστέλλεται πίσω στον χρήστη και αποθηκεύεται στο πρόγραμμα περιήγησης ως cookie ή σε τοπικό αποθηκευτικό χώρο.
 
-#### Example - 1
 
-- **User Login and JWT Creation:**
+#### Παράδειγμα - 1
+
+- **Σύνδεση χρήστη και δημιουργία JWT:**
 
 ```javascript
 app.post("/login", (req, res) => {
@@ -159,9 +161,10 @@ app.post("/login", (req, res) => {
 });
 ```
 
-### Authorization
+### Εξουσιοδότηση
 
-Once a user is authenticated and has a JWT, the server can use that token to check the user's identity and permissions when they request protected resources.
+Μόλις ένας χρήστης πιστοποιηθεί και αποκτήσει ένα JWT, ο διακομιστής μπορεί να χρησιμοποιήσει αυτό το token για να ελέγξει την ταυτότητα και τα δικαιώματα του χρήστη όταν ζητά προστατευμένους πόρους.
+
 
 #### Example - 2
 
