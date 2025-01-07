@@ -1,6 +1,6 @@
-# API - Application Programming Interface
+# API -Διεπαφή προγραμματισμού εφαρμογών (Application Programming Interface)
 
-In this chapter, we will cover APIs, their types, resources, responses, and CRUD operations.
+Σε αυτό το κεφάλαιο, θα καλύψουμε τα APIs, τους τύπους τους, τους πόρους, τις απαντήσεις και τις λειτουργίες CRUD.
 
 ![HTTP API](HTTP-API.webp)
 
