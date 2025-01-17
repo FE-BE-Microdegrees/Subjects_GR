@@ -1,8 +1,8 @@
-# Kuidas olemasolevale Node Express API-le testid lisada?
+# Πώς να προσθέσετε δοκιμές σε ένα υπάρχον API Node Express;
 
-In this section, we will explore how to create End-to-End automated tests for an existing Node.js Express API.
+Σε αυτή την ενότητα, θα εξερευνήσουμε τον τρόπο δημιουργίας αυτοματοποιημένων δοκιμών End-to-End για ένα υπάρχον API Node.js Express.
 
-We will use the [Mocha](../mocha/README.md) testing framework, the [Supertest](../supertest/README.md) module, and [Chai](../chai/README.md) assertions.
+Θα χρησιμοποιήσουμε το πλαίσιο δοκιμών [Mocha](../mocha/README.md), την ενότητα [Supertest](../supertest/README.md) και τους ισχυρισμούς [Chai](../chai/README.md).
 
 ## Learning Outcomes
 
