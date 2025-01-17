@@ -1,27 +1,28 @@
 # Πώς να προσθέσετε δοκιμές σε ένα υπάρχον API Node Express;
 
-In this section, we will explore how to create End-to-End automated tests for an existing Node.js Express API.
+Σε αυτή την ενότητα, θα εξερευνήσουμε τον τρόπο δημιουργίας αυτοματοποιημένων δοκιμών End-to-End για ένα υπάρχον API Node.js Express.
 
-We will use the [Mocha](../mocha/README.md) testing framework, the [Supertest](../supertest/README.md) module, and [Chai](../chai/README.md) assertions.
+Θα χρησιμοποιήσουμε το πλαίσιο δοκιμών [Mocha](../mocha/README.md), την ενότητα [Supertest](../supertest/README.md) και τους ισχυρισμούς [Chai](../chai/README.md).
 
-## Learning Outcomes
+## Μαθησιακά αποτελέσματα
 
-By the end of this section, students should be able to:
+Στο τέλος αυτής της ενότητας, οι μαθητές θα πρέπει να είναι σε θέση να:
 
-- Create tests for an existing Node.js Express API.
-- Use the Mocha testing framework.
-- Use the Supertest module.
-- Use Chai assertions.
-- Generate coverage reports for tests.
-- Utilize a test database when writing tests.
-- Separate application logic from server startup.
-- Structure an application for writing tests.
+- Να δημιουργούν δοκιμές για ένα υπάρχον Node.js Express API.
+- Να χρησιμοποιούν το πλαίσιο δοκιμών Mocha.
+- Να χρησιμοποιούν την ενότητα Supertest.
+- Να χρησιμοποιούν τους ισχυρισμούς Chai.
+- Να δημιουργούν αναφορές κάλυψης για τις δοκιμές.
+- Χρησιμοποιήστε μια βάση δεδομένων δοκιμών κατά τη συγγραφή δοκιμών.
+- Διαχωρίστε τη λογική της εφαρμογής από την εκκίνηση του διακομιστή.
+- Δομήστε μια εφαρμογή για τη συγγραφή δοκιμών.
 
-## Application Structure
+##Δομή της εφαρμογής
 
-The first step to adding automated tests to your existing Node.js Express API is to separate the Express `app` from its initialization. This is necessary so that we can use the `app` variable during testing without directly starting the server.
+Το πρώτο βήμα για την προσθήκη αυτοματοποιημένων δοκιμών στο υπάρχον Node.js Express API σας είναι να διαχωρίσετε την «εφαρμογή» Express από την αρχικοποίησή της. Αυτό είναι απαραίτητο ώστε να μπορούμε να χρησιμοποιήσουμε τη μεταβλητή `app` κατά τη διάρκεια των δοκιμών χωρίς να εκκινήσουμε απευθείας τον διακομιστή.
 
-To do this, we will extract the `app` creation logic from the existing `index.ts` file and leave only the server startup. This means our `index.ts` file should look like this:
+Για να το κάνουμε αυτό, θα αφαιρέσουμε τη λογική δημιουργίας της εφαρμογής από το υπάρχον αρχείο `index.ts` και θα αφήσουμε μόνο την εκκίνηση του διακομιστή. Αυτό σημαίνει ότι το αρχείο `index.ts` θα πρέπει να μοιάζει με αυτό:
+
 
 ```typescript
 import app from "./app";
@@ -33,7 +34,8 @@ app.listen(port, () => {
 });
 ```
 
-Next, we will create a new file `app.ts`, where we will place all the code related to creating the `app`. This means our `app.ts` file should look like this:
+Στη συνέχεια, θα δημιουργήσουμε ένα νέο αρχείο `app.ts`, όπου θα τοποθετήσουμε όλο τον κώδικα που σχετίζεται με τη δημιουργία της `app`. Αυτό σημαίνει ότι το αρχείο `app.ts` θα πρέπει να μοιάζει με αυτό:
+
 
 ```typescript
 import express from "express";
@@ -49,26 +51,26 @@ app.get("/", (_req, res) => {
 export default app;
 ```
 
-With this structure, we can import the application (`app`) into our tests and use it without starting the server.
+Με αυτή τη δομή, μπορούμε να εισάγουμε την εφαρμογή (`app`) στις δοκιμές μας και να τη χρησιμοποιήσουμε χωρίς να εκκινήσουμε τον διακομιστή.
 
-## Test Data Creation and Test Database Usage
+## Δημιουργία δεδομένων δοκιμής και χρήση βάσης δεδομένων δοκιμής
 
-Next, we need to determine how to obtain the data required for testing our application. Since our goal is to test the application as it would be used in production, we want to ensure it interacts correctly with the database.
+Στη συνέχεια, πρέπει να καθορίσουμε πώς θα λάβουμε τα δεδομένα που απαιτούνται για τη δοκιμή της εφαρμογής μας. Δεδομένου ότι ο στόχος μας είναι να δοκιμάσουμε την εφαρμογή όπως θα χρησιμοποιούνταν στην παραγωγή, θέλουμε να διασφαλίσουμε ότι αλληλεπιδρά σωστά με τη βάση δεδομένων.
 
-To get the necessary data for testing, we have several options:
+Για να λάβουμε τα απαραίτητα δεδομένα για τις δοκιμές, έχουμε διάφορες επιλογές:
 
-- Use the existing live database.
-- Create a new database.
-- Use an in-memory database instead of a real database.
-- Use a mock database instead of a real database.
+- Χρησιμοποιήστε την υπάρχουσα ζωντανή βάση δεδομένων.
+- Δημιουργήστε μια νέα βάση δεδομένων.
+- Χρησιμοποιήστε μια βάση δεδομένων στη μνήμη αντί για μια πραγματική βάση δεδομένων.
+- Χρησιμοποιήστε μια εικονική βάση δεδομένων αντί για μια πραγματική βάση δεδομένων.
 
-Using the existing live database has significant drawbacks, such as polluting it with test data and not being able to guarantee that the data is in the expected state.
+Η χρήση της υπάρχουσας βάσης δεδομένων έχει σημαντικά μειονεκτήματα, όπως η μόλυνσή της με δεδομένα δοκιμών και η μη δυνατότητα να εγγυηθεί ότι τα δεδομένα βρίσκονται στην αναμενόμενη κατάσταση.
 
-To avoid these issues, we need to create a new database for testing.
+Για να αποφύγουμε αυτά τα ζητήματα, πρέπει να δημιουργήσουμε μια νέα βάση δεδομένων για δοκιμές.
 
-### Automating Database Creation
+### Αυτοματοποίηση δημιουργίας βάσης δεδομένων
 
-To automate the creation of a new database, we will write a separate script that creates the database and inserts the necessary data.
+Για να αυτοματοποιήσουμε τη δημιουργία μιας νέας βάσης δεδομένων, θα γράψουμε ένα ξεχωριστό σενάριο που θα δημιουργεί τη βάση δεδομένων και θα εισάγει τα απαραίτητα δεδομένα.
 
 ```ts
 import mysql2 from "mysql2";
@@ -108,7 +110,7 @@ try {
 }
 ```
 
-This script requires an `init.sql` file containing the necessary SQL commands to set up the database. For example, the `init.sql` file might look like this:
+Αυτό το σενάριο απαιτεί ένα αρχείο `init.sql` που περιέχει τις απαραίτητες εντολές SQL για τη ρύθμιση της βάσης δεδομένων. Για παράδειγμα, το αρχείο `init.sql` μπορεί να μοιάζει ως εξής:
 
 ```sql
 DROP DATABASE IF EXISTS `test`;
@@ -129,7 +131,7 @@ INSERT INTO `users` (`name`, `email`, `password`) VALUES
 ('John Doe', 'john@doe.ee', 'secret');
 ```
 
-Now we can run this script before running our tests by adding a new script in the `package.json`:
+Τώρα μπορούμε να εκτελέσουμε αυτό το σενάριο πριν από την εκτέλεση των δοκιμών μας προσθέτοντας ένα νέο σενάριο στο αρχείο `package.json`:
 
 ```json
 {
@@ -139,11 +141,11 @@ Now we can run this script before running our tests by adding a new script in th
 }
 ```
 
-The `pretest` script ensures that the database setup script runs before the tests.
+Το σενάριο `pretest` εξασφαλίζει ότι το σενάριο εγκατάστασης της βάσης δεδομένων εκτελείται πριν από τις δοκιμές.
 
-Next, we need to ensure that when we run our tests, the test database is used. One way to achieve this is by using an environment variable to inform the application which database to use. To do this, we'll modify the database configuration file to select the appropriate database based on the environment variable.
+Στη συνέχεια, πρέπει να διασφαλίσουμε ότι όταν εκτελούμε τις δοκιμές μας, χρησιμοποιείται η βάση δεδομένων των δοκιμών. Ένας τρόπος για να το πετύχουμε αυτό είναι να χρησιμοποιήσουμε μια μεταβλητή περιβάλλοντος για να ενημερώσουμε την εφαρμογή ποια βάση δεδομένων να χρησιμοποιήσει. Για να το κάνουμε αυτό, θα τροποποιήσουμε το αρχείο ρυθμίσεων της βάσης δεδομένων ώστε να επιλέγει την κατάλληλη βάση δεδομένων με βάση τη μεταβλητή περιβάλλοντος.
 
-Our `config.ts` file might look like this:
+Το αρχείο μας `config.ts` μπορεί να μοιάζει ως εξής:
 
 ```ts
 const config: IConfig = {
@@ -170,7 +172,8 @@ const config: IConfig = {
 export default config;
 ```
 
-Next, we need to add functionality to read the environment variable and return the appropriate database configuration. This could look like:
+Στη συνέχεια, πρέπει να προσθέσουμε μια λειτουργικότητα για να διαβάζουμε τη μεταβλητή περιβάλλοντος και να επιστρέφουμε την κατάλληλη διαμόρφωση της βάσης δεδομένων. Αυτό θα μπορούσε να μοιάζει με:
+
 
 ```ts
 import mysql2 from "mysql2";
@@ -183,9 +186,9 @@ const db = mysql2.createConnection(dbConfig).promise();
 export default db;
 ```
 
-If TypeScript gives an error about `process.env.NODE_ENV`, we can define an interface for configuration that allows any string key but requires the value to be a database configuration object.
+Αν η TypeScript δώσει σφάλμα για το `process.env.NODE_ENV`, μπορούμε να ορίσουμε μια διασύνδεση για τη διαμόρφωση που επιτρέπει οποιοδήποτε κλειδί συμβολοσειράς αλλά απαιτεί η τιμή να είναι ένα αντικείμενο διαμόρφωσης της βάσης δεδομένων.
 
-### Example Configuration Interface
+### Παράδειγμα Configuration Interface
 
 ```ts
 interface IDatabaseConfig {
@@ -198,7 +201,7 @@ interface IDatabaseConfig {
 }
 ```
 
-It’s also advisable to define an interface for the entire `config.ts` file:
+Είναι επίσης σκόπιμο να ορίσετε μια διεπαφή για ολόκληρο το αρχείο `config.ts`:
 
 ```ts
 interface Config {
@@ -217,7 +220,7 @@ interface Config {
 }
 ```
 
-Next, we need to ensure that tests are executed in the correct environment. One way to do this is by using the `cross-env` module. First, we install `cross-env`:
+Στη συνέχεια, πρέπει να διασφαλίσουμε ότι οι δοκιμές εκτελούνται στο σωστό περιβάλλον. Ένας τρόπος για να γίνει αυτό είναι η χρήση της ενότητας `cross-env`. Πρώτα, εγκαθιστούμε το `cross-env`:
 
 ```bash
 npm install cross-env
@@ -234,18 +237,18 @@ Then we can add the environment variable to our `package.json`:
 }
 ```
 
-Now, when we run `npm test`, the script to create the test database will execute before running the tests.
+Τώρα, όταν εκτελούμε το `npm test`, το σενάριο για τη δημιουργία της δοκιμαστικής βάσης δεδομένων θα εκτελεστεί πριν από την εκτέλεση των δοκιμών.
 
-## Installing Testing Frameworks
+## Εγκαθιστώντας το Testing Frameworks
 
-Next, we need to install the necessary frameworks and type definitions for writing tests. We will install [Mocha](../mocha/README.md), [Supertest](../supertest/README.md), and [Chai](../chai/README.md):
+Στη συνέχεια, πρέπει να εγκαταστήσουμε τα απαραίτητα πλαίσια και τους ορισμούς τύπων για τη συγγραφή δοκιμών. Θα εγκαταστήσουμε τα [Mocha](../mocha/README.md), [Supertest](../supertest/README.md) και [Chai](../chai/README.md):
 
 ```bash
 npm install mocha supertest chai
 npm install -D @types/mocha @types/supertest @types/chai
 ```
 
-Additionally, we need to update the ESLint configuration to avoid warnings about Chai assertions. First, we need to install the `eslint-plugin-chai-friendly` module:
+Επιπλέον, πρέπει να ενημερώσουμε τη ρύθμιση παραμέτρων του ESLint για να αποφύγουμε τις προειδοποιήσεις σχετικά με τους ισχυρισμούς Chai. Πρώτον, πρέπει να εγκαταστήσουμε την ενότητα `eslint-plugin-chai-friendly`:
 
 ```bash
 npm install eslint-plugin-chai-friendly --save-dev
@@ -259,7 +262,7 @@ Add the following line to your ESLint configuration file’s `extends` section:
 }
 ```
 
-### Example ESLint Configuration
+###  Παράδειγμα ESLint Configuration
 
 ```javascript
 module.exports = {
@@ -299,9 +302,10 @@ module.exports = {
 
 ## Writing Tests
 
-With this setup, it’s expected that the tests will be in the `tests` folder at the root of the application, with files ending in `.test.ts`. Thus, we will create the `tests` folder and a `users.test.ts` file for user-related tests.
+Με αυτή τη ρύθμιση, αναμένεται ότι οι δοκιμές θα βρίσκονται στο φάκελο `tests` στη ρίζα της εφαρμογής, με τα αρχεία να τελειώνουν σε `.test.ts`. Έτσι, θα δημιουργήσουμε το φάκελο `tests` και ένα αρχείο `users.test.ts` για τις δοκιμές που σχετίζονται με τους χρήστες.
 
-First, we need to import the relevant testing modules and the app itself:
+Πρώτα, πρέπει να εισάγουμε τις σχετικές ενότητες δοκιμών και την ίδια την εφαρμογή:
+
 
 ```ts
 import request from "supertest";
@@ -310,11 +314,9 @@ import { describe, it } from "mocha";
 import app from "../app";
 ```
 
-The `
+Η ενότητα `request` μας επιτρέπει να κάνουμε αιτήσεις στην εφαρμογή, ενώ η ενότητα `expect` μας επιτρέπει να ορίσουμε διάφορους ισχυρισμούς για να ελέγξουμε αν η εφαρμογή συμπεριφέρεται όπως αναμένεται. Οι ενότητες `describe`και `it` μας επιτρέπουν να ομαδοποιήσουμε και να περιγράψουμε τις δοκιμές μας.
 
-request`module allows us to make requests to the application, while`expect`allows us to define various assertions to check if the application behaves as expected. The`describe`and`it` modules let us group and describe our tests.
-
-Next, we can write a test that checks if creating a user works as expected. We will create an object containing the necessary data for user creation and send this object in the request body:
+Στη συνέχεια, μπορούμε να γράψουμε μια δοκιμή που ελέγχει αν η δημιουργία ενός χρήστη λειτουργεί όπως αναμένεται. Θα δημιουργήσουμε ένα αντικείμενο που θα περιέχει τα απαραίτητα δεδομένα για τη δημιουργία χρήστη και θα στείλουμε αυτό το αντικείμενο στο σώμα της αίτησης:
 
 ```ts
 describe("Users controller", () => {
@@ -331,9 +333,10 @@ describe("Users controller", () => {
 });
 ```
 
-As seen in the example, we use the `describe` and `it` modules to group tests and describe their purpose. We then use the `request` module to send a request to the application with the `newUser` object in the body. Finally, we use `expect` and Chai assertions to check if the response is what we expect.
+Όπως φαίνεται στο παράδειγμα, χρησιμοποιούμε τις ενότητες `describe` και `it` για να ομαδοποιήσουμε τις δοκιμές και να περιγράψουμε το σκοπό τους. Στη συνέχεια χρησιμοποιούμε την ενότητα `request` για να στείλουμε μια αίτηση στην εφαρμογή με το αντικείμενο `newUser` στο σώμα. Τέλος, χρησιμοποιούμε τα `expect` και τους ισχυρισμούς Chai για να ελέγξουμε αν η απάντηση είναι αυτή που περιμένουμε.
 
-When we now run the test with `npm test`, we should see output similar to this:
+Όταν τώρα εκτελέσουμε τη δοκιμή με το `npm test`, θα πρέπει να δούμε έξοδο παρόμοια με αυτή:
+
 
 ```bash
   Users controller
@@ -343,7 +346,8 @@ When we now run the test with `npm test`, we should see output similar to this:
   1 passing (137ms)
 ```
 
-Next, we can check if the user can log in and retrieve some data. For this, we need to send a request to the `POST /login` endpoint to receive the user's token, and then send a request to the `GET /users/:id` endpoint with the token. We can write a test like this:
+Στη συνέχεια, μπορούμε να ελέγξουμε αν ο χρήστης μπορεί να συνδεθεί και να ανακτήσει κάποια δεδομένα. Για το σκοπό αυτό, πρέπει να στείλουμε ένα αίτημα στο τελικό σημείο `POST /login` για να λάβουμε το token του χρήστη και στη συνέχεια να στείλουμε ένα αίτημα στο τελικό σημείο `GET /users/:id` με το token. Μπορούμε να γράψουμε μια δοκιμή ως εξής:
+
 
 ```ts
 let newUserToken: string; // Variable to store the token for future use
@@ -377,7 +381,7 @@ describe("GET /users/:id", () => {
 });
 ```
 
-The complete test file now looks like this:
+Το πλήρες αρχείο δοκιμής μοιάζει τώρα ως εξής:
 
 ```ts
 /* eslint-disable import/no-unresolved */
@@ -438,29 +442,30 @@ describe("Users controller", () => {
 });
 ```
 
-Similarly, we can write tests for other use cases, such as:
+Ομοίως, μπορούμε να γράψουμε δοκιμές για άλλες περιπτώσεις χρήσης, όπως:
 
-- User creation fails when the user already exists.
-- User creation fails when the user data is invalid.
-- User creation fails when the user data is incomplete.
-- Data retrieval fails when the user is not logged in.
-- Data retrieval fails when the user does not exist.
-- Data retrieval fails when the user is not an admin.
+- Η δημιουργία χρήστη αποτυγχάνει όταν ο χρήστης υπάρχει ήδη.
+- Η δημιουργία χρήστη αποτυγχάνει όταν τα δεδομένα του χρήστη είναι άκυρα.
+- Η δημιουργία χρήστη αποτυγχάνει όταν τα δεδομένα χρήστη είναι ελλιπή.
+- Η ανάκτηση δεδομένων αποτυγχάνει όταν ο χρήστης δεν είναι συνδεδεμένος.
+- Η ανάκτηση δεδομένων αποτυγχάνει όταν ο χρήστης δεν υπάρχει.
+- Η ανάκτηση δεδομένων αποτυγχάνει όταν ο χρήστης δεν είναι διαχειριστής.
 - ...
 
-We can also write tests for other endpoints.
+Μπορούμε επίσης να γράψουμε δοκιμές για άλλα τελικά σημεία.
 
-## Generating Coverage Reports
+## Δημιουργία Coverage Reports
 
-Once we have written our tests, it is useful to know how much of our application is covered by the tests. For this, we have several options, but one option is to use the [nyc](https://www.npmjs.com/package/nyc) module.
+Αφού γράψουμε τις δοκιμές μας, είναι χρήσιμο να γνωρίζουμε πόσο μεγάλο μέρος της εφαρμογής μας καλύπτεται από τις δοκιμές. Για το σκοπό αυτό, έχουμε διάφορες επιλογές, αλλά μια επιλογή είναι να χρησιμοποιήσουμε την ενότητα [nyc](https://www.npmjs.com/package/nyc).
 
-To install the `nyc` module:
+Για να εγκαταστήσετε την ενότητα `nyc`:
 
 ```bash
 npm install nyc
 ```
 
-Next, we can add a new script to the `package.json` file:
+Στη συνέχεια, μπορούμε να προσθέσουμε ένα νέο σενάριο στο αρχείο `package.json`:
+
 
 ```json
 {
@@ -472,7 +477,7 @@ Next, we can add a new script to the `package.json` file:
 }
 ```
 
-To see the coverage report, we can run the command `npm run coverage`. This will display a coverage report after the tests have been run, looking something like this:
+Για να δούμε την αναφορά κάλυψης, μπορούμε να εκτελέσουμε την εντολή `npm run coverage`. Αυτό θα εμφανίσει μια αναφορά κάλυψης μετά την εκτέλεση των δοκιμών, η οποία θα μοιάζει κάπως έτσι:
 
 ```bash
 --------------------------|---------|----------|---------|---------|-------------------
@@ -520,5 +525,5 @@ All files                 |    73.6 |    51.78 |   47.27 |   74.71 |
 --------------------------|---------|----------|---------|---------|-------------------
 ```
 
-The report provides a good overview of which files have been tested and to what extent. It also shows which lines are covered by tests and which are not.
+Η έκθεση παρέχει μια καλή επισκόπηση των αρχείων που έχουν δοκιμαστεί και σε ποιο βαθμό. Δείχνει επίσης ποιες γραμμές καλύπτονται από δοκιμές και ποιες όχι.
 
