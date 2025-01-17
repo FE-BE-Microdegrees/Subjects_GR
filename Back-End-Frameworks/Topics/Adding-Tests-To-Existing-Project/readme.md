@@ -226,7 +226,8 @@ interface Config {
 npm install cross-env
 ```
 
-Then we can add the environment variable to our `package.json`:
+Στη συνέχεια, μπορούμε να προσθέσουμε τη μεταβλητή περιβάλλοντος στο αρχείο `package.json`:
+
 
 ```json
 {
@@ -254,7 +255,7 @@ npm install -D @types/mocha @types/supertest @types/chai
 npm install eslint-plugin-chai-friendly --save-dev
 ```
 
-Add the following line to your ESLint configuration file’s `extends` section:
+Προσθέστε την ακόλουθη γραμμή στην ενότητα `extends` του αρχείου ρυθμίσεων ESLint:
 
 ```json
 {
