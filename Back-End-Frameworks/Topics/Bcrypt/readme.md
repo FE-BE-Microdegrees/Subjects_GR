@@ -1,40 +1,38 @@
 # Bcrypt
 
-In this section, we will discuss `bcrypt`, which is a hashing function primarily used for hashing passwords.
+Σε αυτή την ενότητα, θα συζητήσουμε την `bcrypt`, η οποία είναι μια συνάρτηση κατακερματισμού που χρησιμοποιείται κυρίως για τον κατακερματισμό κωδικών πρόσβασης.
 
+## Μαθησιακά αποτελέσματα
 
+Στο τέλος αυτής της ενότητας, οι μαθητές θα πρέπει να είναι σε θέση:
 
-## Learning Outcomes
+- Να εξηγήσουν τι είναι το `bcrypt` και πώς να το χρησιμοποιούν.
+- Να αναφέρουν τα πλεονεκτήματα της χρήσης του `bcrypt`.
+- Να εφαρμόζουν το `bcrypt` για κατακερματισμό και σύγκριση κωδικών πρόσβασης.
 
-By the end of this section, students should be able to:
+## Τι είναι η Bcrypt;
 
-- Explain what `bcrypt` is and how to use it.
-- List the advantages of using `bcrypt`.
-- Implement `bcrypt` for hashing and comparing passwords.
+Η `Bcrypt` είναι μια συνάρτηση κατακερματισμού που χρησιμοποιείται κυρίως για τον κατακερματισμό κωδικών πρόσβασης. Ο κατακερματισμός είναι η διαδικασία μετατροπής μιας τιμής εισόδου (π.χ. ενός κωδικού πρόσβασης) σε μια έξοδο σταθερού μήκους, γνωστή ως τιμή κατακερματισμού. Η τιμή κατακερματισμού είναι μοναδική και δεν μπορεί να επανέλθει στην αρχική είσοδο. Η κατακερματισμός χρησιμοποιείται συνήθως για τη διασφάλιση της ασφάλειας των δεδομένων, καθώς είναι μοναδική και μη αναστρέψιμη.
 
-## What is Bcrypt?
+Ο κατακερματισμός συγχέεται συχνά με την κρυπτογράφηση, αλλά πρόκειται για δύο διαφορετικές διαδικασίες. Η κρυπτογράφηση είναι η διαδικασία μετατροπής μιας τιμής εισόδου σε μια κρυπτογραφημένη έξοδο χρησιμοποιώντας ένα κρυπτογραφικό κλειδί, η οποία μπορεί στη συνέχεια να αποκρυπτογραφηθεί πίσω στην αρχική είσοδο. Αντίθετα, μια κατακερματισμένη τιμή δεν μπορεί να μετατραπεί πίσω στην αρχική είσοδο, γεγονός που την καθιστά πιο ασφαλή για την αποθήκευση ευαίσθητων δεδομένων.
 
-`Bcrypt` is a hashing function used primarily for hashing passwords. Hashing is the process of transforming an input value (e.g., a password) into a fixed-length output known as a hash value. The hash value is unique and cannot be reverted to the original input. Hashing is commonly used to ensure data security, as it is unique and irreversible.
+## Πλεονεκτήματα του Bcrypt
 
-Hashing is often confused with encryption, but they are two different processes. Encryption is the process of transforming an input value into an encrypted output using a cryptographic key, which can then be decrypted back to the original input. In contrast, a hashed value cannot be converted back to the original input, making it more secure for storing sensitive data.
+- **Ασφάλεια**: Σε αντίθεση με πολλές άλλες συναρτήσεις κατακερματισμού, η `bcrypt` έχει σχεδιαστεί για να είναι αργή, καθιστώντας έτσι πιο δύσκολο για τους επιτιθέμενους να παραβιάσουν τους κωδικούς πρόσβασης. Η βραδύτητα μπορεί να ρυθμιστεί αυξάνοντας ή μειώνοντας τον αριθμό των salt rounds.
 
-## Advantages of Bcrypt
+- **Salting**: Το `Bcrypt` περιλαμβάνει αυτόματα μια λειτουργία salting. Το salting σημαίνει την προσθήκη τυχαίων δεδομένων σε έναν κωδικό πρόσβασης πριν από τον κατακερματισμό του, ώστε να αποφευχθούν διπλές τιμές κατακερματισμού για τους ίδιους κωδικούς πρόσβασης και να γίνει πιο δύσκολο για τους επιτιθέμενους που χρησιμοποιούν προ-υπολογισμένους πίνακες κατακερματισμού (γνωστούς ως « rainbow tables »).
+- 
+## Χρήση του Bcrypt
 
-- **Security**: Unlike many other hashing functions, `bcrypt` is designed to be slow, making it more difficult for attackers to brute-force passwords. The slowness can be adjusted by increasing or decreasing the number of salt rounds.
+Κατά την εφαρμογή του bcrypt σε ένα API, η ροή εργασίας περιλαμβάνει γενικά τον κατακερματισμό του κωδικού πρόσβασης πριν από την αποθήκευση στη βάση δεδομένων και στη συνέχεια τη σύγκριση του κατακερματισμένου κωδικού πρόσβασης κατά τη διάρκεια της σύνδεσης του χρήστη.
 
-- **Salting**: `Bcrypt` automatically includes a salting feature. Salting means adding random data to a password before hashing it to prevent duplicate hash values for the same passwords and make it more difficult for attackers using precomputed hash tables (known as "rainbow tables").
-
-## Using Bcrypt
-
-When implementing bcrypt in an API, the workflow generally involves hashing the password before storing it in the database and then comparing the hashed password during user login.
-
-To install `bcrypt`, use the command:
+Για να εγκαταστήσετε το `bcrypt`, χρησιμοποιήστε την εντολή:
 
 ```bash
 npm install bcrypt
 ```
 
-A sample hashing service might look like this:
+Ένα δείγμα υπηρεσίας κατακερματισμού μπορεί να μοιάζει ως εξής:
 
 ```javascript
 // Import bcrypt
@@ -60,9 +58,9 @@ const hashService = {
 module.exports = hashService;
 ```
 
-Now we can use this service when creating, updating, or logging in users.
+Τώρα μπορούμε να χρησιμοποιήσουμε αυτή την υπηρεσία κατά τη δημιουργία, την ενημέρωση ή τη σύνδεση χρηστών.
 
-Hashing a password during user creation might look like this:
+Το κρυπτογράφημα ενός κωδικού πρόσβασης κατά τη δημιουργία ενός χρήστη μπορεί να μοιάζει ως εξής:
 
 ```javascript
 createUser: async (newUser) => {
@@ -79,7 +77,8 @@ createUser: async (newUser) => {
 },
 ```
 
-User login and password comparison might look like this:
+Η σύγκριση σύνδεσης χρήστη και κωδικού πρόσβασης μπορεί να μοιάζει ως εξής:
+
 
 ```javascript
 login: async (email, password) => {
@@ -100,11 +99,11 @@ login: async (email, password) => {
 },
 ```
 
-## Summary
+## Περίληψη
 
-`Bcrypt` is a secure hashing function that can be used for hashing and comparing passwords. Its slowness and automatic salting make it more secure than other hashing functions. Using `bcrypt` helps protect user passwords and ensure their privacy in web applications.
+Το `Bcrypt` είναι μια ασφαλής συνάρτηση κατακερματισμού που μπορεί να χρησιμοποιηθεί για κατακερματισμό και σύγκριση κωδικών πρόσβασης. Η βραδύτητά της και το αυτόματο salting την καθιστούν πιο ασφαλή από άλλες συναρτήσεις κατακερματισμού. Η χρήση του `bcrypt` βοηθά στην προστασία των κωδικών πρόσβασης των χρηστών και διασφαλίζει το απόρρητό τους σε εφαρμογές ιστού.
 
-## Sources
+## Πηγές
 
 - [Bcrypt npm page](https://www.npmjs.com/package/bcrypt)
 - [Wikipedia](https://en.wikipedia.org/wiki/Bcrypt#:~:text=The%20bcrypt%20function%20is%20the,Ruby%2C%20python%20and%20other%20languages.)
