@@ -1,55 +1,55 @@
 # Αυθεντικοποίηση και Eξουσιοδότηση (Authentication and Authorization)
 
-In this section, we will discuss the concepts and processes of authentication and authorization. Authentication is the process by which a user verifies their identity in a system, while authorization determines what actions a user is allowed to perform.
+Σε αυτή την ενότητα, θα συζητήσουμε τις έννοιες και τις διαδικασίες της αυθεντικοποίησης και της εξουσιοδότησης. Η αυθεντικοποίηση είναι η διαδικασία με την οποία ένας χρήστης επαληθεύει την ταυτότητά του σε ένα σύστημα, ενώ η εξουσιοδότηση καθορίζει ποιες ενέργειες επιτρέπεται να εκτελεί ένας χρήστης.
 
 ![Auth](Auth.webp)
 
 Image source: Dall-E by OpenAI
 
 - [Αυθεντικοποίηση και Eξουσιοδότηση (Authentication and Authorization)](#Αυθεντικοποίηση-και-Eξουσιοδότηση (Authentication and Authorization))
-  - [Learning Outcomes](#learning-outcomes)
-  - [Authentication](#authentication)
-  - [Authorization](#authorization)
-  - [General Overview of Authentication and Authorization](#general-overview-of-authentication-and-authorization)
-  - [Authentication and Authorization Process in Front-End Applications](#authentication-and-authorization-process-in-front-end-applications)
-  - [Authentication and Authorization Process in Back-End Applications](#authentication-and-authorization-process-in-back-end-applications)
+  - [Μαθησιακά αποτελέσματα](#Μαθησιακά-αποτελέσματα)
+  - [Αυθεντικοποίηση (Authentication)](#Αυθεντικοποίηση (Authentication))
+  - [Εξουσιοδότηση (Authorization)](#Εξουσιοδότηση (Authorization))
+  - [Γενική επισκόπηση της αυθεντικοποίησης και εξουσιοδότησης](#Γενική-επισκόπηση-της-αυθεντικοποίησης-και-εξουσιοδότηση)
+  - [Διαδικασία ελέγχου ταυτότητας και εξουσιοδότησης σε εφαρμογές Front-End](#Διαδικασία-ελέγχου-ταυτότητας-και-εξουσιοδότησης-σε-εφαρμογές-Front--End)
+  - [Διαδικασία ελέγχου ταυτότητας και εξουσιοδότησης σε εφαρμογές Back-End](#Διαδικασία-ελέγχου-ταυτότητας-και-εξουσιοδότησης-σε-εφαρμογές-Back--End)
 
-## Learning Outcomes
+## Μαθησιακά αποτελέσματα
 
-By the end of this section, students should be able to:
+Στο τέλος αυτής της ενότητας, οι μαθητές θα πρέπει να είναι σε θέση να:
 
-- Explain the concepts of authentication and authorization.
-- Describe the processes of authentication and authorization.
+- Να εξηγούν τις έννοιες της αυθεντικοποίησης και της εξουσιοδότησης.
+- Να περιγράφουν τις διαδικασίες αυθεντικοποίησης και εξουσιοδότησης.
 
-## Authentication
+## Αυθεντικοποίηση (Authentication)
 
-Authentication is the process by which one entity (user, system, or object) verifies the identity of another entity, typically based on some type of credentials:
+Αυθεντικοποίηση είναι η διαδικασία με την οποία μια οντότητα (χρήστης, σύστημα ή αντικείμενο) επαληθεύει την ταυτότητα μιας άλλης οντότητας, συνήθως βάσει κάποιου τύπου διαπιστευτηρίων:
 
-- Something you know (e.g., password, PIN, CAPTCHA, security question);
-- Something you have (e.g., ID card, bank card, phone number, email, hardware token, password card, certificate);
-- Something you are (e.g., fingerprint, facial recognition, iris structure).
+- Κάτι που γνωρίζετε (π.χ. κωδικός πρόσβασης, PIN, CAPTCHA, ερώτηση ασφαλείας),
+- Κάτι που έχετε (π.χ. ταυτότητα, τραπεζική κάρτα, αριθμός τηλεφώνου, ηλεκτρονικό ταχυδρομείο, κουπόνι υλικού, κάρτα κωδικού πρόσβασης, πιστοποιητικό),
+- Κάτι που είστε (π.χ. δακτυλικό αποτύπωμα, αναγνώριση προσώπου, δομή ίριδας).
 
-## Authorization
+## Εξουσιοδότηση (Authorization)
 
-Authorization is the process that grants (or denies) access to (network) resources. For example, most e-commerce security systems rely on a two-step process. First, authentication checks whether the user is indeed who they claim to be, followed by authorization, which allows the user to access designated resources.
+Η εξουσιοδότηση είναι η διαδικασία που χορηγεί (ή αρνείται) την πρόσβαση σε πόρους (δικτύου). Για παράδειγμα, τα περισσότερα συστήματα ασφαλείας ηλεκτρονικού εμπορίου βασίζονται σε μια διαδικασία δύο βημάτων. Αρχικά, η αυθεντικοποίηση ελέγχει αν ο χρήστης είναι όντως αυτός που ισχυρίζεται ότι είναι, και ακολουθεί η εξουσιοδότηση, η οποία επιτρέπει στον χρήστη να έχει πρόσβαση σε καθορισμένους πόρους.
 
 [Source](https://sisu.ut.ee/autentimine/m%C3%B5isted)
 
-## General Overview of Authentication and Authorization
+## Γενική επισκόπηση της αυθεντικοποίησης και εξουσιοδότησης
 
-When we have an application or API with different users, we likely need to assign different roles to those users. For instance, an API might need a separate administrator role to make changes to user data or other system settings that an average user should not access.
+Όταν έχουμε μια εφαρμογή ή ένα API με διαφορετικούς χρήστες, είναι πιθανό να χρειαστεί να αναθέσουμε διαφορετικούς ρόλους σε αυτούς τους χρήστες. Για παράδειγμα, ένα API μπορεί να χρειάζεται έναν ξεχωριστό ρόλο διαχειριστή για να πραγματοποιεί αλλαγές στα δεδομένα των χρηστών ή σε άλλες ρυθμίσεις του συστήματος στις οποίες ένας μέσος χρήστης δεν πρέπει να έχει πρόσβαση.
 
-The user authentication process typically follows these steps:
+Η διαδικασία ελέγχου ταυτότητας χρήστη ακολουθεί συνήθως τα εξής βήματα:
 
-1. The user submits their authentication credentials (e.g., username and password) to the server.
-2. The server checks if the provided username and password are correct.
-3. The server also verifies the user's permissions (e.g., user, admin).
-4. If authentication is successful, the server generates a token for the user, which is sent back to the client for future authentication. The token typically includes the user identifier, user role or permissions, and an expiration time.
-5. The user sends the token with each subsequent request, allowing the server to identify the user and their permissions.
-6. The server verifies the token and decides if the user has the right to make the requested action.
-7. If the user has the right, the request is processed accordingly.
-8. If the user does not have the right, the request returns an appropriate error message or status.
-9. The authentication token expires after a certain period, and the user must re-authenticate to receive a new token.
+1. Ο χρήστης υποβάλλει στον διακομιστή τα διαπιστευτήρια πιστοποίησής του (π.χ. όνομα χρήστη και κωδικό πρόσβασης).
+2. Ο διακομιστής ελέγχει αν το όνομα χρήστη και ο κωδικός πρόσβασης που παρέχονται είναι σωστά.
+3. Ο διακομιστής ελέγχει επίσης τα δικαιώματα του χρήστη (π.χ. χρήστης, διαχειριστής).
+4. Εάν ο έλεγχος ταυτότητας είναι επιτυχής, ο διακομιστής δημιουργεί ένα token για τον χρήστη, το οποίο αποστέλλεται πίσω στον πελάτη για μελλοντικό έλεγχο ταυτότητας. Το token τυπικά περιλαμβάνει το αναγνωριστικό χρήστη, το ρόλο ή τα δικαιώματα του χρήστη και έναν χρόνο λήξης.
+5. Ο χρήστης στέλνει το token με κάθε επόμενη αίτηση, επιτρέποντας στον διακομιστή να αναγνωρίζει τον χρήστη και τα δικαιώματά του.
+6. Ο διακομιστής επαληθεύει το token και αποφασίζει αν ο χρήστης έχει το δικαίωμα να προβεί στη ζητούμενη ενέργεια.
+7. Εάν ο χρήστης έχει το δικαίωμα, το αίτημα επεξεργάζεται αναλόγως.
+8. Εάν ο χρήστης δεν έχει το δικαίωμα, η αίτηση επιστρέφει ένα κατάλληλο μήνυμα σφάλματος ή κατάσταση.
+9. Το κουπόνι ελέγχου ταυτότητας λήγει μετά από ένα ορισμένο χρονικό διάστημα και ο χρήστης πρέπει να πραγματοποιήσει εκ νέου έλεγχο ταυτότητας για να λάβει ένα νέο κουπόνι.
 
 ```mermaid
 sequenceDiagram
@@ -65,20 +65,20 @@ sequenceDiagram
     Server->>Client: Return response
 ```
 
-## Authentication and Authorization Process in Front-End Applications
+## Διαδικασία ελέγχου ταυτότητας και εξουσιοδότησης σε εφαρμογές Front-End
 
-From the front-end perspective, we need to provide the user with a way to enter their username and password (or another authentication method) and then send this data to the server. If authentication is successful, the server sends back an authentication token, which must be stored and sent with each request.
+Από τη σκοπιά του front-end, πρέπει να παρέχουμε στο χρήστη έναν τρόπο να εισάγει το όνομα χρήστη και τον κωδικό πρόσβασής του (ή άλλη μέθοδο ελέγχου ταυτότητας) και στη συνέχεια να στείλουμε αυτά τα δεδομένα στο διακομιστή. Εάν ο έλεγχος ταυτότητας είναι επιτυχής, ο διακομιστής στέλνει πίσω ένα διακριτικό ελέγχου ταυτότητας, το οποίο πρέπει να αποθηκεύεται και να αποστέλλεται με κάθε αίτηση.
 
-For example, the token is typically stored in the user's browser's `localStorage` or `sessionStorage` object. When the user closes the browser or tab, the `sessionStorage` object is cleared, but the `localStorage` object remains even when the browser is closed and reopened.
+Για παράδειγμα, το token αποθηκεύεται συνήθως στο αντικείμενο `localStorage` ή `sessionStorage` του προγράμματος περιήγησης του χρήστη. Όταν ο χρήστης κλείνει το πρόγραμμα περιήγησης ή την καρτέλα, το αντικείμενο `sessionStorage` διαγράφεται, αλλά το αντικείμενο `localStorage` παραμένει ακόμη και όταν το πρόγραμμα περιήγησης κλείνει και ανοίγει ξανά.
 
-## Authentication and Authorization Process in Back-End Applications
+## Διαδικασία ελέγχου ταυτότητας και εξουσιοδότησης σε εφαρμογές Back-End
 
-From the back-end perspective, we need to create server-side functionality to receive user authentication credentials, verify them, and generate an authentication token. The server must also be able to check the token sent with each request and decide if the user has the right to perform the requested action.
+Από τη σκοπιά του back-end, πρέπει να δημιουργήσουμε μια λειτουργικότητα στην πλευρά του διακομιστή για να λαμβάνουμε τα διαπιστευτήρια πιστοποίησης ταυτότητας του χρήστη, να τα επαληθεύουμε και να δημιουργούμε ένα διακριτικό ελέγχου ταυτότητας. Ο διακομιστής πρέπει επίσης να είναι σε θέση να ελέγχει το token που αποστέλλεται με κάθε αίτηση και να αποφασίζει αν ο χρήστης έχει το δικαίωμα να εκτελέσει τη ζητούμενη ενέργεια.
 
-In this course, we will use the `JWT` (JSON Web Token) technology for generating and verifying tokens. JWT is a standard that defines a compact and self-contained way to securely transmit information as a JSON object.
+Σε αυτό το μάθημα, θα χρησιμοποιήσουμε την τεχνολογία `JWT` (JSON Web Token) για τη δημιουργία και την επαλήθευση μαρκών. Το JWT είναι ένα πρότυπο που ορίζει έναν συμπαγή και αυτόνομο τρόπο ασφαλούς μετάδοσης πληροφοριών ως αντικείμενο JSON.
 
-When generating the JWT, a secret key is used, which is kept only on the server side and is used to sign the token. Once signed, the token cannot be modified without altering the signature, ensuring the token's authenticity.
+Κατά τη δημιουργία του JWT, χρησιμοποιείται ένα μυστικό κλειδί, το οποίο διατηρείται μόνο στην πλευρά του διακομιστή και χρησιμοποιείται για την υπογραφή του token. Μόλις υπογραφεί, το token δεν μπορεί να τροποποιηθεί χωρίς να τροποποιηθεί η υπογραφή, εξασφαλίζοντας την αυθεντικότητα του token.
 
-To verify the token, we use the same secret key to decode the token and check if it is valid and the user is authenticated.
+Για να επαληθεύσουμε το token, χρησιμοποιούμε το ίδιο μυστικό κλειδί για να αποκωδικοποιήσουμε το token και να ελέγξουμε αν είναι έγκυρο και αν ο χρήστης έχει πιστοποιηθεί.
 
-We implement the token verification using a middleware function that checks each request and decides whether the user has the right to perform the requested action. This function can be applied to any routes where we want to enforce authentication and authorization.
+Υλοποιούμε την επαλήθευση του token χρησιμοποιώντας μια λειτουργία ενδιάμεσου λογισμικού που ελέγχει κάθε αίτηση και αποφασίζει αν ο χρήστης έχει το δικαίωμα να εκτελέσει τη ζητούμενη ενέργεια. Αυτή η συνάρτηση μπορεί να εφαρμοστεί σε οποιεσδήποτε διαδρομές όπου θέλουμε να επιβάλλουμε την αυθεντικοποίηση και την εξουσιοδότηση.
