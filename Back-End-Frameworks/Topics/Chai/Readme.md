@@ -25,7 +25,7 @@ Image source: Dall-E by OpenAI
     - [1. Στυλ Assert](#1-Στυλ-Assert)
     - [2. Expect Style](#2-expect-style)
     - [3. Should Style](#3-should-style)
-  - [Επέκταση του Chai](#Επέκταση-του-Chai)
+  - [Επεκτείνοντας το Chai](#Επεκτείνοντας-το-Chai)
     - [Παράδειγμα: Chai-as-Promised](#Παράδειγμα-chai-as-promised)
       - [Εγκατάσταση](#Εγκατάσταση)
       - [Χρήση](#Χρήση)
@@ -191,21 +191,21 @@ chai.should();
 sum(1, 2).should.equal(3, "sum of 1 and 2 should be 3");
 ```
 
-## Extending Chai
+## Επεκτείνοντας το Chai
 
 Chai can be extended with plugins to add additional functionality.
 
-### Example: Chai-as-Promised
+###  Παράδειγμα:  Chai-as-Promised
 
-Chai-as-Promised is a plugin that allows you to test promises.
+Το Chai-as-Promised είναι ένα πρόσθετο που σας επιτρέπει να δοκιμάζετε υποσχέσεις.
 
-#### Installation
+#### Εγκατάσταση
 
 ```bash
 npm install --save-dev chai-as-promised
 ```
 
-#### Usage
+#### Χρήση
 
 ```javascript
 const chai = require("chai");
