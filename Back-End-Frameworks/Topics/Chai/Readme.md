@@ -151,9 +151,9 @@ describe("Sum Function", function () {
 });
 ```
 
-### Running Tests
+### Εκτέλεση Tests
 
-Run the tests using the Mocha command line.
+Εκτελέστε τις δοκιμές χρησιμοποιώντας τη γραμμή εντολών της Mocha.
 
 ```bash
 npm test
