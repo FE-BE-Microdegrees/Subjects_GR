@@ -18,7 +18,7 @@ Image source: Dall-E by OpenAI
     - [Παράδειγμα: TDD Style Test](#Παράδειγμα-:-TDD-Style-Test)
       - [`sum.js` - Η συνάρτηση που δοκιμάζουμε](#sum.js---Η-συνάρτηση-που-δοκιμάζουμε)
       - [`test/sum.test.test.js` - Δοκιμή Mocha με Chai](#test/sum.test.test.js---Δοκιμή-Mocha-με-Chai)
-    - [Example: Simple BDD Style Test](#example-simple-bdd-style-test)
+    - [Παράδειγμα: BDD Style Test](#Παράδειγμα-:-BDD-Style-Test)
       - [`test/sum.test.js` - Mocha Test with Chai](#testsumtestjs---mocha-test-with-chai-1)
     - [Running Tests](#running-tests)
   - [Chai Assertion Styles](#chai-assertion-styles)
