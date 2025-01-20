@@ -161,9 +161,10 @@ npm test
 
 ## Chai Assertion Styles
 
-Chai supports three different assertion styles: Assert, Expect, and Should.
+Το Chai υποστηρίζει τρία διαφορετικά στυλ ισχυρισμού: Assert, Expect και Should.
 
-### 1. Assert Style
+
+### 1.Στυλ Assert
 
 ```javascript
 const chai = require("chai");
