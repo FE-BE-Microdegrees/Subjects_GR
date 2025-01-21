@@ -1,14 +1,14 @@
-# Deploying an Express API to Production: A Tutorial
+# Ανάπτυξη ενός API Express στην παραγωγή: Εκπαιδευτικό υλικό
 
-Deploying an API to production is a complex process requiring careful planning and adherence to best practices. To deploy an Express API, considerations include server selection, application configuration, security, load balancing, and monitoring. This guide provides a step-by-step approach to deploying an Express API to production using Node.js and popular tools.
+Η ανάπτυξη ενός API στην παραγωγή είναι μια πολύπλοκη διαδικασία που απαιτεί προσεκτικό σχεδιασμό και τήρηση βέλτιστων πρακτικών. Για την ανάπτυξη ενός API Express, οι εκτιμήσεις περιλαμβάνουν την επιλογή του διακομιστή, τη διαμόρφωση της εφαρμογής, την ασφάλεια, την εξισορρόπηση φορτίου και την παρακολούθηση. Αυτός ο οδηγός παρέχει μια βήμα προς βήμα προσέγγιση για την ανάπτυξη ενός Express API στην παραγωγή με χρήση του Node.js και δημοφιλών εργαλείων.
 
-- [Deploying an Express API to Production: A Tutorial](#deploying-an-express-api-to-production-a-tutorial)
-  - [Learning Outcomes](#learning-outcomes)
-  - [1. Server Selection and Setup](#1-server-selection-and-setup)
-    - [Popular Server Options](#popular-server-options)
-    - [Example: Setting Up a VPS](#example-setting-up-a-vps)
-  - [2. Configuring the Application for Production](#2-configuring-the-application-for-production)
-    - [Using Environment Variables](#using-environment-variables)
+- [Ανάπτυξη ενός API Express στην παραγωγή: Εκπαιδευτικό υλικό](#Ανάπτυξη-ενός-API-Express-στην-παραγωγή-:-Εκπαιδευτικό-υλικό)
+  - [Μαθησιακά αποτελέσματα](#Μαθησιακά-αποτελέσματα)
+  - [1. Επιλογή και εγκατάσταση διακομιστή](#1-Επιλογή-και-εγκατάσταση-διακομιστή)
+    - [Δημοφιλείς επιλογές διακομιστή](#Δημοφιλείς-επιλογές-διακομιστή)
+    - [Παράδειγμα: Ρύθμιση ενός VPS](#Παράδειγμα-:-Ρύθμιση-ενός-VPS)
+  - [2. Διαμόρφωση της εφαρμογής για παραγωγή](#2-Διαμόρφωση-της-εφαρμογής-για-παραγωγή)
+    - [Χρήση μεταβλητών Environment](#Χρήση-μεταβλητών-Environment)
     - [Optimizing for Production](#optimizing-for-production)
   - [3. Load Balancing and Clustering](#3-load-balancing-and-clustering)
     - [Load Balancing](#load-balancing)
