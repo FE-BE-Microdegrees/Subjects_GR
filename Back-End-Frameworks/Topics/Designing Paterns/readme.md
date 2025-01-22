@@ -52,22 +52,22 @@
 - **Command**: Ενθυλακώνει μια αίτηση ως αντικείμενο, επιτρέποντας την παραμετροποίηση και την αναμονή αιτήσεων σε ουρά.
 - **Observer**: Ορίζει μια εξάρτηση ένα προς πολλά, έτσι ώστε όταν ένα αντικείμενο αλλάζει κατάσταση, να ειδοποιούνται όλα τα εξαρτώμενά του.
 - **Strategy**: Ορίζει μια οικογένεια αλγορίθμων και τους καθιστά εναλλάξιμους.
-- **Template Method**: Defines the skeleton of an algorithm in a method, deferring some steps to subclasses.
-- **Interpreter**: Provides a way to evaluate language grammar or expressions.
-- **Iterator**: Provides a way to access elements of a collection sequentially without exposing the underlying representation.
-- **Mediator**: Centralizes complex communications and controls interactions between objects.
-- **Memento**: Captures and restores an object's internal state without violating encapsulation.
-- **State**: Allows an object to alter its behavior when its internal state changes.
-- **Visitor**: Adds new operations to existing object structures without modifying them.
-- **Chain of Responsibility**: Passes requests along a chain of handlers, allowing each to process or pass the request further.
+- **Template Method**: Ορίζει το σκελετό ενός αλγορίθμου σε μια μέθοδο, αναθέτοντας ορισμένα βήματα σε υποκλάσεις.
+- **Interpreter**: Παρέχει έναν τρόπο αξιολόγησης της γραμματικής της γλώσσας ή των εκφράσεων.
+- **Iterator**: Παρέχει έναν τρόπο πρόσβασης στα στοιχεία μιας συλλογής διαδοχικά χωρίς να αποκαλύπτεται η υποκείμενη αναπαράσταση.
+- **Mediator**: Συγκεντρώνει πολύπλοκες επικοινωνίες και ελέγχει τις αλληλεπιδράσεις μεταξύ αντικειμένων.
+- **Memento**: Συλλαμβάνει και επαναφέρει την εσωτερική κατάσταση ενός αντικειμένου χωρίς να παραβιάζει την ενθυλάκωση.
+- **State**: Επιτρέπει σε ένα αντικείμενο να αλλάζει τη συμπεριφορά του όταν αλλάζει η εσωτερική του κατάσταση.
+- **Visitor**: Προσθέτει νέες λειτουργίες στις υπάρχουσες δομές αντικειμένων χωρίς να τις τροποποιεί.
+- **Chain of Responsibility**: Διαβιβάζει τις αιτήσεις σε μια αλυσίδα χειριστών, επιτρέποντας σε κάθε έναν από αυτούς να επεξεργαστεί ή να διαβιβάσει την αίτηση περαιτέρω.
 
 ---
 
-## Why Are Design Patterns Important?
+## Γιατί είναι σημαντικά τα Design Patterns;
 
-- **Proven Solutions**: They provide tried and tested solutions, reducing the time spent on solving common problems.
-- **Improved Code Quality**: Help developers write cleaner, modular, and more extensible code.
-- **Facilitate Communication**: Design patterns establish a common vocabulary for developers, simplifying discussions around architecture.
-- **Avoid Common Pitfalls**: By adhering to established practices, developers can avoid common errors and inefficiencies.
+- **Αποδεδειγμένες λύσεις**: Παρέχουν δοκιμασμένες και ελεγμένες λύσεις, μειώνοντας τον χρόνο που δαπανάται για την επίλυση κοινών προβλημάτων.
+- **Βελτιωμένη ποιότητα κώδικα**: Βοηθήστε τους προγραμματιστές να γράφουν καθαρότερο, αρθρωτό και πιο επεκτάσιμο κώδικα.
+- **Διευκόλυνση της επικοινωνίας**: Τα πρότυπα σχεδίασης δημιουργούν ένα κοινό λεξιλόγιο για τους προγραμματιστές, απλοποιώντας τις συζητήσεις γύρω από την αρχιτεκτονική.
+- **Αποφυγή κοινών παγίδων**:Τηρώντας τις καθιερωμένες πρακτικές, οι προγραμματιστές μπορούν να αποφύγουν τα συνήθη σφάλματα και τις αναποτελεσματικότητες.
 
-Design patterns are essential tools for software developers seeking to create robust, maintainable, and scalable systems. Familiarity with these patterns enables you to approach complex problems with confidence and ensures your solutions align with industry standards.
+Τα πρότυπα σχεδίασης είναι βασικά εργαλεία για τους προγραμματιστές λογισμικού που επιδιώκουν να δημιουργήσουν ισχυρά, συντηρήσιμα και επεκτάσιμα συστήματα. Η εξοικείωση με αυτά τα πρότυπα σας επιτρέπει να προσεγγίζετε σύνθετα προβλήματα με αυτοπεποίθηση και διασφαλίζει ότι οι λύσεις σας ευθυγραμμίζονται με τα πρότυπα του κλάδου.
