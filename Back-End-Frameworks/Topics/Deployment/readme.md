@@ -9,28 +9,27 @@
     - [Παράδειγμα: Ρύθμιση ενός VPS](#Παράδειγμα--:--Ρύθμιση-ενός-VPS)
   - [2. Διαμόρφωση της εφαρμογής για παραγωγή](#2-Διαμόρφωση-της-εφαρμογής-για-παραγωγή)
     - [Χρήση μεταβλητών Environment](#Χρήση-μεταβλητών-Environment)
-    - [Optimizing for Production](#optimizing-for-production)
-  - [3. Load Balancing and Clustering](#3-load-balancing-and-clustering)
-    - [Load Balancing](#load-balancing)
-    - [Using Clusters](#using-clusters)
-  - [4. Monitoring and Logging](#4-monitoring-and-logging)
-    - [Application Monitoring](#application-monitoring)
+    - [Βελτιστοποίηση για παραγωγή](#Βελτιστοποίηση-για-παραγωγή)
+  - [3. Εξισορρόπηση φορτίου και ομαδοποίηση](#3-Εξισορρόπηση-φορτίου-και-ομαδοποίηση)
+    - [Εξισορρόπηση φορτίου](#Εξισορρόπηση-φορτίου)
+    - [Χρήση των Clusters](#Χρήση-των-Clusters)
+  - [4. Παρακολούθηση και καταγραφή](#4-Παρακολούθηση-και-καταγραφή)
+    - [Παρακολούθηση της εφαρμογής](#Παρακολούθηση-της-εφαρμογής)
     - [Logging](#logging)
-  - [5. Security](#5-security)
-    - [SSL Certificates](#ssl-certificates)
-    - [Security Best Practices](#security-best-practices)
+  - [5. Ασφάλεια](#5-Ασφάλεια)
+    - [Πιστοποιητικά SSL](#Πιστοποιητικά-SSL)
+    - [Βέλτιστες πρακτικές ασφάλειας](#Βέλτιστες-πρακτικές-ασφάλειας)
 
-## Learning Outcomes
+## Μαθησιακά αποτελέσματα
 
-By the end of this tutorial, learners will be able to:
+Στο τέλος αυτού του σεμιναρίου, οι εκπαιδευόμενοι θα είναι σε θέση να:
 
-- Choose a suitable server and set up an Express API for production.
-- Configure the application for a production environment.
-- Apply best practices to ensure security and optimize performance.
-- Set up load balancing and application monitoring.
+- Να επιλέξουν έναν κατάλληλο διακομιστή και να ρυθμίσουν ένα Express API για παραγωγή.
+- Να διαμορφώνουν την εφαρμογή για ένα περιβάλλον παραγωγής.
+- Να εφαρμόζουν βέλτιστες πρακτικές για να διασφαλίζουν την ασφάλεια και να βελτιστοποιούν την απόδοση.
+- Να ρυθμίζουν την εξισορρόπηση φορτίου και την παρακολούθηση της εφαρμογής.
 
-
-## 1. Server Selection and Setup
+## 1. Επιλογή και εγκατάσταση διακομιστή (Server Selection and Setup)
 
 The first step is to select an appropriate server to host your Express API. Here are popular options:
 
