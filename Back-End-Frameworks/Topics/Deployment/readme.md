@@ -99,18 +99,18 @@
 Αυτό εξασφαλίζει την αυτόματη επανεκκίνηση της εφαρμογής σας σε περίπτωση επανεκκίνησης του διακομιστή.
 
 
-## 2. Configuring the Application for Production
+## 2. Διαμόρφωση της εφαρμογής για παραγωγή
 
-### Using Environment Variables
+### Χρήση μεταβλητών Environment
 
-Use environment variables for production configuration.
+Χρησιμοποιήστε μεταβλητές περιβάλλοντος για τις ρυθμίσεις παραγωγής.
 
 Install dotenv:
 ```bash
 npm install dotenv
 ```
 
-Create a .env file:
+Δημιουργήστε ένα αρχείο .env:
 
 ```plaintext
 PORT=3000
@@ -119,7 +119,7 @@ DB_USER=root
 DB_PASS=s1mpl3
 ```
 
-Access variables in your application:
+Πρόσβαση σε μεταβλητές στην εφαρμογή σας:
 
 ```javascript
 require('dotenv').config();
@@ -133,19 +133,19 @@ app.listen(port, () => {
 });
 ```
 
-### Optimizing for Production
+### Βελτιστοποίηση για παραγωγή
 
-- **Memory Management:**:
+- **Διαχείριση μνήμης:**:
   node --max-old-space-size=1024 app.js
 
-- **CORS: Install and configure `cors`**:
+- **CORS: Εγκατάσταση και ρύθμιση παραμέτρων `cors`**:
 
 ```javascript
 const cors = require('cors');
 app.use(cors());
 ```
 
-- **Security:**:
+- **Ασφάλεια:**:
   - Use `helmet` to secure HTTP headers.
 
 ```bash
@@ -157,7 +157,7 @@ const helmet = require('helmet');
 app.use(helmet());
 ```
 
-- **Static File Caching:**:
+- **Στατική προσωρινή αποθήκευση αρχείων:**:
   
 ```javascript
 app.use(express.static('public', {
@@ -165,9 +165,9 @@ app.use(express.static('public', {
 }));
 ```
 
-## 3. Load Balancing and Clustering
+## 3. Εξισορρόπηση φορτίου και ομαδοποίηση
 
-### Load Balancing
+###  Εξισορρόπηση φορτίου
 
 Use tools like NGINX for load balancing:
 
@@ -190,11 +190,11 @@ Use tools like NGINX for load balancing:
   }
   ```
 
-- **AWS ELB (Elastic Load Balancer)**: 
+- **AWS ELB (Ελαστικός εξισορροπιστής φορτίου)**: 
 
-### Using Clusters
+### Χρήση των Clusters
 
-Utilize all CPU cores with Node.js clusters:
+Αξιοποιήστε όλους τους πυρήνες CPU με συστάδες Node.js:
 
 ```javascript
 const cluster = require('cluster');
@@ -222,9 +222,9 @@ if (cluster.isMaster) {
 }
 ```
 
-## 4. Monitoring and Logging
+## 4. Παρακολούθηση και καταγραφή
 
-### Application Monitoring
+### Παρακολούθηση της εφαρμογής
 
 Use tools like PM2 for built-in monitoring:
 
@@ -234,18 +234,18 @@ pm2 monit
 
 - Or third-party tools like New Relic or Datadog for detailed analysis.
 
-### Logging
+### Καταγραφή
 
 use `winston` or `morgan` for application logging:
 ```bash
 npm install winston morgan
 ```
 
-## 5. Security
+## 5. Ασφάλεια
 
-### SSL Certificates
+### Πιστοποιητικά SSL
 
-Configure SSL in NGINX:
+Ρυθμίστε το SSL στο NGINX:
 
 ```nginx
 server {
@@ -271,10 +271,10 @@ server {
 }
 ```
 
-### Security Best Practices
+### Βέλτιστες πρακτικές ασφάλειας
 
-- **Environment Variablesd**: Avoid hardcoding sensitive data.
-- **Rate Limiting**: Protect against DDoS attacks.
+- **Μεταβλητές περιβάλλοντος**: Αποφύγετε τη σκληρή κωδικοποίηση ευαίσθητων δεδομένων.
+- **Περιορισμός ποσοστού**: Προστασία από επιθέσεις DDoS.
 
 ```bash
 npm install express-rate-limit
