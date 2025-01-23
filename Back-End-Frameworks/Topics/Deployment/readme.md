@@ -169,7 +169,7 @@ app.use(express.static('public', {
 
 ###  Εξισορρόπηση φορτίου
 
-Use tools like NGINX for load balancing:
+Χρησιμοποιήστε εργαλεία όπως το NGINX για εξισορρόπηση φορτίου:
 
   ```nginx
   upstream myapp {
