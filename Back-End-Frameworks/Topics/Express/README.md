@@ -1,42 +1,42 @@
 # Express
 
-In this lesson, we will explore Express, a popular web application framework for Node.js. We will learn how to install Express, use its methods, and work with request and response objects in Express.
+Σε αυτό το μάθημα, θα εξερευνήσουμε το Express, ένα δημοφιλές πλαίσιο εφαρμογών ιστού για το Node.js. Θα μάθουμε πώς να εγκαθιστούμε το Express, να χρησιμοποιούμε τις μεθόδους του και να δουλεύουμε με αντικείμενα αιτήσεων και απαντήσεων στο Express.
 
 ![Express](Express.webp)
 
 Image source: Dall-E by OpenAI
 
 - [Express](#express)
-  - [Learning Outcomes](#learning-outcomes)
-  - [What is Express?](#what-is-express)
-  - [Installing Express](#installing-express)
-  - [Express App Methods](#express-app-methods)
-  - [Request and Response in Express](#request-and-response-in-express)
-    - [Sources](#sources)
+  - [Μαθησιακά αποτελέσματα](#Μαθησιακά-αποτελέσματα)
+  - [Τι είναι το Express;](#Τι-είναι-το-Express)
+  - [Εγκαθιστώντας το Express](#installing-express)
+  - [Μέθοδοι Express App](#Μέθοδοι-Express-App)
+  - [Αίτηση και απάντηση στην Express](#Αίτηση-και-απάντηση-στην-Express)
+    - [Πηγές](#Πηγές)
 
-## Learning Outcomes
+## Μαθησιακά αποτελέσματα
 
-By the end of this lesson, you will be able to:
+Στο τέλος αυτού του μαθήματος, θα είστε σε θέση να:
 
-- Explain what Express is and why it is used.
-- Install Express in a Node.js project.
-- Create a simple Express application and run it.
+- Να εξηγήσετε τι είναι το Express και γιατί χρησιμοποιείται.
+- Να εγκαταστήσετε την Express σε ένα έργο Node.js.
+- Να δημιουργήσετε μια απλή εφαρμογή Express και να την εκτελέσετε.
 
-## What is Express?
+## Τι είναι το Express;
 
-Express is a popular web application framework for Node.js, designed for building scalable and flexible web applications. It provides a range of features for developing web applications, such as routing, middleware, and support for handling HTTP requests and responses.
+Το Express είναι ένα δημοφιλές πλαίσιο εφαρμογών ιστού για το Node.js, σχεδιασμένο για τη δημιουργία επεκτάσιμων και ευέλικτων εφαρμογών ιστού. Παρέχει μια σειρά χαρακτηριστικών για την ανάπτυξη εφαρμογών ιστού, όπως δρομολόγηση, ενδιάμεσο λογισμικό και υποστήριξη για το χειρισμό αιτημάτων και απαντήσεων HTTP.
 
-Express simplifies the process of building web applications by offering a lightweight yet powerful framework that allows developers to focus on creating core application functionality. It includes a simple API that enables developers to easily create HTTP routes, define middleware functions to handle requests, and work with various templating engines and other tools.
+Το Express απλοποιεί τη διαδικασία δημιουργίας εφαρμογών ιστού, προσφέροντας ένα ελαφρύ αλλά ισχυρό πλαίσιο που επιτρέπει στους προγραμματιστές να επικεντρωθούν στη δημιουργία της βασικής λειτουργικότητας της εφαρμογής. Περιλαμβάνει ένα απλό API που επιτρέπει στους προγραμματιστές να δημιουργούν εύκολα διαδρομές HTTP, να ορίζουν λειτουργίες middleware για το χειρισμό αιτημάτων και να συνεργάζονται με διάφορες μηχανές διαμόρφωσης προτύπων και άλλα εργαλεία.
 
-## Installing Express
+## Εγκαθιστώντας το Express
 
-To install Express in a Node.js project, follow these steps:
+Για να εγκαταστήσετε την Express σε ένα έργο Node.js, ακολουθήστε τα παρακάτω βήματα:
 
-1. Create a new directory for your project and navigate to that directory in the terminal.
-2. Initialize a new Node.js project using the command `npm init`. This will create a `package.json` file that tracks your project's dependencies.
-3. Install Express using the command `npm install express`. This will download and install the latest version of Express and its dependencies.
+1. Δημιουργήστε έναν νέο κατάλογο για το έργο σας και πλοηγηθείτε σε αυτόν τον κατάλογο στο τερματικό.
+2. Αρχικοποιήστε ένα νέο έργο Node.js χρησιμοποιώντας την εντολή `npm init`. Αυτό θα δημιουργήσει ένα αρχείο `package.json` που θα παρακολουθεί τις εξαρτήσεις του έργου σας.
+3. Εγκαταστήστε την Express χρησιμοποιώντας την εντολή `npm install express`. Αυτό θα κατεβάσει και θα εγκαταστήσει την τελευταία έκδοση του Express και τις εξαρτήσεις του.
 
-Here is an example of installing Express using the command line:
+Ακολουθεί ένα παράδειγμα εγκατάστασης του Express με χρήση της γραμμής εντολών:
 
 ```bash
 mkdir myapp
@@ -45,14 +45,15 @@ npm init -y
 npm install express
 ```
 
-After installing Express, you can create a new file named `app.js` and start building your application using the Express framework. To use Express in your application, you need to import it in your `app.js` file like this:
+Αφού εγκαταστήσετε την Express, μπορείτε να δημιουργήσετε ένα νέο αρχείο με όνομα `app.js` και να αρχίσετε να δημιουργείτε την εφαρμογή σας χρησιμοποιώντας το πλαίσιο Express. Για να χρησιμοποιήσετε το Express στην εφαρμογή σας, πρέπει να το εισάγετε στο αρχείο `app.js` σας ως εξής:
+
 
 ```javascript
 const express = require("express");
 const app = express();
 ```
 
-Here’s a simple example of an Express application:
+Ακολουθεί ένα απλό παράδειγμα μιας εφαρμογής Express:
 
 ```javascript
 const express = require("express");
@@ -69,67 +70,67 @@ app.listen(port, () => {
 });
 ```
 
-## Express App Methods
+## Μέθοδοι Express App
 
-Similar to [HTTP request methods](../http-methods/README.md), Express provides a wide range of methods that can be used to create web applications and receive requests from clients. Here are some of the most common methods in an Express application:
+Παρόμοια με τις [HTTP request methods](../http-methods/README.md), η Express παρέχει ένα ευρύ φάσμα μεθόδων που μπορούν να χρησιμοποιηθούν για τη δημιουργία εφαρμογών ιστού και τη λήψη αιτημάτων από πελάτες. Ακολουθούν μερικές από τις πιο συνηθισμένες μεθόδους σε μια εφαρμογή Express:
 
-- **GET**: (`app.get()`) This method is used to retrieve data from the server. It is used to request a specific resource, such as a webpage, image, or video.
+- **GET**: (`app.get()`) Αυτή η μέθοδος χρησιμοποιείται για την ανάκτηση δεδομένων από τον διακομιστή. Χρησιμοποιείται για να ζητήσετε έναν συγκεκριμένο πόρο, όπως μια ιστοσελίδα, μια εικόνα ή ένα βίντεο.
 
-- **POST**: (`app.post()`) This method is used to send data to the server. It is typically used to submit forms or send data to the server for processing.
+- **POST**: (`app.post()`) Αυτή η μέθοδος χρησιμοποιείται για την αποστολή δεδομένων στον διακομιστή. Συνήθως χρησιμοποιείται για την υποβολή φορμών ή την αποστολή δεδομένων στο διακομιστή για επεξεργασία.
 
-- **PUT**: (`app.put()`) This method is used to update existing data on the server. It is typically used to update a specific resource (e.g., a user profile or product information).
+- **PUT**: (`app.put()`) Αυτή η μέθοδος χρησιμοποιείται για την ενημέρωση των υφιστάμενων δεδομένων στο διακομιστή. Συνήθως χρησιμοποιείται για την ενημέρωση ενός συγκεκριμένου πόρου (π.χ. ενός προφίλ χρήστη ή πληροφοριών προϊόντος).
 
-- **DELETE**: (`app.delete()`) This method is used to delete data from the server. It is typically used to remove a specific resource, such as a user account or product.
+- **DELETE**: (`app.delete()`) Αυτή η μέθοδος χρησιμοποιείται για τη διαγραφή δεδομένων από το διακομιστή. Συνήθως χρησιμοποιείται για τη διαγραφή ενός συγκεκριμένου πόρου, όπως ένας λογαριασμός χρήστη ή ένα προϊόν.
 
-- **USE**: (`app.use()`) This method is used to define middleware functions that execute for every request that matches a specific route.
+- **USE**: (`app.use()`) Αυτή η μέθοδος χρησιμοποιείται για τον ορισμό συναρτήσεων ενδιάμεσου λογισμικού που εκτελούνται για κάθε αίτηση που αντιστοιχεί σε μια συγκεκριμένη διαδρομή.
 
-- **SET**: (`app.set()`) This method is used to set application-level variables (e.g., port number or view engine).
+- **SET**: (`app.set()`) Αυτή η μέθοδος χρησιμοποιείται για τον καθορισμό μεταβλητών σε επίπεδο εφαρμογής (π.χ. αριθμός θύρας ή μηχανή προβολής).
 
-These are just a few of the many methods offered by Express. Each method can be used to create routes that handle specific types of HTTP requests, enabling developers to build powerful and flexible web applications.
+Αυτές είναι μερικές μόνο από τις πολλές μεθόδους που προσφέρει η Express. Κάθε μέθοδος μπορεί να χρησιμοποιηθεί για τη δημιουργία διαδρομών που χειρίζονται συγκεκριμένους τύπους αιτημάτων HTTP, επιτρέποντας στους προγραμματιστές να δημιουργούν ισχυρές και ευέλικτες εφαρμογές ιστού.
 
-## Request and Response in Express
+## Αίτηση και απάντηση στην Express (Request and Response in Express)
 
-Similar to the HTTP protocol, Express provides options for receiving and sending request and response objects.
+Παρόμοια με το πρωτόκολλο HTTP, το Express παρέχει επιλογές για τη λήψη και την αποστολή αντικειμένων αίτησης και απόκρισης.
 
-When a request is received, Express creates its version of the request, which has many different properties, including:
+Όταν λαμβάνεται ένα αίτημα, η Express δημιουργεί τη δική της έκδοση του αιτήματος, η οποία έχει πολλές διαφορετικές ιδιότητες, όπως
 
-- **params**: (req.params) This attribute is an object containing parameters matched to the named route "parameters." For example, if you have a route `/users/:id`, the params object will have the attribute `id` with the value `:id`.
+- **params**: (req.params) Αυτό το χαρακτηριστικό είναι ένα αντικείμενο που περιέχει παραμέτρους που αντιστοιχούν στην ονομαζόμενη διαδρομή "parameters". Για παράδειγμα, αν έχετε μια διαδρομή `/users/:id`, το αντικείμενο params θα έχει το χαρακτηριστικό `id` με την τιμή `:id`.
 
-- **query**: (req.query) This attribute is an object containing attributes for each query string parameter of the route. For example, if the URL is `/users?sort=desc`, the request object will contain `{ sort: 'desc' }`.
+- **query**: (req.query) Αυτό το χαρακτηριστικό είναι ένα αντικείμενο που περιέχει χαρακτηριστικά για κάθε παράμετρο της συμβολοσειράς ερωτήματος της διαδρομής. Για παράδειγμα, εάν η διεύθυνση URL είναι `/users?sort=desc`, το αντικείμενο αίτησης θα περιέχει `{ sort: 'desc' }`.
 
-- **body**: (req.body) This attribute is an object containing the parsed body of the request when the request method is `POST`, `PUT`, or `PATCH`, and the content-type header is `application/x-www-form-urlencoded` or `application/json`.
+- **body**: (req.body) Αυτό το χαρακτηριστικό είναι ένα αντικείμενο που περιέχει το αναλυμένο σώμα της αίτησης όταν η μέθοδος αίτησης είναι `POST`, `PUT` ή `PATCH` και η επικεφαλίδα τύπου περιεχομένου είναι `application/x-www-form-urlencoded` ή `application/json`.
 
-- **headers**: (req.headers) This attribute is an object containing the headers sent by the client.
+- **headers**: (req.headers) Αυτό το χαρακτηριστικό είναι ένα αντικείμενο που περιέχει τις επικεφαλίδες που αποστέλλονται από τον πελάτη.
 
-- **method**: (req.method) This attribute is a string that contains the HTTP request method (e.g., `GET`, `POST`, `PUT`, `DELETE`, etc.).
+- **method**: (req.method) Αυτό το χαρακτηριστικό είναι μια συμβολοσειρά που περιέχει τη μέθοδο αίτησης HTTP (π.χ. `GET`, `POST`, `PUT`, `DELETE` κ.λπ.).
 
-- **url**: (req.url) This attribute is a string that contains the request URL.
+- **url**: (req.url) Αυτό το χαρακτηριστικό είναι μια συμβολοσειρά που περιέχει τη διεύθυνση URL της αίτησης.
 
-- **cookies**: (req.cookies) This attribute is an object that contains cookies sent by the client.
+- **cookies**: (req.cookies) Αυτό το χαρακτηριστικό είναι ένα αντικείμενο που περιέχει τα cookies που αποστέλλονται από τον πελάτη.
 
-- **ip**: (req.ip) This attribute is a string that contains the client's IP address.
+- **ip**: (req.ip) Αυτό το χαρακτηριστικό είναι μια συμβολοσειρά που περιέχει τη διεύθυνση IP του πελάτη.
 
-- **protocol**: (req.protocol) This attribute is a string that contains the protocol used for the request (http or https).
+- **protocol**: (req.protocol) Αυτό το χαρακτηριστικό είναι μια συμβολοσειρά που περιέχει το πρωτόκολλο που χρησιμοποιήθηκε για την αίτηση (http ή https).
 
-Overall, the Express request object provides developers with a wealth of information about the client's request, enabling them to create powerful and flexible web applications.
+Συνολικά, το αντικείμενο αίτησης Express παρέχει στους προγραμματιστές πληθώρα πληροφοριών σχετικά με την αίτηση του πελάτη, επιτρέποντάς τους να δημιουργήσουν ισχυρές και ευέλικτες εφαρμογές ιστού.
 
-To send a response, Express offers several functions, the most common of which are:
+Για την αποστολή μιας απάντησης, η Express προσφέρει διάφορες λειτουργίες, οι πιο συνηθισμένες από τις οποίες είναι οι εξής:
 
-- **send**: (res.send()) This method is used to send a string, buffer, or JSON response back to the client. It automatically sets the `Content-Type` header based on the type of data.
+- **send**: (res.send()) Αυτή η μέθοδος χρησιμοποιείται για την αποστολή μιας απόκρισης συμβολοσειράς, buffer ή JSON πίσω στον πελάτη. Ορίζει αυτόματα την επικεφαλίδα `Content-Type` με βάση τον τύπο των δεδομένων.
+- 
+- **json**: (res.json()) Αυτή η μέθοδος χρησιμοποιείται για την αποστολή μιας απάντησης JSON πίσω στον πελάτη. Ορίζει την επικεφαλίδα `Content-Type` σε `application/json`.
 
-- **json**: (res.json()) This method is used to send a JSON response back to the client. It sets the `Content-Type` header to `application/json`.
+- **redirect**: (res.redirect()) Αυτή η μέθοδος χρησιμοποιείται για την ανακατεύθυνση του πελάτη σε άλλη διεύθυνση URL. Ορίζει την επικεφαλίδα τοποθεσίας στην καθορισμένη διεύθυνση URL και έχει ως προεπιλογή τον κωδικό κατάστασης `302`.
 
-- **redirect**: (res.redirect()) This method is used to redirect the client to another URL. It sets the location header to the specified URL and defaults to the `302` status code.
+- **render**: (res.render()) Αυτή η μέθοδος χρησιμοποιείται για την απόδοση ενός προτύπου προβολής και την αποστολή μιας απάντησης HTML πίσω στον πελάτη. Λαμβάνει το όνομα του προτύπου και ένα αντικείμενο δεδομένων ως ορίσματα.
 
-- **render**: (res.render()) This method is used to render a view template and send an HTML response back to the client. It takes the name of the template and a data object as arguments.
+- **status**: (res.status()) Αυτή η μέθοδος χρησιμοποιείται για τον καθορισμό του κωδικού κατάστασης απόκρισης HTTP. Μπορεί να χρησιμοποιηθεί για τον καθορισμό οποιουδήποτε έγκυρου κωδικού κατάστασης HTTP.
 
-- **status**: (res.status()) This method is used to set the HTTP response status code. It can be used to specify any valid HTTP status code.
+- **sendFile**: (res.sendFile()) Αυτή η μέθοδος χρησιμοποιείται για την αποστολή ενός αρχείου ως απάντηση. Λαμβάνει τη διαδρομή του αρχείου ως όρισμα και ρυθμίζει αυτόματα την επικεφαλίδα content-type με βάση την επέκταση του αρχείου.
 
-- **sendFile**: (res.sendFile()) This method is used to send a file in response. It takes the file path as an argument and automatically sets the content-type header based on the file extension.
+Αυτές είναι μερικές μόνο από τις πολλές μεθόδους ανταπόκρισης που προσφέρει η Express. Κάθε μέθοδος μπορεί να χρησιμοποιηθεί για την αποστολή διαφορετικών τύπων απαντήσεων στον πελάτη.
 
-These are just a few of the many response methods offered by Express. Each method can be used to send different types of responses back to the client.
-
-### Sources
+### Πηγές
 
 - [Express Official Website](https://expressjs.com/)
 - [Express API Reference](https://expressjs.com/en/4x/api.html#app.METHOD)
