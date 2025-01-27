@@ -1,49 +1,46 @@
- # Middleware in Express
+ # Middleware στην Express
 
-In this section, we will discuss middleware in the context of Express.js.
+Σε αυτή την ενότητα, θα συζητήσουμε το middleware στο πλαίσιο της Express.js.
 
-![Middleware](Middleware.webp)
 
-Image source: Dall-E by OpenAI
-
-- [Middleware in Express](#middleware-in-express)
-  - [Learning Outcomes](#learning-outcomes)
-  - [What are Middleware Functions?](#what-are-middleware-functions)
+- [Middleware στην Express](#Middleware-στην-Express)
+  - [Μαθησιακά αποτελέσματα](#Μαθησιακά-αποτελέσματα)
+  - [Τι είναι οι συναρτήσεις Middleware;](#Τι-είναι-οι-λειτουργίες-Middleware)
   - [Next Function](#next-function)
-  - [Using Middleware](#using-middleware)
-    - [Example of Logging Middleware](#example-of-logging-middleware)
-  - [Request/Response Cycle with Middleware](#requestresponse-cycle-with-middleware)
+  - [Χρήση Middleware](#Χρήση-Middleware)
+    - [Παράδειγμα Logging Middleware](#Παράδειγμα-logging-middleware)
+  - [Κύκλος αιτήματος/απάντησης με Middleware](#Κύκλος-αιτήματος-απάντησης-με-Middleware)
   - [Not Found Middleware](#not-found-middleware)
-    - [Registering Not Found Middleware](#registering-not-found-middleware)
+    - [Καταχώριση Not Found Middleware](#Καταχώριση-not-found-middleware)
 
-## Learning Outcomes
+## Μαθησιακά αποτελέσματα
 
-By the end of this section, you will be able to:
+Στο τέλος αυτής της ενότητας, θα είστε σε θέση να:
 
-- Explain what middleware is and how it is used.
-- Write middleware functions.
-- Implement middleware in an Express.js application.
+- Να εξηγείτε τι είναι το middleware και πώς χρησιμοποιείται.
+- Να γράφετε συναρτήσεις middleware.
+- Να υλοποιείτε middleware σε μια εφαρμογή Express.js.
 
-## What are Middleware Functions?
+## Τι είναι οι συναρτήσεις Middleware;
 
-Middleware functions are functions that have access to the request object (`req`), response object (`res`), and the next middleware function in the application's request-response cycle. Essentially, you can think of middleware as a filter that processes requests before they reach the next stage in the request-response cycle. For example, middleware could handle logging, authentication, request data parsing, or any other functionality that is important for the application.
+Οι συναρτήσεις middleware είναι συναρτήσεις που έχουν πρόσβαση στο αντικείμενο αίτησης (`req`), στο αντικείμενο απόκρισης (`res`) και στην επόμενη συνάρτηση middleware στον κύκλο αίτησης-απόκρισης της εφαρμογής. Ουσιαστικά, μπορείτε να σκεφτείτε το middleware ως ένα φίλτρο που επεξεργάζεται τις αιτήσεις πριν φτάσουν στο επόμενο στάδιο του κύκλου αίτησης-απόκρισης. Για παράδειγμα, το middleware θα μπορούσε να χειριστεί την καταγραφή, τον έλεγχο ταυτότητας, την ανάλυση δεδομένων αιτήσεων ή οποιαδήποτε άλλη λειτουργικότητα που είναι σημαντική για την εφαρμογή.
 
 ## Next Function
 
-The `next` function is an Express router function that, when called, passes control to the next middleware in the stack.
+Η συνάρτηση `next` είναι μια συνάρτηση δρομολόγησης Express που, όταν καλείται, μεταβιβάζει τον έλεγχο στο επόμενο middleware της στοίβας.
 
-## Using Middleware
+## Χρήση Middleware
 
-Middleware can:
+Το Middleware μπορεί:
 
-- Execute code.
-- Modify the request and response objects.
-- End the request-response cycle.
-- Call the next middleware in the stack.
+- Να εκτελεί κώδικα.
+- Να τροποποιεί τα αντικείμενα αίτησης και απόκρισης.
+- Να τερματίσει τον κύκλο αίτησης-απάντησης.
+- Να καλέσει το επόμενο middleware στη στοίβα.
+  
+Είναι σημαντικό να θυμάστε ότι αν ένα ενδιάμεσο λογισμικό δεν τερματίσει τον κύκλο αίτησης-απάντησης (π.χ. χρησιμοποιώντας `return res.status(200).json...`), πρέπει να καλέσει τη συνάρτηση `next()`, διαφορετικά η εφαρμογή θα κολλήσει.
 
-It’s important to remember that if a middleware does not end the request-response cycle (e.g., using `return res.status(200).json…`), it must call the `next()` function; otherwise, the application will hang.
-
-### Example of Logging Middleware
+### Παράδειγμα Logging Middleware
 
 ```javascript
 // Middleware for logging HTTP requests
@@ -56,9 +53,9 @@ const logger = (req, res, next) => {
 };
 ```
 
-Middleware can be applied in different ways.
+Το ενδιάμεσο λογισμικό μπορεί να εφαρμοστεί με διάφορους τρόπους.
 
-One option is to register the middleware for all requests:
+Μια επιλογή είναι η καταχώρηση του ενδιάμεσου λογισμικού για όλες τις αιτήσεις:
 
 ```javascript
 ...
@@ -73,7 +70,8 @@ app.use(logger);
 ...
 ```
 
-Another option is to register middleware only for specific routes:
+Μια άλλη επιλογή είναι η καταχώριση ενδιάμεσου λογισμικού μόνο για συγκεκριμένες διαδρομές:
+
 
 ```javascript
 ...
@@ -89,13 +87,12 @@ app.get('/api', logger, (req, res) => {
 ...
 ```
 
-## Request/Response Cycle with Middleware
+## Κύκλος αιτήματος/απάντησης με Middleware
 
-![Middleware Cycle](./middleware.png)
 
 ## Not Found Middleware
 
-One useful scenario for middleware is displaying a 404 page when the requested resource is not found. Example:
+Ένα χρήσιμο σενάριο για το ενδιάμεσο λογισμικό είναι η εμφάνιση μιας σελίδας 404 όταν ο ζητούμενος πόρος δεν βρέθηκε. Παράδειγμα:
 
 ```javascript
 // Middleware to display a 404 page when the requested resource is not found
@@ -110,7 +107,7 @@ const notFound = (req, res, next) => {
 module.exports = notFound;
 ```
 
-### Registering Not Found Middleware
+### Καταχώριση Not Found Middleware
 
 ```javascript
 ...
@@ -124,10 +121,9 @@ app.use('*', notFound);
 
 ...
 ```
+Εδώ, είναι σημαντικό να καταχωρήσετε αυτό το ενδιάμεσο λογισμικό μετά από όλες τις διαδρομές, χρησιμοποιώντας τη διαδρομή `*`. Αυτό σημαίνει ότι αν ένας χρήστης έχει πρόσβαση σε μια διαδρομή που δεν υπάρχει στο API, θα οδηγηθεί σε αυτή τη λειτουργία middleware.
 
-Here, it is important to register this middleware after all routes, using the path `*`. This means that if a user accesses a route that does not exist in the API, they will be directed to this middleware function.
-
-Now, if a user tries to access a route that does not exist, they will receive the following response:
+Τώρα, αν ένας χρήστης προσπαθήσει να αποκτήσει πρόσβαση σε μια διαδρομή που δεν υπάρχει, θα λάβει την ακόλουθη απάντηση:
 
 ```json
 {
