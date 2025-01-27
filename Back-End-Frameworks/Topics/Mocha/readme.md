@@ -70,9 +70,9 @@ npm install --global mocha
 npm install --save-dev mocha
 ```
 
-### 2. Creating a Test File
+### 2.  Δημιουργία ενός Test File
 
-Create a directory named `test` in the root of your project and create a test file inside it, for example, `test.js`.
+Δημιουργήστε έναν κατάλογο με όνομα `test` στη ρίζα του έργου σας και δημιουργήστε ένα αρχείο δοκιμών μέσα σε αυτόν, για παράδειγμα, `test.js`.
 
 ```bash
 mkdir test
@@ -80,13 +80,13 @@ cd test
 touch test.js
 ```
 
-## Writing Tests with Mocha
+## Συγγραφή δοκιμών με τη Mocha
 
-Mocha uses BDD style functions to write tests, including `describe`, `it`, and `before`, `after`, `beforeEach`, `afterEach`.
+Η Mocha χρησιμοποιεί συναρτήσεις τύπου BDD για τη συγγραφή δοκιμών, συμπεριλαμβανομένων των `describe`, `it` και `before`, `after`, `beforeEach`, `afterEach`.
 
-### Example: Simple Test
+### Παράδειγμα: Simple Test
 
-#### `sum.js` - Function to Test
+#### `sum.js` - Συνάρτηση για Test
 
 ```javascript
 function sum(a, b) {
@@ -113,21 +113,21 @@ describe("Sum Function", function () {
 });
 ```
 
-### Running Tests
+### Εκτέλεση Tests
 
-Run the tests using Mocha from the command line.
+Εκτελέστε τις δοκιμές χρησιμοποιώντας το Mocha από τη γραμμή εντολών.
 
 ```bash
 npx mocha
 ```
 
-## Asynchronous Tests
+## Ασύγχρονα Tests
 
-Mocha supports writing asynchronous tests using callbacks or promises.
+Η Mocha υποστηρίζει τη συγγραφή ασύγχρονων δοκιμών χρησιμοποιώντας callbacks ή υποσχέσεις.
 
-### Example: Asynchronous Test with Callbacks
+### Παράδειγμα: Ασύγχρονα Test με Callbacks
 
-#### `asyncFunction.js` - Asynchronous Function
+#### `asyncFunction.js` - Ασύγχρονη Function
 
 ```javascript
 function asyncFunction(callback) {
@@ -155,9 +155,9 @@ describe("AsyncFunction", function () {
 });
 ```
 
-### Example: Asynchronous Test with Promises
+### Παράδειγμα: Ασύγχρονο Test με Promises
 
-#### `asyncPromise.js` - Asynchronous Function
+#### `asyncPromise.js` - Ασύγχρονη Function
 
 ```javascript
 function asyncPromise() {
@@ -186,21 +186,21 @@ describe("AsyncPromise", function () {
 });
 ```
 
-## Using Chai Assertion Library
+## Χρησιμοποιώντας Chai Assertion Library
 
-Chai is a popular assertion library that can be used with Mocha. Chai supports various assertion styles, including TDD and BDD.
+Το Chai είναι μια δημοφιλής βιβλιοθήκη ισχυρισμών που μπορεί να χρησιμοποιηθεί με τη Mocha. Το Chai υποστηρίζει διάφορα στυλ ισχυρισμών, συμπεριλαμβανομένων των TDD και BDD.
 
-### Installing Chai
+### Εγκαθιστώντας το Chai
 
-Install Chai at the project level.
+Εγκαταστήστε το Chai σε επίπεδο έργου.
 
 ```bash
 npm install --save-dev chai
 ```
 
-### Example: Using Chai
+### Παράδειγμα: Χρησιμοποιώντας Chai
 
-#### `test/chaiTest.js` - Mocha Test with Chai
+#### `test/chaiTest.js` - Δοκιμή Mocha με Chai
 
 ```javascript
 const chai = require("chai");
@@ -218,13 +218,14 @@ describe("Sum Function", function () {
 });
 ```
 
-## Additional Mocha Features
+## Πρόσθετα χαρακτηριστικά της Mocha
 
 ### Hooks
 
-Mocha provides hooks (`before`, `after`, `beforeEach`, `afterEach`) that allow you to execute code before and after tests run.
+Η Mocha παρέχει άγκιστρα (`before`, `after`, `beforeEach`, `afterEach`) που σας επιτρέπουν να εκτελείτε κώδικα πριν και μετά την εκτέλεση των δοκιμών.
 
-#### Example: Using Hooks
+
+#### Παράδειγμα: Χρήση Hooks
 
 ```javascript
 describe("Hooks Example", function () {
