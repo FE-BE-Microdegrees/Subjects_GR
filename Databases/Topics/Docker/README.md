@@ -1,7 +1,89 @@
-# Docker
+# MySQL στο Docker
 
-What docker is and how to use it to run MySQL.
+Σε αυτό το κεφάλαιο, θα συζητήσουμε τη χρήση της MySQL σε ένα δοχείο Docker.
 
-## Learning Outcomes
+- [MySQL στο Docker](#MySQL-στο-Docker)
+  - [Μαθησιακά αποτελέσματα](#Μαθησιακά-αποτελέσματα)
+  - [Δημιουργία εικόνας και εμπορευματοκιβωτίου MySQL στο Docker Desktop](#Δημιουργία-εικόνας-και-εμπορευματοκιβωτίου-MySQL-στο-Docker-Desktop)
+  - [Δημιουργία ενός MySQL Container μέσω τερματικού](#Δημιουργία-ενός-MySQL-Container-μέσω-τερματικού)
+  - [Πηγές](#Πηγές)
+  - [Ασκήσεις](#Ασκήσεις)
 
-After completing this topic, you'll be able to:
+## Μαθησιακά αποτελέσματα
+
+Στο τέλος αυτού του κεφαλαίου, οι εκπαιδευόμενοι θα πρέπει να είναι σε θέση:
+
+- Να τραβήξουν και να εκτελέσουν ένα δοχείο Docker της MySQL,
+- Να διαμορφώνουν το δοχείο MySQL για χρήση.
+
+
+Ένας από τους ευκολότερους τρόπους χρήσης της MySQL στον υπολογιστή σας είναι μέσω του Docker. Για να χρησιμοποιήσετε το Docker, πρέπει να εγκατασταθεί στον υπολογιστή σας το Docker Desktop. Αν δεν έχει εγκατασταθεί ακόμα, μπορείτε να το κατεβάσετε [εδώ](https://www.docker.com/products/docker-desktop).
+
+## Δημιουργία εικόνας και εμπορευματοκιβωτίου MySQL στο Docker Desktop
+
+Αρχικά, ξεκινάμε το Docker Desktop και αναζητούμε την εικόνα MySQL στο Docker Hub. Για να το κάνετε αυτό, πληκτρολογήστε `mysql` στη γραμμή αναζήτησης στο επάνω μέρος του παραθύρου του Docker Desktop και κάντε κλικ στο κουμπί `Pull` δίπλα στο πρώτο αποτέλεσμα για να κατεβάσετε την επίσημη εικόνα της MySQL στον υπολογιστή σας.
+
+![Search Result](Search-result.png)
+
+Στη συνέχεια, μεταβείτε στην ενότητα `Images`  αριστερού μενού και κάντε κλικ στο κουμπί `Run` δίπλα στην εικόνα MySQL στη στήλη `Actions`.
+
+![Images-Play](Images-Play.png)
+
+Στο παράθυρο `Run a new container` που ανοίγει, επιλέξτε `Optional settings` και συμπληρώστε τα απαιτούμενα πεδία:
+
+- **Container name:** Το όνομα του δοχείου που πρόκειται να δημιουργηθεί.
+- **Ports:** Η θύρα στην οποία η MySQL θα δέχεται ερωτήματα (η προεπιλογή είναι 3306).
+- **Volumes:** Αν θέλετε τα δεδομένα του container να αποθηκεύονται στον υπολογιστή σας, πρέπει να ορίσετε έναν φάκελο για τα δεδομένα και να τον αντιστοιχίσετε στο φάκελο του container.
+- **Environment variables:** Αυτά μπορούν να χρησιμοποιηθούν για να ορίσετε διάφορες ρυθμίσεις της MySQL, όπως όνομα χρήστη, κωδικό πρόσβασης κ.λπ.
+  - `MYSQL_ROOT_PASSWORD`: Ο κωδικός πρόσβασης για τον χρήστη root της MySQL.
+  - `MYSQL_DATABASE`: Το όνομα της βάσης δεδομένων που θα δημιουργηθεί.
+  - `MYSQL_USER`: Το όνομα του χρήστη που πρόκειται να δημιουργηθεί.
+  - `MYSQL_PASSWORD`: Ο κωδικός πρόσβασης για τον χρήστη που πρόκειται να δημιουργηθεί.
+  - ...
+
+![Optional Settings](Optional-Settings.png)
+
+Μετά τη διαμόρφωση των ρυθμίσεων, κάντε κλικ στην επιλογή `Run`, η οποία θα δημιουργήσει και θα εκκινήσει τον περιέκτη.
+
+Ως αποτέλεσμα, θα έχουμε ένα κοντέινερ MySQL σε λειτουργία, το οποίο μπορεί να προσπελαστεί μέσω του τερματικού (επίσης διαθέσιμο στο Docker Desktop), να συνδεθεί με ένα εργαλείο SQL (όπως το SQLLTools στο VS Code) ή να χρησιμοποιηθεί από τη δική μας εφαρμογή που χρησιμοποιεί τη βάση δεδομένων MySQL.
+
+## Δημιουργία ενός MySQL Container μέσω τερματικού
+
+Αν προτιμάτε να δημιουργήσετε το δοχείο MySQL μέσω του τερματικού, μπορείτε να χρησιμοποιήσετε την ακόλουθη εντολή για να δημιουργήσετε ένα δοχείο με τις ίδιες ρυθμίσεις.
+
+// Όνομα βάσης δεδομένων: todos, root password: super-secret, user: todo-user, user password: my-secret, volume: docker folder `mysql-data` mapped to the container folder `/var/lib/mysql`
+
+```bash
+docker run --name mysql-todo -e MYSQL_ROOT_PASSWORD=super-secret -e MYSQL_DATABASE=todos -e MYSQL_USER=todo-user -e MYSQL_PASSWORD=my-secret -p 3306:3306 -v mysql-data:/var/lib/mysql -d mysql
+```
+
+Όταν εκτελείτε αυτή την εντολή, θα δημιουργηθεί ο περιέκτης MySQL με τις ακόλουθες ρυθμίσεις:
+
+- **Database name:** `todos`
+- **Root user password:** `super-secret`
+- **User:** `todo-user`
+- **User password:** `my-secret`
+- **Port:** `3306`
+- **Volume:** `mysql-data`, mapped to the container folder `/var/lib/mysql`
+- **Container name:** `mysql-todo`
+- **Image:** mysql
+- Ο περιέκτης θα εκτελείται στο παρασκήνιο (λειτουργία αποσύνδεσης).
+
+Για να ελέγξετε αν ο περιέκτης τρέχει, μπορείτε να χρησιμοποιήσετε την ακόλουθη εντολή:
+
+```bash
+docker ps
+```
+
+Τώρα, έχουμε ένα περιβάλλον όπου μπορούμε να χρησιμοποιήσουμε τη βάση δεδομένων MySQL. Αν θέλουμε, μπορούμε εύκολα να τη σταματήσουμε, να τη διαγράψουμε ή να την επανεκκινήσουμε. Μπορούμε επίσης να δημιουργήσουμε νέα containers χρησιμοποιώντας την ίδια εικόνα της MySQL.
+
+## Πηγές
+
+- [Docker Official Documentation](https://docs.docker.com/)
+- [MySQL Official Docker Image](https://hub.docker.com/_/mysql)
+- [Docker Hub](https://hub.docker.com/)
+
+## Ασκήσεις
+
+- Δημιουργήστε ένα δοχείο MySQL στο Docker Desktop στον υπολογιστή σας χρησιμοποιώντας τις ρυθμίσεις που σας ταιριάζουν.
+
