@@ -252,7 +252,7 @@ npm install -D @types/mocha @types/supertest @types/chai
 npm install eslint-plugin-chai-friendly --save-dev
 ```
 
-Add the following line to your ESLint configuration file’s `extends` section:
+Προσθέστε την ακόλουθη γραμμή στην ενότητα `extends` του αρχείου ρυθμίσεων ESLint:
 
 ```json
 {
