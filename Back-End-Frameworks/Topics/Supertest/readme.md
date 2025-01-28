@@ -31,44 +31,44 @@
       - [`app.js` - Ενημερωμένο](#appjs---Ενημερωμένο-2)
       - [`__tests__/app.test.js`](#__tests__apptestjs-4)
 
-## Learning Outcomes
+## Μαθησιακά αποτελέσματα
 
-By the end of this material, learners should be able to:
+Στο τέλος αυτού του υλικού, οι εκπαιδευόμενοι θα πρέπει να είναι σε θέση:
 
-- Explain what Supertest is and why it is used.
-- Install and set up Supertest for writing tests.
-- Write and run tests related to HTTP requests using Supertest.
-- Use Supertest with testing frameworks like Jest.
+- Να εξηγούν τι είναι το Supertest και γιατί χρησιμοποιείται.
+- Να εγκαθιστούν και να ρυθμίζουν το Supertest για τη συγγραφή δοκιμών.
+- Να γράφουν και να εκτελούν δοκιμές που σχετίζονται με αιτήσεις HTTP χρησιμοποιώντας το Supertest.
+- Να χρησιμοποιούν το Supertest με πλαίσια δοκιμών όπως το Jest.
 
-## What is Supertest?
+## Τι είναι το Supertest;
 
-Supertest is a library that allows you to make HTTP requests to Node.js servers and verify responses. It is designed to be simple and intuitive, providing several features that make API testing easy and effective.
+Το Supertest είναι μια βιβλιοθήκη που σας επιτρέπει να κάνετε αιτήσεις HTTP σε διακομιστές Node.js και να επαληθεύετε τις απαντήσεις. Έχει σχεδιαστεί για να είναι απλή και διαισθητική, παρέχοντας αρκετές δυνατότητες που καθιστούν τον έλεγχο API εύκολο και αποτελεσματικό.
 
-## Installing and Setting Up Supertest
+## Εγκατάσταση και ρύθμιση του Supertest
 
-### 1. Installing Supertest
+### 1. Εγκαθιστώντας το Supertest
 
-Install Supertest at the project level using npm or yarn.
+Εγκαταστήστε το Supertest σε επίπεδο έργου χρησιμοποιώντας npm ή yarn.
 
 ```bash
 npm install --save-dev supertest
 ```
 
-Or, if you are using yarn:
+Ή, αν χρησιμοποιείτε νήματα:
 
 ```bash
 yarn add --dev supertest
 ```
 
-### 2. Installing a Testing Framework
+### 2. Εγκατάσταση ενός Testing Framework
 
-In this example, we will use Mocha, but you can also use another testing framework.
+Σε αυτό το παράδειγμα, θα χρησιμοποιήσουμε το Mocha, αλλά μπορείτε επίσης να χρησιμοποιήσετε κάποιο άλλο πλαίσιο δοκιμών.
 
 ```bash
 npm install --save-dev mocha
 ```
 
-Add a script to your `package.json` file to run tests with Mocha.
+Προσθέστε ένα σενάριο στο αρχείο `package.json` για να εκτελείτε δοκιμές με τη Mocha.
 
 ```json
 {
@@ -78,11 +78,12 @@ Add a script to your `package.json` file to run tests with Mocha.
 }
 ```
 
-### 3. Creating a Simple Express Application
+### 3.  Δημιουργία μιας απλής εφαρμογής Express
 
-Let's create a simple Express application that we will test with Supertest.
+Ας δημιουργήσουμε μια απλή εφαρμογή Express που θα δοκιμάσουμε με το Supertest.
 
-#### `app.js` - Express Application
+
+#### `app.js` - Εφαρμογή Express
 
 ```javascript
 const express = require("express");
@@ -99,7 +100,7 @@ app.post("/data", (req, res) => {
 module.exports = app;
 ```
 
-#### `server.js` - Starting the Server
+#### `server.js` - Ενεργοποίηση του διακομιστή
 
 ```javascript
 const app = require("./app");
@@ -110,11 +111,11 @@ app.listen(PORT, () => {
 });
 ```
 
-## Writing Tests with Supertest
+## Συγγραφή Tests με το Supertest
 
-### Example: Simple Test
+### Παράδειγμα: Απλό Test
 
-Let's create a test to check the response of the GET request to the `/hello` endpoint.
+Ας δημιουργήσουμε μια δοκιμή για να ελέγξουμε την απόκριση της αίτησης GET στο τελικό σημείο `/hello`
 
 #### `__tests__/app.test.js`
 
@@ -131,9 +132,9 @@ describe("GET /hello", () => {
 });
 ```
 
-### Example: Testing a POST Request
+### Παράδειγμα: Δοκιμή ενός αιτήματος POST
 
-Let's add a test to check the response of the POST request to the `/data` endpoint.
+Ας προσθέσουμε μια δοκιμή για να ελέγξουμε την απόκριση της αίτησης POST στο τελικό σημείο `/data`.
 
 #### `__tests__/app.test.js`
 
@@ -158,21 +159,21 @@ describe("POST /data", () => {
 });
 ```
 
-### Running Tests
+### Εκτελώντας Tests
 
-Run the tests using Jest from the command line.
+Εκτελέστε τις δοκιμές χρησιμοποιώντας το Jest από τη γραμμή εντολών.
 
 ```bash
 npm test
 ```
 
-## Additional Examples and Best Practices
+## Πρόσθετα παραδείγματα και βέλτιστες πρακτικές
 
-### 1. Parameter Checking
+### 1.  Έλεγχος παραμέτρων
 
-Test how the API handles URL parameters and query strings.
+Δοκιμάστε τον τρόπο με τον οποίο το API χειρίζεται τις παραμέτρους URL και τις συμβολοσειρές ερωτημάτων.
 
-#### `app.js` - Updated
+#### `app.js` - Ενημερωμένο
 
 ```javascript
 app.get("/user/:id", (req, res) => {
@@ -193,11 +194,11 @@ describe("GET /user/:id", () => {
 });
 ```
 
-### 2. Header Checking
+### 2.  Έλεγχος επικεφαλίδας
 
-Test how the API handles HTTP headers.
+Δοκιμάστε τον τρόπο με τον οποίο το API χειρίζεται τις επικεφαλίδες HTTP.
 
-#### `app.js` - Updated
+#### `app.js` - Ενημερωμένο
 
 ```javascript
 app.get("/headers", (req, res) => {
@@ -217,11 +218,11 @@ describe("GET /headers", () => {
 });
 ```
 
-### 3. Error Handling
+### 3. Διαχείριση σφαλμάτων
 
-Test how the API handles errors and invalid requests.
+Δοκιμάστε τον τρόπο με τον οποίο το API χειρίζεται τα σφάλματα και τις άκυρες αιτήσεις
 
-#### `app.js` - Updated
+#### `app.js` - Ενημερωμένο
 
 ```javascript
 app.get("/error", (req, res) => {
