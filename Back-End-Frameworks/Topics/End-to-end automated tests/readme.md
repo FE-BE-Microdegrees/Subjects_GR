@@ -439,12 +439,12 @@ describe("Users controller", () => {
 
 Ομοίως, μπορούμε να γράψουμε δοκιμές για άλλες περιπτώσεις χρήσης, όπως:
 
-- User creation fails when the user already exists.
-- User creation fails when the user data is invalid.
-- User creation fails when the user data is incomplete.
-- Data retrieval fails when the user is not logged in.
-- Data retrieval fails when the user does not exist.
-- Data retrieval fails when the user is not an admin.
+- Η δημιουργία χρήστη αποτυγχάνει όταν ο χρήστης υπάρχει ήδη.
+- Η δημιουργία χρήστη αποτυγχάνει όταν τα δεδομένα του χρήστη είναι άκυρα.
+- Η δημιουργία χρήστη αποτυγχάνει όταν τα δεδομένα χρήστη είναι ελλιπή.
+- Η ανάκτηση δεδομένων αποτυγχάνει όταν ο χρήστης δεν είναι συνδεδεμένος.
+- Η ανάκτηση δεδομένων αποτυγχάνει όταν ο χρήστης δεν υπάρχει.
+- Η ανάκτηση δεδομένων αποτυγχάνει όταν ο χρήστης δεν είναι διαχειριστής.
 - ...
 
 Μπορούμε επίσης να γράψουμε δοκιμές για άλλα τελικά σημεία.
