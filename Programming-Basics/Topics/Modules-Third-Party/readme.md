@@ -5,7 +5,7 @@
 Εκτός από τα modules που δημιουργούνται από τον χρήστη και τα ενσωματωμένα modules, το Node.js επιτρέπει επίσης τη χρήση modules τρίτων κατασκευαστών. Αυτές οι ενότητες δημιουργούνται από άλλους προγραμματιστές και είναι διαθέσιμες μέσω του μητρώου *[Node Package Manager (NPM)](https://www.npmjs.com/)*.
 
 - [Ενότητες Third-Party ](#Ενότητες-Third---Party )
-  - [Μαθησιακά αποτελέσματα](#Μαθησιακά αποτελέσματα)
+  - [Μαθησιακά αποτελέσματα](#Μαθησιακά-αποτελέσματα)
   - [NPM](#npm)
   - [package.json](#packagejson)
   - [Εγκατάσταση ενοτήτων Third-Party](#Εγκατάσταση-ενοτήτων-Third---Party)
@@ -159,23 +159,23 @@ npm uninstall prompt-sync
 
 ## Εγκατάσταση και χρήση ενότητας Third-Party
 
-![Installing and Using a Third-Party Module](thirdPartyModules.gif)
+![Εγκατάσταση και χρήση ενότητας Third-Party](thirdPartyModules.gif)
 
-## List of Useful Third-Party Modules
+## Κατάλογος χρήσιμων ενοτήτων Third-Party
 
-Here are some useful third-party modules:
+Ακολουθούν ορισμένες χρήσιμες ενότητες third-party:
 
-- [Nodemon](https://www.npmjs.com/package/nodemon) - Automatically restarts Node.js applications.
-- [prompt-sync](https://www.npmjs.com/package/prompt-sync) - For accepting user input.
-- [colors](https://www.npmjs.com/package/colors) - For colored console text.
-- [nodemailer](https://www.npmjs.com/package/nodemailer) - For sending emails.
-- [cron](https://www.npmjs.com/package/cron) - For scheduling tasks.
+- [Nodemon](https://www.npmjs.com/package/nodemon) - Αυτόματη επανεκκίνηση των εφαρμογών Node.js.
+- [prompt-sync](https://www.npmjs.com/package/prompt-sync) - Για την αποδοχή της εισόδου του χρήστη.
+- [colors](https://www.npmjs.com/package/colors) - Για έγχρωμο κείμενο κονσόλας.
+- [nodemailer](https://www.npmjs.com/package/nodemailer) - Για την αποστολή μηνυμάτων ηλεκτρονικού ταχυδρομείου.
+- [cron](https://www.npmjs.com/package/cron) - Για τον προγραμματισμό εργασιών.
 
-## Exercises
+## Ασκήσεις
 
-### Exercise 1
+### Άσκηση 1
 
-Create a program that asks the user for a username and password. If the username is admin and the password is 1234, display Welcome!. Otherwise, display Invalid username or password!.
+Δημιουργήστε ένα πρόγραμμα που ζητά από τον χρήστη ένα όνομα χρήστη και έναν κωδικό πρόσβασης. Εάν το όνομα χρήστη είναι admin και ο κωδικός πρόσβασης είναι 1234, εμφανίστε το μήνυμα Welcome!. Διαφορετικά, εμφανίστε Invalid username or password!.
 
 <details> <summary>Hint 1</summary>
 Create a package.json file using npm init -y.
@@ -203,22 +203,22 @@ if (username === 'admin' && password === '1234') {
 
 </details>
 
-### Exercise 2
+### Άσκηση 2
 
-Enhance the program to allow the user to re-enter their username and password if incorrect.
+Βελτιώστε το πρόγραμμα ώστε να επιτρέπει στον χρήστη να εισάγει εκ νέου το όνομα χρήστη και τον κωδικό πρόσβασής του σε περίπτωση λανθασμένων στοιχείων.
 
 <details> <summary>Hint</summary>
 Use a loop (e.g., while) to repeat the input prompt until the correct credentials are provided.
 
 </details>
 
-### Exercise 3
+### Άσκηση 3
 
-Modify the program to limit the number of incorrect attempts to three. After three incorrect attempts, terminate the program with the message Too many invalid attempts!.
+Τροποποιήστε το πρόγραμμα ώστε να περιορίσετε τον αριθμό των λανθασμένων προσπαθειών σε τρεις. Μετά από τρεις λανθασμένες προσπάθειες, τερματίστε το πρόγραμμα με το μήνυμα Too many invalid attempts!.
 
-### Exercise 4
+### Άσκηση 4
 
-Add color to the program's outputs using the colors module. For example, display Welcome! in green and Invalid username or password! in red.
+Προσθέστε χρώμα στις εξόδους του προγράμματος χρησιμοποιώντας την ενότητα colors. Για παράδειγμα, εμφανίστε το Welcome! με πράσινο χρώμα και το Invalid username or password! με κόκκινο χρώμα.
 
 <details> <summary>Hint 1</summary>
 Install the colors module using npm install colors.
