@@ -5,7 +5,7 @@
   - [Εισαγωγή ενσωματωμένων ενοτήτων](#Εισαγωγή-ενσωματωμένων-ενοτήτων)
   - [Χρησιμοποιώντας Ενσωματωμένες Ενότητες](#Χρησιμοποιώντας-Ενσωματωμένες-Ενότητες)
   - [Κατάλογος ενσωματωμένων ενοτήτων](#Κατάλογος-ενσωματωμένων-ενοτήτων)
-  - [`fs` Module](#fs-module)
+  - [Ενότητα`fs`](#Ενότητα`fs`)
     - [Διαβάζοντας ένα αρχείο](#Διαβάζοντας-ένα-αρχείο)
     - [Γράφοντας ένα αρχείο](#Γράφοντας-ένα-αρχείο)
     - [Διαγραφή ενός αρχείου](#Διαγραφή-ενός-αρχείου)
@@ -40,11 +40,11 @@ const fs = require('fs');
 
 Όπως φαίνεται, οι ενσωματωμένες ενότητες μπορούν να εισαχθούν με τον ίδιο τρόπο όπως οι ενότητες που δημιουργούνται από τον χρήστη, αλλά δεν απαιτούν συγκεκριμένη διαδρομή- αρκεί μόνο το όνομα της ενότητας.
 
-## Using Built-In Modules
+## Χρησιμοποιώντας Ενσωματωμένες Ενότητες
 
-Built-in modules are used in the same way as user-created modules.
+Οι ενσωματωμένες ενότητες χρησιμοποιούνται με τον ίδιο τρόπο όπως και οι ενότητες που δημιουργούνται από τον χρήστη.
 
-For instance, to read the contents of a file, you can use the `fs` module:
+Για παράδειγμα, για να διαβάσετε τα περιεχόμενα ενός αρχείου, μπορείτε να χρησιμοποιήσετε την ενότητα `fs`:
 
 ```javascript
 const fs = require('fs');
@@ -55,32 +55,32 @@ fs.readFile('file.txt', 'utf8', (err, data) => {
 });
 ```
 
-In this example, the contents of the file `file.txt` are read and displayed in the console.
+Σε αυτό το παράδειγμα, τα περιεχόμενα του αρχείου `file.txt` διαβάζονται και εμφανίζονται στην κονσόλα.
 
-## List of Built-In Modules
+## Κατάλογος ενσωματωμένων ενοτήτων
 
-Here are some built-in modules available for use:
+Ακολουθούν ορισμένες ενσωματωμένες ενότητες που είναι διαθέσιμες για χρήση:
 
-- `fs` - File System module
-- `path` - Path module
-- `os` - Operating System module
-- `util` - Utility module
-- `events` - Events module
-- `http` - HTTP module
-- `crypto` - Cryptography module
-- `zlib` - Compression module
-- `stream` - Stream module
+- `fs` - Ενότητα File System
+- `path` - Ενότητα Path 
+- `os` -  Ενότητα Operating System
+- `util` - Ενότητα Utility 
+- `events` -   Ενότητα Events 
+- `http` -  Ενότητα HTTP 
+- `crypto` -  Ενότητα Cryptography 
+- `zlib` -   Ενότητα Compression 
+- `stream` -  Ενότητα Stream 
 - ...
 
-For a complete list of built-in modules, refer to the [official Node.js documentation](https://nodejs.org/dist/latest-v19.x/docs/api/).
+Για έναν πλήρη κατάλογο των ενσωματωμένων ενοτήτων, ανατρέξτε στην [επίσημη τεκμηρίωση του Node.js](https://nodejs.org/dist/latest-v19.x/docs/api/).
 
-## `fs` Module
+## Ενότητα`fs`
 
-The `fs` module is a built-in Node.js module that allows working with the file system. It supports reading, writing, modifying, and deleting files.
+Η ενότητα `fs` είναι μια ενσωματωμένη ενότητα του Node.js που επιτρέπει την εργασία με το σύστημα αρχείων. Υποστηρίζει την ανάγνωση, εγγραφή, τροποποίηση και διαγραφή αρχείων.
 
-### Reading a File
+### Διαβάζοντας ένα αρχείο
 
-To read a file, use the  `fs.readFile` method. For example:
+Για να διαβάσετε ένα αρχείο, χρησιμοποιήστε τη μέθοδο `fs.readFile`. Για παράδειγμα:
 
 ```javascript
 const fs = require('fs');
@@ -91,7 +91,7 @@ fs.readFile('file.txt', 'utf8', (err, data) => {
 });
 ```
 
-You can also use the synchronous method `fs.readFileSync`:
+Μπορείτε επίσης να χρησιμοποιήσετε τη σύγχρονη μέθοδο `fs.readFileSync`:
 
 ```javascript
 const fs = require('fs');
@@ -100,11 +100,12 @@ const data = fs.readFileSync('file.txt', 'utf8');
 console.log(data);
 ```
 
-> Note: Use synchronous methods only when you're certain it won't block other processes, as they may slow down the application.
-> 
-### Writing a File
+> Σημείωση: Χρησιμοποιήστε σύγχρονες μεθόδους μόνο όταν είστε σίγουροι ότι δεν θα μπλοκάρουν άλλες διεργασίες, καθώς μπορεί να επιβραδύνουν την εφαρμογή.
 
-To write to a file, use the `fs.writeFile` method. For example:
+
+### Γράφοντας ένα αρχείο
+
+Για να γράψετε σε ένα αρχείο, χρησιμοποιήστε τη μέθοδο `fs.writeFile`. Για παράδειγμα:
 
 ```javascript
 const fs = require('fs');
@@ -115,7 +116,7 @@ fs.writeFile('file.txt', 'Hello, World!', (err) => {
 });
 ```
 
-You can also use the synchronous method `fs.writeFileSync` 
+Μπορείτε επίσης να χρησιμοποιήσετε τη σύγχρονη μέθοδο `fs.writeFileSync` 
 
 ```javascript
 const fs = require('fs');
@@ -124,9 +125,9 @@ fs.writeFileSync('file.txt', 'Hello, World!');
 console.log('File has been written!');
 ```
 
-### Deleting a File
+### Διαγραφή ενός αρχείου
 
-To delete a file, use the  `fs.unlink` method. For example:
+Για να διαγράψετε ένα αρχείο, χρησιμοποιήστε τη μέθοδο `fs.unlink`. Για παράδειγμα:
 
 ```javascript
 const fs = require('fs');
@@ -137,7 +138,7 @@ fs.unlink('file.txt', (err) => {
 });
 ```
 
-You can also use the synchronous method `fs.unlinkSync`:
+Μπορείτε επίσης να χρησιμοποιήσετε τη σύγχρονη μέθοδο `fs.unlinkSync`:
 
 ```javascript
 const fs = require('fs');
@@ -146,13 +147,13 @@ fs.unlinkSync('file.txt');
 console.log('File has been deleted!');
 ```
 
-## `path` Module
+## Ενότητα `path`
 
-The `path` module is a built-in Node.js module that helps with file paths and names. It allows creating, modifying, and analyzing paths to files and directories.
+Η ενότητα `path` είναι μια ενσωματωμένη ενότητα του Node.js που βοηθάει με τις διαδρομές και τα ονόματα αρχείων. Επιτρέπει τη δημιουργία, την τροποποίηση και την ανάλυση διαδρομών σε αρχεία και καταλόγους.
 
-### Creating a Path
+### Δημιουργία Path
 
-To create a path, use the `path.join` method. For example:
+Για να δημιουργήσετε μια διαδρομή, χρησιμοποιήστε τη μέθοδο `path.join`. Για παράδειγμα:
 
 ```javascript
 const path = require('path');
@@ -161,15 +162,15 @@ const filePath = path.join(__dirname, 'file.txt');
 console.log(filePath);
 ```
 
-This example generates a path to the file `file.txt` using the `__dirname` variable, which points to the current directory.
+Αυτό το παράδειγμα δημιουργεί μια διαδρομή προς το αρχείο `file.txt` χρησιμοποιώντας τη μεταβλητή `__dirname`, η οποία δείχνει στον τρέχοντα κατάλογο.
 
-## `os` Module
+## Ενότητα `os`
 
-The `os` module is a built-in Node.js module that provides information about the operating system. It supports retrieving data such as the OS version, architecture, CPU details, username, and home directory.
+Η ενότητα `os` είναι μια ενσωματωμένη ενότητα του Node.js που παρέχει πληροφορίες σχετικά με το λειτουργικό σύστημα. Υποστηρίζει την ανάκτηση δεδομένων όπως η έκδοση του λειτουργικού συστήματος, η αρχιτεκτονική, οι λεπτομέρειες της CPU, το όνομα χρήστη και ο κεντρικός κατάλογος.
 
-### Operating System Information
+###Πληροφορίες λειτουργικού συστήματος
 
-To retrieve OS information, use methods provided by the os module. For example:
+Για να ανακτήσετε πληροφορίες για το λειτουργικό σύστημα, χρησιμοποιήστε τις μεθόδους που παρέχονται από την ενότητα os. Για παράδειγμα:
 
 ```javascript
 const os = require('os');
