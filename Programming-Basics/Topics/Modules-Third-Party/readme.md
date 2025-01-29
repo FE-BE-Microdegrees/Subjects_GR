@@ -103,9 +103,9 @@ npm install prompt-sync
 ```
 
 
-## nThe node_modules Folder
+## Ο φάκελος `node_modules`
 
-Installed modules are stored in the  `node_modules`. folder in the project's root directory. This folder includes all project dependencies and their dependencies. It can grow large and is not recommended for version control (e.g., Git). Instead, add it to `.gitignore`.
+Οι εγκατεστημένες ενότητες αποθηκεύονται στο φάκελο `node_modules`. στο ριζικό κατάλογο του έργου. Αυτός ο φάκελος περιλαμβάνει όλες τις εξαρτήσεις του έργου και τις εξαρτήσεις τους. Μπορεί να γίνει μεγάλος και δεν συνιστάται για έλεγχο εκδόσεων (π.χ. Git). Αντ' αυτού, προσθέστε τον στον φάκελο `.gitignore`.
 
  `.gitignore` example:
 
@@ -114,19 +114,19 @@ node_modules/
 ```
 
 
-## Restoring the node_modules Folder
+## Επαναφορά του φακέλου `node_modules`
 
-Restoring the node_modules Folder `node_modules` folder is not included in version control, other developers can recreate it using the following command in the project's root directory (where  `package.json`  is located):
+Επαναφορά του φακέλου node_modules Ο φάκελος `node_modules` δεν περιλαμβάνεται στον έλεγχο έκδοσης, άλλοι προγραμματιστές μπορούν να τον επαναδημιουργήσουν χρησιμοποιώντας την ακόλουθη εντολή στον ριζικό κατάλογο του έργου (όπου βρίσκεται το αρχείο `package.json`):
 
 ```bash
 npm install
 ```
 
-This command generates the `node_modules` older based on the dependencies listed in `package.json`.
+Αυτή η εντολή δημιουργεί το `node_modules` παλαιότερα με βάση τις εξαρτήσεις που αναφέρονται στο `package.json`.
 
-## Using Third-Party Modules
+## Χρήση ενοτήτων Third-Party
 
-After installing a module, it can be used in code like any other module. For instance, using the `prompt-sync`  module:
+Μετά την εγκατάσταση μιας ενότητας, μπορεί να χρησιμοποιηθεί στον κώδικα όπως οποιαδήποτε άλλη ενότητα. Για παράδειγμα, χρησιμοποιώντας την ενότητα `prompt-sync`:
 
 ```javascript
 const prompt = require('prompt-sync'); // Import the module
@@ -139,25 +139,25 @@ console.log(age); // Output the input
 
 ```
 
-In this example, the `prompt-sync` module is used to prompt the user for their age and display it in the console.
+Σε αυτό το παράδειγμα, η ενότητα `prompt-sync` χρησιμοποιείται για να ζητάει από τον χρήστη την ηλικία του και να την εμφανίζει στην κονσόλα.
 
-## Removing Third-Party Modules
+## Αφαίρεση ενοτήτων Third-Party
 
-To remove an installed module, use the following command:
+Για να αφαιρέσετε μια εγκατεστημένη μονάδα, χρησιμοποιήστε την ακόλουθη εντολή:
 
 ```bash
 npm uninstall <module-name>
 ```
 
-For example, to uninstall  `prompt-sync` :
+Για παράδειγμα, για να απεγκαταστήσετε το `prompt-sync` :
 
 ```bash
 npm uninstall prompt-sync
 ```
 
-This removes the module from the `prompt-sync` folder and the dependencies list in `package.json`.
+Αυτό αφαιρεί την ενότητα από το φάκελο `prompt-sync` και τη λίστα εξαρτήσεων στο `package.json`.
 
-## Installing and Using a Third-Party Module
+## Εγκατάσταση και χρήση ενότητας Third-Party
 
 ![Installing and Using a Third-Party Module](thirdPartyModules.gif)
 
